@@ -1,0 +1,43 @@
+<!DOCTYPE html> <!-- Declares the document type and version of HTML -->
+<html lang="en"> <!-- Start of the HTML document, with English language specified -->
+
+<head>
+    <meta charset="UTF-8"> <!-- Specifies the character encoding for the HTML document -->
+    <title>WhyDRS Database</title> <!-- Title of the HTML document shown in the browser's title bar or tab -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css"> <!-- Links a CSS file for styling the DataTables -->
+
+    <style>
+        /* Simple table styling */
+        table {
+            width: 100%; /* Sets the table width to 100% of its container */
+            border-collapse: collapse; /* Collapses table borders into a single border */
+        }
+        th, td {
+            border: 1px solid #ddd; /* Sets a light gray border for table headers and cells */
+            padding: 8px; /* Adds space around text in table headers and cells */
+            text-align: left; /* Aligns the text to the left */
+        }
+        th {
+            background-color: #f2f2f2; /* Sets a light gray background color for table headers */
+        }
+    </style>
+</head>
+
+<body>
+    <h1>WhyDRS Database</h1> <!-- Main heading of the webpage -->
+    <table id="data-table"> <!-- Table element with an ID for reference in JavaScript -->
+        <thead>
+            <tr>
+                <!-- Table headers will be inserted here by the script.js -->
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Data rows will be inserted here by the script.js -->
+        </tbody>
+    </table>
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script> <!-- Includes jQuery library -->
+    <script type="text/javascript" src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script> <!-- Includes DataTables JavaScript library -->
+    <script src="src/web/script.js"></script> <!-- Links to the JavaScript file that handles the table logic -->
+</body>
+</html>
