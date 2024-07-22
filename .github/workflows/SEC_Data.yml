@@ -1,0 +1,55 @@
+name: Update Google Sheet + Database with SEC Data
+
+on:
+  schedule:
+#    - cron: '0 0 * * *'  # Runs every day at midnight
+  workflow_dispatch:  # Allows manual triggering
+
+concurrency: 
+  group: database-update
+
+jobs:
+  update-data:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.x'
+
+    - name: Install dependencies
+      run: pip install requests pandas gspread oauth2client
+
+    - name: Pull SEC data and update repository
+      run: python src/scripts/SEC_company_tickers_exchange.py
+
+    - name: Change Primary Key in Database
+      run: python src/scripts/change_primary_key_to_cik.py
+
+    - name: Update Database from JSON
+      run: python src/scripts/update_db_from_json.py
+
+    - name: Update Google Sheet
+      env:
+        SHEET_ID: ${{ secrets.SHEET_ID }}
+        GOOGLE_API_KEYS: ${{ secrets.GOOGLE_API_KEYS }}
+      run: python src/scripts/update_google_sheet.py
+
+    - name: Verify changes
+      run: |
+        echo "Checking for changes in data files..."
+        git status
+
+    - name: Commit and push changes
+      run: |
+        git config --global user.name 'JamesAlfonse'
+        git config --global user.email 'jamesalfonse@gmail.com'
+        git add data/company_tickers_exchange.json data/Full_Database_Backend.db
+        git commit -m "Update SEC data and push to Google Sheets"
+        git push
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
