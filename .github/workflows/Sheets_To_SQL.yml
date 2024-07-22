@@ -1,0 +1,45 @@
+name: Update Database with Google Sheets Data
+
+on:
+  schedule:
+#    - cron: '0 0 * * *'  # Runs every day at midnight
+  workflow_dispatch:
+
+concurrency: 
+  group: database-update
+
+jobs:
+  update_database:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v2
+      
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.9'
+    
+    - name: Install Python Dependencies
+      run: |
+        pip install gspread oauth2client
+    
+    - name: Read Google Sheet and Write to SQL Database
+      env:
+        SHEET_ID: ${{ secrets.SHEET_ID }}
+        GOOGLE_API_KEYS: ${{ secrets.GOOGLE_API_KEYS }}
+      run: |
+        python 'src/scripts/update_sql.py'
+
+    - name: Change Primary Key in Database
+      run: python src/scripts/change_primary_key_to_cik.py
+    
+    - name: Commit and Push Database Files
+      run: |
+        git config --global user.name 'JamesAlfonse'
+        git config --global user.email 'jamesalfonse@gmail.com'
+        git add 'data/Full_Database_Backend.db' 'data/Full_Database_Backend.json'  # Add both the database and the JSON file
+        git commit -m "Updated database and JSON files" -a || echo "No changes to commit."
+        git push
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
