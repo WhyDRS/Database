@@ -1,8 +1,8 @@
 name: Update Google Sheet + Database with SEC Data
 
 on:
-#  schedule:
-#    - cron: '0 0 * * *'  # Runs every day at midnight
+  schedule:
+    - cron: '0 0 * * *'  # Runs every day at midnight
   workflow_dispatch:  # Allows manual triggering
 
 concurrency: 
