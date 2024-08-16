@@ -20,12 +20,21 @@
         th {
             background-color: #f2f2f2; /* Sets a light gray background color for table headers */
         }
+        #loading-bar {
+            width: 100%;
+            text-align: center;
+            padding: 10px;
+            background-color: #f2f2f2;
+            font-size: 18px;
+            font-weight: bold;
+        }
     </style>
 </head>
 
 <body>
     <h1>WhyDRS Database</h1> <!-- Main heading of the webpage -->
-    <table id="data-table"> <!-- Table element with an ID for reference in JavaScript -->
+    <div id="loading-bar" style="display: none;">Loading...</div> <!-- Loading bar element -->
+    <table id="data-table" style="display: none;"> <!-- Table element with an ID for reference in JavaScript -->
         <thead>
             <tr>
                 <!-- Table headers will be inserted here by the script.js -->
