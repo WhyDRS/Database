@@ -9,3 +9,4 @@ This information has been gathered in one place to make it easy for any investor
 You can view the raw data, volunteer missing information to be added to the database, or search for the entity you are interested in below. All data available is free for use and access.
 
 ### Not your name, not your shares!
+changing
