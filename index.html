@@ -1,40 +1,25 @@
-<!DOCTYPE html> <!-- Declares the document type and version of HTML -->
-<html lang="en"> <!-- Start of the HTML document, with English language specified -->
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
-    <meta charset="UTF-8"> <!-- Specifies the character encoding for the HTML document -->
-    <title>WhyDRS Database</title> <!-- Title of the HTML document shown in the browser's title bar or tab -->
-    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css"> <!-- Links a CSS file for styling the DataTables -->
+    <meta charset="UTF-8">
+    <title>WhyDRS Database</title>
 
-    <style>
-        /* Simple table styling */
-        table {
-            width: 100%; /* Sets the table width to 100% of its container */
-            border-collapse: collapse; /* Collapses table borders into a single border */
-        }
-        th, td {
-            border: 1px solid #ddd; /* Sets a light gray border for table headers and cells */
-            padding: 8px; /* Adds space around text in table headers and cells */
-            text-align: left; /* Aligns the text to the left */
-        }
-        th {
-            background-color: #f2f2f2; /* Sets a light gray background color for table headers */
-        }
-        #loading-bar {
-            width: 100%;
-            text-align: center;
-            padding: 10px;
-            background-color: #f2f2f2;
-            font-size: 18px;
-            font-weight: bold;
-        }
-    </style>
+    <!-- DataTables CSS -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css">
+    <!-- DataTables Buttons CSS -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/buttons/2.3.6/css/buttons.dataTables.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" type="text/css" href="src/web/css/styles.css">
 </head>
 
 <body>
-    <h1>WhyDRS Database</h1> <!-- Main heading of the webpage -->
-    <div id="loading-bar" style="display: none;">Loading...</div> <!-- Loading bar element -->
-    <table id="data-table" style="display: none;"> <!-- Table element with an ID for reference in JavaScript -->
+    <h1>WhyDRS Database</h1>
+    <div id="loading-bar" style="display: none;">
+        <div class="spinner"></div>
+        <span>Loading data, please wait...</span>
+    </div>
+    <table id="data-table" style="display: none;">
         <thead>
             <tr>
                 <!-- Table headers will be inserted here by the script.js -->
@@ -45,8 +30,16 @@
         </tbody>
     </table>
 
-    <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script> <!-- Includes jQuery library -->
-    <script type="text/javascript" src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script> <!-- Includes DataTables JavaScript library -->
-    <script src="src/web/script.js"></script> <!-- Links to the JavaScript file that handles the table logic -->
+    <!-- jQuery library -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <!-- DataTables JS -->
+    <script type="text/javascript" src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
+    <!-- DataTables Buttons JS -->
+    <script src="https://cdn.datatables.net/buttons/2.3.6/js/dataTables.buttons.min.js"></script>
+    <!-- Buttons ColVis JS -->
+    <script src="https://cdn.datatables.net/buttons/2.3.6/js/buttons.colVis.min.js"></script>
+    <!-- Your custom script -->
+    <script src="src/web/script.js"></script>
 </body>
+
 </html>
