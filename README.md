@@ -46,7 +46,7 @@ We welcome contributions from the community! If you have additional information 
 
 ## License
 
-The source code is licensed under the (Affero General Public License AGPL)[https://www.gnu.org/licenses/agpl-3.0.html] and the database is licensed under the (Open Database License ODbL)[https://opendatacommons.org/licenses/odbl/1-0/].
+The source code is licensed under the [Affero General Public License (AGPL)](https://www.gnu.org/licenses/agpl-3.0.html) and the database is licensed under the [Open Database License ODbL](https://opendatacommons.org/licenses/odbl/1-0/).
 
 ## Contact
 
