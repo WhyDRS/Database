@@ -1,192 +1,253 @@
-/* General page styling */
+/* Set the default font family, background color, margin, and text color for the entire page */
 body {
-    font-family: 'Helvetica Neue', Arial, sans-serif;
-    background-color: #F5F5F5;
-    margin: 20px;
-    color: #333;
+    font-family: 'Helvetica Neue', Arial, sans-serif; /* Use Helvetica Neue as primary font, fallback to Arial and sans-serif */
+    background-color: #F5F5F5; /* Set a light gray background color */
+    margin: 20px; /* Add 20px margin around the body */
+    color: #333; /* Set the default text color to dark gray */
 }
 
+/* Style the main heading of the page */
 h1 {
-    text-align: center;
-    color: #134F9B;
-    margin-bottom: 30px;
-    font-size: 2em;
+    text-align: center; /* Center-align the heading text */
+    color: #134F9B; /* Set the heading color to a deep blue */
+    margin-bottom: 30px; /* Add 30px margin below the heading */
+    font-size: 2em; /* Set the font size to 2 times the default size */
 }
 
-/* Loading bar styling */
-#loading-bar {
+/* Loading overlay styles */
+#loading-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
-    text-align: center;
-    padding: 20px;
-    background-color: #FFFFFF;
-    font-size: 18px;
-    font-weight: bold;
-    border-radius: 8px;
-    margin-bottom: 20px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    height: 100%;
+    background: rgba(245, 245, 245, 0.95);
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
+    z-index: 9999;
 }
 
-#loading-bar .spinner {
-    border: 6px solid #f3f3f3;
-    border-top: 6px solid #134F9B;
+#loading-overlay .loader {
+    border: 8px solid #f3f3f3;
+    border-top: 8px solid #134F9B;
     border-radius: 50%;
-    width: 40px;
-    height: 40px;
+    width: 60px;
+    height: 60px;
     animation: spin 1s linear infinite;
-    margin-right: 15px;
+    margin-bottom: 20px;
 }
 
-#loading-bar span {
+#loading-overlay p {
+    font-size: 18px;
     color: #3E3E3E;
 }
 
-/* Spinner animation */
+/* Existing spinner animation */
 @keyframes spin {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
 }
 
-/* Table styling */
+/* Center table headers within DataTables */
+table.dataTable thead th {
+    text-align: center !important;
+}
+
+/* Style the main table */
 table {
-    width: 100%;
-    border-collapse: collapse;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 100%; /* Make the table full width */
+    border-collapse: collapse; /* Collapse table borders */
+    border-radius: 8px; /* Add rounded corners to the table */
+    overflow: hidden; /* Hide overflow for rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add a subtle shadow effect */
 }
 
+/* Style table headers and cells */
 th, td {
-    padding: 14px;
-    text-align: left;
-    font-size: 14px;
-    line-height: 1.5;
+    padding: 14px; /* Add padding inside cells */
+    text-align: left; /* Left-align text in cells */
+    font-size: 14px; /* Set font size for cell content */
+    line-height: 1.5; /* Set line height for better readability */
 }
 
+/* Style table headers specifically */
 th {
-    background-color: #134F9B;
-    color: #FFFFFF;
-    text-align: center;
-    box-shadow: inset 0 -3px 5px rgba(0, 0, 0, 0.3);
+    background-color: #134F9B; /* Set background color for headers */
+    color: #FFFFFF; /* Set text color to white for headers */
+    text-align: center; /* Center-align text in headers */
+    box-shadow: inset 0 -3px 5px rgba(0, 0, 0, 0.3); /* Add an inner shadow effect */
 }
 
+/* Style table cells */
 td {
-    background-color: #FFFFFF;
+    background-color: #FFFFFF; /* Set background color for cells to white */
 }
 
+/* Style alternating rows in the table body */
 tbody tr:nth-child(even) {
-    background-color: #F7F7F7;
+    background-color: #F7F7F7; /* Set a light gray background for even rows */
 }
 
+/* Style table rows on hover */
 tbody tr:hover {
-    background-color: #DCEEFF;
+    background-color: #DCEEFF; /* Change background color on hover */
 }
 
-/* DataTables button styling */
+/* Style the DataTables buttons container */
 .dt-buttons {
-    margin-bottom: 20px;
+    margin-bottom: 20px; /* Add margin below the buttons container */
 }
 
+/* Style individual DataTables buttons */
 .dt-button {
-    background-color: #134F9B !important;
-    color: #FFFFFF !important;
-    border: none !important;
-    border-radius: 4px !important;
-    margin-right: 5px;
-    padding: 6px 12px !important;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #134F9B !important; /* Set button background color */
+    color: #FFFFFF !important; /* Set button text color */
+    border: none !important; /* Remove button border */
+    border-radius: 4px !important; /* Add rounded corners to buttons */
+    margin-right: 5px; /* Add margin to the right of each button */
+    padding: 6px 12px !important; /* Add padding inside buttons */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle shadow effect */
 }
 
-.dt-button:hover {
-    background-color: #0B3C75 !important;
-}
-
-/* DataTables pagination and info styling */
+/* Style DataTables pagination buttons */
 .dataTables_wrapper .dataTables_paginate .paginate_button {
-    background-color: #134F9B !important;
-    color: #FFFFFF !important;
-    border: none !important;
+    background-color: #FFFFFF !important;
+    color: #134F9B !important;
+    border: 1px solid #134F9B !important;
     border-radius: 4px !important;
     margin: 2px;
+    padding: 6px 12px;
+    transition: background-color 0.3s;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button:hover {
+    background-color: #134F9B !important;
+    color: #FFFFFF !important;
 }
 
 .dataTables_wrapper .dataTables_paginate .paginate_button.current {
-    background-color: #0B3C75 !important;
+    background-color: #134F9B !important;
+    color: #FFFFFF !important;
 }
 
+/* Style labels for length menu and search input */
 .dataTables_wrapper .dataTables_length label,
 .dataTables_wrapper .dataTables_filter label {
-    color: #3E3E3E;
+    color: #3E3E3E; /* Set label text color */
 }
 
+/* Style the information text */
 .dataTables_wrapper .dataTables_info {
-    color: #3E3E3E;
+    color: #3E3E3E; /* Set info text color */
 }
 
-/* Adjust the select box in the length menu */
+/* Style the select box in the length menu */
 .dataTables_length select {
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    padding: 4px;
-    background-color: #FFFFFF;
+    border: 1px solid #ccc; /* Add a light gray border */
+    border-radius: 4px; /* Add rounded corners */
+    padding: 4px; /* Add padding inside the select box */
+    background-color: #FFFFFF; /* Set background color to white */
 }
 
-/* Adjust the search input */
+/* Style the search input */
 .dataTables_filter input {
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    padding: 4px;
-    background-color: #FFFFFF;
+    border: 1px solid #ccc; /* Add a light gray border */
+    border-radius: 4px; /* Add rounded corners */
+    padding: 4px; /* Add padding inside the input */
+    background-color: #FFFFFF; /* Set background color to white */
 }
 
-/* Responsive adjustments */
+/* Responsive adjustments for smaller screens */
 @media screen and (max-width: 768px) {
+    body {
+        margin: 10px;
+    }
+
+    h1 {
+        font-size: 1.5em;
+        margin-bottom: 20px;
+    }
+
     table, th, td {
-        font-size: 12px;
+        font-size: 13px;
     }
 
     .dt-button {
-        padding: 4px 8px !important;
-        font-size: 12px;
+        padding: 5px 10px !important;
+        font-size: 13px !important;
     }
 
-    #loading-bar {
-        flex-direction: column;
+    #loading-overlay .loader {
+        width: 50px;
+        height: 50px;
     }
 
-    #loading-bar .spinner {
-        margin-bottom: 15px;
+    #loading-overlay p {
+        font-size: 16px;
+    }
+
+    /* Adjust table width */
+    table {
+        width: 100%;
     }
 }
 
-/* Additional visual enhancements */
-/* Highlight the table headers on hover */
+
+/* Highlight table headers on hover */
 th:hover {
-    background-color: #0B3C75;
-    cursor: pointer;
+    background-color: #0B3C75; /* Change background color on hover */
+    cursor: pointer; /* Change cursor to pointer on hover */
 }
 
-/* Style the pagination buttons */
+/* Add margin above pagination */
 .dataTables_wrapper .dataTables_paginate {
-    margin-top: 10px;
+    margin-top: 10px; /* Add margin above pagination */
 }
 
-/* Center the bottom controls */
+/* Center and space out bottom controls */
 .dataTables_wrapper .bottom {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Vertically center items */
+    justify-content: space-between; /* Space items evenly */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
 }
 
-/* Style for "Show entries" label */
+/* Remove margin from "Show entries" label */
 .dataTables_length label {
-    margin: 0;
+    margin: 0; /* Remove default margin */
 }
 
-/* Adjust the information text */
+/* Add margin to information text */
 .dataTables_info {
-    margin: 10px 0;
+    margin: 10px 0; /* Add vertical margin to info text */
+}
+
+/* Style the buttons within the "Select Columns" dropdown */
+.dt-button-collection button {
+    background-color: #134F9B;
+    color: #FFFFFF;
+    border: 1px solid #134F9B;
+    padding: 6px 12px;
+    margin: 2px;
+    border-radius: 4px;
+}
+
+/* Style for active (selected) buttons */
+.dt-button-collection button.active {
+    background-color: #FFFFFF;
+    color: #134F9B;
+}
+
+/* Hover styles for all buttons in the dropdown */
+.dt-button-collection button:hover {
+    background-color: #0B3C75;
+    color: #FFFFFF;
+}
+
+/* Hover styles for active buttons */
+.dt-button-collection button.active:hover {
+    background-color: #DCEEFF;
+    color: #134F9B;
 }
