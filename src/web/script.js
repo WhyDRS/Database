@@ -50,24 +50,22 @@ document.addEventListener("DOMContentLoaded", function () {
                                         dt.column(colIndex).visible(true);
                                     });
 
+                                    // Adjust column widths and redraw table
+                                    dt.columns.adjust().draw(false);
+
                                     // Save the new state
                                     dt.state.save();
-
-                                    // Redraw the table without resetting the paging
-                                    dt.draw(false);
                                 }
                             }
                         ],
                         "stateSave": true,
-                        "stateDuration": -1, // Set to -1 to save the state indefinitely
-                        // In initComplete function:
+                        "stateDuration": -1,
                         "initComplete": function (settings, json) {
-                        // Hide the loading overlay and show the table after DataTables initialization is complete
+                            // Hide the loading overlay and show the table after DataTables initialization is complete
                             loadingOverlay.style.display = 'none';
                             dataTableElement.style.display = 'table';
                         },
-
-                        "pagingType": "full_numbers", // Displays page numbers
+                        "pagingType": "full_numbers",
                         "language": {
                             "search": "",
                             "searchPlaceholder": "Search records"
@@ -77,8 +75,13 @@ document.addEventListener("DOMContentLoaded", function () {
                             [100, 200, 300, 400, 500, 600, 700, 800, 900, 1000],
                             [100, 200, 300, 400, 500, 600, 700, 800, 900, 1000]
                         ],
-                        "order": [[0, 'asc']], // Sort by the first column (index 0) ascending
-                        "responsive": true // Enable responsive table
+                        "order": [[0, 'asc']],
+                        "autoWidth": false // Disable automatic column width calculation
+                    });
+
+                    // Event listener to adjust columns when visibility changes
+                    table.on('column-visibility.dt', function (e, settings, column, state) {
+                        table.columns.adjust().draw(false);
                     });
                 });
             })
