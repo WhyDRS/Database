@@ -30,7 +30,7 @@ for index, row in df.iterrows():
     cursor.execute('''
         INSERT INTO full_database_backend (CIK, Ticker, Exchange, CompanyNameIssuer)
         VALUES (?, ?, ?, ?)
-        ON CONFLICT(CIK, Ticker) DO UPDATE SET
+        ON CONFLICT (CIK, Ticker) DO UPDATE SET
             Exchange = excluded.Exchange,
             CompanyNameIssuer = excluded.CompanyNameIssuer
     ''', (row['cik'], row['ticker'], row['exchange'], row['name']))
