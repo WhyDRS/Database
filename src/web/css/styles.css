@@ -1,218 +1,320 @@
-/* Set the default font family, background color, margin, and text color for the entire page */
+/* Base styles for the body element */
 body {
+    /* Set the default font family */
     font-family: 'Helvetica Neue', Arial, sans-serif;
+    /* Set the background color of the page */
     background-color: #F5F5F5;
+    /* Add margin around the content */
     margin: 20px;
+    /* Set the default text color */
     color: #333;
 }
 
-/* Style the main heading of the page */
+/* Styles for the main heading */
 h1 {
+    /* Center the heading text */
     text-align: center;
+    /* Set the heading text color */
     color: #134F9B;
+    /* Add space below the heading */
     margin-bottom: 30px;
+    /* Set the font size */
     font-size: 2em;
 }
 
-/* Loading overlay styles */
+/* Styles for the loading overlay */
 #loading-overlay {
+    /* Position the overlay to cover the entire viewport */
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
+    /* Set a semi-transparent background */
     background: rgba(245, 245, 245, 0.95);
-    display: flex;
+    /* Use flexbox to center content */
+    display: flex; /* Overlay is visible by default */
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    /* Ensure the overlay appears above other content */
     z-index: 9999;
 }
 
+/* Styles for the loading spinner */
 #loading-overlay .loader {
-    border: 8px solid #f3f3f3;
-    border-top: 8px solid #134F9B;
-    border-radius: 50%;
+    /* Define the spinner's appearance */
+    border: 8px solid #f3f3f3; /* Light gray border */
+    border-top: 8px solid #134F9B; /* Blue border on top to create a spinning effect */
+    border-radius: 50%; /* Make it circular */
     width: 60px;
     height: 60px;
+    /* Define the animation for spinning */
     animation: spin 1s linear infinite;
+    /* Add space below the spinner */
     margin-bottom: 20px;
 }
 
+/* Styles for the loading message */
 #loading-overlay p {
+    /* Set the font size of the message */
     font-size: 18px;
+    /* Set the text color */
     color: #3E3E3E;
 }
 
-/* Existing spinner animation */
+/* Keyframes for the spinner animation */
 @keyframes spin {
+    /* Define the rotation from 0 to 360 degrees */
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
 }
 
-/* Center table headers within DataTables */
+/* Center table headers in DataTables */
 table.dataTable thead th {
+    /* Center-align the header text */
     text-align: center !important;
 }
 
-/* Style the main table */
+/* Styles for the table */
 table {
-    /* width: 100%; */ /* Commented out to allow automatic width adjustment */
+    /* Remove gaps between cells */
     border-collapse: collapse;
+    /* Round the corners of the table */
     border-radius: 8px;
+    /* Hide overflow to ensure rounded corners are visible */
     overflow: hidden;
+    /* Add a subtle shadow around the table */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    table-layout: auto; /* Allow the table to adjust its layout automatically */
+    /* Allow the table to adjust column widths automatically */
+    table-layout: auto;
+    /* Add a border around the table */
+    border: 1px solid #ccc;
 }
 
-/* Style table headers and cells */
+/* Styles for table headers and cells */
 th, td {
+    /* Add padding inside the cells */
     padding: 14px;
+    /* Align text to the left */
     text-align: left;
+    /* Set the font size */
     font-size: 14px;
+    /* Set the line height */
     line-height: 1.5;
+    /* Add a border below the cells */
+    border-bottom: 1px solid #ddd;
 }
 
-/* Style table headers specifically */
+/* Styles for table headers */
 th {
+    /* Set the background color */
     background-color: #134F9B;
+    /* Set the text color */
     color: #FFFFFF;
+    /* Center-align header text */
     text-align: center;
+    /* Add an inset shadow effect */
     box-shadow: inset 0 -3px 5px rgba(0, 0, 0, 0.3);
 }
 
-/* Style table cells */
+/* Styles for table cells */
 td {
+    /* Set the background color */
     background-color: #FFFFFF;
 }
 
-/* Style alternating rows in the table body */
+/* Alternate row colors for better readability */
 tbody tr:nth-child(even) {
+    /* Set background color for even rows */
     background-color: #F7F7F7;
 }
 
-/* Style table rows on hover */
+/* Hover effect for table rows */
 tbody tr:hover {
+    /* Change background color on hover */
     background-color: #DCEEFF;
 }
 
-/* Style the DataTables buttons container */
+/* Add margin below DataTables buttons */
 .dt-buttons {
+    /* Add space below the buttons */
     margin-bottom: 20px;
 }
 
-/* Style individual DataTables buttons */
+/* Styles for DataTables buttons */
 .dt-button {
+    /* Set background color */
     background-color: #134F9B !important;
+    /* Set text color */
     color: #FFFFFF !important;
+    /* Remove borders */
     border: none !important;
+    /* Round the corners */
     border-radius: 4px !important;
+    /* Add space between buttons */
     margin-right: 5px;
+    /* Adjust padding */
     padding: 6px 12px !important;
+    /* Add a subtle shadow */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-/* Style DataTables pagination buttons */
+/* Hover effect for DataTables buttons */
+.dt-button:hover {
+    /* Darken background color on hover */
+    background-color: #0B3C75 !important;
+    /* Ensure text color remains white */
+    color: #FFFFFF !important;
+}
+
+/* Styles for pagination buttons */
 .dataTables_wrapper .dataTables_paginate .paginate_button {
+    /* Set background color */
     background-color: #FFFFFF !important;
+    /* Set text color */
     color: #134F9B !important;
+    /* Add border */
     border: 1px solid #134F9B !important;
+    /* Round the corners */
     border-radius: 4px !important;
+    /* Add margin between buttons */
     margin: 2px;
+    /* Adjust padding */
     padding: 6px 12px;
+    /* Add transition effect */
     transition: background-color 0.3s;
 }
 
+/* Hover effect for pagination buttons */
 .dataTables_wrapper .dataTables_paginate .paginate_button:hover {
+    /* Change background and text colors on hover */
     background-color: #134F9B !important;
     color: #FFFFFF !important;
 }
 
+/* Styles for the current pagination button */
 .dataTables_wrapper .dataTables_paginate .paginate_button.current {
+    /* Highlight the current page button */
     background-color: #134F9B !important;
     color: #FFFFFF !important;
 }
 
-/* Style labels for length menu and search input */
+/* Styles for labels in DataTables length and filter controls */
 .dataTables_wrapper .dataTables_length label,
 .dataTables_wrapper .dataTables_filter label {
+    /* Set text color */
     color: #3E3E3E;
 }
 
-/* Style the information text */
+/* Styles for the information text in DataTables */
 .dataTables_wrapper .dataTables_info {
+    /* Set text color */
     color: #3E3E3E;
 }
 
-/* Style the select box in the length menu */
+/* Styles for the entries per page dropdown */
 .dataTables_length select {
+    /* Add border */
     border: 1px solid #ccc;
+    /* Round the corners */
     border-radius: 4px;
+    /* Adjust padding */
     padding: 4px;
+    /* Set background color */
     background-color: #FFFFFF;
 }
 
-/* Style the search input */
+/* Styles for the search input field */
 .dataTables_filter input {
+    /* Add border */
     border: 1px solid #ccc;
+    /* Round the corners */
     border-radius: 4px;
+    /* Adjust padding */
     padding: 4px;
+    /* Set background color */
     background-color: #FFFFFF;
 }
 
-/* Highlight table headers on hover */
+/* Hover effect for table headers */
 th:hover {
+    /* Change background color on hover */
     background-color: #0B3C75;
+    /* Change cursor to pointer to indicate interactivity */
     cursor: pointer;
 }
 
-/* Add margin above pagination */
+/* Add margin above pagination controls */
 .dataTables_wrapper .dataTables_paginate {
+    /* Add space above pagination controls */
     margin-top: 10px;
 }
 
-/* Center and space out bottom controls */
+/* Layout adjustments for DataTables footer */
 .dataTables_wrapper .bottom {
+    /* Use flexbox to arrange elements */
     display: flex;
     align-items: center;
     justify-content: space-between;
+    /* Allow wrapping on smaller screens */
     flex-wrap: wrap;
 }
 
-/* Remove margin from "Show entries" label */
+/* Remove margin from length label */
 .dataTables_length label {
+    /* Remove default margin */
     margin: 0;
 }
 
 /* Add margin to information text */
 .dataTables_info {
+    /* Add space above and below */
     margin: 10px 0;
 }
 
-/* Style the buttons within the "Select Columns" dropdown */
-.dt-button-collection button {
-    background-color: #134F9B;
-    color: #FFFFFF;
-    border: 1px solid #134F9B;
+/* Hide elements with the 'hidden' class */
+.hidden {
+    /* Force the element to not display */
+    display: none !important;
+}
+
+/* Styles for buttons in the column visibility collection */
+div.dt-button-collection .dt-button {
+    /* Set background color for inactive buttons */
+    background-color: #FFFFFF !important;
+    /* Set text color for inactive buttons */
+    color: #134F9B !important;
+    /* Add border */
+    border: 1px solid #134F9B !important;
+    /* Adjust padding */
     padding: 6px 12px;
+    /* Add margin between buttons */
     margin: 2px;
+    /* Round the corners */
     border-radius: 4px;
 }
 
-/* Style for active (selected) buttons */
-.dt-button-collection button.active {
-    background-color: #FFFFFF;
-    color: #134F9B;
+/* Hover effect for inactive buttons */
+div.dt-button-collection .dt-button:hover {
+    /* Change background color on hover */
+    background-color: #DCEEFF !important;
+    /* Ensure text color remains blue */
+    color: #134F9B !important;
 }
 
-/* Hover styles for all buttons in the dropdown */
-.dt-button-collection button:hover {
-    background-color: #0B3C75;
-    color: #FFFFFF;
+/* Styles for active buttons using aria-pressed attribute */
+div.dt-button-collection .dt-button[aria-pressed="true"] {
+    /* Set background color for active buttons */
+    background-color: #134F9B !important;
+    /* Set text color for active buttons */
+    color: #FFFFFF !important;
 }
 
-/* Hover styles for active buttons */
-.dt-button-collection button.active:hover {
-    background-color: #DCEEFF;
-    color: #134F9B;
+/* Hover effect for active buttons */
+div.dt-button-collection .dt-button[aria-pressed="true"]:hover {
+    /* Darken background color on hover */
+    background-color: #0B3C75 !important;
+    /* Ensure text color remains white */
+    color: #FFFFFF !important;
 }

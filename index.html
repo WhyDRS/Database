@@ -1,55 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
+    <!-- Set the character encoding for the HTML document -->
     <meta charset="UTF-8">
+    <!-- Title of the webpage displayed in the browser tab -->
     <title>WhyDRS Database</title>
 
-    <!-- DataTables CSS -->
+    <!-- Link to the DataTables CSS for basic table styling -->
     <link rel="stylesheet" type="text/css"
         href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css">
-    <!-- DataTables Buttons CSS -->
+    <!-- Link to the DataTables Buttons extension CSS for additional button styling -->
     <link rel="stylesheet" type="text/css"
         href="https://cdn.datatables.net/buttons/2.3.6/css/buttons.dataTables.min.css">
-    <!-- Custom CSS -->
+    <!-- Link to the custom CSS file for overriding and adding additional styles -->
     <link rel="stylesheet" type="text/css" href="src/web/css/styles.css">
-    <!-- Font Awesome for icons -->
+    <!-- Link to Font Awesome for using icons (e.g., in buttons or UI elements) -->
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
         integrity="sha384-6R4xFVxVwVr5yDK2gML1qeKZB7RTTzLJ4ql25nPEvP2hR+ga7Z1/jlVSWdwEly5N"
         crossorigin="anonymous">
-
 </head>
 
 <body>
+    <!-- Main heading of the webpage -->
     <h1>WhyDRS Database</h1>
+
+    <!-- Loading overlay displayed while data is being fetched and the table is being initialized -->
     <div id="loading-overlay">
+        <!-- Loading spinner -->
         <div class="loader"></div>
+        <!-- Loading message -->
         <p>Loading data, please wait...</p>
     </div>
-    <table id="data-table" style="display: none;">
+
+    <!-- Data table that will display the fetched data; initially hidden -->
+    <table id="data-table" class="hidden">
+        <!-- Table header section -->
         <thead>
             <tr>
-                <!-- Table headers will be inserted here by the script.js -->
+                <!-- Table headers will be dynamically populated by JavaScript based on the data -->
             </tr>
         </thead>
+        <!-- Table body section -->
         <tbody>
-            <!-- Data rows will be inserted here by the script.js -->
+            <!-- Table rows will be dynamically populated by JavaScript based on the data -->
         </tbody>
     </table>
 
-    <!-- jQuery library -->
+    <!-- Include jQuery library for DOM manipulation and event handling -->
     <script type="text/javascript"
         src="https://code.jquery.com/jquery-3.5.1.js"></script>
-    <!-- DataTables JS -->
+    <!-- Include DataTables library for enhanced table functionalities -->
     <script type="text/javascript"
         src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
-    <!-- DataTables Buttons JS -->
+    <!-- Include DataTables Buttons extension for additional button features -->
     <script src="https://cdn.datatables.net/buttons/2.3.6/js/dataTables.buttons.min.js"></script>
-    <!-- Buttons ColVis JS -->
+    <!-- Include Buttons ColVis extension for column visibility control -->
     <script src="https://cdn.datatables.net/buttons/2.3.6/js/buttons.colVis.min.js"></script>
-    <!-- Your custom script -->
+
+    <!-- Include custom JavaScript file that contains the logic for fetching data and initializing the table -->
     <script src="src/web/script.js"></script>
 </body>
-
 </html>
