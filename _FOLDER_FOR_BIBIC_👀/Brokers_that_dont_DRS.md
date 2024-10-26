@@ -28,7 +28,7 @@ Before you contact IBKR, you should start the process by making an appointment t
 
 - Call ${name of broker} and book an appointment in your local branch to fill out the outbound transfer form.
 - Go into the bank, fill in the form with the help of the bank employee.
-- Provide IBKR's contact email for share transfers: fop-transfer-in@interactivebrokers.com
+  - Provide IBKR's contact email for share transfers: fop-transfer-in@interactivebrokers.com
 - ${name of broker} will then start to process the transfer request. Now you can notify IBKR so they know the transfer is coming.
 
 
