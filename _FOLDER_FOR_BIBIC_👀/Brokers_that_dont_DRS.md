@@ -1,4 +1,4 @@
-kdoIf broker cannot DRS transfer:
+# If broker cannot DRS transfer:
 
 ## Intro/disclaimer:
 **${name of broker}** does not DRS transfer shares, so you need to transfer your shares to another broker that can DRS transfer. **{if outside US}** A popular route has been through Interactive Brokers (IBKR), as they are available internationally and can DRS transfer for $5(US). For this example, IBKR is being used. **{if inside US}** A popular route has been through Fidelity, as they are able to reliably DRS transfer for free, and it’s a very simple process to request it. Fidelity have also been known to reimburse transfer fees when moving to them **{(up to $75)}**
