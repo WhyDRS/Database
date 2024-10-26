@@ -20,7 +20,7 @@ N/A
 ## Option 1: Hold and buy elsewhere
 
 Continue to hold your shares with your non-transferring broker.
-Open an account with a broker that can direct register shares. _{if outside US}_ IBKR is a  popular choice as it's an international broker that can direct register quickly, and for a $5(US) fee.}_ _{if inside US}_ Fidelity is a popular choice as it’s a very accessible broker that can DRS transfer reliably for free.}_
+Open an account with a broker that can direct register shares. _{if outside US}_ IBKR is a  popular choice as it's an international broker that can direct register quickly, and for a **_{$5(US) fee.}_** _{if inside US}_ Fidelity is a popular choice as it’s a very accessible broker that can DRS transfer reliably for free.}_
 _{if outside US}_ If the company offers a purchase plan, you can purchase a share through Give A Share to open your Transfer Agent account (link here), then purchase more shares directly through the Transfer Agent.}_ _{if inside US}_ If the company offers a purchase plan, you can purchase directly through the Transfer Agent to open an account and buy more.}_
 
 ### Option 2: Sell and repurchase
