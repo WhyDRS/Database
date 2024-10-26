@@ -25,7 +25,7 @@ N/A
 
 
 ## Transfer Instructions:
-Option 1: Hold and buy elsewhere
+## Option 1: Hold and buy elsewhere
 Continue to hold your shares with your non-transferring broker.
 Open an account with a broker that can direct register shares. {if outside US} IBKR is a  popular choice as it's an international broker that can direct register quickly, and for a $5(US) fee.} {if inside US} Fidelity is a popular choice as it’s a very accessible broker that can DRS transfer reliably for free.}
 {if outside US} If the company offers a purchase plan, you can purchase a share through Give A Share to open your Transfer Agent account (link here), then purchase more shares directly through the Transfer Agent.} {if inside US} If the company offers a purchase plan, you can purchase directly through the Transfer Agent to open an account and buy more.}
@@ -38,7 +38,7 @@ A few things to bear in mind with this option:
 You may be adversely impacted by volatility. You may benefit if there is a dip, but you might lose out if the price increases.
 You may be adversely impacted by transaction fees. If your broker charges for each sale, then you increase the number of fees to pay.
 It's also worth bearing in mind that there will be {if outside US} currency conversion fees and} (depending on your broker) a DRS transfer fee.
-Option 3: Buy first, then sell
+## Option 3: Buy first, then sell
 Please note: selling at a profit, or from a tax advantaged account may create a taxable event.
 Decide how many shares you can purchase at a time.
 Buy a batch of shares from the broker that can direct register. {if outside US} IBKR is a  popular choice as it's an international broker that can direct register quickly, and for a $5(US) fee.} {if inside US} Fidelity is a popular choice as it’s a very accessible broker that can DRS transfer reliably for free.}
