@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const dataTableElement = document.getElementById('data-table');
 
     function loadData() {
-        fetch('data/DRSGME_Broker_Guides.json')
+        fetch('Broker-Data/data/DRSGME_Broker_Guides.json')
             .then(response => {
                 if (!response.ok) {
                     throw new Error(`HTTP error! status: ${response.status}`);
