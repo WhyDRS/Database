@@ -1,7 +1,7 @@
 # If no transfers at all:
 
 ## Intro/disclaimer
-**_${name of broker}_ does not allow transfers of any kind. 
+**_${name of broker}_** does not allow transfers of any kind. 
 
 To direct register your shares, you are left with a few options:
 Stop buying with your non-transferring broker and instead buy with a broker that can DRS transfer shares. For example: _{if inside US}_ Fidelity}_ _{if outside US}_ _{Interactive Brokers}_.
