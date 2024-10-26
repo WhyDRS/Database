@@ -1,6 +1,6 @@
-If no transfers at all:
+# If no transfers at all:
 
-Intro/disclaimer
+## Intro/disclaimer
 ${name of broker} does not allow transfers of any kind. 
 
 To direct register your shares, you are left with a few options:
@@ -10,7 +10,7 @@ Buy shares in a broker that can direct register. Then sell from your non- transf
 This isn't advocating day trading in any way shape or form; stocks can become volatile for a multitude of reasons. While you may make some gains, selling in any shape provides short hedge funds with liquidity. Those shares, and that liquidity is removed permanently if the re-purchased shares are directly registered.
 
 
-Bespoke broker info
+## Bespoke broker info
 N/A
 
 
@@ -24,12 +24,12 @@ N/A
 
 
 
-Transfer Instructions:
+## Transfer Instructions:
 Option 1: Hold and buy elsewhere
 Continue to hold your shares with your non-transferring broker.
 Open an account with a broker that can direct register shares. {if outside US} IBKR is a  popular choice as it's an international broker that can direct register quickly, and for a $5(US) fee.} {if inside US} Fidelity is a popular choice as it’s a very accessible broker that can DRS transfer reliably for free.}
 {if outside US} If the company offers a purchase plan, you can purchase a share through Give A Share to open your Transfer Agent account (link here), then purchase more shares directly through the Transfer Agent.} {if inside US} If the company offers a purchase plan, you can purchase directly through the Transfer Agent to open an account and buy more.}
-Option 2: Sell and repurchase
+## Option 2: Sell and repurchase
 Please note: selling at a profit, or from a tax advantaged account may create a taxable event.
 Sell a batch of shares from your non-transferring broker (or all of them) and wait for the cash to settle and withdraw it to your bank account.
 Fund your new broker account with the cash now it's available.
@@ -54,6 +54,6 @@ If you go for option 2 or 3, or a combination of them you do risk losing some of
 
 
 
-Transfer Agent Instructions:
+## Transfer Agent Instructions:
 N/A
 
