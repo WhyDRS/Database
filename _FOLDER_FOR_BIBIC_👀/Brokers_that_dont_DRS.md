@@ -1,61 +1,73 @@
-# If broker cannot DRS transfer:
+##**If broker cannot DRS transfer:**
 
 ## Intro/disclaimer:
 **${name of broker}** does not DRS transfer shares, so you need to transfer your shares to another broker that can DRS transfer. **{if outside US}** A popular route has been through Interactive Brokers (IBKR), as they are available internationally and can DRS transfer for $5(US). For this example, IBKR is being used. **{if inside US}** A popular route has been through Fidelity, as they are able to reliably DRS transfer for free, and it’s a very simple process to request it. Fidelity have also been known to reimburse transfer fees when moving to them **{(up to $75)}**
 
 
-**{if outside US}** The quickest way is to open an Interactive Broker account, buy a share, and request a DRS transfer. While you wait for your **${transfer agent name}** account to be created, you can transfer your shares from **${name of broker}** to IBKR with a Basic FOP Transfer, then from IBKR to **${transfer agent name}** via DRS transfer for a **$5(US) fee.**
+**{if outside US}** 
+
+The quickest way is to open an Interactive Broker account, buy a share, and request a DRS transfer. While you wait for your **${transfer agent name}** account to be created, you can transfer your shares from **${name of broker}** to IBKR with a Basic FOP Transfer, then from IBKR to **${transfer agent name}** via DRS transfer for a $5(US) fee.**}**
 
 
 **{If a fee is charged}**
-**${name of broker}** charges a **${expected fee}** fee to transfer to another broker (Basic FOP Transfer and/or ACAT Transfer). This means each time you want to transfer a specific stock (no matter how many shares) you are charged **${expected fee}**. You will need to make sure you have **${expected fee}** settled in your account before you can transfer.
+
+**${name of broker}** charges a **${expected fee}** fee to transfer to another broker (Basic FOP Transfer and/or ACAT Transfer). This means each time you want to transfer a specific stock (no matter how many shares) you are charged **${expected fee}**. You will need to make sure you have **${expected fee}** settled in your account before you can transfer.**}**
 
 **{If free to transfer}**
-**${name of broker}** can transfer to another broker for free.
+
+**${name of broker}** can transfer to another broker for free.**}**
 
 **{If no info on fees available}**
-**${name of broker}** may charge a fee for each Basic FOP Transfer. This means each time you want to transfer a specific stock (no matter how many shares) you are charged a fee.
+
+**${name of broker}** may charge a fee for each Basic FOP Transfer. This means each time you want to transfer a specific stock (no matter how many shares) you are charged a fee.**}**
 
 ## For database: Bespoke broker info - pre transfer instructions:
-**Acorns**
+
+### Acorns
+
 For more information on transferring out of **${name of broker}**, you can read their support page on it here (It says funds in the title, but goes on to talk about shares).
 
-**Banca Sella**
+### Banca Sella
+
 If you don’t want to use IBKR, the Italian brokers that are known to DRS transfer are Directa SIM ($75 fee), and MeXeM ($5 fee).
 
-Before you contact IBKR, you should start the process by making an appointment to go into your local ${name of broker} branch and filling out an outbound transfer form. Then you notify IBKR by creating a Letter of Instruction with their forms.
+Before you contact IBKR, you should start the process by making an appointment to go into your local **${name of broker}** branch and filling out an outbound transfer form. Then you notify IBKR by creating a Letter of Instruction with their forms.
 
 
-- Call ${name of broker} and book an appointment in your local branch to fill out the outbound transfer form.
+- Call **${name of broker}** and book an appointment in your local branch to fill out the outbound transfer form.
 - Go into the bank, fill in the form with the help of the bank employee.
 - Provide IBKR's contact email for share transfers: fop-transfer-in@interactivebrokers.com
-- ${name of broker} will then start to process the transfer request. Now you can notify IBKR so they know the transfer is coming.
+- **${name of broker}** will then start to process the transfer request. Now you can notify IBKR so they know the transfer is coming.
 
 
-Bourse Direct
+### Bourse Direct
+
 If you don’t want to use IBKR, the only French brokers we are aware of that can DRS transfer are BNP Paribas (€75 fee), and Credit Mutuel (€40 fee).
 
-Commerzbank
-Once your shares and ${expected fee} are settled in Commerzbank, you first need to get a transfer form from Commerzbank, fill it out and send it back to them.
-Login to Commerzbank and start a support chat.
-Ask for an outbound FOP transfer form.
-Fill out the outbound FOP transfer form with the following information:
-Name of the financial Institution: INTERACTIVE BROKERS Ireland Limited.
-Address of the financial Institution: 10 Earlsfort Terrace, Dublin, D02 T380, Ireland.
-Contact Person: Kathrin – Asset Transfers.
-Phone: +41 41 726 9500
-Email address of broker: assettransferservice@interactivebrokers.com (this email address is exclusively for bank to bank correspondence).
-BIC/SWIFT Code: IBKRUS33XXX.
-Account number: Your Interactive Brokers account number.
-Full name of the account holder: Your full name.
-Send the form to Commerzbank and then follow the instructions below to let IBKR know to expect the transfer. Although, you can skip the last couple steps of signing and sending the Letter of Instruction.
+### Commerzbank
 
-Commsec
-${name of broker} can only perform ACAT transfers to other brokers. Currently this is unavailable with IBKR, so you’re left with the following Australian brokers than can DRS transfer: IG Australia (free to DRS transfer), Nabtrade (free to DRS transfer), Westpac ($10 to DRS transfer).
+- Once your shares and ${expected fee} are settled in Commerzbank, you first need to get a transfer form from Commerzbank, fill it out and send it back to them.
+- Login to Commerzbank and start a support chat.
+- Ask for an outbound FOP transfer form.
+- Fill out the outbound FOP transfer form with the following information:
+  - Name of the financial Institution: INTERACTIVE BROKERS Ireland Limited.
+Address of the financial Institution: 10 Earlsfort Terrace, Dublin, D02 T380, Ireland.
+  - Contact Person: Kathrin – Asset Transfers.
+  - Phone: +41 41 726 9500
+  - Email address of broker: assettransferservice@interactivebrokers.com (this email address is exclusively for bank to bank correspondence).
+  - BIC/SWIFT Code: IBKRUS33XXX.
+  - Account number: Your Interactive Brokers account number.
+  - Full name of the account holder: Your full name.
+- Send the form to Commerzbank and then follow the instructions below to let IBKR know to expect the transfer. Although, you can skip the last couple steps of signing and sending the Letter of Instruction.
+
+### Commsec
+
+**${name of broker}** can only perform ACAT transfers to other brokers. Currently this is unavailable with IBKR, so you’re left with the following Australian brokers than can DRS transfer: IG Australia (free to DRS transfer), Nabtrade (free to DRS transfer), Westpac ($10 to DRS transfer).
 
 Fortunately it’s free to ACAT transfer with Commsec.
 
-Consorsbank
+### Consorsbank
+
 ${name of broker} also charges a €40 fee to convert shares bought on the German market into their US ticker.
 
 Before you contact IBKR, you should start the process by getting a transfer form (link here), filling it out and sending it back. Then submit a transfer request with IBKR.
