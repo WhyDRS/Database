@@ -1,6 +1,6 @@
-##**If broker cannot DRS transfer:**
+# **If broker cannot DRS transfer:**
 
-## Intro/disclaimer:
+## **Intro/disclaimer:**
 **${name of broker}** does not DRS transfer shares, so you need to transfer your shares to another broker that can DRS transfer. **{if outside US}** A popular route has been through Interactive Brokers (IBKR), as they are available internationally and can DRS transfer for $5(US). For this example, IBKR is being used. **{if inside US}** A popular route has been through Fidelity, as they are able to reliably DRS transfer for free, and it’s a very simple process to request it. Fidelity have also been known to reimburse transfer fees when moving to them **{(up to $75)}**
 
 
@@ -21,7 +21,7 @@ The quickest way is to open an Interactive Broker account, buy a share, and requ
 
 **${name of broker}** may charge a fee for each Basic FOP Transfer. This means each time you want to transfer a specific stock (no matter how many shares) you are charged a fee.**}**
 
-## For database: Bespoke broker info - pre transfer instructions:
+## **For database: Bespoke broker info - pre transfer instructions:**
 
 ### Acorns
 
