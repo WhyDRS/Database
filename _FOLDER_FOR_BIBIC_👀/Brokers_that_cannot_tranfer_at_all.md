@@ -36,7 +36,7 @@ _Please note: selling at a profit, or from a tax advantaged account may create a
   - You may be adversely impacted by volatility.
   - You may benefit if there is a dip, but you might lose out if the price increases.
   - You may be adversely impacted by transaction fees. If your broker charges for each sale, then you increase the number of fees to pay.
-  - It's also worth bearing in mind that there will be **_{if outside US}_** currency conversion fees and**}** (depending on your broker) a DRS transfer fee.
+  - It's also worth bearing in mind that there will be **_{if outside US}_** currency conversion fees and **}** (depending on your broker) a DRS transfer fee.
 
 ### Option 3: Buy first, then sell
 
