@@ -78,7 +78,7 @@ for row in data:
 conn.commit()  # Commit all changes made during the transaction
 
 # Now query all data from the database for JSON conversion
-cursor.execute('SELECT * FROM Issers_TA')  # Execute an SQL query to select all records from the table
+cursor.execute('SELECT * FROM Issuers_TA')  # Execute an SQL query to select all records from the table
 rows = cursor.fetchall()  # Fetch all the rows from the query
 
 # Convert the rows to dictionaries
