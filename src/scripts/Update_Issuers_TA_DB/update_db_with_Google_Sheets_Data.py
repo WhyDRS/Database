@@ -24,7 +24,7 @@ cursor = conn.cursor()  # Create a cursor object to execute SQL commands
 
 # Create a table if it doesn't exist
 cursor.execute('''
-CREATE TABLE IF NOT EXISTS Issers_TA_new (
+CREATE TABLE IF NOT EXISTS Issuers_TA_new (
     Ticker TEXT PRIMARY KEY,
     Exchange TEXT,
     CompanyNameIssuer TEXT,
@@ -63,7 +63,7 @@ for row in data:
     # Check if the row has the correct number of elements (adjust 27 to match the expected number of columns)
     if len(row) == 27:
         cursor.execute('''
-        INSERT OR REPLACE INTO Issers_TA (
+        INSERT OR REPLACE INTO Issuers_TA (
             Ticker, Exchange, CompanyNameIssuer, TransferAgent, OnlinePurchase, DTCMemberNum, TAURL,
             TransferAgentPct, IREmails, IRPhoneNum, IRCompanyAddress, IRURL, IRContactInfo, SharesOutstanding,
             CUSIP, CompanyInfoURL, CompanyInfo, FullProgressPct, CIK, DRS, PercentSharesDRSd, SubmissionReceived,
