@@ -8,7 +8,7 @@ cursor = conn.cursor()
 
 # Create a new table with the correct schema
 cursor.execute('''
-CREATE TABLE IF NOT EXISTS Issers_TA_new (
+CREATE TABLE IF NOT EXISTS Issuers_TA_new (
     Ticker TEXT,
     Exchange TEXT,
     CompanyNameIssuer TEXT,
@@ -42,15 +42,15 @@ CREATE TABLE IF NOT EXISTS Issers_TA_new (
 
 # Migrate data from the old table to the new table
 cursor.execute('''
-INSERT INTO Issers_TA_new
-SELECT * FROM Issers_TA
+INSERT INTO Issuers_TA_new
+SELECT * FROM Issuers_TA
 ''')
 
 # Drop the old table
-cursor.execute('DROP TABLE Issers_TA')
+cursor.execute('DROP TABLE Issuers_TA')
 
 # Rename the new table to the old table name
-cursor.execute('ALTER TABLE Issers_TA_new RENAME TO Issers_TA')
+cursor.execute('ALTER TABLE Issuers_TA_new RENAME TO Issers_TA')
 
 # Commit the changes and close the connection
 conn.commit()
