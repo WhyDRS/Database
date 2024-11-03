@@ -1,4 +1,4 @@
-name: Change Primary Key Script
+name: Change Primary Key Of Issuers TA Database
 
 on:
   workflow_dispatch:
