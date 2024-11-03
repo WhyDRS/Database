@@ -1,4 +1,4 @@
-name: Update Database with Google Sheets Data
+name: Update Issuers TA Database with Google Sheets Data
 
 on:
   schedule:

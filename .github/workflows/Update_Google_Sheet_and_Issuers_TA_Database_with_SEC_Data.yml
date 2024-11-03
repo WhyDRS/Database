@@ -1,4 +1,4 @@
-name: Update Google Sheet + Database with SEC Data
+name: Update Google Sheet and Issuers TA Database with SEC Data
 
 on:
   schedule:
