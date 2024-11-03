@@ -17,7 +17,7 @@ sheet = gc.open_by_key(os.environ['SHEET_ID'])  # Open the spreadsheet using the
 worksheet = sheet.worksheet("Full_Database_Backend")  # Specify the worksheet name within the spreadsheet to work with
 
 # Connect to the SQLite database
-db_file_path = 'data/Full_Database_Backend.db'  # Define the path to the database file
+db_file_path = 'data/Issuers_TA/Issuers_TA.db'  # Define the path to the database file
 if not os.path.exists(db_file_path):
     raise FileNotFoundError(f"Database file not found: {db_file_path}")  # Raise an error if the database file does not exist
 conn = sqlite3.connect(db_file_path)  # Open a connection to the SQLite database

@@ -25,19 +25,19 @@ jobs:
       run: pip install requests pandas gspread oauth2client
 
     - name: Pull SEC data and update repository
-      run: python src/scripts/SEC_company_tickers_exchange.py
+      run: python src/scripts/SEC_Data_Scripts/SEC_company_tickers_exchange.py
 
     - name: Change Primary Key in Database
-      run: python src/scripts/change_primary_key_to_cik.py
+      run: python src/scripts/Update_Issuers_TA_DB/change_primary_key_to_cik.py
 
     - name: Update Database from JSON
-      run: python src/scripts/update_db_from_json.py
+      run: python src/scripts/Update_Issuers_TA_DB/update_db_with_SEC_data.py
 
     - name: Update Google Sheet
       env:
         SHEET_ID: ${{ secrets.SHEET_ID }}
         GOOGLE_API_KEYS: ${{ secrets.GOOGLE_API_KEYS }}
-      run: python src/scripts/update_google_sheet.py
+      run: python src/scripts/Update_Issuers_TA_Google_Sheet/update_google_sheet.py
 
     - name: Verify changes
       run: |
@@ -48,7 +48,7 @@ jobs:
       run: |
         git config --global user.name 'JamesAlfonse'
         git config --global user.email 'jamesalfonse@gmail.com'
-        git add data/company_tickers_exchange.json data/Full_Database_Backend.db
+        git add data/SEC_Ticker_Exchange_Company_CIK/company_tickers_exchange.json data/Issuers_TA/Issuers_TA.db
         git commit -m "Update SEC data and push to Google Sheets"
         git push
       env:

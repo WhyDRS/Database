@@ -4,8 +4,8 @@ import json
 import sqlite3
 
 # Path to the JSON file
-json_file_path = 'data/company_tickers_exchange.json'
-db_file_path = 'data/Full_Database_Backend.db'
+json_file_path = 'data/SEC_Ticker_Exchange_Company_CIK/company_tickers_exchange.json'
+db_file_path = 'data/Issuers_TA/Issuers_TA.db'
 
 # Read the JSON file
 with open(json_file_path, 'r') as json_file:
@@ -28,7 +28,7 @@ cursor = conn.cursor()
 # Update the database with the JSON data
 for index, row in df.iterrows():
     cursor.execute('''
-        INSERT INTO full_database_backend (CIK, Ticker, Exchange, CompanyNameIssuer)
+        INSERT INTO Issers_TA (CIK, Ticker, Exchange, CompanyNameIssuer)
         VALUES (?, ?, ?, ?)
         ON CONFLICT (CIK, Ticker) DO UPDATE SET
             Exchange = excluded.Exchange,
@@ -37,7 +37,7 @@ for index, row in df.iterrows():
 
 # Replace NULL, blank, and single space values with empty strings
 cursor.execute('''
-    UPDATE full_database_backend
+    UPDATE Issers_TA
     SET
         Ticker = IFNULL(NULLIF(TRIM(Ticker), ''), ''),
         Exchange = IFNULL(NULLIF(TRIM(Exchange), ''), ''),

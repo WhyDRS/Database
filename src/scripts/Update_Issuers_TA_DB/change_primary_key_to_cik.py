@@ -1,6 +1,6 @@
 import sqlite3
 
-db_file_path = 'data/Full_Database_Backend.db'
+db_file_path = 'data/Issuers_TA/Issuers_TA.db'
 
 # Connect to the SQLite database
 conn = sqlite3.connect(db_file_path)
@@ -8,7 +8,7 @@ cursor = conn.cursor()
 
 # Create a new table with the correct schema
 cursor.execute('''
-CREATE TABLE IF NOT EXISTS full_database_backend_new (
+CREATE TABLE IF NOT EXISTS Issers_TA_new (
     Ticker TEXT,
     Exchange TEXT,
     CompanyNameIssuer TEXT,
@@ -42,15 +42,15 @@ CREATE TABLE IF NOT EXISTS full_database_backend_new (
 
 # Migrate data from the old table to the new table
 cursor.execute('''
-INSERT INTO full_database_backend_new
-SELECT * FROM full_database_backend
+INSERT INTO Issers_TA_new
+SELECT * FROM Issers_TA
 ''')
 
 # Drop the old table
-cursor.execute('DROP TABLE full_database_backend')
+cursor.execute('DROP TABLE Issers_TA')
 
 # Rename the new table to the old table name
-cursor.execute('ALTER TABLE full_database_backend_new RENAME TO full_database_backend')
+cursor.execute('ALTER TABLE Issers_TA_new RENAME TO Issers_TA')
 
 # Commit the changes and close the connection
 conn.commit()

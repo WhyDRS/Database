@@ -12,8 +12,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Function to load data from the JSON file and initialize the DataTable
     function loadData() {
-        // Fetch data from the JSON file located at '/data/Full_Database_Backend.json'
-        fetch('/data/Full_Database_Backend.json')
+        // Fetch data from the JSON file located at '/data/Issuers_TA/Issuers_TA.json'
+        fetch('/data/Issuers_TA/Issuers_TA.json')
             .then(response => response.json()) // Parse the JSON response
             .then(data => {
                 // Extract headers (keys) from the first data object to use as column names

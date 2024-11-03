@@ -3,8 +3,8 @@ import os
 import json
 
 # Path to the JSON file
-json_file_path = 'data/company_tickers_exchange.json'
-csv_file_path = 'data/company_tickers_exchange.csv'
+json_file_path = 'data/SEC_Ticker_Exchange_Company_CIK/company_tickers_exchange.json'
+csv_file_path = 'data/SEC_Ticker_Exchange_Company_CIK/company_tickers_exchange.csv'
 
 # Read the JSON file
 with open(json_file_path, 'r') as json_file:

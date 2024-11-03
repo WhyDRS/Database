@@ -17,4 +17,4 @@ jobs:
         python-version: '3.x'
 
     - name: Run change_primary_key_to_cik.py script
-      run: python src/scripts/change_primary_key_to_cik.py
+      run: python src/scripts/Update_Issuers_TA_DB/change_primary_key_to_cik.py
