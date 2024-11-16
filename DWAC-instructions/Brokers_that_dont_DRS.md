@@ -13,19 +13,25 @@ The quickest way is to open an Interactive Broker account, buy a share, and requ
 
 **${name of broker}** charges a **${expected fee}** fee to transfer to another broker (Basic FOP Transfer and/or ACAT Transfer). This means each time you want to transfer a specific stock (no matter how many shares) you are charged **${expected fee}**. You will need to make sure you have **${expected fee}** settled in your account before you can transfer.**}**
 
+
 **{If free to transfer}**
 
 **${name of broker}** can transfer to another broker for free.**}**
 
+
 **{If no info on fees available}**
 
 **${name of broker}** may charge a fee for each Basic FOP Transfer. This means each time you want to transfer a specific stock (no matter how many shares) you are charged a fee.**}**
+
 
 ## **For database: Bespoke broker info - pre transfer instructions:**
 
 ### Acorns
 
 For more information on transferring out of **${name of broker}**, you can read their support page on it here (It says funds in the title, but goes on to talk about shares).
+
+
+
 
 ### Banca Sella
 
@@ -40,9 +46,14 @@ Before you contact IBKR, you should start the process by making an appointment t
 - **${name of broker}** will then start to process the transfer request. Now you can notify IBKR so they know the transfer is coming.
 
 
+
+
 ### Bourse Direct
 
 If you don’t want to use IBKR, the only French brokers we are aware of that can DRS transfer are BNP Paribas (€75 fee), and Credit Mutuel (€40 fee).
+
+
+
 
 ### Commerzbank
 
@@ -60,292 +71,345 @@ Address of the financial Institution: 10 Earlsfort Terrace, Dublin, D02 T380, Ir
   - Full name of the account holder: Your full name.
 - Send the form to Commerzbank and then follow the instructions below to let IBKR know to expect the transfer. Although, you can skip the last couple steps of signing and sending the Letter of Instruction.
 
+
+
+
 ### Commsec
 
 **${name of broker}** can only perform ACAT transfers to other brokers. Currently this is unavailable with IBKR, so you’re left with the following Australian brokers than can DRS transfer: IG Australia (free to DRS transfer), Nabtrade (free to DRS transfer), Westpac ($10 to DRS transfer).
 
-Fortunately it’s free to ACAT transfer with Commsec.
+Fortunately it’s free to ACAT transfer with **${name of broker}**.
+
+
+
 
 ### Consorsbank
 
-${name of broker} also charges a €40 fee to convert shares bought on the German market into their US ticker.
+**${name of broker}** also charges a €40 fee to convert shares bought on the German market into their US ticker.
 
-Before you contact IBKR, you should start the process by getting a transfer form (link here), filling it out and sending it back. Then submit a transfer request with IBKR.
+Before you contact IBKR, you should start the process by getting a **${name of broker}** transfer form (link here), filling it out and sending it back. Then submit a transfer request with IBKR.
 
+Send the transfer form to **${name of broker}** (Consorsbank - Bahnhofstraße 55, 90402 Nürnberg) along with the following information:
 
-Send the transfer form to ${name of broker} (Consorsbank - Bahnhofstraße 55, 90402 Nürnberg) along with the following information:
-Name of the financial Institution: INTERACTIVE BROKERS Ireland Limited.
-Phone: +41-41-726-9500.
-Email address of broker: assettransferservice@interactivebrokers.com (this email address is exclusively for bank to bank correspondence).
-BIC/SWIFT (BLZ) Code: IBKRUS33XXX.
-Account number: Your Interactive Brokers account number (starts with "U").
-Details of the sender: Your information.
-Details of the receiver: Your information.
+- Name of the financial Institution: INTERACTIVE BROKERS Ireland Limited.
+- Phone: +41-41-726-9500.
+- Email address of broker: assettransferservice@interactivebrokers.com (this email address is exclusively for bank to bank correspondence).
+- BIC/SWIFT (BLZ) Code: IBKRUS33XXX.
+- Account number: Your Interactive Brokers account number (starts with "U").
+- Details of the sender: Your information.
+- Details of the receiver: Your information.
 Now you can follow the IBKR instructions. Although, you can skip the last couple of steps of signing and sending the Letter of Instruction.
 
 
-CREDEM Banca
+
+
+### CREDEM Banca
+
 If you don’t want to use IBKR, the Italian brokers that are known to DRS transfer are Directa SIM ($75 fee), and MeXeM ($5 fee).
 
-Before you contact IBKR, you should start the process by opening a support ticket on ${name of broker}'s website. Then make a Letter of Instruction with IBKR.
-Log in to your ${name of broker} account.
+Before you contact IBKR, you should start the process by opening a support ticket on **${name of broker}**'s website. Then make a Letter of Instruction with IBKR.
+
+- Log in to your **${name of broker}** account.
 Open a new support ticket requesting the transfer of your shares to IBKR.
-The personal intern will give you the ok along with their email address which you will need for the IBKR form.
-Once you have the completed IBKR Letter of Instruction, send it to the same personal intern’s email address.
+- The personal intern will give you the ok along with their email address which you will need for the IBKR form.
+- Once you have the completed IBKR Letter of Instruction, send it to the same personal intern’s email address.
 
 
-Degiro
-Before you contact IBKR, you need to send ${name of broker} an email with a filled out transfer form and screenshot of your IBKR account.
-The transfer form is available here.
+
+
+### Degiro
+
+Before you contact IBKR, you need to send **${name of broker}** an email with a filled out transfer form and screenshot of your IBKR account.
+
+The transfer form is available here (link here).
 Fill the ”Outgoing Transfer of Investment Portfolio form” with the following information:
-Under Positions to be transferred you can put all of the ${Stock Symbol} shares you wish to transfer in one row.
-Product Name: ${company name}.
-ISIN: ${ISIN}.
-Quantity: How many shares you want to transfer.
-Exchange: The Exchange you bought the shares through. This will be in your contract notes.
+
+- Under Positions to be transferred you can put all of the **${Stock Symbol}** shares you wish to transfer in one row.
+- Product Name: **${company name}**.
+- ISIN: **${ISIN}**.
+- Quantity: How many shares you want to transfer.
+- Exchange: The Exchange you bought the shares through. This will be in your contract notes.
 Securities credit to be transferred can be left blank.
-Account details (DEGIRO): Provide your username and full name.
-Account details (IBKR):
-Name of the financial Institution: INTERACTIVE BROKERS.
-Account number: Your Interactive Brokers account number.
-Full name of the account holder : Your full name.
-Email address of broker:  fop-transfer-in@interactivebrokers.com
-This account is from the following country : Put in the country you registered your IBKR account in.
-Print out the form, sign it, and scan it back in.
-Send an email to clients@degiro.ie if you weren't given a region specific email. (eg. transfers@degiro.fr in France, overboeken@degiro.nl in Netherlands)
-For the subject write: “${Stock Symbol} Position transfer demand 14738/302”.
-For the email write: “I want an outbound Basic FOP Transfer of my XX ${Stock Symbol} shares to Interactive Brokers. I accept the transfer fees”.
-Attach the screenshot of your IBKR account, and the transfer form.
-Hit "Send".
+- Account details (DEGIRO): Provide your username and full name.
+- Account details (IBKR):
+  - Name of the financial Institution: INTERACTIVE BROKERS.
+  - Account number: Your Interactive Brokers account number.
+  - Full name of the account holder : Your full name.
+  - Email address of broker:  fop-transfer-in@interactivebrokers.com
+  - This account is from the following country : Put in the country you registered your IBKR account in.
+- Print out the form, sign it, and scan it back in.
+- Send an email to clients@degiro.ie if you weren't given a region specific email. (eg. transfers@degiro.fr in France, overboeken@degiro.nl in Netherlands)
+- For the subject write: “**${Stock Symbol}** Position transfer demand 14738/302”.
+- For the email write: “I want an outbound Basic FOP Transfer of my XX **${Stock Symbol}** shares to Interactive Brokers. I accept the transfer fees”.
+- Attach the screenshot of your IBKR account, and the transfer form.
+- Click on "Send".
 Now you can follow the IBKR instructions. Although, you can skip the last couple steps of signing and sending the Letter of Instruction.
 
 
-Elana Trading
-${name of broker} uses SaxoBank as it's broker for global markets, so they charge an extortionate $1000(US) to DRS transfer.
 
 
-As it's the highest fee to DRS transfer, this guide focuses on transferring to a broker that can DRS transfer for less. ${name of broker} offers broker to broker transfers for just 12BGN + %1 of the market value of the assets being transferred. Although they may use Saxo Bank's fees for non-Bulgarian stocks, in which case it is €25 per transfer (recently Saxo increased this in Belgium to a €75 fee).
+### Elana Trading
+
+**${name of broker}** uses SaxoBank as it's broker for global markets, so they charge an extortionate $1000(US) to DRS transfer.
+
+As it's the highest fee to DRS transfer, this guide focuses on transferring to a broker that can DRS transfer for less. **${name of broker}** offers broker to broker transfers for just 12BGN + %1 of the market value of the assets being transferred. Although they may use Saxo Bank's fees for non-Bulgarian stocks, in which case it is €25 per transfer (recently Saxo increased this in Belgium to a €75 fee).
+
+A popular route to transfer shares from **${name of broker}** to **${transfer agent name}** has been through Interactive Brokers (IBKR) as they can DRS transfer reliably for $5.
 
 
-A popular route to transfer shares from ${name of broker} to ${transfer agent name} has been through Interactive Brokers (IBKR) as they can DRS transfer reliably for $5.
 
 
+### Exante
 
+Before you contact IBKR, you need to send **${name of broker}** an email with a filled out transfer form and screenshot of your IBKR account.
 
-Exante
-Before you contact IBKR, you need to send ${name of broker} an email with a filled out transfer form and screenshot of your IBKR account.
-The transfer form is available here.
+The transfer form is available here (link here).
 Fill the ”Security Transfer Request form” with the following information:
-Name/Company Name: Provide your username and full name.
-Account Number ay EXT: Provide your Exante account number
-Under "Securities details" you can fill in how many ${Stock Symbol} shares you want to transfer.
-Security type: Shares
-Security Name: ${company name}.
-ISIN Code: ${ISIN}.
-Exchange: The Exchange you bought the shares through. This will be in your contract notes.
-Quantity: How many shares you want to transfer.
-Price can be left blank.
-Account details (IBKR):
-Name of the financial Institution: INTERACTIVE BROKERS.
-Contact person and details: assettransferservice@interactivebrokers.com.
+
+- Name/Company Name: Provide your username and full name.
+- Account Number at EXT: Provide your Exante account number
+- Under "Securities details" you can fill in how many **${Stock Symbol}** shares you want to transfer.
+- Security type: Shares
+- Security Name: **${company name}**.
+- ISIN Code: **${ISIN}**.
+- Exchange: The Exchange you bought the shares through. This will be in your contract notes.
+- Quantity: How many shares you want to transfer.
+- Price can be left blank.
+- Account details (IBKR):
+  - Name of the financial Institution: INTERACTIVE BROKERS.
+  - Contact person and details: assettransferservice@interactivebrokers.com.
 Account number: Your Interactive Brokers account number.
-Account holder name: Your full name.
-Transfer Reference: Name, number and date of agreement between you and IBKR
-Standard Settlement Instruction: Leave blank
-Transfer Details: Basic FoP Transfer.
-Face Value: Leave blank
-Print out the form, sign and date it, and scan it back in.
-Send an email to support@Exante.eu.
-For the subject write: “Outgoing ${Stock Symbol} Position Transfer Demand”.
-For the email write: “I want an outbound Basic FOP Transfer of my XX ${Stock Symbol} shares to Interactive Brokers. I accept the transfer fees”.
-Attach the screenshot of your IBKR account, and the transfer form, then click "Send".
+  - Account holder name: Your full name.
+  - Transfer Reference: Name, number and date of agreement between you and IBKR
+  - Standard Settlement Instruction: Leave blank
+  - Transfer Details: Basic FoP Transfer.
+  - Face Value: Leave blank
+- Print out the form, sign and date it, and scan it back in.
+- Send an email to support@Exante.eu.
+- For the subject write: “Outgoing **${Stock Symbol**} Position Transfer Demand”.
+- For the email write: “I want an outbound Basic FOP Transfer of my XX **${Stock Symbol}** shares to Interactive Brokers. I accept the transfer fees”.
+- Attach the screenshot of your IBKR account, and the transfer form, then click "Send".
 Now you can follow the IBKR instructions. Although, you can skip the last couple steps of signing and sending the Letter of Instruction.
 
 
-HSBC HK
-Before you contact IBKR, you need to call ${name of broker} to request the transfer, then go into a physical branch to submit some paperwork.
-Call ${name of broker} on (852)-2233-3000.
-Ask to transfer out your shares.
-The agent will take you through the steps.
-You will then need to go to a physical branch to fill in some forms in order to submit the transfer request.
+
+
+### HSBC HK
+
+Before you contact IBKR, you need to call **${name of broker}** to request the transfer, then go into a physical branch to submit some paperwork.
+
+- Call **${name of broker}** on (852)-2233-3000.
+- Ask to transfer out your shares.
+- The agent will take you through the steps.
+- You will then need to go to a physical branch to fill in some forms in order to submit the transfer request.
+
 Once you have done this, you can follow the IBKR instructions. Although, you can skip the last couple steps of signing and sending the Letter of Instruction.
 
 
-Nordnet
-${name of broker} will only allow transfers from ASKs. Shares in IKZs cannot be transferred.
 
-Rakuten
+
+### Nordnet
+
+**${name of broker}** will only allow transfers from ASKs. Shares in IKZs cannot be transferred.
+
+
+
+
+### Rakuten
+
 It’s important to know that IBKR is known as IBSJ in Japan, so adjust the instructions accordingly.
 
+IBSJ mentions that you will need to enter your 21-digit JASDEC participant account code (Kanyushakoza Code) at the delivering broker (**${name of broker}**) in the "Client Account Number at Financial Institution" field. After submitting the application via Client Portal, please be sure to submit the request and instructions to the delivering broker (**${name of broker}**).
 
-IBSJ mentions that you will need to enter your 21-digit JASDEC participant account code (Kanyushakoza Code) at the delivering broker (${name of broker}) in the "Client Account Number at Financial Institution" field. After submitting the application via Client Portal, please be sure to submit the request and instructions to the delivering broker ( ${name of broker}).
 
-Santander
+
+
+### Santander
+
 This guide was built using the process from Santander Poland.
 
+Before you contact IBKR, you need to fill in a transfer form online with **${name of broker}**.
 
-Before you contact IBKR, you need to fill in a transfer form online with ${name of broker}.
-Login to ${name of broker} and click on "My Services".
-Then select "Instructions", "New Instruction".
-Select "Account", "Instructions to transfer financial instruments".
-You will be prompted to enter the financial instrument you want to transfer.
-Name of financial instrument: ${company name}.
-ISIN: ${ISIN}.
-Quantity: How many shares you want to transfer.
-Next you will be asked for the details of the receiving brokerage:
-Name of the financial Institution: INTERACTIVE BROKERS Europe Zrt.
-Account number: Your Interactive Brokers account number.
-Full name of the account holder: Your full name.
+- Login to **${name of broker}** and click on "My Services".
+- Then select "Instructions", "New Instruction".
+- Select "Account", "Instructions to transfer financial instruments".
+- You will be prompted to enter the financial instrument you want to transfer.
+  - Name of financial instrument: **${company name}**.
+  - ISIN: **${ISIN}**.
+  - Quantity: How many shares you want to transfer.
+- Next you will be asked for the details of the receiving brokerage:
+  - Name of the financial Institution: INTERACTIVE BROKERS Europe Zrt.
+  - Account number: Your Interactive Brokers account number.
+  - Full name of the account holder: Your full name.
 Once you have done this, you can follow the IBKR instructions. Although, you can skip the last couple steps of signing and sending the Letter of Instruction.
 
 
 
 
+### Saxobank
 
+**${name of broker}** has stopped outbound DRS transfers in the Netherlands.
 
-Saxobank
-${name of broker} has stopped outbound DRS transfers in the Netherlands.
+In some countries **${name of broker}** has started offering DRS transfers for a $25(US) fee, down from $1000(US) in 2021. Although they still list $1000 as the fee for some countries.
 
+As it used to be the highest fee to DRS transfer, and they are now refusing DRS transfer requests in the Netherlands, this guide focuses on transferring to a broker that can DRS transfer for less. **${name of broker}** offers broker to broker transfers for just €25. Although in 2023 they increased this in Belgium to a €75 fee.
 
-In some countries ${name of broker} has started offering DRS transfers for a $25(US) fee, down from $1000(US) in 2021. Although they still list $1000 as the fee for some countries.
-
-
-As it used to be the highest fee to DRS transfer, and they are now refusing DRS transfer requests in the Netherlands, this guide focuses on transferring to a broker that can DRS transfer for less. ${name of broker} offers broker to broker transfers for just €25. Although in 2023 they increased this in Belgium to a €75 fee.
-
-
-More information on how to transfer shares from ${name of broker} can be found here.
+More information on how to transfer shares from **${name of broker}** can be found here.
 
 
 
 
+### Scalable Capital
+
+As **${name of broker}** uses Baader Bank for investing, you must contact Baader Bank about the transfer and use your Baader Bank account number instead of your **${name of broker}** one.
 
 
 
 
-Scalable Capital
-As Scalable Capital uses Baader Bank for investing, you must contact Baader Bank about the transfer and use your Baader Bank account number instead of your Scalable Capital one.
+### SelfWealth
 
-SelfWealth
-Please Note: SelfWealth requires your name to match exactly with the account you send the shares to. So make sure you have spelled everything the same, and included middle names if necessary.
+Please Note: **${name of broker}** requires your name to match exactly with the account you send the shares to. So make sure you have spelled everything the same, and included middle names if necessary.
 
+Before you contact IBKR, you need to fill in a transfer form online with **${name of broker}**.
 
-Before you contact IBKR, you need to fill in a transfer form online with ${name of broker}.
-Login to ${name of broker} and start a support chat.
-Ask for an outbound transfer form.
-Fill out the outbound transfer form with the following information:
-Name of the financial Institution: INTERACTIVE BROKERS Ireland Limited.
-Address of the financial Institution: 10 Earlsfort Terrace, Dublin, D02 T380, Ireland.
-Contact Person: Kathrin – Asset Transfers
-Phone: +41-41-726-9500.
-Email address of broker: assettransferservice@interactivebrokers.com (this email address is exclusively for bank to bank correspondence).
-BIC/SWIFT Code: IBKRUS33XXX.
-Account number: Your Interactive Brokers account number.
-Full name of the account holder : Your full name.
+- Login to **${name of broker}** and start a support chat.
+- Ask for an outbound transfer form.
+- Fill out the outbound transfer form with the following information:
+- Name of the financial Institution: INTERACTIVE BROKERS Ireland Limited.
+- Address of the financial Institution: 10 Earlsfort Terrace, Dublin, D02 T380, Ireland.
+- Contact Person: Kathrin – Asset Transfers
+- Phone: +41-41-726-9500.
+- Email address of broker: assettransferservice@interactivebrokers.com (this email address is exclusively for bank to bank correspondence).
+- BIC/SWIFT Code: IBKRUS33XXX.
+- Account number: Your Interactive Brokers account number.
+- Full name of the account holder: Your full name.
 Once you have sent this form to ${name of broker}, you can follow the IBKR instructions. Although, you can skip the last couple steps of signing and sending the Letter of Instruction.
 
 
-SoFi HK
-Before you contact IBKR, you need to contact ${name of broker} to start the request.
-You need to contact the ${name of broker} Live Chat Support and ask for an “Outbound FOP Transfer”. They send all the information needed, and a form attached for you to complete.
-Fill the ”Stock Instruction Form” with the following information:
-Your Account Name and ${name of broker} Account Number.
-Check the box next to Stock Transfer, and jump to section C.
-Firm Name : INTERACTIVE BROKERS.
-ID : N/A.
-Contact Person Name: assettransferservice@interactivebrokers.com.
-Contact Person Phone: N/A (Or put IBKR's HK customer care number : +852-2456-7907).
-Account Name: Your Interactive Brokers account Name.
-Account Number: Your Interactive Brokers account number.
-Settlement date (format DD/MM/YYYY).
-Stock Code / Stock Name / Quantity:
-${ISIN} / ${Stock Symbol} / XX
+
+
+### SoFi HK
+
+Before you contact IBKR, you need to contact **${name of broker}** to start the request.
+
+You can contact the **${name of broker}** Live Chat Support and ask for an “Outbound FOP Transfer”. They will send all the information needed, and a form attached for you to complete.
+
+- Fill the ”Stock Instruction Form” with the following information:
+- Your Account Name and ${name of broker} Account Number.
+- Check the box next to Stock Transfer, and jump to section C.
+- Firm Name : INTERACTIVE BROKERS.
+- ID : N/A.
+- Contact Person Name: assettransferservice@interactivebrokers.com.
+- Contact Person Phone: N/A (Or put IBKR's HK customer care number : +852-2456-7907).
+- Account Name: Your Interactive Brokers account Name.
+- Account Number: Your Interactive Brokers account number.
+- Settlement date (format DD/MM/YYYY).
+- Stock Code / Stock Name / Quantity: **${ISIN}** / **${Stock Symbol}** / XX
 Download, print, fill, scan and attach the form to your transfer request.
 
-Swedbank
-This guide applies to Swedbank "Securities" accounts. If you have an "investment" account with them, you can message them online and pay a €25 fee to make the transfer from the "investment" account.
 
 
-Tiger Brokers
-Before you contact IBKR, you need to email ${name of broker} with a filled out transfer form and screenshot of your IBKR account.
-Contact the ${name of broker} support team by email and request an outgoing transfer to another broker.
-They will send you a form to fill out.
-Fill the ”Request For Transfer Of Shares In/Out” with the following information:
-Account Name: Your name.
-NRIC / Passport number: Your Passport number.
-Account Number: Your ${name of broker} Account Number.
-Check: TRANSFER OUT.
-Counterparty (IBKR): Counterparty Name (Broker/ Bank/ Custodian: INTERACTIVE BROKERS LLC Counterparty.
-Contact Person Name: INTERACTIVE BROKERS LLC .
-Counterparty Contact Person Email Address: assettransferservice@interactivebrokers.com.
-Counterparty Contact Person Tel No.: 1(312)542-6901 Customer.
-Account No. in Counterparty: Your Interactive Brokers account number.
-Customer Account Name in Counterparty: Your Interactive Brokers account name.
-Transfer Type: Check “FOP”.
-Value Date: Current Date.
-Check: U.S. Market.
-Counterparty DTC No.: (IBKRs DTC Number) 0534.
-Issuer/Company Name: ${company name}.
-Symbol and CUSIP/ISIN: ${Stock Symbol}, ${CUSIP} or ${ISIN}
-Quantity: How many shares you want to transfer.
-Print out the form, sign it, and scan it back in.
-Send an email to clientservice@tigerbrokers.com.au
-For the subject write: “ ${Stock Symbol} Position Transfer”.
-For the email write:
-“I want an outbound Basic FOP Transfer of my XX  ${Stock Symbol} shares to Interactive Brokers. I accept the transfer fees”.
-Attach the screenshot of your IBKR account, and the transfer form.
-Hit send.
-Once you have sent this form to ${name of broker}, you can follow the IBKR instructions. Although, you can skip the last couple steps of signing and sending the Letter of Instruction.
+
+### Swedbank
+
+This guide applies to **${name of broker}** "Securities" accounts. If you have an "investment" account with them, you can message them online and pay a €25 fee to make the transfer from the "investment" account.
 
 
-Tradernet
-Before you contact IBKR, you need to contact ${name of broker} to start the request.
-Log in to your ${name of broker} account and on the left hand side of the screen, select "Account Settings".
-From the options that drop down, select "Securities Transfer".
-Make sure you have the "Securities Transfer" tab selected at the top of the page, and not the "Batch Transfer Between Your Accounts" tab.
-Under "Type of Transfer" select "Debit from a Custody Account".
-Select which account you will be removing the shares from.
-Then enter the Security's ticker (${Stock Symbol}) and the name of the company (${company name}).
-Under "Type of Financial Instrument" select "Ordinary Stock".
-Then enter its ISIN (${ISIN}).
-Under "Volume" enter how many shares you want to transfer.
-Under "Book Value" enter the current price per share.
-Then select which currency it's in (USD).
-If you are asked for book value again, re-enter the same information, but in pennies (I.E. if the price is $123.45, you enter 12345).
-Under "PSET" Write: DTC.
-Under "REAG/DEAG" write the name of the receiving broker (in this example it's Interactive Brokers).
-Then under "Additional bank details" you can include the following:
-IBKR Phone number: +41-41-726-9500.
-Email address of broker: assettransferservice@interactivebrokers.com (this email address is exclusively for bank to bank correspondence).
-BIC/SWIFT (BLZ) Code: IBKRUS33XXX.
-Account number: Your Interactive Brokers account number (starts with 'U').
-Click on "Confirm" and your request is submitted. You can check in on it under the "Previously Submitted Orders" part of the page.
+
+
+### Tiger Brokers
+
+Before you contact IBKR, you need to email **${name of broker}** with a filled out transfer form and screenshot of your IBKR account.
+
+- Contact the **${name of broker}** support team by email and request an outgoing transfer to another broker.
+- They will send you a form to fill out.
+- Fill the ”Request For Transfer Of Shares In/Out” with the following information:
+- Account Name: Your name.
+- NRIC / Passport number: Your Passport number.
+- Account Number: Your **${name of broker}** Account Number.
+- Check: TRANSFER OUT.
+- Counterparty (IBKR): Counterparty Name (Broker/ Bank/ Custodian: INTERACTIVE BROKERS LLC Counterparty.
+- Contact Person Name: INTERACTIVE BROKERS LLC.
+- Counterparty Contact Person Email Address: assettransferservice@interactivebrokers.com.
+- Counterparty Contact Person Tel No.: 1(312)542-6901.
+- Account No. in Counterparty: Your Interactive Brokers account number.
+- Customer Account Name in Counterparty: Your Interactive Brokers account name.
+- Transfer Type: Check “FOP”.
+- Value Date: Current Date.
+- Check: U.S. Market.
+- Counterparty DTC No.: (IBKRs DTC Number) 0534.
+- Issuer/Company Name: **${company name}**.
+- Symbol and CUSIP/ISIN: **${Stock Symbol}**, **${CUSIP}** or **${ISIN}**
+- Quantity: How many shares you want to transfer.
+- Print out the form, sign it, and scan it back in.
+- Send an email to clientservice@tigerbrokers.com.au
+- For the subject write: “ **${Stock Symbol}** Position Transfer”.
+- For the email write:
+“I want an outbound Basic FOP Transfer of my XX  **${Stock Symbol}** shares to Interactive Brokers. I accept the transfer fees”.
+- Attach the screenshot of your IBKR account, and the transfer form.
+- Click on send.
+Once you have sent this form to **${name of broker}**, you can follow the IBKR instructions. Although, you can skip the last couple steps of signing and sending the Letter of Instruction.
+
+
+
+
+### Tradernet
+
+Before you contact IBKR, you need to contact **${name of broker}** to start the request.
+
+- Log in to your **${name of broker}** account and on the left hand side of the screen, select "Account Settings".
+- From the options that drop down, select "Securities Transfer".
+- Make sure you have the "Securities Transfer" tab selected at the top of the page, and not the "Batch Transfer Between Your Accounts" tab.
+- Under "Type of Transfer" select "Debit from a Custody Account".
+- Select which account you will be removing the shares from.
+- Then enter the Security's ticker (**${Stock Symbol}**) and the name of the company (**${company name}**).
+- Under "Type of Financial Instrument" select "Ordinary Stock".
+- Then enter its ISIN (**${ISIN}**).
+- Under "Volume" enter how many shares you want to transfer.
+- Under "Book Value" enter the current price per share.
+- Then select which currency it's in (USD).
+- If you are asked for book value again, re-enter the same information, but in pennies (I.E. if the price is $123.45, you enter 12345).
+- Under "PSET" Write: DTC.
+- Under "REAG/DEAG" write the name of the receiving broker (in this example it's Interactive Brokers).
+- Then under "Additional bank details" you can include the following:
+- IBKR Phone number: +41-41-726-9500.
+- Email address of broker: assettransferservice@interactivebrokers.com (this email address is exclusively for bank to bank correspondence).
+- BIC/SWIFT (BLZ) Code: IBKRUS33XXX.
+- Account number: Your Interactive Brokers account number (starts with 'U').
+- Click on "Confirm" and your request is submitted. You can check in on it under the "Previously Submitted Orders" part of the page.
 Now you can submit a transfer request with the receiving broker (IBKR):
 
 
-Wealthfront
-It is unconfirmed if Wealthfront can DRS transfer, Wealthfront only states they can transfer to ACATS-eligible firms and they can transfer to them for free. It may be worth asking if they can DRS transfer instead to save yourself some time.
 
 
-Zaba
-Before you contact IBKR, you need to contact ${name of broker} to start the request.
-Write an email to: brokeri@unicreditgroup.zaba.hr.
-For the subject line write: Outbound FOP transfer to IBKR.
-For the message, request a transfer of your shares to IBKR, and include your ${name of broker} account number.
-Ask them to email IBKR at fop-transfer-in@interactivebrokers.com.
-You should receive a reply from ${name of broker} giving you the go ahead for the transfer.
+### Wealthfront
+
+It is unconfirmed if **${name of broker}** can DRS transfer, **${name of broker}** only states they can transfer to ACATS-eligible firms and they can transfer to them for free. It may be worth asking if they can DRS transfer instead to save yourself some time.
+
+
+
+
+### Zaba
+
+Before you contact IBKR, you need to contact **${name of broker}** to start the request.
+
+- Write an email to: brokeri@unicreditgroup.zaba.hr.
+- For the subject line write: Outbound FOP transfer to IBKR.
+- For the message, request a transfer of your shares to IBKR, and include your **${name of broker}** account number.
+- Ask them to email IBKR at fop-transfer-in@interactivebrokers.com.
+- You should receive a reply from **${name of broker}** giving you the go ahead for the transfer.
 Now you can inform IBKR. Although, you can skip the last couple steps of signing and sending the Letter of Instruction.
 
 
 
 
 ## Transfer Instructions:
-{if outside US}
+
+**{if outside US}**
 How to Transfer:
-Once your shares are settled in ${name of broker}, you can start the process by making a Letter of Instruction with IBKR.
+Once your shares are settled in **${name of broker}**, you can make the transfer request by making a Letter of Instruction with IBKR.
 
-
-Making the Letter of Instruction with IBKR:
-Login in your IBKR account, and click on “Transfer & Pay” from the top menu and select “Transfer Positions”.
+- Login in your IBKR account, and click on “Transfer & Pay” from the top menu and select “Transfer Positions”.
 On the next page select “Incoming”.
 On the next page select “All Other Regions” from the drop down menu.
 On the next page select “Basic FOP Transfer".
@@ -366,9 +430,13 @@ Sign the Letter of Instruction with a pen.
 Scan it back in, or take a photo of it.
 
 
-{if inside US}
+
+
+**{if inside US}**
 How to Transfer:
-Open an account with Fidelity. When it asks you how you want to fund your account, select transfer from another brokerage. Fidelity will pull your shares from ${name of broker}. This will take roughly 3 days.
+Open an account with Fidelity. When it asks you how you want to fund your account, select transfer from another brokerage. Fidelity will pull your shares from **${name of broker}**. This will take roughly 3 days.
+
+
 
 
 ## For Database: Bespoke broker info - after transfer instructions:
