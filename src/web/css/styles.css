@@ -330,3 +330,11 @@ div.dt-button-collection .dt-button[aria-pressed="true"]:hover {
     /* Ensure text color remains white */
     color: #FFFFFF !important;
 }
+
+/* Styles for the footer message */
+.footer {
+    text-align: center;
+    font-size: 1em;
+    margin-top: 30px;
+    color: #3E3E3E;
+}
