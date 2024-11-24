@@ -17,9 +17,21 @@ h1 {
     /* Set the heading text color */
     color: #134F9B;
     /* Add space below the heading */
-    margin-bottom: 30px;
+    margin-bottom: 10px;
     /* Set the font size */
     font-size: 2em;
+}
+
+/* Styles for informational text under the heading */
+.info-text {
+    /* Center the text */
+    text-align: center;
+    /* Set the font size */
+    font-size: 1em;
+    /* Set the text color */
+    color: #3E3E3E;
+    /* Add margin below the text */
+    margin-bottom: 20px;
 }
 
 /* Styles for the loading overlay */
