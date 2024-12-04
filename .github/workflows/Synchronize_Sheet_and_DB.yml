@@ -1,4 +1,4 @@
-name: Update Database with Google Sheets Data
+name: Synchronize Google Sheet and Database
 
 on:
   schedule:
@@ -9,7 +9,7 @@ concurrency:
   group: database-update
 
 jobs:
-  update_database:
+  sync_data:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout Repository
@@ -22,24 +22,21 @@ jobs:
     
     - name: Install Python Dependencies
       run: |
-        pip install gspread oauth2client
+        pip install pandas gspread oauth2client
     
-    - name: Read Google Sheet and Write to SQL Database
+    - name: Synchronize Google Sheet and Database
       env:
         SHEET_ID: ${{ secrets.SHEET_ID }}
         GOOGLE_API_KEYS: ${{ secrets.GOOGLE_API_KEYS }}
       run: |
-        python 'src/scripts/update_sql.py'
-
-    - name: Change Primary Key in Database
-      run: python src/scripts/change_primary_key_to_cik.py
+        python 'src/scripts/synchronize_google_sheet_and_db.py'
     
     - name: Commit and Push Database Files
       run: |
-        git config --global user.name 'JamesAlfonse'
-        git config --global user.email 'jamesalfonse@gmail.com'
-        git add 'data/Full_Database_Backend.db' 'data/Full_Database_Backend.json'  # Add both the database and the JSON file
-        git commit -m "Updated database and JSON files" -a || echo "No changes to commit."
+        git config --global user.name 'YourName'
+        git config --global user.email 'YourEmail@example.com'
+        git add 'data/Full_Database_Backend.db' 'data/Full_Database_Backend.json'
+        git commit -m "Synchronized database with Google Sheet" -a || echo "No changes to commit."
         git push
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
