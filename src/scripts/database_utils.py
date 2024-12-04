@@ -10,15 +10,36 @@ class DatabaseHandler:
     def ensure_database_schema(self):
         conn = sqlite3.connect(self.db_file_path)
         cursor = conn.cursor()
-        # Define column names
-        columns = [f'col{i}' for i in range(27)]
-        columns_sql = ',\n'.join([f'{col} TEXT' for col in columns])
-        primary_keys = 'col18, col0, col2'  # CIK, Ticker, CompanyNameIssuer
-
-        cursor.execute(f'''
+        cursor.execute('''
         CREATE TABLE IF NOT EXISTS full_database_backend (
-            {columns_sql},
-            PRIMARY KEY ({primary_keys})
+            Ticker TEXT,
+            Exchange TEXT,
+            CompanyNameIssuer TEXT,
+            TransferAgent TEXT,
+            OnlinePurchase TEXT,
+            DTCMemberNum TEXT,
+            TAURL TEXT,
+            TransferAgentPct TEXT,
+            IREmails TEXT,
+            IRPhoneNum TEXT,
+            IRCompanyAddress TEXT,
+            IRURL TEXT,
+            IRContactInfo TEXT,
+            SharesOutstanding TEXT,
+            CUSIP TEXT,
+            CompanyInfoURL TEXT,
+            CompanyInfo TEXT,
+            FullProgressPct TEXT,
+            CIK TEXT,
+            DRS TEXT,
+            PercentSharesDRSd TEXT,
+            SubmissionReceived TEXT,
+            TimestampsUTC TEXT,
+            LearnMoreAboutDRS TEXT,
+            CertificatesOffered TEXT,
+            SandP500 TEXT,
+            IncorporatedIn TEXT,
+            PRIMARY KEY (CIK, Ticker, CompanyNameIssuer)
         )
         ''')
         conn.commit()
@@ -38,22 +59,22 @@ class DatabaseHandler:
 
         conn = sqlite3.connect(self.db_file_path)
         cursor = conn.cursor()
-        for _, row in df_updates.iterrows():
-            CIK = row['col18']  # 19th column
-            Ticker = row['col0']  # 1st column
-            CompanyNameIssuer = row['col2']  # 3rd column
-            columns_to_update = [f'col{i}' for i in range(27) if i not in [0, 2, 18] and pd.notna(row[f'col{i}'])]
-            set_clause = ', '.join([f"{col} = ?" for col in columns_to_update])
-            values = [row[col] for col in columns_to_update]
+        for index, row in df_updates.iterrows():
+            CIK = row.iloc[18]  # 19th column
+            Ticker = row.iloc[0]  # 1st column
+            CompanyNameIssuer = row.iloc[2]  # 3rd column
+            columns_to_update = [i for i in range(27) if i not in [0, 2, 18] and pd.notna(row.iloc[i])]
+            set_clause = ', '.join([f"{row.index[i]} = ?" for i in columns_to_update])
+            values = [row.iloc[i] for i in columns_to_update]
             values.extend([CIK, Ticker, CompanyNameIssuer])
 
             if set_clause:
-                sql = f"UPDATE full_database_backend SET {set_clause} WHERE col18 = ? AND col0 = ? AND col2 = ?"
+                sql = f"UPDATE full_database_backend SET {set_clause} WHERE CIK = ? AND Ticker = ? AND CompanyNameIssuer = ?"
                 cursor.execute(sql, values)
                 if cursor.rowcount == 0:
                     # Insert new record
                     placeholders = ', '.join(['?'] * 27)
-                    insert_values = [row[f'col{i}'] if pd.notna(row[f'col{i}']) else '' for i in range(27)]
+                    insert_values = [row.iloc[i] if pd.notna(row.iloc[i]) else '' for i in range(27)]
                     sql_insert = f"INSERT INTO full_database_backend VALUES ({placeholders})"
                     cursor.execute(sql_insert, insert_values)
             else:
