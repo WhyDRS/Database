@@ -60,12 +60,12 @@ class DatabaseHandler:
         conn = sqlite3.connect(self.db_file_path)
         cursor = conn.cursor()
         for index, row in df_updates.iterrows():
-            CIK = row['CIK']
-            Ticker = row['Ticker']
-            CompanyNameIssuer = row['CompanyNameIssuer']
-            columns_to_update = [col for col in df_updates.columns if col not in ['CIK', 'Ticker', 'CompanyNameIssuer'] and pd.notna(row[col])]
-            set_clause = ', '.join([f"{col} = ?" for col in columns_to_update])
-            values = [row[col] for col in columns_to_update]
+            CIK = row.iloc[18]  # 19th column
+            Ticker = row.iloc[0]  # 1st column
+            CompanyNameIssuer = row.iloc[2]  # 3rd column
+            columns_to_update = [i for i in range(27) if i not in [0, 2, 18] and pd.notna(row.iloc[i])]
+            set_clause = ', '.join([f"col{i+1} = ?" for i in columns_to_update])
+            values = [row.iloc[i] for i in columns_to_update]
             values.extend([CIK, Ticker, CompanyNameIssuer])
 
             if set_clause:
@@ -73,10 +73,9 @@ class DatabaseHandler:
                 cursor.execute(sql, values)
                 if cursor.rowcount == 0:
                     # Insert new record
-                    columns = ['CIK', 'Ticker', 'CompanyNameIssuer'] + columns_to_update
-                    placeholders = ', '.join(['?'] * len(columns))
-                    insert_values = [row[col] for col in columns]
-                    sql_insert = f"INSERT INTO full_database_backend ({', '.join(columns)}) VALUES ({placeholders})"
+                    placeholders = ', '.join(['?'] * 27)
+                    insert_values = [row.iloc[i] if pd.notna(row.iloc[i]) else '' for i in range(27)]
+                    sql_insert = f"INSERT INTO full_database_backend VALUES ({placeholders})"
                     cursor.execute(sql_insert, insert_values)
             else:
                 print(f"No updates for record with CIK={CIK}, Ticker={Ticker}, CompanyNameIssuer={CompanyNameIssuer}")
