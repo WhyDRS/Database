@@ -3,18 +3,23 @@ import pandas as pd
 class DataMerger:
     def merge_dataframes(self, df_sheet, df_db):
         # We only consider the first 27 columns
-        df_sheet = df_sheet.iloc[:, :27]
-        df_db = df_db.iloc[:, :27]
+        df_sheet = df_sheet.iloc[:, :27].copy()
+        df_db = df_db.iloc[:, :27].copy()
+
+        # Rename columns to standard names
+        col_names = [f'col{i}' for i in range(27)]
+        df_sheet.columns = col_names
+        df_db.columns = col_names
 
         # Replace empty strings with NaN for comparison
         df_sheet.replace('', pd.NA, inplace=True)
         df_db.replace('', pd.NA, inplace=True)
 
         # Merge on composite key (CIK, Ticker, CompanyNameIssuer)
+        key_columns = ['col18', 'col0', 'col2']  # CIK, Ticker, CompanyNameIssuer
         df_merged = pd.merge(
             df_sheet, df_db,
-            left_on=[df_sheet.columns[18], df_sheet.columns[0], df_sheet.columns[2]],
-            right_on=[df_db.columns[18], df_db.columns[0], df_db.columns[2]],
+            on=key_columns,
             how='outer',
             suffixes=('_sheet', '_db'),
             indicator=True
@@ -24,30 +29,29 @@ class DataMerger:
         df_sheet_updates = pd.DataFrame()
 
         for i in range(27):
-            if i in [0, 2, 18]:  # Skip keys
+            col_name = f'col{i}'
+            if col_name in key_columns:
                 continue
-            col_sheet = df_sheet.columns[i] + '_sheet'
-            col_db = df_db.columns[i] + '_db'
+            col_sheet = f'{col_name}_sheet'
+            col_db = f'{col_name}_db'
 
             # Update database where DB has NaN and sheet has data
             condition_db_update = df_merged[col_db].isna() & df_merged[col_sheet].notna()
-            df_db_updates.loc[condition_db_update, i] = df_merged.loc[condition_db_update, col_sheet]
+            if condition_db_update.any():
+                df_db_updates = pd.concat([df_db_updates, df_merged.loc[condition_db_update, key_columns + [col_sheet]]])
 
             # Update sheet where sheet has NaN and DB has data
             condition_sheet_update = df_merged[col_sheet].isna() & df_merged[col_db].notna()
-            df_sheet_updates.loc[condition_sheet_update, i] = df_merged.loc[condition_sheet_update, col_db]
+            if condition_sheet_update.any():
+                df_sheet_updates = pd.concat([df_sheet_updates, df_merged.loc[condition_sheet_update, key_columns + [col_db]]])
 
-        # Include primary keys
-        df_db_updates[0] = df_merged[df_sheet.columns[0] + '_sheet']
-        df_db_updates[2] = df_merged[df_sheet.columns[2] + '_sheet']
-        df_db_updates[18] = df_merged[df_sheet.columns[18] + '_sheet']
+        # Rename columns back to standard names
+        if not df_db_updates.empty:
+            df_db_updates.rename(columns={f'col{i}_sheet': f'col{i}' for i in range(27)}, inplace=True)
+            df_db_updates.drop_duplicates(inplace=True)
 
-        df_sheet_updates[0] = df_merged[df_sheet.columns[0] + '_sheet']
-        df_sheet_updates[2] = df_merged[df_sheet.columns[2] + '_sheet']
-        df_sheet_updates[18] = df_merged[df_sheet.columns[18] + '_sheet']
-
-        # Reorder columns
-        df_db_updates = df_db_updates.sort_index(axis=1)
-        df_sheet_updates = df_sheet_updates.sort_index(axis=1)
+        if not df_sheet_updates.empty:
+            df_sheet_updates.rename(columns={f'col{i}_db': f'col{i}' for i in range(27)}, inplace=True)
+            df_sheet_updates.drop_duplicates(inplace=True)
 
         return df_db_updates, df_sheet_updates

@@ -10,9 +10,8 @@ class GoogleSheetHandler:
         worksheet = self.sheet.worksheet(worksheet_name)
         # Read only the first 27 columns
         data = worksheet.get_all_values()
-        headers = data[0][:27]  # First 27 headers
         records = [row[:27] for row in data[1:]]  # First 27 columns of data
-        df_sheet = pd.DataFrame(records, columns=headers)
+        df_sheet = pd.DataFrame(records)
         return df_sheet
 
     def update_google_sheet(self, worksheet_name, df_updates):
@@ -22,44 +21,36 @@ class GoogleSheetHandler:
 
         worksheet = self.sheet.worksheet(worksheet_name)
         data = worksheet.get_all_values()
-        # Use indexes since headers might differ
-        records = data[1:]  # Exclude header
-        total_rows = len(records)
+        total_rows = len(data)
         total_cols = len(data[0])
 
         # Build key to row mapping
         key_to_row = {}
-        for idx, row in enumerate(records):
-            # Ensure row has at least 27 columns
+        for idx, row in enumerate(data[1:], start=2):  # Start at row 2 (excluding headers)
             row = row + [''] * (27 - len(row))
-            CIK = row[18]  # 19th column
-            Ticker = row[0]  # 1st column
-            CompanyNameIssuer = row[2]  # 3rd column
+            CIK = row[18]
+            Ticker = row[0]
+            CompanyNameIssuer = row[2]
             key = (CIK, Ticker, CompanyNameIssuer)
-            key_to_row[key] = idx + 2  # Row numbers start from 2
+            key_to_row[key] = idx
 
         updates = []
-        new_rows = []
-        for index, row in df_updates.iterrows():
-            CIK = row.iloc[18]  # 19th column
-            Ticker = row.iloc[0]  # 1st column
-            CompanyNameIssuer = row.iloc[2]  # 3rd column
+        for _, row in df_updates.iterrows():
+            CIK = row['col18']
+            Ticker = row['col0']
+            CompanyNameIssuer = row['col2']
             key = (CIK, Ticker, CompanyNameIssuer)
             if key in key_to_row:
                 row_number = key_to_row[key]
-                for col_idx in range(27):
-                    if pd.notna(row.iloc[col_idx]):
-                        cell = gspread.Cell(row_number, col_idx + 1, row.iloc[col_idx])
+                for i in range(27):
+                    if i in [0, 2, 18]:
+                        continue
+                    if pd.notna(row[f'col{i}']):
+                        cell = gspread.Cell(row_number, i + 1, row[f'col{i}'])
                         updates.append(cell)
             else:
-                # Append new row
-                new_row = [row.iloc[i] if pd.notna(row.iloc[i]) else '' for i in range(27)]
-                new_rows.append(new_row)
+                print(f"Key {key} not found in Google Sheet; cannot update.")
 
         if updates:
             worksheet.update_cells(updates, value_input_option='USER_ENTERED')
             print(f"Updated {len(updates)} cells in Google Sheet.")
-
-        if new_rows:
-            worksheet.append_rows(new_rows, value_input_option='USER_ENTERED')
-            print(f"Added {len(new_rows)} new rows to Google Sheet.")
