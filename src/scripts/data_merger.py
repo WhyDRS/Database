@@ -13,11 +13,14 @@ class DataMerger:
         # Align the column names of df_db to match df_sheet
         df_db.columns = df_sheet.columns
 
+        # Define key columns
+        key_columns = [df_sheet.columns[18], df_sheet.columns[0], df_sheet.columns[2]]  # CIK, Ticker, CompanyNameIssuer
+
         # Merge on composite key (CIK, Ticker, CompanyNameIssuer)
         df_merged = pd.merge(
             df_sheet,
             df_db,
-            on=[df_sheet.columns[18], df_sheet.columns[0], df_sheet.columns[2]],
+            on=key_columns,
             how='outer',
             suffixes=('_sheet', '_db'),
             indicator=True
@@ -29,8 +32,9 @@ class DataMerger:
         for i in range(27):
             if i in [0, 2, 18]:  # Skip keys
                 continue
-            col_sheet = df_sheet.columns[i] + '_sheet'
-            col_db = df_sheet.columns[i] + '_db'  # Use df_sheet.columns[i] to match the column names
+            col_name = df_sheet.columns[i]
+            col_sheet = col_name + '_sheet'
+            col_db = col_name + '_db'
 
             # Check if the columns exist in df_merged
             if col_sheet not in df_merged.columns or col_db not in df_merged.columns:
@@ -38,22 +42,20 @@ class DataMerger:
 
             # Update database where DB has NaN and sheet has data
             condition_db_update = df_merged[col_db].isna() & df_merged[col_sheet].notna()
-            df_db_updates = pd.concat([df_db_updates, df_merged.loc[condition_db_update, [df_sheet.columns[i], df_sheet.columns[0], df_sheet.columns[2], df_sheet.columns[18]]]], ignore_index=True)
+            if condition_db_update.any():
+                update_rows = df_merged.loc[condition_db_update, key_columns + [col_sheet]].copy()
+                update_rows.rename(columns={col_sheet: col_name}, inplace=True)
+                df_db_updates = pd.concat([df_db_updates, update_rows], ignore_index=True)
 
             # Update sheet where sheet has NaN and DB has data
             condition_sheet_update = df_merged[col_sheet].isna() & df_merged[col_db].notna()
-            df_sheet_updates = pd.concat([df_sheet_updates, df_merged.loc[condition_sheet_update, [df_sheet.columns[i], df_sheet.columns[0], df_sheet.columns[2], df_sheet.columns[18]]]], ignore_index=True)
+            if condition_sheet_update.any():
+                update_rows = df_merged.loc[condition_sheet_update, key_columns + [col_db]].copy()
+                update_rows.rename(columns={col_db: col_name}, inplace=True)
+                df_sheet_updates = pd.concat([df_sheet_updates, update_rows], ignore_index=True)
 
         # Remove duplicates if any
         df_db_updates.drop_duplicates(inplace=True)
         df_sheet_updates.drop_duplicates(inplace=True)
-
-        # Reorder columns for database updates
-        if not df_db_updates.empty:
-            df_db_updates = df_db_updates[[df_sheet.columns[i] for i in range(27)]]
-
-        # Reorder columns for sheet updates
-        if not df_sheet_updates.empty:
-            df_sheet_updates = df_sheet_updates[[df_sheet.columns[i] for i in range(27)]]
 
         return df_db_updates, df_sheet_updates
