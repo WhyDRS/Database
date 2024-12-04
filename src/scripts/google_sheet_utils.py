@@ -22,6 +22,7 @@ class GoogleSheetHandler:
 
         worksheet = self.sheet.worksheet(worksheet_name)
         data = worksheet.get_all_values()
+        headers = data[0][:27]  # Get headers from the sheet
         # Use indexes since headers might differ
         records = data[1:]  # Exclude header
         total_rows = len(records)
@@ -29,31 +30,39 @@ class GoogleSheetHandler:
 
         # Build key to row mapping
         key_to_row = {}
-        for idx, row in enumerate(records):
+        for idx, row_data in enumerate(records):
             # Ensure row has at least 27 columns
-            row = row + [''] * (27 - len(row))
-            CIK = row[18]  # 19th column
-            Ticker = row[0]  # 1st column
-            CompanyNameIssuer = row[2]  # 3rd column
+            row_data = row_data + [''] * (27 - len(row_data))
+            CIK = row_data[18]  # 19th column
+            Ticker = row_data[0]  # 1st column
+            CompanyNameIssuer = row_data[2]  # 3rd column
             key = (CIK, Ticker, CompanyNameIssuer)
             key_to_row[key] = idx + 2  # Row numbers start from 2
 
         updates = []
         new_rows = []
         for index, row in df_updates.iterrows():
-            CIK = row.iloc[18]  # 19th column
-            Ticker = row.iloc[0]  # 1st column
-            CompanyNameIssuer = row.iloc[2]  # 3rd column
+            CIK = row['CIK']
+            Ticker = row['Ticker']
+            CompanyNameIssuer = row['CompanyNameIssuer']
             key = (CIK, Ticker, CompanyNameIssuer)
             if key in key_to_row:
                 row_number = key_to_row[key]
-                for col_idx in range(27):
-                    if pd.notna(row.iloc[col_idx]):
-                        cell = gspread.Cell(row_number, col_idx + 1, row.iloc[col_idx])
-                        updates.append(cell)
+                for col_name in row.index:
+                    if pd.notna(row[col_name]):
+                        try:
+                            col_idx = headers.index(col_name) + 1  # 1-based indexing for gspread
+                            cell = gspread.Cell(row_number, col_idx, row[col_name])
+                            updates.append(cell)
+                        except ValueError:
+                            print(f"Column '{col_name}' not found in sheet headers.")
             else:
                 # Append new row
-                new_row = [row.iloc[i] if pd.notna(row.iloc[i]) else '' for i in range(27)]
+                new_row = [''] * len(headers)
+                for col_name in row.index:
+                    if col_name in headers:
+                        col_idx = headers.index(col_name)
+                        new_row[col_idx] = row[col_name] if pd.notna(row[col_name]) else ''
                 new_rows.append(new_row)
 
         if updates:

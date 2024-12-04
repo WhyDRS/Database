@@ -26,13 +26,13 @@ class DataMerger:
             indicator=True
         )
 
-        df_db_updates = pd.DataFrame()
-        df_sheet_updates = pd.DataFrame()
+        df_db_updates = pd.DataFrame(columns=df_sheet.columns)
+        df_sheet_updates = pd.DataFrame(columns=df_sheet.columns)
 
         for i in range(27):
-            if i in [0, 2, 18]:  # Skip keys
-                continue
             col_name = df_sheet.columns[i]
+            if col_name in key_columns:
+                continue
             col_sheet = col_name + '_sheet'
             col_db = col_name + '_db'
 
@@ -57,5 +57,9 @@ class DataMerger:
         # Remove duplicates if any
         df_db_updates.drop_duplicates(inplace=True)
         df_sheet_updates.drop_duplicates(inplace=True)
+
+        # Ensure all columns are present
+        df_db_updates = df_db_updates.reindex(columns=df_sheet.columns)
+        df_sheet_updates = df_sheet_updates.reindex(columns=df_sheet.columns)
 
         return df_db_updates, df_sheet_updates
