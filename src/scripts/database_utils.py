@@ -12,7 +12,6 @@ class DatabaseHandler:
         cursor = conn.cursor()
         cursor.execute('''
         CREATE TABLE IF NOT EXISTS full_database_backend (
-            CIK TEXT,
             Ticker TEXT,
             Exchange TEXT,
             CompanyNameIssuer TEXT,
@@ -31,6 +30,7 @@ class DatabaseHandler:
             CompanyInfoURL TEXT,
             CompanyInfo TEXT,
             FullProgressPct TEXT,
+            CIK TEXT,
             DRS TEXT,
             PercentSharesDRSd TEXT,
             SubmissionReceived TEXT,
@@ -39,7 +39,7 @@ class DatabaseHandler:
             CertificatesOffered TEXT,
             SandP500 TEXT,
             IncorporatedIn TEXT,
-            PRIMARY KEY (CIK, Ticker)
+            PRIMARY KEY (CIK, Ticker, CompanyNameIssuer)
         )
         ''')
         conn.commit()
@@ -62,22 +62,24 @@ class DatabaseHandler:
         for index, row in df_updates.iterrows():
             CIK = row['CIK']
             Ticker = row['Ticker']
-            columns_to_update = [col for col in df_updates.columns if col not in ['CIK', 'Ticker'] and pd.notna(row[col])]
+            CompanyNameIssuer = row['CompanyNameIssuer']
+            columns_to_update = [col for col in df_updates.columns if col not in ['CIK', 'Ticker', 'CompanyNameIssuer'] and pd.notna(row[col])]
             set_clause = ', '.join([f"{col} = ?" for col in columns_to_update])
             values = [row[col] for col in columns_to_update]
-            values.extend([CIK, Ticker])
+            values.extend([CIK, Ticker, CompanyNameIssuer])
 
             if set_clause:
-                sql = f"UPDATE full_database_backend SET {set_clause} WHERE CIK = ? AND Ticker = ?"
+                sql = f"UPDATE full_database_backend SET {set_clause} WHERE CIK = ? AND Ticker = ? AND CompanyNameIssuer = ?"
                 cursor.execute(sql, values)
                 if cursor.rowcount == 0:
-                    columns = ['CIK', 'Ticker'] + columns_to_update
+                    # Insert new record
+                    columns = ['CIK', 'Ticker', 'CompanyNameIssuer'] + columns_to_update
                     placeholders = ', '.join(['?'] * len(columns))
                     insert_values = [row[col] for col in columns]
                     sql_insert = f"INSERT INTO full_database_backend ({', '.join(columns)}) VALUES ({placeholders})"
                     cursor.execute(sql_insert, insert_values)
             else:
-                print(f"No updates for record with CIK={CIK} and Ticker={Ticker}")
+                print(f"No updates for record with CIK={CIK}, Ticker={Ticker}, CompanyNameIssuer={CompanyNameIssuer}")
 
         conn.commit()
         conn.close()
