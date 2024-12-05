@@ -2,7 +2,7 @@ import os
 import json
 from google_sheet_utils import GoogleSheetHandler
 from database_utils import DatabaseHandler
-from data_merger import DataMerger
+
 
 def main():
     # Load credentials and environment variables
