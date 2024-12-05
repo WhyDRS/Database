@@ -1,51 +1,42 @@
-### Synchronize_Sheet_and_DB.yml
----
 name: Synchronize Google Sheet and Database
 
 on:
-  # schedule:
-  #   - cron: '0 0 * * *'  # Runs every day at midnight
-  workflow_dispatch:  # Allows manual triggering
+  schedule:
+    - cron: '0 0 * * *'  # Runs every day at midnight
+  workflow_dispatch: # Allows manual triggering
 
-concurrency:
+concurrency: 
   group: database-update
-  cancel-in-progress: true
 
 jobs:
   sync_data:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v3
-        with:
-          fetch-depth: 0  # Ensures the full history is fetched for accurate commit references
-
-      - name: Set up Python
-        uses: actions/setup-python@v4
-        with:
-          python-version: '3.9'
-
-      - name: Install Python Dependencies
-        run: |
-          pip install --upgrade pip
-          pip install pandas gspread oauth2client
-
-      - name: Synchronize Google Sheet and Database
-        env:
-          SHEET_ID: ${{ secrets.SHEET_ID }}
-          GOOGLE_API_KEYS: ${{ secrets.GOOGLE_API_KEYS }}
-        run: |
-          python 'src/scripts/synchronize_google_sheet_and_db.py'
-
-      - name: Commit and Push Database Files
-        uses: EndBug/add-and-commit@v9
-        with:
-          author_name: github-actions[bot]
-          author_email: github-actions[bot]@users.noreply.github.com
-          message: "Synchronized database with Google Sheet"
-          add: |
-            data/Full_Database_Backend.db
-            data/Full_Database_Backend.json
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    - name: Checkout Repository
+      uses: actions/checkout@v2
+      
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.9'
+    
+    - name: Install Python Dependencies
+      run: |
+        pip install pandas gspread oauth2client
+    
+    - name: Synchronize Google Sheet and Database
+      env:
+        SHEET_ID: ${{ secrets.SHEET_ID }}
+        GOOGLE_API_KEYS: ${{ secrets.GOOGLE_API_KEYS }}
+      run: |
+        python 'src/scripts/synchronize_google_sheet_and_db.py'
+    
+    - name: Commit and Push Database Files
+      run: |
+        git config --global user.name 'YourName'
+        git config --global user.email 'YourEmail@example.com'
+        git add 'data/Full_Database_Backend.db' 'data/Full_Database_Backend.json'
+        git commit -m "Synchronized database with Google Sheet" -a || echo "No changes to commit."
+        git push
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

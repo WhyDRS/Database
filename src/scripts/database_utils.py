@@ -1,5 +1,4 @@
 import sqlite3
-import pandas as pd
 import json
 
 class DatabaseHandler:
@@ -45,44 +44,38 @@ class DatabaseHandler:
         conn.commit()
         conn.close()
 
-    def read_database_to_dataframe(self):
-        conn = sqlite3.connect(self.db_file_path)
-        query = "SELECT * FROM full_database_backend"
-        df_db = pd.read_sql_query(query, conn)
-        conn.close()
-        return df_db
-
-    def update_database(self, df_updates):
-        if df_updates.empty:
-            print("No updates to apply to the database.")
+    def update_database(self, data):
+        if not data:
+            print("No data to update in the database.")
             return
 
         conn = sqlite3.connect(self.db_file_path)
         cursor = conn.cursor()
-        for index, row in df_updates.iterrows():
-            CIK = row['CIK']  # Use column names directly
-            Ticker = row['Ticker']
-            CompanyNameIssuer = row['CompanyNameIssuer']
-            columns_to_update = [col for col in row.index if col not in ['Ticker', 'CompanyNameIssuer', 'CIK'] and pd.notna(row[col])]
-            set_clause = ', '.join([f"{col} = ?" for col in columns_to_update])
-            values = [row[col] for col in columns_to_update]
-            values.extend([CIK, Ticker, CompanyNameIssuer])
 
-            if set_clause:
-                sql = f"UPDATE full_database_backend SET {set_clause} WHERE CIK = ? AND Ticker = ? AND CompanyNameIssuer = ?"
-                cursor.execute(sql, values)
-                if cursor.rowcount == 0:
-                    # Insert new record
-                    placeholders = ', '.join(['?'] * len(row))
-                    insert_values = [row[col] if pd.notna(row[col]) else '' for col in row.index]
-                    sql_insert = f"INSERT INTO full_database_backend VALUES ({placeholders})"
-                    cursor.execute(sql_insert, insert_values)
-            else:
-                print(f"No updates for record with CIK={CIK}, Ticker={Ticker}, CompanyNameIssuer={CompanyNameIssuer}")
+        for row in data:
+            # Ensure row has exactly 27 elements
+            row = row + [''] * (27 - len(row))
+            # Prepare the INSERT OR REPLACE statement
+            cursor.execute('''
+            INSERT OR REPLACE INTO full_database_backend (
+                Ticker, Exchange, CompanyNameIssuer, TransferAgent, OnlinePurchase, DTCMemberNum, TAURL,
+                TransferAgentPct, IREmails, IRPhoneNum, IRCompanyAddress, IRURL, IRContactInfo, SharesOutstanding,
+                CUSIP, CompanyInfoURL, CompanyInfo, FullProgressPct, CIK, DRS, PercentSharesDRSd, SubmissionReceived,
+                TimestampsUTC, LearnMoreAboutDRS, CertificatesOffered, SandP500, IncorporatedIn
+            ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+            ''', tuple(row))
 
         conn.commit()
         conn.close()
         print("Database updated successfully.")
+
+    def read_database_data(self):
+        conn = sqlite3.connect(self.db_file_path)
+        cursor = conn.cursor()
+        cursor.execute('SELECT * FROM full_database_backend')
+        rows = cursor.fetchall()
+        conn.close()
+        return rows
 
     def export_database_to_json(self, json_file_path):
         conn = sqlite3.connect(self.db_file_path)

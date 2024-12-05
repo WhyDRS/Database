@@ -14,18 +14,18 @@ def main():
     # Initialize handlers
     sheet_handler = GoogleSheetHandler(sheet_id, creds_json)
     db_handler = DatabaseHandler(db_file_path)
-    data_merger = DataMerger()
 
-    # Read data from sources
-    df_sheet = sheet_handler.read_sheet_to_dataframe('Full_Database_Backend')
-    df_db = db_handler.read_database_to_dataframe()
+    # Read data from Google Sheet
+    data = sheet_handler.read_sheet_data('Full_Database_Backend')
 
-    # Merge data
-    df_db_updates, df_sheet_updates = data_merger.merge_dataframes(df_sheet, df_db)
+    # Update database with data from Google Sheet
+    db_handler.update_database(data)
 
-    # Apply updates
-    db_handler.update_database(df_db_updates)
-    sheet_handler.update_google_sheet('Full_Database_Backend', df_sheet_updates)
+    # Read data from database to find missing values for the Google Sheet
+    db_data = db_handler.read_database_data()
+
+    # Update Google Sheet with missing data from database
+    sheet_handler.update_google_sheet('Full_Database_Backend', db_data)
 
     # Export database to JSON
     db_handler.export_database_to_json(json_file_path)
