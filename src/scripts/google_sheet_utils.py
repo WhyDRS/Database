@@ -1,4 +1,5 @@
 import gspread
+import pandas as pd
 
 class GoogleSheetHandler:
     def __init__(self, sheet_id, creds_json):
@@ -31,32 +32,19 @@ class GoogleSheetHandler:
 
         updates = []
         for row in db_data:
-            row = list(row)  # Convert tuple to list
-            row = [str(cell) if cell is not None else '' for cell in row]
-            # Ensure row has 27 elements
-            row = row + [''] * (27 - len(row))
-
             CIK = row[18]
             Ticker = row[0]
             CompanyNameIssuer = row[2]
             key = (CIK, Ticker, CompanyNameIssuer)
             if key in key_to_row:
                 row_number = key_to_row[key]
-                # Get the existing sheet row
+                # Update missing cells in Google Sheet
                 sheet_row = worksheet.row_values(row_number)
                 sheet_row = sheet_row + [''] * (27 - len(sheet_row))
-                # Compare number of filled cells
-                db_filled = sum(1 for cell in row if cell.strip())
-                sheet_filled = sum(1 for cell in sheet_row if cell.strip())
-                if db_filled > sheet_filled:
-                    # Update the sheet row with db row
-                    for i in range(27):
-                        if sheet_row[i] != row[i]:
-                            cell = gspread.Cell(row_number, i + 1, row[i])
-                            updates.append(cell)
-                else:
-                    # Keep the sheet row as is
-                    continue
+                for i in range(27):
+                    if not sheet_row[i] and row[i]:
+                        cell = gspread.Cell(row_number, i + 1, row[i])
+                        updates.append(cell)
             else:
                 # Append new row
                 new_row = [row[i] if row[i] else '' for i in range(27)]

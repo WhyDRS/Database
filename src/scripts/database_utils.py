@@ -55,46 +55,15 @@ class DatabaseHandler:
         for row in data:
             # Ensure row has exactly 27 elements
             row = row + [''] * (27 - len(row))
-            # Get the key
-            CIK = row[18]
-            Ticker = row[0]
-            CompanyNameIssuer = row[2]
-            key = (CIK, Ticker, CompanyNameIssuer)
-            
-            # Check if record exists in database
+            # Prepare the INSERT OR REPLACE statement
             cursor.execute('''
-            SELECT * FROM full_database_backend WHERE CIK=? AND Ticker=? AND CompanyNameIssuer=?
-            ''', key)
-            db_row = cursor.fetchone()
-
-            if db_row is None:
-                # Record does not exist, insert new row
-                cursor.execute('''
-                INSERT INTO full_database_backend (
-                    Ticker, Exchange, CompanyNameIssuer, TransferAgent, OnlinePurchase, DTCMemberNum, TAURL,
-                    TransferAgentPct, IREmails, IRPhoneNum, IRCompanyAddress, IRURL, IRContactInfo, SharesOutstanding,
-                    CUSIP, CompanyInfoURL, CompanyInfo, FullProgressPct, CIK, DRS, PercentSharesDRSd, SubmissionReceived,
-                    TimestampsUTC, LearnMoreAboutDRS, CertificatesOffered, SandP500, IncorporatedIn
-                ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
-                ''', tuple(row))
-            else:
-                # Record exists, compare number of filled cells
-                db_row_values = list(db_row)
-                sheet_filled = sum(1 for cell in row if cell.strip())
-                db_filled = sum(1 for cell in db_row_values if cell and str(cell).strip())
-                if sheet_filled > db_filled:
-                    # Sheet has more data, update the database
-                    cursor.execute('''
-                    REPLACE INTO full_database_backend (
-                        Ticker, Exchange, CompanyNameIssuer, TransferAgent, OnlinePurchase, DTCMemberNum, TAURL,
-                        TransferAgentPct, IREmails, IRPhoneNum, IRCompanyAddress, IRURL, IRContactInfo, SharesOutstanding,
-                        CUSIP, CompanyInfoURL, CompanyInfo, FullProgressPct, CIK, DRS, PercentSharesDRSd, SubmissionReceived,
-                        TimestampsUTC, LearnMoreAboutDRS, CertificatesOffered, SandP500, IncorporatedIn
-                    ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
-                    ''', tuple(row))
-                else:
-                    # Keep the database row as is
-                    continue
+            INSERT OR REPLACE INTO full_database_backend (
+                Ticker, Exchange, CompanyNameIssuer, TransferAgent, OnlinePurchase, DTCMemberNum, TAURL,
+                TransferAgentPct, IREmails, IRPhoneNum, IRCompanyAddress, IRURL, IRContactInfo, SharesOutstanding,
+                CUSIP, CompanyInfoURL, CompanyInfo, FullProgressPct, CIK, DRS, PercentSharesDRSd, SubmissionReceived,
+                TimestampsUTC, LearnMoreAboutDRS, CertificatesOffered, SandP500, IncorporatedIn
+            ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+            ''', tuple(row))
 
         conn.commit()
         conn.close()

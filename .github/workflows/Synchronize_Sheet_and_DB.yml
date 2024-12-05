@@ -3,9 +3,9 @@ name: Synchronize Google Sheet and Database
 on:
   schedule:
     - cron: '0 0 * * *'  # Runs every day at midnight
-  workflow_dispatch:  # Allows manual triggering
+  workflow_dispatch: # Allows manual triggering
 
-concurrency:
+concurrency: 
   group: database-update
 
 jobs:
