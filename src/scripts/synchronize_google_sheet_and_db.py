@@ -3,7 +3,6 @@ import json
 from google_sheet_utils import GoogleSheetHandler
 from database_utils import DatabaseHandler
 
-
 def main():
     # Load credentials and environment variables
     sheet_id = os.environ['SHEET_ID']
