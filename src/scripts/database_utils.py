@@ -53,38 +53,22 @@ class DatabaseHandler:
         cursor = conn.cursor()
 
         for row in data:
-            # Ensure row has exactly 27 elements
             row = row + [''] * (27 - len(row))
-            # Prepare the INSERT OR REPLACE statement
-            cursor.execute('''
-            INSERT OR REPLACE INTO full_database_backend (
-                Ticker, Exchange, CompanyNameIssuer, TransferAgent, OnlinePurchase, DTCMemberNum, TAURL,
-                TransferAgentPct, IREmails, IRPhoneNum, IRCompanyAddress, IRURL, IRContactInfo, SharesOutstanding,
-                CUSIP, CompanyInfoURL, CompanyInfo, FullProgressPct, CIK, DRS, PercentSharesDRSd, SubmissionReceived,
-                TimestampsUTC, LearnMoreAboutDRS, CertificatesOffered, SandP500, IncorporatedIn
-            ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
-            ''', tuple(row))
+            cursor.execute('SELECT * FROM full_database_backend WHERE CIK=? AND Ticker=? AND CompanyNameIssuer=?',
+                           (row[18], row[0], row[2]))
+            db_row = cursor.fetchone()
+            if db_row:
+                db_filled = sum(1 for cell in db_row if cell)
+                sheet_filled = sum(1 for cell in row if cell)
+                if sheet_filled > db_filled:
+                    cursor.execute('''
+                    REPLACE INTO full_database_backend VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+                    ''', tuple(row))
+            else:
+                cursor.execute('''
+                INSERT INTO full_database_backend VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+                ''', tuple(row))
 
         conn.commit()
         conn.close()
         print("Database updated successfully.")
-
-    def read_database_data(self):
-        conn = sqlite3.connect(self.db_file_path)
-        cursor = conn.cursor()
-        cursor.execute('SELECT * FROM full_database_backend')
-        rows = cursor.fetchall()
-        conn.close()
-        return rows
-
-    def export_database_to_json(self, json_file_path):
-        conn = sqlite3.connect(self.db_file_path)
-        cursor = conn.cursor()
-        cursor.execute('SELECT * FROM full_database_backend')
-        rows = cursor.fetchall()
-        column_names = [description[0] for description in cursor.description]
-        data_json = [dict(zip(column_names, row)) for row in rows]
-        with open(json_file_path, 'w', encoding='utf-8') as f:
-            json.dump(data_json, f, ensure_ascii=False, indent=4)
-        conn.close()
-        print(f"Exported database to {json_file_path}")
