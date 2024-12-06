@@ -32,5 +32,6 @@ def main():
 
     print("Synchronization between Google Sheet and database completed successfully.")
 
+
 if __name__ == "__main__":
     main()
