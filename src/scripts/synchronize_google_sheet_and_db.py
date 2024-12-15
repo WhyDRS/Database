@@ -3,6 +3,9 @@ import json
 from google_sheet_utils import GoogleSheetHandler
 from database_utils import DatabaseHandler
 
+# Columns that are the source of truth from the DB (0-based indices):
+# For the request: first (0), second (1), third (2), and nineteenth (18) columns
+SOURCE_OF_TRUTH_COLUMNS = [0, 1, 2, 18]
 
 def main():
     # Load credentials and environment variables
@@ -12,22 +15,23 @@ def main():
     json_file_path = 'data/Full_Database_Backend.json'
 
     # Initialize handlers
-    sheet_handler = GoogleSheetHandler(sheet_id, creds_json)
     db_handler = DatabaseHandler(db_file_path)
+    sheet_handler = GoogleSheetHandler(sheet_id, creds_json, SOURCE_OF_TRUTH_COLUMNS)
 
-    # Read data from Google Sheet
-    data = sheet_handler.read_sheet_data('Full_Database_Backend')
-
-    # Update database with data from Google Sheet
-    db_handler.update_database(data)
-
-    # Read data from database to find missing values for the Google Sheet
+    # Step 1: Read database data
     db_data = db_handler.read_database_data()
 
-    # Update Google Sheet with missing data from database
+    # Step 2: Update the sheet from the DB for source-of-truth columns
+    # This ensures that the sheet reflects the DB's authoritative columns first.
     sheet_handler.update_google_sheet('Full_Database_Backend', db_data)
 
-    # Export database to JSON
+    # Step 3: Now read the updated sheet data
+    sheet_data = sheet_handler.read_sheet_data('Full_Database_Backend')
+
+    # Step 4: Update the database from the sheet data (for non-source-of-truth columns)
+    db_handler.update_database(sheet_data)
+
+    # Step 5: Export the updated database to JSON
     db_handler.export_database_to_json(json_file_path)
 
     print("Synchronization between Google Sheet and database completed successfully.")

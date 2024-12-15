@@ -55,7 +55,6 @@ class DatabaseHandler:
         for row in data:
             # Ensure row has exactly 27 elements
             row = row + [''] * (27 - len(row))
-            # Insert or replace data in the database
             cursor.execute('''
             INSERT OR REPLACE INTO full_database_backend (
                 Ticker, Exchange, CompanyNameIssuer, TransferAgent, OnlinePurchase, DTCMemberNum, TAURL,
