@@ -20,9 +20,9 @@ MAX_REQUESTS_PER_SECOND = 10
 SLEEP_TIME = 1 / MAX_REQUESTS_PER_SECOND
 
 def download_sec_data(url, headers, output_file):
-    """Download the SEC JSON data and save it to a file."""
+    """Download the SEC JSON data and save it."""
     response = requests.get(url, headers=headers)
-    response.raise_for_status()  # Raise an error if the request failed
+    response.raise_for_status()
     with open(output_file, "wb") as file:
         file.write(response.content)
     print(f"SEC data file saved to {output_file}")
