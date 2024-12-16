@@ -11,7 +11,7 @@ class GoogleSheetHandler:
         data = worksheet.get_all_values()
         if not data:
             return []
-        # Only process the first 27 columns, skip the header row
+        # Process only the first 27 columns, skip the header row
         data = [row[:27] for row in data[1:]]  
         return data
 
@@ -19,14 +19,15 @@ class GoogleSheetHandler:
         worksheet = self.sheet.worksheet(worksheet_name)
         existing_data = worksheet.get_all_values()
         if not existing_data:
-            # If the sheet is empty or missing headers, we assume no header:
+            # If sheet is empty or missing headers, there's nothing to update in place.
+            # If needed, you could create a header row here.
             return
 
         existing_data = [row[:27] for row in existing_data]
         headers = existing_data[0]
         records = existing_data[1:]
 
-        # Create a mapping from (CIK, Ticker, CompanyNameIssuer) to row index (1-based)
+        # Map (CIK, Ticker, CompanyNameIssuer) -> row index (1-based)
         key_to_row = {}
         for idx, row in enumerate(records):
             row = row + [''] * (27 - len(row))
@@ -34,11 +35,11 @@ class GoogleSheetHandler:
             Ticker = row[0]
             CompanyNameIssuer = row[2]
             key = (CIK, Ticker, CompanyNameIssuer)
-            key_to_row[key] = idx + 2  # Row index starting after headers
+            key_to_row[key] = idx + 2  # Adjust for header row
 
         updates = []
+        new_rows = []  # To batch-add new records
         for db_row in db_data:
-            # db_row is a tuple from the database
             db_row = list(db_row)
             CIK = db_row[18]
             Ticker = db_row[0]
@@ -46,7 +47,7 @@ class GoogleSheetHandler:
             key = (CIK, Ticker, CompanyNameIssuer)
 
             if key in key_to_row:
-                # Existing row in sheet
+                # Existing record in sheet
                 row_number = key_to_row[key]
                 sheet_row = records[row_number - 2]
                 sheet_row = sheet_row + [''] * (27 - len(sheet_row))
@@ -55,17 +56,25 @@ class GoogleSheetHandler:
                 for i in self.source_of_truth_columns:
                     db_value = db_row[i] if i < len(db_row) else ''
                     sheet_value = sheet_row[i]
-                    # If DB value differs from sheet or sheet is blank, update
                     if db_value and db_value != sheet_value:
                         updates.append(gspread.Cell(row_number, i + 1, db_value))
             else:
-                # Add a new row to the sheet with only the source-of-truth columns
+                # New record
+                # Create a blank row of length 27 and fill only source-of-truth columns
                 new_row = [''] * 27
                 for i in self.source_of_truth_columns:
                     if i < len(db_row):
                         new_row[i] = db_row[i] if db_row[i] else ''
-                worksheet.append_row(new_row, value_input_option='USER_ENTERED')
+                new_rows.append(new_row)
 
-        # Batch update all source-of-truth columns if needed
+        # Batch update all source-of-truth column cells for existing rows
         if updates:
             worksheet.update_cells(updates, value_input_option='USER_ENTERED')
+
+        # Batch add all new rows at once
+        if new_rows:
+            # Find the next available row after existing_data
+            start_row = len(existing_data) + 1  # after header + existing records
+            end_row = start_row + len(new_rows) - 1
+            # Update a range that fits all new rows (A:AA covers 27 columns)
+            worksheet.update(f"A{start_row}:AA{end_row}", new_rows, value_input_option='USER_ENTERED')
