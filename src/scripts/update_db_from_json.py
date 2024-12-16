@@ -1,5 +1,4 @@
 import pandas as pd
-import os
 import json
 import sqlite3
 
@@ -59,19 +58,23 @@ CREATE TABLE IF NOT EXISTS full_database_backend (
 )
 ''')
 
-# Insert rows from DataFrame into the database
-# No ON CONFLICT clause - if there's a new combination of (CIK, Ticker, CompanyNameIssuer),
-# it will be added as a new row.
+# Insert or update rows from SEC DataFrame into the database
+# If there's a conflict on (CIK, Ticker, CompanyNameIssuer),
+# we overwrite these four columns with SEC data as the source of truth.
 for _, row in df.iterrows():
     cik_value = row['cik']
     ticker_value = row['ticker']
     exchange_value = row['exchange']
     company_name_issuer_value = row['name']
 
-    # Insert a minimal set of values; other fields may remain empty at this stage
     cursor.execute('''
         INSERT INTO full_database_backend (CIK, Ticker, Exchange, CompanyNameIssuer)
         VALUES (?, ?, ?, ?)
+        ON CONFLICT (CIK, Ticker, CompanyNameIssuer) DO UPDATE SET
+            CIK = excluded.CIK,
+            Ticker = excluded.Ticker,
+            Exchange = excluded.Exchange,
+            CompanyNameIssuer = excluded.CompanyNameIssuer
     ''', (cik_value, ticker_value, exchange_value, company_name_issuer_value))
 
 # Clean up whitespace and NULL-like values from all text fields
