@@ -16,8 +16,11 @@ records = sec_data['data']
 # Convert JSON records to a DataFrame
 df = pd.DataFrame(records, columns=fields)
 
-# Replace NaN with empty strings for consistency
+# Replace NaN with empty strings
 df = df.fillna('')
+
+# Drop duplicates based on the key columns from the SEC data
+df.drop_duplicates(subset=['cik', 'ticker', 'name'], inplace=True)
 
 # Connect to the SQLite database
 conn = sqlite3.connect(DB_FILE_PATH)
@@ -58,24 +61,30 @@ CREATE TABLE IF NOT EXISTS full_database_backend (
 )
 ''')
 
-# Insert or update rows from SEC DataFrame into the database
-# If there's a conflict on (CIK, Ticker, CompanyNameIssuer),
-# we overwrite these four columns with SEC data as the source of truth.
+# For each row in the SEC data:
+# 1. Try to UPDATE an existing row with the given CIK, Ticker, CompanyNameIssuer.
+# 2. If no rows are updated (cursor.rowcount == 0), INSERT a new row.
+
 for _, row in df.iterrows():
     cik_value = row['cik']
     ticker_value = row['ticker']
     exchange_value = row['exchange']
     company_name_issuer_value = row['name']
 
+    # Attempt to UPDATE existing row
     cursor.execute('''
-        INSERT INTO full_database_backend (CIK, Ticker, Exchange, CompanyNameIssuer)
-        VALUES (?, ?, ?, ?)
-        ON CONFLICT (CIK, Ticker, CompanyNameIssuer) DO UPDATE SET
-            CIK = excluded.CIK,
-            Ticker = excluded.Ticker,
-            Exchange = excluded.Exchange,
-            CompanyNameIssuer = excluded.CompanyNameIssuer
-    ''', (cik_value, ticker_value, exchange_value, company_name_issuer_value))
+        UPDATE full_database_backend
+        SET CIK = ?, Ticker = ?, Exchange = ?, CompanyNameIssuer = ?
+        WHERE CIK = ? AND Ticker = ? AND CompanyNameIssuer = ?
+    ''', (cik_value, ticker_value, exchange_value, company_name_issuer_value,
+          cik_value, ticker_value, company_name_issuer_value))
+
+    if cursor.rowcount == 0:
+        # If no row was updated, INSERT a new one
+        cursor.execute('''
+            INSERT INTO full_database_backend (CIK, Ticker, Exchange, CompanyNameIssuer)
+            VALUES (?, ?, ?, ?)
+        ''', (cik_value, ticker_value, exchange_value, company_name_issuer_value))
 
 # Clean up whitespace and NULL-like values from all text fields
 cursor.execute('''
@@ -110,7 +119,7 @@ SET
     IncorporatedIn = IFNULL(NULLIF(TRIM(IncorporatedIn), ''), '')
 ''')
 
-# Commit changes and close connection
+# Commit changes and close the connection
 conn.commit()
 cursor.close()
 conn.close()
