@@ -29,7 +29,7 @@ jobs:
         SHEET_ID: ${{ secrets.SHEET_ID }}
         GOOGLE_API_KEYS: ${{ secrets.GOOGLE_API_KEYS }}
       run: |
-        python 'src/scripts/synchronize_google_sheet_and_db.py'
+        python 'src/scripts/Database-Sync/synchronize_google_sheet_and_db.py'
     
     - name: Commit and Push Database Files
       run: |
