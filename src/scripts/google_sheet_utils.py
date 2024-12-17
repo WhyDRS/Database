@@ -34,12 +34,11 @@ class GoogleSheetHandler:
             CIK = row[18].strip()
             Ticker = row[0].strip()
             CompanyNameIssuer = row[2].strip()
-
-            # Case-insensitive key
             ci_key = (CIK.lower(), Ticker.lower(), CompanyNameIssuer.lower())
             key_to_row[ci_key] = (idx + 2, row)
 
         updates = []
+        new_rows = []  # Collect new rows here for a single batch append
         for db_row in db_data:
             db_row = list(db_row)
             # Extract keys from the DB row (source of truth)
@@ -60,13 +59,18 @@ class GoogleSheetHandler:
                     if db_value and db_value != sheet_value:
                         updates.append(gspread.Cell(row_number, i + 1, db_value))
             else:
-                # Add a new row to the sheet with only the source-of-truth columns
+                # Prepare a new row to be appended
                 new_row = [''] * 27
                 for i in self.source_of_truth_columns:
                     if i < len(db_row):
                         new_row[i] = db_row[i] if db_row[i] else ''
-                worksheet.append_row(new_row, value_input_option='USER_ENTERED')
+                new_rows.append(new_row)
 
         # Batch update all source-of-truth columns if needed
         if updates:
             worksheet.update_cells(updates, value_input_option='USER_ENTERED')
+
+        # Append all new rows at once, if there are any
+        if new_rows:
+            # Note: append_rows takes a list of lists
+            worksheet.append_rows(new_rows, value_input_option='USER_ENTERED')
