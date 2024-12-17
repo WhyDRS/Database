@@ -4,7 +4,6 @@ from google_sheet_utils import GoogleSheetHandler
 from database_utils import DatabaseHandler
 
 # Columns that are the source of truth from the DB (0-based indices):
-# For the request: first (0), second (1), third (2), and nineteenth (18) columns
 SOURCE_OF_TRUTH_COLUMNS = [0, 1, 2, 18]
 
 def main():
@@ -21,11 +20,10 @@ def main():
     # Step 1: Read database data
     db_data = db_handler.read_database_data()
 
-    # Step 2: Update the sheet from the DB for source-of-truth columns
-    # This ensures that the sheet reflects the DB's authoritative columns first.
+    # Step 2: Update the sheet from the DB for source-of-truth columns (case-insensitive matching)
     sheet_handler.update_google_sheet('Full_Database_Backend', db_data)
 
-    # Step 3: Now read the updated sheet data
+    # Step 3: Read the now-updated sheet data
     sheet_data = sheet_handler.read_sheet_data('Full_Database_Backend')
 
     # Step 4: Update the database from the sheet data (for non-source-of-truth columns)
