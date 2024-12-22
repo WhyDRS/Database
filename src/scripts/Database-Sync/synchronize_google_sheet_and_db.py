@@ -10,8 +10,8 @@ def main():
     # Load credentials and environment variables
     sheet_id = os.environ['SHEET_ID']
     creds_json = json.loads(os.environ['GOOGLE_API_KEYS'])
-    db_file_path = 'data/Full_Database_Backend.db'
-    json_file_path = 'data/Full_Database_Backend.json'
+    db_file_path = 'data/Issuers/Full_Database_Backend.db'
+    json_file_path = 'data/Issuers/Full_Database_Backend.json'
 
     # Initialize handlers
     db_handler = DatabaseHandler(db_file_path)

@@ -3,8 +3,8 @@ import json
 import sqlite3
 
 # File paths
-JSON_FILE_PATH = 'data/company_tickers_exchange.json'
-DB_FILE_PATH = 'data/Full_Database_Backend.db'
+JSON_FILE_PATH = 'data/SEC-CTEC-Data/company_tickers_exchange.json'
+DB_FILE_PATH = 'data/Issuers/Full_Database_Backend.db'
 
 # Read JSON data
 with open(JSON_FILE_PATH, 'r') as json_file:

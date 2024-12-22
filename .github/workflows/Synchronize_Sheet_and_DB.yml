@@ -35,7 +35,7 @@ jobs:
       run: |
         git config user.name "github-actions[bot]"
         git config user.email "github-actions[bot]@users.noreply.github.com"
-        git add 'data/Full_Database_Backend.db' 'data/Full_Database_Backend.json'
+        git add 'data/Issuers/Full_Database_Backend.db' 'data/Issuers/Full_Database_Backend.json'
         git commit -m "Synchronized database with Google Sheet" -a || echo "No changes to commit."
         git push
       env:

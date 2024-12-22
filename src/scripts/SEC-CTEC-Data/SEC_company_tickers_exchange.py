@@ -6,7 +6,7 @@ import time
 SEC_JSON_URL = "https://www.sec.gov/files/company_tickers_exchange.json"
 
 # Data folder and output file paths
-DATA_FOLDER = "data"
+DATA_FOLDER = "data/SEC-CTEC-Data"
 os.makedirs(DATA_FOLDER, exist_ok=True)
 OUTPUT_FILE = os.path.join(DATA_FOLDER, "company_tickers_exchange.json")
 
