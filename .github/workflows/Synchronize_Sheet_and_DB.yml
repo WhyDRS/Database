@@ -12,31 +12,31 @@ jobs:
     if: ${{ github.event.workflow_run.conclusion == 'success' }}
     runs-on: ubuntu-latest
     steps:
-    - name: Checkout Repository
-      uses: actions/checkout@v2
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+        
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.9'
       
-    - name: Set up Python
-      uses: actions/setup-python@v2
-      with:
-        python-version: '3.9'
-    
-    - name: Install Python Dependencies
-      run: |
-        pip install pandas gspread oauth2client
-    
-    - name: Synchronize Google Sheet and Database
-      env:
-        SHEET_ID: ${{ secrets.SHEET_ID }}
-        GOOGLE_API_KEYS: ${{ secrets.GOOGLE_API_KEYS }}
-      run: |
-        python 'src/scripts/Database-Sync/synchronize_google_sheet_and_db.py'
-    
-    - name: Commit and Push Database Files
-      run: |
-        git config user.name "github-actions[bot]"
-        git config user.email "github-actions[bot]@users.noreply.github.com"
-        git add 'data/Issuers/Full_Database_Backend.db' 'data/Issuers/Full_Database_Backend.json'
-        git commit -m "Synchronized database with Google Sheet" -a || echo "No changes to commit."
-        git push
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Install Python Dependencies
+        run: |
+          pip install pandas gspread oauth2client
+      
+      - name: Synchronize Google Sheet and Database
+        env:
+          SHEET_ID: ${{ secrets.SHEET_ID }}
+          GOOGLE_API_KEYS: ${{ secrets.GOOGLE_API_KEYS }}
+        run: |
+          python 'src/scripts/Database-Sync/synchronize_google_sheet_and_db.py'
+      
+      - name: Commit and Push Database Files
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add 'data/Issuers/Full_Database_Backend.db' 'data/Issuers/Full_Database_Backend.json'
+          git commit -m "Synchronized database with Google Sheet" -a || echo "No changes to commit."
+          git push
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
