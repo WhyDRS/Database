@@ -1,15 +1,15 @@
 name: Synchronize Google Sheet and Database
 
 on:
-  schedule:
-    - cron: '0 0 * * *'  # Runs every day at midnight
+  workflow_run:
+    workflows: ["Update Database with SEC Data (CIK, Ticker, Exchange, Company Name)"]
+    types:
+      - completed
   workflow_dispatch: # Allows manual triggering
-
-concurrency: 
-  group: database-update
 
 jobs:
   sync_data:
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
     runs-on: ubuntu-latest
     steps:
     - name: Checkout Repository
