@@ -81,7 +81,7 @@ class DatabaseHandler:
         cursor = conn.cursor()
         cursor.execute('SELECT * FROM full_database_backend')
         rows = cursor.fetchall()
-        column_names = [description[0].replace('_', ' ') for description in cursor.description]
+        column_names = [description[0] for description in cursor.description]
         data_json = [dict(zip(column_names, row)) for row in rows]
         with open(json_file_path, 'w', encoding='utf-8') as f:
             json.dump(data_json, f, ensure_ascii=False, indent=4)

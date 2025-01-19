@@ -23,8 +23,8 @@ document.addEventListener("DOMContentLoaded", function () {
                 const columns = headers.map((header, index) => ({
                     // Specify the data property for the column
                     data: header,
-                    // Format header titles by inserting spaces before uppercase letters
-                    title: header.replace(/([A-Z])/g, ' $1').trim(),
+                    // Replace underscores with spaces instead of adding spaces before capitals
+                    title: header.replace(/_/g, ' '),
                     // Set column visibility based on defaultVisibleColumns array
                     visible: defaultVisibleColumns.includes(index)
                 }));
