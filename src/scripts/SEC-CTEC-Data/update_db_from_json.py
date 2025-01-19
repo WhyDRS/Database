@@ -31,32 +31,32 @@ cursor.execute('''
 CREATE TABLE IF NOT EXISTS full_database_backend (
     Ticker TEXT,
     Exchange TEXT,
-    CompanyNameIssuer TEXT,
-    TransferAgent TEXT,
-    OnlinePurchase TEXT,
-    DTCMemberNum TEXT,
-    TAURL TEXT,
-    TransferAgentPct TEXT,
-    IREmails TEXT,
-    IRPhoneNum TEXT,
-    IRCompanyAddress TEXT,
-    IRURL TEXT,
-    IRContactInfo TEXT,
-    SharesOutstanding TEXT,
+    Company_Name_Issuer TEXT,
+    Transfer_Agent TEXT,
+    Online_Purchase TEXT,
+    DTC_Member_Number TEXT,
+    TA_URL TEXT,
+    Transfer_Agent_Pct TEXT,
+    IR_Emails TEXT,
+    IR_Phone_Number TEXT,
+    IR_Company_Address TEXT,
+    IR_URL TEXT,
+    IR_Contact_Info TEXT,
+    Shares_Outstanding TEXT,
     CUSIP TEXT,
-    CompanyInfoURL TEXT,
-    CompanyInfo TEXT,
-    FullProgressPct TEXT,
+    Company_Info_URL TEXT,
+    Company_Info TEXT,
+    Full_Progress_Pct TEXT,
     CIK TEXT,
     DRS TEXT,
-    PercentSharesDRSd TEXT,
-    SubmissionReceived TEXT,
-    TimestampsUTC TEXT,
-    LearnMoreAboutDRS TEXT,
-    CertificatesOffered TEXT,
-    SandP500 TEXT,
-    IncorporatedIn TEXT,
-    PRIMARY KEY (CIK, Ticker, CompanyNameIssuer)
+    Percent_Shares_DRSd TEXT,
+    Submission_Received TEXT,
+    Timestamps_UTC TEXT,
+    Learn_More_About_DRS TEXT,
+    Certificates_Offered TEXT,
+    S_And_P_500 TEXT,
+    Incorporated_In TEXT,
+    PRIMARY KEY (CIK, Ticker, Company_Name_Issuer)
 )
 ''')
 
@@ -71,10 +71,10 @@ for _, row in df.iterrows():
     # Attempt to UPDATE existing row, ignoring case differences in CompanyNameIssuer
     cursor.execute('''
         UPDATE full_database_backend
-        SET CIK = ?, Ticker = ?, Exchange = ?, CompanyNameIssuer = ?
+        SET CIK = ?, Ticker = ?, Exchange = ?, Company_Name_Issuer = ?
         WHERE CIK = ?
           AND Ticker = ?
-          AND LOWER(CompanyNameIssuer) = LOWER(?)
+          AND LOWER(Company_Name_Issuer) = LOWER(?)
     ''', (
         cik_value, ticker_value, exchange_value, company_name_issuer_value,
         cik_value, ticker_value, company_name_issuer_value
@@ -83,7 +83,7 @@ for _, row in df.iterrows():
     # If no rows were updated, INSERT a new one
     if cursor.rowcount == 0:
         cursor.execute('''
-            INSERT INTO full_database_backend (CIK, Ticker, Exchange, CompanyNameIssuer)
+            INSERT INTO full_database_backend (CIK, Ticker, Exchange, Company_Name_Issuer)
             VALUES (?, ?, ?, ?)
         ''', (cik_value, ticker_value, exchange_value, company_name_issuer_value))
 
@@ -92,11 +92,11 @@ cursor.execute('''
 UPDATE full_database_backend
 SET
     Exchange = IFNULL(NULLIF(TRIM(Exchange), ''), ''),
-    TransferAgent = IFNULL(NULLIF(TRIM(TransferAgent), ''), ''),
-    OnlinePurchase = IFNULL(NULLIF(TRIM(OnlinePurchase), ''), ''),
-    DTCMemberNum = IFNULL(NULLIF(TRIM(DTCMemberNum), ''), ''),
-    TAURL = IFNULL(NULLIF(TRIM(TAURL), ''), ''),
-    TransferAgentPct = IFNULL(NULLIF(TRIM(TransferAgentPct), ''), ''),
+    Transfer_Agent = IFNULL(NULLIF(TRIM(Transfer_Agent), ''), ''),
+    Online_Purchase = IFNULL(NULLIF(TRIM(Online_Purchase), ''), ''),
+    DTC_Member_Number = IFNULL(NULLIF(TRIM(DTC_Member_Number), ''), ''),
+    TA_URL = IFNULL(NULLIF(TRIM(TA_URL), ''), ''),
+    Transfer_Agent_Pct = IFNULL(NULLIF(TRIM(Transfer_Agent_Pct), ''), ''),
     IREmails = IFNULL(NULLIF(TRIM(IREmails), ''), ''),
     IRPhoneNum = IFNULL(NULLIF(TRIM(IRPhoneNum), ''), ''),
     IRCompanyAddress = IFNULL(NULLIF(TRIM(IRCompanyAddress), ''), ''),
@@ -104,17 +104,17 @@ SET
     IRContactInfo = IFNULL(NULLIF(TRIM(IRContactInfo), ''), ''),
     SharesOutstanding = IFNULL(NULLIF(TRIM(SharesOutstanding), ''), ''),
     CUSIP = IFNULL(NULLIF(TRIM(CUSIP), ''), ''),
-    CompanyInfoURL = IFNULL(NULLIF(TRIM(CompanyInfoURL), ''), ''),
-    CompanyInfo = IFNULL(NULLIF(TRIM(CompanyInfo), ''), ''),
-    FullProgressPct = IFNULL(NULLIF(TRIM(FullProgressPct), ''), ''),
+    Company_Info_URL = IFNULL(NULLIF(TRIM(Company_Info_URL), ''), ''),
+    Company_Info = IFNULL(NULLIF(TRIM(Company_Info), ''), ''),
+    Full_Progress_Pct = IFNULL(NULLIF(TRIM(Full_Progress_Pct), ''), ''),
     DRS = IFNULL(NULLIF(TRIM(DRS), ''), ''),
-    PercentSharesDRSd = IFNULL(NULLIF(TRIM(PercentSharesDRSd), ''), ''),
-    SubmissionReceived = IFNULL(NULLIF(TRIM(SubmissionReceived), ''), ''),
-    TimestampsUTC = IFNULL(NULLIF(TRIM(TimestampsUTC), ''), ''),
-    LearnMoreAboutDRS = IFNULL(NULLIF(TRIM(LearnMoreAboutDRS), ''), ''),
-    CertificatesOffered = IFNULL(NULLIF(TRIM(CertificatesOffered), ''), ''),
-    SandP500 = IFNULL(NULLIF(TRIM(SandP500), ''), ''),
-    IncorporatedIn = IFNULL(NULLIF(TRIM(IncorporatedIn), ''), '')
+    Percent_Shares_DRSd = IFNULL(NULLIF(TRIM(Percent_Shares_DRSd), ''), ''),
+    Submission_Received = IFNULL(NULLIF(TRIM(Submission_Received), ''), ''),
+    Timestamps_UTC = IFNULL(NULLIF(TRIM(Timestamps_UTC), ''), ''),
+    Learn_More_About_DRS = IFNULL(NULLIF(TRIM(Learn_More_About_DRS), ''), ''),
+    Certificates_Offered = IFNULL(NULLIF(TRIM(Certificates_Offered), ''), ''),
+    S_And_P_500 = IFNULL(NULLIF(TRIM(S_And_P_500), ''), ''),
+    Incorporated_In = IFNULL(NULLIF(TRIM(Incorporated_In), ''), '')
 ''')
 
 # Commit changes and close the connection
