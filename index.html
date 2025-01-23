@@ -3,47 +3,52 @@
 <head>
     <!-- Set the character encoding for the HTML document -->
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="WhyDRS Database - A Comprehensive Public Database for Companies, Brokers, and Transfer Agents">
+    <meta name="theme-color" content="#134F9B">
     <!-- Title of the webpage displayed in the browser tab -->
     <title>WhyDRS Database</title>
 
-    <!-- Link to the DataTables CSS for basic table styling -->
-    <link rel="stylesheet" type="text/css"
-        href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css">
-    <!-- Link to the DataTables Buttons extension CSS for additional button styling -->
-    <link rel="stylesheet" type="text/css"
-        href="https://cdn.datatables.net/buttons/2.3.6/css/buttons.dataTables.min.css">
-    <!-- Link to the custom CSS file for overriding and adding additional styles -->
-    <link rel="stylesheet" type="text/css" href="src/web/css/styles.css">
+    <!-- Preload critical resources -->
+    <link rel="preload" href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css" as="style">
+    <link rel="preload" href="https://cdn.datatables.net/buttons/2.3.6/css/buttons.dataTables.min.css" as="style">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/buttons/2.3.6/css/buttons.dataTables.min.css">
+    <link rel="stylesheet" href="src/web/css/styles.css">
 </head>
 
 <body>
-    <!-- Main heading of the webpage -->
-    <h1>WhyDRS Database</h1>
+    <div class="container">
+        <!-- Main heading of the webpage -->
+        <h1>WhyDRS Database</h1>
 
-    <!-- Informational text about empty cells and how to contribute -->
-    <p class="info-text"><sup>*</sup> Empty cells indicate missing data. You can help us improve by <a href="https://forms.gle/deQ6YDoyX4kTNXy28" target="_blank">contributing missing information</a> or emailing us at <a href="mailto:hi@whydrs.org">hi@whydrs.org</a>.</p>
+        <!-- Informational text about empty cells and how to contribute -->
+        <p class="info-text"><sup>*</sup> Empty cells indicate missing data. You can help us improve by <a href="https://forms.gle/deQ6YDoyX4kTNXy28" target="_blank">contributing missing information</a> or emailing us at <a href="mailto:hi@whydrs.org">hi@whydrs.org</a>.</p>
 
-    <!-- Loading overlay displayed while data is being fetched and the table is being initialized -->
-    <div id="loading-overlay">
-        <!-- Loading spinner -->
-        <div class="loader"></div>
-        <!-- Loading message -->
-        <p>Loading data, please wait...</p>
+        <!-- Loading overlay displayed while data is being fetched and the table is being initialized -->
+        <div id="loading-overlay">
+            <!-- Loading spinner -->
+            <div class="loader"></div>
+            <!-- Loading message -->
+            <p>Loading data, please wait...</p>
+        </div>
+
+        <!-- Data table that will display the fetched data; initially hidden -->
+        <table id="data-table" class="hidden">
+            <!-- Table header section -->
+            <thead>
+                <tr>
+                    <!-- Table headers will be dynamically populated by JavaScript based on the data -->
+                </tr>
+            </thead>
+            <!-- Table body section -->
+            <tbody>
+                <!-- Table rows will be dynamically populated by JavaScript based on the data -->
+            </tbody>
+        </table>
     </div>
-
-    <!-- Data table that will display the fetched data; initially hidden -->
-    <table id="data-table" class="hidden">
-        <!-- Table header section -->
-        <thead>
-            <tr>
-                <!-- Table headers will be dynamically populated by JavaScript based on the data -->
-            </tr>
-        </thead>
-        <!-- Table body section -->
-        <tbody>
-            <!-- Table rows will be dynamically populated by JavaScript based on the data -->
-        </tbody>
-    </table>
 
     <!-- Include jQuery library for DOM manipulation and event handling -->
     <script type="text/javascript"
@@ -59,9 +64,9 @@
     <!-- Include custom JavaScript file that contains the logic for fetching data and initializing the table -->
     <script src="src/web/javascript/script.js"></script>
 
-    <!-- Footer message encouraging volunteering -->
-    <p class="footer">
-        WhyDRS is 100% volunteer-driven. Help us improve by contributing or providing feedback <a href="https://github.com/WhyDRS/Database/tree/main" target="_blank">here</a>. Join us today! 
-    </p>
+    <!-- Sticky bottom bar -->
+    <div class="sticky-bottom-bar">
+        <p>WhyDRS is 100% volunteer-driven. Help us improve by contributing or providing feedback <a href="https://github.com/WhyDRS/Database/tree/main" style="color: #FFFFFF; text-decoration: underline;">here</a>. Have questions? Visit <a href="https://whydrs.org" style="color: #FFFFFF; text-decoration: underline;">WhyDRS.org</a> or contact us at <a href="mailto:hi@whydrs.org" style="color: #FFFFFF; text-decoration: underline;">hi@whydrs.org</a></p>
+    </div>
 </body>
 </html>
