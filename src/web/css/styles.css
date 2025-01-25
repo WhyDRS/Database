@@ -1,16 +1,27 @@
-/* Base styles for the body element */
+/*******************************************************
+ * GLOBAL STYLES
+ *******************************************************/
+
+/* 
+    The body element is the main container for all content.
+    We set a default font family, background color, and
+    some spacing around the edges.
+*/
 body {
     font-family: 'Helvetica Neue', Arial, sans-serif;
     background-color: #F5F5F5;
     margin: 0;
     padding: 20px;
-    color: #333;
-    min-width: 320px;
-    overflow-x: hidden;
     padding-bottom: 60px;
+    color: #333;
+    min-width: 320px; /* Ensures at least a 320px wide display */
+    overflow-x: hidden; /* Prevents horizontal scrollbar on small screens */
 }
 
-/* Container for all content */
+/* 
+    Container class that provides a max width and centers 
+    the content horizontally with responsive padding.
+*/
 .container {
     max-width: 100%;
     margin: 0 auto;
@@ -19,17 +30,22 @@ body {
     position: relative;
 }
 
-/* Styles for the main heading */
+/* 
+    H1 heading style, centered text, and custom color. 
+    We also include a margin to space it properly from surrounding elements.
+*/
 h1 {
     text-align: center;
-    color: #134F9B;
+    color: #144F9B;
     margin-bottom: 10px;
     font-size: 2em;
     width: 100%;
     box-sizing: border-box;
 }
 
-/* Styles for informational text under the heading */
+/* 
+    Paragraph style for informational text under the main heading.
+*/
 .info-text {
     text-align: center;
     font-size: 1em;
@@ -39,25 +55,35 @@ h1 {
     box-sizing: border-box;
 }
 
-/* Styles for the loading overlay */
+/*******************************************************
+ * LOADING OVERLAY
+ *******************************************************/
+
+/* 
+    Covers the entire screen while data is loading. 
+    A slightly transparent background is used to obscure content.
+*/
 #loading-overlay {
-    position: fixed;
+    position: fixed;   /* Ensures it covers the viewport entirely */
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     background: rgba(245, 245, 245, 0.95);
     display: flex;
-    flex-direction: column;
+    flex-direction: column; /* Vertically stacks the loader and text */
     align-items: center;
     justify-content: center;
-    z-index: 9999;
+    z-index: 9999;     /* High z-index to ensure it sits above everything else */
 }
 
-/* Styles for the loading spinner */
+/* 
+    The spinning loader circle. 
+    We use the CSS border trick to animate a spinner.
+*/
 #loading-overlay .loader {
     border: 8px solid #f3f3f3;
-    border-top: 8px solid #134F9B;
+    border-top: 8px solid #144F9B; /* The top border is colored to create the spinner effect */
     border-radius: 50%;
     width: 60px;
     height: 60px;
@@ -65,24 +91,35 @@ h1 {
     margin-bottom: 20px;
 }
 
-/* Styles for the loading message */
+/* 
+    Loading message text under the spinner.
+*/
 #loading-overlay p {
     font-size: 18px;
     color: #3E3E3E;
 }
 
-/* Keyframes for the spinner animation */
+/* 
+    Keyframes defining the spinner's rotation animation.
+    It rotates 360 degrees repeatedly.
+*/
 @keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
-/* Center table headers in DataTables */
-table.dataTable thead th {
-    text-align: center !important;
-}
+/*******************************************************
+ * TABLE & DATATABLES STYLING
+ *******************************************************/
 
-/* Styles for the table */
+/* 
+    Sets up basic table styles, merges borders, 
+    and prevents overflow of table content.
+*/
 table {
     border-collapse: collapse;
     border-radius: 8px;
@@ -90,9 +127,47 @@ table {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     table-layout: auto;
     border: 1px solid #ccc;
+    width: 100%;
 }
 
-/* Styles for table headers and cells */
+/* 
+    DataTables plugin specifically targets .dataTable thead th. 
+    !important is used to override inline styles set by DataTables.
+*/
+table.dataTable thead th {
+    text-align: center !important;
+}
+
+/* 
+    Table headers with a background color and shadow effect. 
+    The text is centered, and a box-shadow adds depth.
+*/
+th {
+    background-color: #144F9B;
+    color: #FFFFFF;
+    text-align: center;
+    box-shadow: inset 0 -3px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* 
+    Changes the background color of the header cell when hovered, 
+    indicating it's clickable for sorting.
+*/
+th:hover {
+    background-color: #0B3C75;
+    cursor: pointer;
+}
+
+/* 
+    Table cells in the body use a white background by default.
+*/
+td {
+    background-color: #FFFFFF;
+}
+
+/* 
+    General spacing and font size for both headers and body cells.
+*/
 th, td {
     padding: 14px;
     text-align: left;
@@ -101,97 +176,208 @@ th, td {
     border-bottom: 1px solid #ddd;
 }
 
-/* Styles for table headers */
-th {
-    background-color: #134F9B;
-    color: #FFFFFF;
-    text-align: center;
-    box-shadow: inset 0 -3px 5px rgba(0, 0, 0, 0.3);
-}
-
-/* Styles for table cells */
-td {
-    background-color: #FFFFFF;
-}
-
-/* Alternate row colors for better readability */
+/* 
+    Applies a subtle background on every even row, making the table easier to read.
+*/
 tbody tr:nth-child(even) {
     background-color: #F7F7F7;
 }
 
-/* Hover effect for table rows */
+/* 
+    Highlight effect on row hover to guide the user’s eye.
+*/
 tbody tr:hover {
     background-color: #DCEEFF;
 }
 
-/* Styles for DataTables buttons */
-.dt-buttons {
-    margin-bottom: 20px;
-    position: sticky;
-    left: 0;
-    background-color: #F5F5F5;
-    z-index: 1;
-    padding: 10px 0;
+/*******************************************************
+ * DATATABLES WRAPPER / BUTTONS
+ *******************************************************/
+
+/* 
+    Ensures the DataTables container can handle horizontal overflow 
+    and keeps the table responsive.
+*/
+.dataTables_wrapper {
+    width: 100%;
+    margin: 0 auto;
+    overflow-x: auto;
+    box-sizing: border-box;
+    padding-bottom: 15px;
 }
 
-/* Styles for DataTables buttons */
-.dt-button {
-    background-color: #134F9B !important;
-    color: #FFFFFF !important;
-    border: none !important;
-    border-radius: 4px !important;
+/* 
+    Additional wrapper that DataTables uses for vertical/horizontal scroll.
+*/
+.dataTables_scroll {
+    overflow-x: auto;
+    margin-bottom: 15px;
+}
+
+/* 
+    Styles for the DataTables buttons (e.g., column visibility, export, etc.).
+    Provides a consistent button look and feel matching our color scheme.
+*/
+.dataTables_wrapper .dt-buttons .dt-button {
+    background-color: #144F9B;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 4px;
     margin-right: 5px;
-    padding: 6px 12px !important;
+    padding: 6px 12px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-/* Hover effect for DataTables buttons */
-.dt-button:hover {
+.dataTables_wrapper .dt-buttons .dt-button:hover {
+    background-color: #0B3C75;
+    color: #FFFFFF;
+}
+
+/* 
+    The button collection is the dropdown or popup with column toggle options.
+*/
+.dataTables_wrapper div.dt-button-collection .dt-button {
+    background-color: #FFFFFF;
+    color: #144F9B;
+    border: 1px solid #144F9B;
+    padding: 6px 12px;
+    margin: 2px;
+    border-radius: 4px;
+}
+
+.dataTables_wrapper div.dt-button-collection .dt-button:hover {
+    background-color: #DCEEFF;
+    color: #144F9B;
+}
+
+/* 
+    Indicates a toggled (pressed) state for buttons 
+    in the button collection.
+*/
+.dataTables_wrapper div.dt-button-collection .dt-button[aria-pressed="true"] {
+    background-color: #144F9B;
+    color: #FFFFFF;
+}
+
+.dataTables_wrapper div.dt-button-collection .dt-button[aria-pressed="true"]:hover {
+    background-color: #0B3C75;
+    color: #FFFFFF;
+}
+
+/*******************************************************
+ * DATATABLES PAGINATION
+ *******************************************************/
+
+/* 
+    Styles for the pagination container (forward/back buttons, page numbers, etc.).
+*/
+.dataTables_wrapper .dataTables_paginate {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 4px;
+}
+
+/* 
+    Pagination buttons, default white background with a border 
+    matching the theme color.
+*/
+.dataTables_wrapper .dataTables_paginate .paginate_button {
+    background-color: #FFFFFF;
+    color: #144F9B !important; 
+    border: 1px solid #144F9B;
+    border-radius: 4px;
+    margin: 0 2px;
+    padding: 6px 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 32px;
+    text-decoration: none; /* Removes underline from links if any */
+}
+
+/* 
+    Hover and focus style for pagination buttons 
+    that are not disabled.
+*/
+.dataTables_wrapper .dataTables_paginate .paginate_button:hover:not(.disabled),
+.dataTables_wrapper .dataTables_paginate .paginate_button:focus:not(.disabled) {
+    background: #0B3C75 !important;
+    background-color: #0B3C75 !important;
+    color: #FFFFFF !important;
+    border-color: #0B3C75;
+    text-decoration: none;
+}
+
+/* 
+    Hover style to ensure consistency even if :focus doesn't apply.
+*/
+.dataTables_wrapper .dataTables_paginate .paginate_button:hover {
+    background: #0B3C75 !important;
     background-color: #0B3C75 !important;
     color: #FFFFFF !important;
 }
 
-/* Styles for pagination buttons */
-.dataTables_wrapper .dataTables_paginate .paginate_button {
-    background-color: #FFFFFF !important;
-    color: #134F9B !important;
-    border: 1px solid #134F9B !important;
-    border-radius: 4px !important;
-    margin: 0 2px;
-    padding: 6px 12px;
-    transition: background-color 0.3s;
+/* 
+    Pagination button for the currently active page.
+*/
+.dataTables_wrapper .dataTables_paginate .paginate_button.current,
+.dataTables_wrapper .dataTables_paginate .paginate_button.current:hover {
+    background-color: #144F9B !important;
+    color: #FFFFFF !important;
+    border-color: #144F9B;
+}
+
+/* 
+    Disabled pagination buttons (when there's no previous or next page).
+*/
+.dataTables_wrapper .dataTables_paginate .paginate_button.disabled {
+    background-color: #F5F5F5 !important;
+    color: #999999 !important;
+    border-color: #CCCCCC;
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
+/* 
+    Specific styles for previous, next, first, last buttons 
+    to keep them consistent with other pagination buttons.
+*/
+.dataTables_wrapper .dataTables_paginate .paginate_button.previous,
+.dataTables_wrapper .dataTables_paginate .paginate_button.next,
+.dataTables_wrapper .dataTables_paginate .paginate_button.first,
+.dataTables_wrapper .dataTables_paginate .paginate_button.last {
     min-width: auto;
-    height: auto;
-    display: inline-block;
-    text-align: center;
-    line-height: normal;
-    white-space: nowrap;
+    padding: 6px 12px;
+    color: #144F9B;
 }
 
-/* Hover effect for pagination buttons */
-.dataTables_wrapper .dataTables_paginate .paginate_button:hover {
-    background-color: #134F9B !important;
-    color: #FFFFFF !important;
-}
+/*******************************************************
+ * DATATABLES LENGTH / FILTER / INFO
+ *******************************************************/
 
-/* Styles for the current pagination button */
-.dataTables_wrapper .dataTables_paginate .paginate_button.current {
-    background-color: #134F9B !important;
-    color: #FFFFFF !important;
-}
-
-/* Styles for labels in DataTables length and filter controls */
+/* 
+    Labels for "Show x entries" (dataTables_length) 
+    and the search box (dataTables_filter).
+*/
 .dataTables_wrapper .dataTables_length label,
 .dataTables_wrapper .dataTables_filter label {
     color: #3E3E3E;
 }
 
-/* Styles for the information text in DataTables */
+/* 
+    Table information text ("Showing x to y of z entries").
+*/
 .dataTables_wrapper .dataTables_info {
     color: #3E3E3E;
 }
 
-/* Styles for the entries per page dropdown */
+/* 
+    The dropdown used to select the number of table rows shown at once.
+*/
 .dataTables_length select {
     border: 1px solid #ccc;
     border-radius: 4px;
@@ -199,7 +385,9 @@ tbody tr:hover {
     background-color: #FFFFFF;
 }
 
-/* Styles for the search input field */
+/* 
+    Search box styling in the top-right corner of the table by default.
+*/
 .dataTables_filter input {
     border: 1px solid #ccc;
     border-radius: 4px;
@@ -207,32 +395,30 @@ tbody tr:hover {
     background-color: #FFFFFF;
 }
 
-/* Hover effect for table headers */
-th:hover {
-    background-color: #0B3C75;
-    cursor: pointer;
-}
+/*******************************************************
+ * DATATABLES TOP/BOTTOM SECTIONS
+ *******************************************************/
 
-/* Add margin above pagination controls */
-.dataTables_wrapper .dataTables_paginate {
-    margin-top: 10px;
-}
-
-/* Layout adjustments for DataTables footer */
+/* 
+    The bottom area of the DataTable which can contain 
+    table length control, table info, and pagination controls.
+*/
 .dataTables_wrapper .bottom {
     display: grid;
-    grid-template-columns: 200px 1fr 200px;
+    grid-template-columns: 200px 1fr 200px; /* Defines 3 columns layout */
     width: 100%;
     box-sizing: border-box;
     padding: 10px 0;
-    position: sticky;
+    position: sticky; /* Stays at the bottom of its container */
     left: 0;
     background-color: #F5F5F5;
     z-index: 1;
     align-items: center;
 }
 
-/* Style the length control container */
+/* 
+    First column for the length (Show x entries) selection.
+*/
 .dataTables_length {
     grid-column: 1;
     white-space: nowrap;
@@ -240,9 +426,13 @@ th:hover {
     padding: 0;
     display: flex;
     align-items: center;
-    height: 32px;
+    height: 32px; /* Aligns the dropdown nicely vertically */
 }
 
+/* 
+    Label containing the text for the length menu. 
+    We use gap to space the label text and the select.
+*/
 .dataTables_length label {
     margin: 0;
     padding: 0;
@@ -251,12 +441,17 @@ th:hover {
     gap: 5px;
 }
 
+/* 
+    The dropdown select used for length selection, styled to match button heights.
+*/
 .dataTables_length select {
     margin: 0 5px;
     height: 28px;
 }
 
-/* Style the info text container */
+/* 
+    Second column for the table info text (e.g., "Showing 1 to 100 of 500 entries").
+*/
 .dataTables_info {
     grid-column: 2;
     text-align: center;
@@ -269,7 +464,9 @@ th:hover {
     height: 32px;
 }
 
-/* Style the pagination container */
+/* 
+    Third column for pagination controls (e.g., previous, next, page numbers).
+*/
 .dataTables_paginate {
     grid-column: 3;
     margin: 0;
@@ -281,7 +478,9 @@ th:hover {
     gap: 4px;
 }
 
-/* Remove the conflicting styles */
+/* 
+    Ensures pagination buttons fit well in the container.
+*/
 .dataTables_paginate .paginate_button {
     display: inline-block;
     min-width: auto;
@@ -291,84 +490,95 @@ th:hover {
     line-height: normal;
 }
 
-/* Add sticky positioning to the top DataTables controls */
+/* 
+    The top section (under the heading) which typically contains 
+    the search box and/or length menu.
+*/
 .dataTables_wrapper .top {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    flex-wrap: wrap;
+    flex-wrap: wrap;       /* Adjusts layout for smaller screens */
     width: 100%;
     box-sizing: border-box;
     padding: 10px 0;
-    position: sticky;
+    position: sticky; /* Sticks to the top while scrolling within the container */
     left: 0;
     background-color: #F5F5F5;
-    z-index: 1;
+    z-index: 1;       /* Ensures it's above the table rows */
 }
 
-/* Ensure search and length controls stay fixed */
+/* 
+    The filter (search box) and length menu in the top area.
+    We keep them visually consistent.
+*/
 .dataTables_filter,
 .dataTables_length {
-    position: static; /* Changed from sticky since parent is now sticky */
+    position: static;
     background-color: transparent;
     padding: 10px 0;
 }
 
-/* Remove margin from length label */
 .dataTables_length label {
     margin: 0;
 }
 
-/* Add margin to information text */
 .dataTables_info {
     margin: 10px 0;
 }
 
-/* Hide elements with the 'hidden' class */
+/*******************************************************
+ * UTILITY CLASSES
+ *******************************************************/
+
+/* 
+    .hidden is used to hide elements without removing them from the DOM, 
+    typically until data has loaded.
+*/
 .hidden {
     display: none !important;
 }
 
-/* Styles for buttons in the column visibility collection */
-div.dt-button-collection .dt-button {
-    background-color: #FFFFFF !important;
-    color: #134F9B !important;
-    border: 1px solid #134F9B !important;
-    padding: 6px 12px;
-    margin: 2px;
-    border-radius: 4px;
-}
+/*******************************************************
+ * STICKY BOTTOM BAR
+ *******************************************************/
 
-/* Hover effect for inactive buttons */
-div.dt-button-collection .dt-button:hover {
-    background-color: #DCEEFF !important;
-    color: #134F9B !important;
-}
-
-/* Styles for active buttons using aria-pressed attribute */
-div.dt-button-collection .dt-button[aria-pressed="true"] {
-    background-color: #134F9B !important;
-    color: #FFFFFF !important;
-}
-
-/* Hover effect for active buttons */
-div.dt-button-collection .dt-button[aria-pressed="true"]:hover {
-    background-color: #0B3C75 !important;
-    color: #FFFFFF !important;
-}
-
-/* Styles for the footer message */
-.footer {
-    text-align: center;
-    font-size: 1em;
-    margin-top: 30px;
-    color: #3E3E3E;
+/* 
+    A fixed bar at the bottom of the screen. We use a box shadow 
+    to create separation from the page content.
+*/
+.sticky-bottom-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
     width: 100%;
+    background-color: #144F9B;
+    color: #FFFFFF;
+    padding: 15px;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000; /* Renders above other elements */
+    display: flex;
+    justify-content: center;
+    align-items: center;
     box-sizing: border-box;
-    padding: 0 15px;
 }
 
-/* Add media queries for better responsiveness */
+/* 
+    Text within the sticky bar, white text on a colored background.
+*/
+.sticky-bottom-bar p {
+    margin: 0;
+    font-size: 14px;
+}
+
+/*******************************************************
+ * MEDIA QUERIES
+ *******************************************************/
+
+/* 
+    Responsive adjustments for screens smaller than 768px. 
+    Reduces padding on the body and adjusts table controls layout.
+*/
 @media screen and (max-width: 768px) {
     body {
         padding: 10px;
@@ -388,39 +598,20 @@ div.dt-button-collection .dt-button[aria-pressed="true"]:hover {
     }
 }
 
-/* Responsive container for DataTables */
-.dataTables_wrapper {
+/*******************************************************
+ * FOOTER
+ *******************************************************/
+
+/* 
+    Footer style, typically used if there's a footer element. 
+    Centered text and a subtle color.
+*/
+.footer {
+    text-align: center;
+    font-size: 1em;
+    margin-top: 30px;
+    color: #3E3E3E;
     width: 100%;
-    margin: 0 auto;
-    overflow-x: auto;
     box-sizing: border-box;
-    padding-bottom: 15px;
-}
-
-/* Ensure the table scrolls horizontally while controls stay fixed */
-.dataTables_scroll {
-    overflow-x: auto;
-    margin-bottom: 15px;
-}
-
-/* Styles for sticky bottom bar */
-.sticky-bottom-bar {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    background-color: #134F9B;
-    color: #FFFFFF;
-    padding: 15px;
-    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
-    z-index: 1000;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-sizing: border-box;
-}
-
-.sticky-bottom-bar p {
-    margin: 0;
-    font-size: 14px;
+    padding: 0 15px;
 }

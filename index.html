@@ -1,70 +1,128 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Set the character encoding for the HTML document -->
+    <!-- 
+        The "lang" attribute specifies the language of the webpage's content,
+        helping search engines and screen readers handle the text correctly.
+    -->
     <meta charset="UTF-8">
+    <!-- 
+        Ensures the page is rendered correctly on mobile devices.
+        'width=device-width' sets the width to the device-width, 
+        and 'initial-scale=1.0' sets the initial zoom level.
+    -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- 
+        Provides a brief description of the webpage content, 
+        which can be used by search engines for indexing.
+    -->
     <meta name="description" content="WhyDRS Database - A Comprehensive Public Database for Companies, Brokers, and Transfer Agents">
-    <meta name="theme-color" content="#134F9B">
-    <!-- Title of the webpage displayed in the browser tab -->
+
+    <!-- 
+        Defines the color of the browser toolbar in some mobile browsers,
+        improving brand visibility and user experience.
+    -->
+    <meta name="theme-color" content="#144F9B">
+    
+    <!-- 
+        The title of the webpage that appears in the browser tab 
+        and in search engine results.
+    -->
     <title>WhyDRS Database</title>
 
-    <!-- Preload critical resources -->
+    <!-- 
+        Preload instructions to hint that these resources 
+        are high priority. 'as' attribute identifies the resource type.
+    -->
     <link rel="preload" href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css" as="style">
     <link rel="preload" href="https://cdn.datatables.net/buttons/2.3.6/css/buttons.dataTables.min.css" as="style">
-    
-    <!-- Stylesheets -->
+
+    <!-- 
+        Links to the DataTables and Buttons library CSS files.
+        DataTables helps create interactive tables with search, 
+        sorting, pagination, etc.
+    -->
     <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css">
     <link rel="stylesheet" href="https://cdn.datatables.net/buttons/2.3.6/css/buttons.dataTables.min.css">
+
+    <!-- 
+        Links to our custom stylesheet which holds site-specific styling.
+    -->
     <link rel="stylesheet" href="src/web/css/styles.css">
 </head>
-
 <body>
     <div class="container">
-        <!-- Main heading of the webpage -->
+        <!-- 
+            Main heading of the webpage, introducing the database.
+        -->
         <h1>WhyDRS Database</h1>
 
-        <!-- Informational text about empty cells and how to contribute -->
+        <!-- 
+            Small paragraph providing context about the database and 
+            encouraging the user to contribute missing data or contact.
+        -->
         <p class="info-text"><sup>*</sup> Empty cells indicate missing data. You can help us improve by <a href="https://forms.gle/deQ6YDoyX4kTNXy28" target="_blank">contributing missing information</a> or emailing us at <a href="mailto:hi@whydrs.org">hi@whydrs.org</a>.</p>
 
-        <!-- Loading overlay displayed while data is being fetched and the table is being initialized -->
+        <!-- 
+            Loading overlay that displays while the data is being fetched.
+            It prevents the user from interacting with the page 
+            and shows a spinner and a loading message.
+        -->
         <div id="loading-overlay">
-            <!-- Loading spinner -->
             <div class="loader"></div>
-            <!-- Loading message -->
             <p>Loading data, please wait...</p>
         </div>
 
-        <!-- Data table that will display the fetched data; initially hidden -->
+        <!-- 
+            Table element that will be initialized as a DataTable in the script.
+            The "hidden" class is applied initially to hide it until data is ready.
+        -->
         <table id="data-table" class="hidden">
-            <!-- Table header section -->
             <thead>
                 <tr>
-                    <!-- Table headers will be dynamically populated by JavaScript based on the data -->
+                    <!-- 
+                        Table headers (th) are dynamically generated 
+                        in the script.js based on JSON keys.
+                    -->
                 </tr>
             </thead>
-            <!-- Table body section -->
             <tbody>
-                <!-- Table rows will be dynamically populated by JavaScript based on the data -->
+                <!-- 
+                    Table rows (tr) are populated dynamically 
+                    with data from the fetched JSON.
+                -->
             </tbody>
         </table>
     </div>
 
-    <!-- Include jQuery library for DOM manipulation and event handling -->
-    <script type="text/javascript"
-        src="https://code.jquery.com/jquery-3.5.1.js"></script>
-    <!-- Include DataTables library for enhanced table functionalities -->
-    <script type="text/javascript"
-        src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
-    <!-- Include DataTables Buttons extension for additional button features -->
+    <!-- 
+        jQuery library (a dependency for DataTables) 
+        is loaded first so DataTables can use it.
+    -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
+
+    <!-- 
+        DataTables core script, which turns ordinary HTML tables 
+        into powerful interactive tables with searching, sorting, etc.
+    -->
+    <script type="text/javascript" src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
+
+    <!-- 
+        Buttons extension for DataTables, adding column visibility and other features.
+    -->
     <script src="https://cdn.datatables.net/buttons/2.3.6/js/dataTables.buttons.min.js"></script>
-    <!-- Include Buttons ColVis extension for column visibility control -->
     <script src="https://cdn.datatables.net/buttons/2.3.6/js/buttons.colVis.min.js"></script>
 
-    <!-- Include custom JavaScript file that contains the logic for fetching data and initializing the table -->
+    <!-- 
+        Our custom JavaScript which fetches data and initializes the table.
+    -->
     <script src="src/web/javascript/script.js"></script>
 
-    <!-- Sticky bottom bar -->
+    <!-- 
+        A sticky bottom bar that stays fixed at the bottom 
+        of the viewport, providing additional links and context.
+    -->
     <div class="sticky-bottom-bar">
         <p>WhyDRS is 100% volunteer-driven. Help us improve by contributing or providing feedback <a href="https://github.com/WhyDRS/Database/tree/main" style="color: #FFFFFF; text-decoration: underline;">here</a>. Have questions? Visit <a href="https://whydrs.org" style="color: #FFFFFF; text-decoration: underline;">WhyDRS.org</a> or contact us at <a href="mailto:hi@whydrs.org" style="color: #FFFFFF; text-decoration: underline;">hi@whydrs.org</a></p>
     </div>
