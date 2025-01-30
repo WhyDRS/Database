@@ -10,7 +10,7 @@ class DatabaseHandler:
         conn = sqlite3.connect(self.db_file_path)
         cursor = conn.cursor()
         cursor.execute('''
-        CREATE TABLE IF NOT EXISTS full_database_backend (
+        CREATE TABLE IF NOT EXISTS Main_Database (
             Ticker TEXT,
             Exchange TEXT,
             Company_Name_Issuer TEXT,
@@ -56,7 +56,7 @@ class DatabaseHandler:
             # Ensure row has exactly 27 elements
             row = row + [''] * (27 - len(row))
             cursor.execute('''
-            INSERT OR REPLACE INTO full_database_backend (
+            INSERT OR REPLACE INTO Main_Database (
                 Ticker, Exchange, Company_Name_Issuer, Transfer_Agent, Online_Purchase, DTC_Member_Number, TA_URL,
                 Transfer_Agent_Pct, IR_Emails, IR_Phone_Number, IR_Company_Address, IR_URL, IR_Contact_Info, Shares_Outstanding,
                 CUSIP, Company_Info_URL, Company_Info, Full_Progress_Pct, CIK, DRS, Percent_Shares_DRSd, Submission_Received,
@@ -71,7 +71,7 @@ class DatabaseHandler:
     def read_database_data(self):
         conn = sqlite3.connect(self.db_file_path)
         cursor = conn.cursor()
-        cursor.execute('SELECT * FROM full_database_backend')
+        cursor.execute('SELECT * FROM Main_Database')
         rows = cursor.fetchall()
         conn.close()
         return rows
@@ -79,7 +79,7 @@ class DatabaseHandler:
     def export_database_to_json(self, json_file_path):
         conn = sqlite3.connect(self.db_file_path)
         cursor = conn.cursor()
-        cursor.execute('SELECT * FROM full_database_backend')
+        cursor.execute('SELECT * FROM Main_Database')
         rows = cursor.fetchall()
         column_names = [description[0] for description in cursor.description]
         data_json = [dict(zip(column_names, row)) for row in rows]

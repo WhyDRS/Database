@@ -48,7 +48,7 @@ jobs:
       run: |
         git config --global user.name 'DRRUTHSEX'
         git config --global user.email 'drsf500@gmail.com'
-        git add data/company_tickers_exchange.json data/Full_Database_Backend.db
+        git add data/company_tickers_exchange.json data/Main_Database.db
         git commit -m "Update SEC data and push to Google Sheets"
         git push
       env:

@@ -10,8 +10,8 @@ def main():
     # Load credentials and environment variables
     sheet_id = os.environ['SHEET_ID']
     creds_json = json.loads(os.environ['GOOGLE_API_KEYS'])
-    db_file_path = 'data/Issuers/Full_Database_Backend.db'
-    json_file_path = 'data/Issuers/Full_Database_Backend.json'
+    db_file_path = 'data/Issuers/Main_Database.db'
+    json_file_path = 'data/Issuers/Main_Database.json'
 
     # Initialize handlers
     db_handler = DatabaseHandler(db_file_path)
@@ -21,10 +21,10 @@ def main():
     db_data = db_handler.read_database_data()
 
     # Step 2: Update the sheet from the DB for source-of-truth columns (case-insensitive matching)
-    sheet_handler.update_google_sheet('Full_Database_Backend', db_data)
+    sheet_handler.update_google_sheet('Main_Database', db_data)
 
     # Step 3: Read the now-updated sheet data
-    sheet_data = sheet_handler.read_sheet_data('Full_Database_Backend')
+    sheet_data = sheet_handler.read_sheet_data('Main_Database')
 
     # Step 4: Update the database from the sheet data (for non-source-of-truth columns)
     db_handler.update_database(sheet_data)

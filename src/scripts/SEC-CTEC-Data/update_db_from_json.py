@@ -4,7 +4,7 @@ import sqlite3
 
 # File paths
 JSON_FILE_PATH = 'data/SEC-CTEC-Data/company_tickers_exchange.json'
-DB_FILE_PATH = 'data/Issuers/Full_Database_Backend.db'
+DB_FILE_PATH = 'data/Issuers/Main_Database.db'
 
 # Read JSON data
 with open(JSON_FILE_PATH, 'r') as json_file:
@@ -28,7 +28,7 @@ cursor = conn.cursor()
 
 # Create table with the updated schema if it doesn't exist
 cursor.execute('''
-CREATE TABLE IF NOT EXISTS full_database_backend (
+CREATE TABLE IF NOT EXISTS Main_Database (
     Ticker TEXT,
     Exchange TEXT,
     Company_Name_Issuer TEXT,
@@ -70,7 +70,7 @@ for _, row in df.iterrows():
 
     # Attempt to UPDATE existing row, ignoring case differences in CompanyNameIssuer
     cursor.execute('''
-        UPDATE full_database_backend
+        UPDATE Main_Database
         SET CIK = ?, Ticker = ?, Exchange = ?, Company_Name_Issuer = ?
         WHERE CIK = ?
           AND Ticker = ?
@@ -83,13 +83,13 @@ for _, row in df.iterrows():
     # If no rows were updated, INSERT a new one
     if cursor.rowcount == 0:
         cursor.execute('''
-            INSERT INTO full_database_backend (CIK, Ticker, Exchange, Company_Name_Issuer)
+            INSERT INTO Main_Database (CIK, Ticker, Exchange, Company_Name_Issuer)
             VALUES (?, ?, ?, ?)
         ''', (cik_value, ticker_value, exchange_value, company_name_issuer_value))
 
 # Clean up whitespace and NULL-like values in non-key columns only
 cursor.execute('''
-UPDATE full_database_backend
+UPDATE Main_Database
 SET
     Exchange = IFNULL(NULLIF(TRIM(Exchange), ''), ''),
     Transfer_Agent = IFNULL(NULLIF(TRIM(Transfer_Agent), ''), ''),
