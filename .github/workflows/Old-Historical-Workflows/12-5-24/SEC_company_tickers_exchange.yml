@@ -1,0 +1,65 @@
+<<<<<<<< HEAD:.github/workflows/Update_Google_Sheet_and_Issuers_TA_Database_with_SEC_Data.yml
+name: Update Google Sheet and Issuers TA Database with SEC Data
+========
+name: Update Google Sheet with SEC Data
+>>>>>>>> 19bfdc4836497caaef74ddce4c6b3e76a486403d:.github/workflows/Old-Historical-Workflows/12-5-24/SEC_company_tickers_exchange.yml
+
+on:
+#  schedule:
+#    - cron: '0 0 * * *'  # Runs every day at midnight
+  workflow_dispatch:  # Allows manual triggering
+
+concurrency: 
+  group: database-update
+
+jobs:
+  update-data:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.x'
+
+    - name: Install dependencies
+      run: pip install requests pandas gspread oauth2client
+
+    - name: Pull SEC data and update repository
+      run: python src/scripts/SEC_Data_Scripts/SEC_company_tickers_exchange.py
+
+    - name: Change Primary Key in Database
+      run: python src/scripts/Update_Issuers_TA_DB/change_primary_key_to_cik.py
+
+    - name: Update Database from JSON
+      run: python src/scripts/Update_Issuers_TA_DB/update_db_with_SEC_data.py
+
+    - name: Update Google Sheet
+      env:
+        SHEET_ID: ${{ secrets.SHEET_ID }}
+        GOOGLE_API_KEYS: ${{ secrets.GOOGLE_API_KEYS }}
+      run: python src/scripts/Update_Issuers_TA_Google_Sheet/update_google_sheet.py
+
+    - name: Verify changes
+      run: |
+        echo "Checking for changes in data files..."
+        git status
+
+    - name: Commit and push changes
+      run: |
+<<<<<<<< HEAD:.github/workflows/Update_Google_Sheet_and_Issuers_TA_Database_with_SEC_Data.yml
+        git config --global user.name 'JamesAlfonse'
+        git config --global user.email 'jamesalfonse@gmail.com'
+        git add data/SEC_Ticker_Exchange_Company_CIK/company_tickers_exchange.json data/Issuers_TA/Issuers_TA.db
+========
+        git config --global user.name 'DRRUTHSEX'
+        git config --global user.email 'drsf500@gmail.com'
+        git add data/company_tickers_exchange.json data/Main_Database.db
+>>>>>>>> 19bfdc4836497caaef74ddce4c6b3e76a486403d:.github/workflows/Old-Historical-Workflows/12-5-24/SEC_company_tickers_exchange.yml
+        git commit -m "Update SEC data and push to Google Sheets"
+        git push
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

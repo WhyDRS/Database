@@ -14,16 +14,20 @@ gc = gspread.service_account_from_dict(creds_json)  # Use credentials to authent
 sheet = gc.open_by_key(os.environ['SHEET_ID'])  # Open the spreadsheet using the SHEET_ID from environment variables
 
 # Select the worksheet to update
-worksheet = sheet.worksheet("Full_Database_Backend")  # Specify the worksheet name within the spreadsheet to work with
+worksheet = sheet.worksheet("Main_Database")  # Specify the worksheet name within the spreadsheet to work with
 
 # Connect to the SQLite database
+<<<<<<<< HEAD:src/scripts/Update_Issuers_TA_Google_Sheet/update_google_sheet.py
 db_file_path = 'data/Issuers_TA/Issuers_TA.db'  # Define the path to the database file
+========
+db_file_path = 'data/Main_Database.db'  # Define the path to the database file
+>>>>>>>> 19bfdc4836497caaef74ddce4c6b3e76a486403d:src/scripts/Old-Historical-Scripts/12-5-24/update_google_sheet.py
 if not os.path.exists(db_file_path):
     raise FileNotFoundError(f"Database file not found: {db_file_path}")  # Raise an error if the database file does not exist
 conn = sqlite3.connect(db_file_path)  # Open a connection to the SQLite database
 
 # Read data from the database
-query = "SELECT Ticker, Exchange, CompanyNameIssuer, CIK FROM full_database_backend"  # Adjusted to fetch only the required columns
+query = "SELECT Ticker, Exchange, CompanyNameIssuer, CIK FROM Main_Database"  # Adjusted to fetch only the required columns
 df_db = pd.read_sql_query(query, conn)  # Execute the SQL query and store the results in a pandas DataFrame
 
 # Replace NaN and infinite values with empty strings
