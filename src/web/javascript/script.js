@@ -5,7 +5,7 @@
  */
 const CONFIG = {
     // URL where the JSON data is hosted
-    dataUrl: '/data/Issuers/Full_Database_Backend.json',
+    dataUrl: '/data/Issuers/test.json',
   
     // By default, which columns should be visible? 
     // (indexing columns in the order they appear in the JSON keys array)

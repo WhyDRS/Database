@@ -11,20 +11,20 @@ gc = gspread.service_account_from_dict(creds_json)  # Use credentials to authent
 
 # Open the Google Sheet using the provided SHEET_ID
 sheet = gc.open_by_key(os.environ['SHEET_ID'])  # Open the spreadsheet using the SHEET_ID from environment variables
-worksheet = sheet.worksheet("Full_Database_Backend")  # Access the specific worksheet
+worksheet = sheet.worksheet("test")  # Access the specific worksheet
 
 # Get all values from columns A to AA (adjust the range if the sheet grows)
 # Fetch all rows starting from the second row to the end of the worksheet and fill empty cells with a space
 data = [row + [' ']*(27 - len(row)) for row in worksheet.get('A2:AA' + str(worksheet.row_count))]
 
 # Connect to a SQLite database (or create it if it doesn't exist)
-conn = sqlite3.connect('data/Full_Database_Backend.db')  # Establish a connection to a SQLite database
+conn = sqlite3.connect('data/test.db')  # Establish a connection to a SQLite database
 conn.row_factory = sqlite3.Row  # Configure the connection to use row factory, allowing for dictionary-like column access
 cursor = conn.cursor()  # Create a cursor object to execute SQL commands
 
 # Create a table if it doesn't exist
 cursor.execute('''
-CREATE TABLE IF NOT EXISTS full_database_backend (
+CREATE TABLE IF NOT EXISTS test (
     Ticker TEXT PRIMARY KEY,
     Exchange TEXT,
     CompanyNameIssuer TEXT,
@@ -63,7 +63,7 @@ for row in data:
     # Check if the row has the correct number of elements (adjust 27 to match the expected number of columns)
     if len(row) == 27:
         cursor.execute('''
-        INSERT OR REPLACE INTO full_database_backend (
+        INSERT OR REPLACE INTO test (
             Ticker, Exchange, CompanyNameIssuer, TransferAgent, OnlinePurchase, DTCMemberNum, TAURL,
             TransferAgentPct, IREmails, IRPhoneNum, IRCompanyAddress, IRURL, IRContactInfo, SharesOutstanding,
             CUSIP, CompanyInfoURL, CompanyInfo, FullProgressPct, CIK, DRS, PercentSharesDRSd, SubmissionReceived,
@@ -78,14 +78,14 @@ for row in data:
 conn.commit()  # Commit all changes made during the transaction
 
 # Now query all data from the database for JSON conversion
-cursor.execute('SELECT * FROM full_database_backend')  # Execute an SQL query to select all records from the table
+cursor.execute('SELECT * FROM test')  # Execute an SQL query to select all records from the table
 rows = cursor.fetchall()  # Fetch all the rows from the query
 
 # Convert the rows to dictionaries
 data_json = [dict(ix) for ix in rows]  # Convert each row into a dictionary
 
 # Write the data to a JSON file
-with open('data/Full_Database_Backend.json', 'w', encoding='utf-8') as f:
+with open('data/test.json', 'w', encoding='utf-8') as f:
     json.dump(data_json, f, ensure_ascii=False, indent=4)  # Write JSON data to a file with UTF-8 encoding and formatted
 
 # Close the database connection

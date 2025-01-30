@@ -38,7 +38,7 @@ jobs:
       run: |
         git config --global user.name 'DRRUTHSEX'
         git config --global user.email 'drsf500@gmail.com'
-        git add 'data/Full_Database_Backend.db' 'data/Full_Database_Backend.json'  # Add both the database and the JSON file
+        git add 'data/test.db' 'data/test.json'  # Add both the database and the JSON file
         git commit -m "Updated database and JSON files" -a || echo "No changes to commit."
         git push
       env:
