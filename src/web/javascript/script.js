@@ -25,8 +25,19 @@ const CONFIG = {
     // Cache DOM elements for easy reference
     const elements = {
       loadingOverlay: document.getElementById('loading-overlay'),
-      dataTable: document.getElementById('data-table')
+      dataTable: document.getElementById('data-table'),
+      stickyBottomBar: document.getElementById('sticky-bottom-bar')
     };
+  
+    // Add event listener for the close button
+    if (elements.stickyBottomBar) {
+        const closeButton = elements.stickyBottomBar.querySelector('.close-button');
+        if (closeButton) {
+            closeButton.addEventListener('click', function() {
+                elements.stickyBottomBar.style.display = 'none';
+            });
+        }
+    }
   
     /**
      * Displays an error message and provides a "Retry" button that reloads the page.
@@ -147,7 +158,7 @@ const CONFIG = {
           throw new Error('No data received from the server');
         }
   
-        // Extract table headers from the first object’s keys (assuming uniform structure)
+        // Extract table headers from the first object's keys (assuming uniform structure)
         const headers = Object.keys(data[0]);
   
         // Initialize DataTable with the data and headers once the DOM is ready
