@@ -1,4 +1,4 @@
-name: Synchronize Google Sheet and Database
+name: Synchronize CSV and Database
 
 on:
   workflow_run:
@@ -22,21 +22,18 @@ jobs:
       
       - name: Install Python Dependencies
         run: |
-          pip install pandas gspread oauth2client
+          pip install pandas
       
-      - name: Synchronize Google Sheet and Database
-        env:
-          SHEET_ID: ${{ secrets.SHEET_ID }}
-          GOOGLE_API_KEYS: ${{ secrets.GOOGLE_API_KEYS }}
+      - name: Synchronize CSV and Database
         run: |
-          python 'src/scripts/Database-Sync/synchronize_google_sheet_and_db.py'
+          python 'src/scripts/Database-Sync/synchronize_csv_and_db.py'
       
       - name: Commit and Push Database Files
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add 'data/Issuers/Main_Database.db' 'data/Issuers/Main_Database.json'
-          git commit -m "Synchronized database with Google Sheet" -a || echo "No changes to commit."
+          git add 'data/Issuers/Main_Database.db' 'data/Issuers/Main_Database.json' 'data/Issuers/Main-Database-CSV-Files'
+          git commit -m "Synchronized database with CSV files" -a || echo "No changes to commit."
           git push
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} 
