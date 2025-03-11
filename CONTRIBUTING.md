@@ -22,6 +22,28 @@ You might contribute here by:
 - Submitting enhancements, bug fixes, or new features for the source code.
 - Improving documentation and guides.
 
+## Contributing (For Beginners)
+
+1. You will need to fork the repository by pressing the "Fork" button at the top. If you have trouble finding it, press CTRL+F on your keyboard and search "Fork". 
+
+2. Sign into Github or make a new account to access your "fork", which gives you a personal copy of the database repository that you can edit.
+
+3. Open the `data/Issuers/Main-Database-CSV-Files` folder from your fork, select the letter you wish to contribute to, then press "." on your keyboard to enter VS Code for the Web.
+
+4. On the left-hand side, click the icon with four squares and search for "Excel Viewer" and Install the extension from MESCIUS. This will allow you to edit the CSV file as if you're working in a spreadsheet.
+
+5. Once the extension is installed, you can right-click on the tab of the previously opened CSV file and select "Reopen Editor With..." and press CSV Editor.
+
+6. Make the changes to the CSV file that you'd like to submit, then once complete you should see a button on the left with a blue circle and a number inside it. Press that icon, write a message and press "Commit & Push" to save changes to your local fork.
+
+7. Go back to the main page of the fork on your Github and click the "Pull Request" button. Make sure to select your branch and the base repository’s `main` branch.
+
+8. Your submission will be reviewed. You may be asked to make some adjustments based on feedback.
+
+Once approved, your contribution will be merged into the project!
+
+**Screenshots coming soon**. Also in the works: an easier way for contributors to enter their submissions.
+
 
 ## Getting Started with GitHub Desktop
 
