@@ -1,0 +1,43 @@
+name: Update Database with SEC Data (CIK, Ticker, Exchange, Company Name)
+
+on:
+  schedule:
+    - cron: '0 0 * * *'  # Runs every day at 00:00 UTC
+  workflow_dispatch:  # Allows manual triggering
+
+jobs:
+  update-data:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.x'
+
+      - name: Install dependencies
+        run: pip install requests pandas gspread oauth2client
+
+      - name: Pull SEC data and update repository
+        run: python src/scripts/SEC-CTEC-Data/SEC_company_tickers_exchange.py
+
+      - name: Update Database from JSON
+        run: python src/scripts/SEC-CTEC-Data/update_db_from_json.py
+
+      - name: Verify changes
+        run: |
+          echo "Checking for changes in data files..."
+          git status
+
+      - name: Commit and push changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/SEC-CTEC-Data/company_tickers_exchange.json data/Issuers/Main_Database.db
+          git commit -m "Updated database with SEC data (CIK, Ticker, CompanyNameIssuer)" || echo "No changes to commit."
+          git push
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

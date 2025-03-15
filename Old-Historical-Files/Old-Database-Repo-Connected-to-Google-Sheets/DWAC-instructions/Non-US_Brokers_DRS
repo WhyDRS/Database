@@ -1,0 +1,1064 @@
+# If broker can DRS transfer, but is outside the US:
+
+## Intro/disclaimer:
+{if a transfer agent account number is required}
+${name of broker} requires you have an existing ${transfer agent name} account before they will directly register your shares.
+
+
+Therefore, they will ask you for a ${transfer agent name} account number. For security reasons it is not recommended to give this information to your broker, but in this case there may not be another choice. With ${transfer agent name} accounts, the account number is the "key" that allows brokers to authorize a transfer of shares out of the DRS and back to the broker.
+
+
+If you provide your account number to initiate the transfer, it is recommended to protect your ${transfer agent name} account by making a small change to your name or address to block any unauthorized attempts at withdrawing your directly registered shares. Such as adding or removing a middle initial, or making a subtle enough change to your address that you can still receive your snail mail (add or remove a borough, or a space in your postal/zip code).
+
+
+Only do this when you are confident you are finished transferring your shares from your broker to the Direct Registration System, and if you are confident you do not want to move your shares back to your broker.
+
+
+If you don't have a ${transfer agent name} account:
+The only way to open one as a non-US citizen is to transfer shares to them, which is possible with IBKR (see our guide for directly registering from IBKR here), or to use GiveAShare.com.}
+
+{if an IBKR Reseller}
+${name of broker} is an Interactive Brokers (IBKR) reseller. No need to contact customer service, as everything can be done through the IBKR client. You can follow the IBKR guide instead.}
+
+{if broker uses Drivewealth}
+DISCLAIMER: Initiating any kind of transfer (DRS, ACAT, DTC, FOP, etc.) will temporarily freeze your ${name of broker} account until all of the shares are settled with the receiving broker or transfer agent. You will not have access to trading during this time, even if there is an active position in your account. Access to funds and trading will resume when the transfer is complete.
+
+
+{If a fee is charged}
+${name of broker} charges a ${expected fee} fee to DRS transfer. This means each time you want to DRS transfer a specific stock (no matter how many shares) you are charged ${expected fee}. You will need to make sure you have ${expected fee} settled in your account before you can transfer.}
+
+{If free to transfer}
+${name of broker} can DRS transfer for free.}
+
+{If no info on fees available}
+${name of broker} may charge a fee for each DRS Transfer. This means each time you want to DRS transfer a specific stock (no matter how many shares) you are charged a fee.}
+
+
+Bespoke broker info - pre transfer instructions:
+Avanza
+AF Vs ISK account:
+Only shares in an AF account can be transferred. If you bought shares in an ISK account and wish to direct register them, the only option is to sell the ISK shares and repurchase them in your AF account.
+
+
+Once your ${transfer agent name} account is open:
+Save a copy of a DRS Advice Report from ${transfer agent name} (${name of broker} need this to verify you have an account with ${transfer agent name}). To get a DRS Advice Report:
+Log in to your ${transfer agent name} account.
+Click on "Documents" on the top menu.
+Select ${company name}
+Make sure it says “DRS Advice” under the “Type” column and click on the “View PDF” button.
+Right click on the document and click “Save Page As” and make sure it saves as a PDF file.
+Alternatively you can click on the print icon in the top right of the page, and from the printer drop down menu select “Save to PDF”.
+Then click “Save”​​.
+Now you can take the document to ${name of broker} and request the transfer:
+Login to ${name of broker}.
+Make sure your ${expected fee} or 300 SEK for the transfer fee is settled in your account.
+Identify with Bank ID.
+Go to "Profile".
+Select “Meddelanden” (Messages).
+Select “Skriv Nytt” (Write New).
+Fill out the form:
+Ämne (Subject): DRS to ${transfer agent name}.
+Min fråga gäller konto (Select Account): Select your CASH/AF account.
+Frågan gäller (Question About): Överföring ava kiter (Transfer of Shares).
+Meddelande (Message):
+Say: “Jag skulle vilja direktregistrera X antal av mina aktier hos ${company name} till ${transfer agent name} från mitt AF konto (XXXX). Jag har bifogat mitt DRS-advice från ${transfer agent name}".
+Be sure to include:
+Your ${name of broker} account number, full name, phone number, email address, Tax ID.
+Your ${transfer agent name} account number.
+The stock (${company name}), its ticker (${Stock Symbol}), and its CUSIP (${CUSIP}).
+How many shares you want to transfer.
+The Transfer Agent's name, address, and DTC number. In ${company name}'s case that's: ${transfer agent address}. DTC # ${transfer agent DTC member #}
+Optional: If you want the shares ordered in Last In First Out (newest shares transferred first), or First In First Out (oldest shares transferred first).
+Be sure to attach the DRS Advice you saved from Computershare earlier.
+
+
+
+
+Bank of Scotland
+You can email them using the Letter of Instruction template laid out below. But no need to print and sign, just write it out in the body of the email.
+
+
+Start a web chat with them on their website, or through their app.
+Ask for the contact email of the stock transfers team to initiate an outbound DRS transfer.
+The agent will let you know the email address, and either ask you to call them instead, or handle the transfer request for you right there and then.
+If you get the email address, for the subject line write: “Outbound DRS Transfer Request (Bank of Scotland account number)”.
+
+
+Be sure to include:
+Say: “I want an outbound DRS transfer of my ${Stock Symbol} shares to ${transfer agent name}”.
+If there are transfer fees, put a statement agreeing to the fees (eg. I agree to the fee of ${expected fee} associated with the DRS transfer).
+Your ${name of broker} account number, full name, phone number, email address, Tax ID.
+The stock (${company name}), its ticker (${Stock Symbol}), and its CUSIP (${CUSIP}).
+How many shares you want to transfer.
+The Transfer Agent's name, address, and DTC number. In ${company name}'s case that's: ${transfer agent address}. DTC # ${transfer agent DTC member #}
+Optional: If you want the shares ordered in Last In First Out (newest shares transferred first), or First In First Out (oldest shares transferred first).
+
+
+
+BBVA
+You can log in to your account and send them a Letter of Instruction through their secure message center.
+
+
+To understand more about how and why you can DRS transfer, you can refer to page 89, section 4 of this pdf from Indeval (warning: link is not secure).
+
+
+BCEE
+Once your shares and ${expected fee} are settled in BCEE, you can log in to the BCEE app and send them a S-Net message requesting the transfer.
+Ask to "Direct Register my shares" or ask for a "DRS transfer to ${transfer agent name}".
+Tell them how many shares you want to transfer.
+You will need to provide the following information to the support agent:
+Full name.
+Date of birth.
+Phone number.
+Home address (house number, street name, city, region, postcode).
+You can give them your ${transfer agent name} account number, or ask them to open a new account as part of the process. (For security reasons we do not recommend giving your ${transfer agent name} account number to your broker. With ${transfer agent name} accounts, the account number is the "key" that allows brokers to authorize a transfer of shares out of the DRS and back to the broker.)
+The support agent will then submit the transfer request with Citi (BCEE's US broker).
+
+
+BMO Investorline
+${name of broker} was the only Canadian broker to offer DRS transfers for free, but from April 1st 2023 they introduced a $100 fee per security DRS transferred, although the fee may be partially, or even fully, rebated depending on your portfolio size (including your cash balance). Ask the support agent about the "updated standards document" if you wish to see your eligibility.
+
+
+It's also a $150 fee to transfer to another broker. If you're already in ${name of broker} then your cheapest option (without selling and repurchasing) is to DRS transfer.
+
+
+If you want to DRS shares from a TFSA, ${name of broker} can DRS them directly to ${transfer agent name}, but the tax advantaged status will be removed from those shares.
+
+
+How to transfer from BMO to the direct registration system:
+Once your shares and ${expected fee} are settled in ${name of broker}:
+Call ${name of broker} on 1-888-776-6886 and ask to talk to someone for a stock transfer, specifically an "Outbound DRS Transfer".
+When you are connected to the correct department, ask: “I want an outbound DRS transfer of my ${Stock Symbol} shares to ${transfer agent name}”.
+You may then be asked for the following information:
+The stock (${company name}), its ticker (${Stock Symbol}), and its CUSIP (${CUSIP}).
+How many shares you want to transfer.
+The Transfer Agent's name, address, and DTC number. In ${company name}'s case that's: ${transfer agent address}. DTC # ${transfer agent DTC member #}
+Optional: Your ${transfer agent name} account number. If you want the shares ordered in Last In First Out (newest shares transferred first), or First In First Out (oldest shares transferred first).
+Once you have provided all of the info, the agent will submit the request for you.
+
+
+BNP Paribas
+Once your ${transfer agent name} account is open, and your shares and ${expected fee} are settled in ${name of broker}:
+You can log in to the Easy Banking app and contact the helpdesk.
+Tell the support agent you want to DRS transfer your ${Stock Symbol} shares to ${transfer agent name}.
+Provide them with your name and address details, as they are defined on your ${transfer agent name} account.
+Accept the ${expected fee} fee.
+The transfer will be processed within 1-3 weeks. If you're unsure, you can log back into the Easy Banking app and reach out for an update.
+
+
+Charles Stanley
+You can direct register shares out of a regular investment account and an ISA. Although ISA shares will lose their tax free status. To request the transfer, you can send ${name of broker} a message online.
+Login to your ${name of broker} account.
+Start a chat with the HelpDesk.
+Ask for an “Outbound DRS Transfer of ${Stock Symbol} shares to ${transfer agent name}”.
+Let the agent know how many shares you want to transfer.
+The agent will ask if you're sure you want to DRS your shares.
+Confirm you would like to do it, and the agent will handle the rest.
+Charles Stanley may take a few weeks to initiate the transfer.
+
+
+
+
+CIBC
+If you want to DRS shares from a TFSA, ${name of broker} may ask you to move them to your cash account first. Either way you will have to remove the tax advantaged status from those shares.
+
+
+To request the transfer:
+Call ${name of broker} on 1-800-567-3343.
+When asked what you want to do, say:
+“I want an outbound DRS transfer of my ${Stock Symbol} shares to ${transfer agent name}”.
+You may then be asked for the following information:
+Your ${name of broker} account number, full name, phone number, email address, Tax ID.
+The stock (${company name}), its ticker (${Stock Symbol}), and its CUSIP (${CUSIP}).
+How many shares you want to transfer.
+The Transfer Agent's name, address, and DTC number. In ${company name}'s case that's: ${transfer agent address}. DTC # ${transfer agent DTC member #}
+Optional: If you want the shares ordered in Last In First Out (newest shares transferred first), or First In First Out (oldest shares transferred first).
+Once you have provided all of the info and agreed to the ${expected fee} fee, the agent will submit the request for you.
+
+
+
+
+Crédit Mutuel
+To request the transfer:
+You must open a securities account in your name and request that your securities be held in ''nominative'' mode.
+Buy the shares from the ${name of broker} app.
+Complete the W-8 BEN form and return it to the adviser.
+Make a transfer request for the shares to be held in ''pure registered form'' (DRS).
+This is not a standard process, you have to insist (the bank thinks this is only possible for French stocks).
+${name of broker} will send you a form to fill out with your contact details etc.
+Fill in the form and return it to ${name of broker}.
+A confirmation of the transfer will be sent to you​.
+
+
+Directa SIM
+To request the transfer you can send them an email with instructions to DRS transfer. Alternatively you can make a Letter of Direction. 
+
+
+Email request:
+Using the same email address you used to sign up with, send an email to: directa@directa.it
+For the subject write: "richiedo il trasferimento in registrazione diretta al ${transfer agent name} (DirectaSIM account number)"
+For the message write:
+"Buongiorno, Con la presente richiedo il trasferimento in registrazione diretta di XX shares to drs azioni ${Stock Symbol} (CUSIP ${CUSIP}) dal mio conto ${name of broker} [${name of broker} account number] al mio account ${transfer agent name} [${transfer agent name} account number]. Contestualmente autorizzo l'addebito della fee di ${expected fee} prevista dalla transazione. Allego scansione dell'account statement rilasciatomi da ${transfer agent name} all'atto della creazione account."
+Attach a recent ${transfer agent name} account statement
+Click on "Send".
+
+
+Letter of Instruction request:
+
+
+Disnat
+If you want to DRS shares from a TFSA, ${name of broker} may ask you to move them to your cash account first. Either way you will have to remove the tax advantaged status from those shares.
+
+
+To request the transfer:
+Call ${name of broker} on 1-866-873-7103.
+Ask to direct register your shares (en français, faites une demande de 'certificat d'immatriculation').
+The rep will walk you through the next steps.
+You may be asked for the following information:
+Your ${name of broker} account number, full name, phone number, email address.
+Tax ID.
+The stock (${company name}), its ticker (${Stock Symbol}), and its CUSIP (${CUSIP}).
+How many shares you want to transfer.
+The Transfer Agent's name, address, and DTC number. In ${company name}'s case that's: ${transfer agent address}. DTC # ${transfer agent DTC member #}
+Optional: If you want the shares ordered in Last In First Out (oldest shares transferred first), or First In First Out (newest shares transferred first).
+Once you have provided the necessary info, the agent will submit the request for you.
+
+
+
+
+DKB
+To request the transfer, you can send ${name of broker} an email with a Letter of Instruction attached. The Letter of Instruction can be handwritten or typed, but it must be signed with wet ink.
+
+
+Please Note: Your name address and Tax ID must match exactly to how it is on your ${transfer agent name} account. This means spelling and capital letters need to match. If they don't match ${name of broker} will not be 100% certain it's your account and reject the transfer. If you want to make sure it's the same you can always copy and paste the info from your ${transfer agent name} account.
+
+
+For the Letter of Instruction, write the following:
+Sehr geehrte Damen und Herren,
+hiermit beantrage ich einen Teilübertrag meines Depots zu der Firma ${transfer agent name} gemäß den unten angegebenen Daten
+ABSENDER:
+Depotnummer ${name of broker}: <hier eintragen>
+Name: <hier eintragen>
+Adresse: <hier eintragen>
+Geburtsdatum: <hier eintragen>
+Steuer-ID: <hier eintragen>
+EMPFÄNGER:
+Depotnummer ${transfer agent name}: <hier eintragen>
+Name Depotinhaber: (wie Absender)
+DTC-Nummer: DTC # ${transfer agent DTC member #}
+Adresse ${transfer agent name}: ${transfer agent address}
+ANSPRECHPARTNER:
+E-Mail: ${transfer agent E-Mail Contact}
+Telefon:  ${transfer agent General Phone Number}
+AUFTRAG:
+Empfänger: Eigenübertrag
+Gesamtes Depot: Nein
+Aktien: ${company name} ${Stock Symbol}
+WKN/ISIN: A0HGDX / ${ISIN}
+Anzahl: <hier eintragen> Stück
+Vielen Dank.
+<Unterschrift>
+<Name>
+If you typed the letter, you will need to print it out to sign it. Then scan it back in or take a photo of it. Now you can send it in an email to ${name of broker}.
+Write an email to: info@dkb.de.
+For the subject write: "Transfer Out Request".
+For the message write "Guten Tag, bitte lesen Sie das beigefügte Schreiben für Anweisungen und Genehmigungen zur Übertragung der ${Stock Symbol}-Aktien in meinem Konto an ${transfer agent name}".
+Attach the Letter of Instruction.
+Click on "Send".
+
+
+
+
+DNB
+To request the transfer:
+Send ${name of broker} a Letter of Instruction from your ${name of broker} Mailbox.
+To do this you need to login to ${name of broker} online, and click on the “i” in the top right corner.
+From the drop down menu select “Mailbox” (Postkasse).
+On the next page click on “Write to Us” (Skriv til oss).
+For the subject line, use “Outbound DRS Transfer Request”.
+For the message, be sure to include:
+Say: “I want an outbound DRS transfer of my ${Stock Symbol} shares to ${transfer agent name}”.
+Your ${name of broker} account number, full name, phone number, email address, home address, Tax ID/Personnummer.
+The stock (${company name}), its ticker (${Stock Symbol}), and its CUSIP (${CUSIP}).
+How many shares you want to transfer.
+The Transfer Agent's name, address, and DTC number. In ${company name}'s case that's: ${transfer agent address}. DTC # ${transfer agent DTC member #}
+Optional: If you want the shares ordered in Last In First Out (newest shares transferred first), or First In First Out (oldest shares transferred first).
+Write: “I agree to the ${expected fee} fee associated with this transfer”.
+Click on "Send".
+
+
+
+
+Flatex
+To request the transfer: you need to use the ${name of broker} website and send a secure message to the support team indicating that you want to direct register your shares.
+Ask for your shares to first be transferred within Clearstream from CBF to CBL (necessary to allow transfers to an external custodian).
+Then provide the following information:
+${transfer agent name}'s DTC number: #${transfer agent DTC member #}.
+${company name}'s ISIN: ${ISIN}.
+Quantity of ${Stock Symbol} shares you want to send to ${transfer agent name}.
+Beneficiary owner (bfo): Usually yourself unless you want to gift the shares to somebody else with an existing ${transfer agent name} account.
+Your home address.
+Your ${name of broker account number.
+Your ${transfer agent name} account number.
+The support agent will take care of the rest.
+
+
+Flink
+To request the transfer:
+Login, and launch the customer support chat and request the “Outgoing DRS Transfer Form”.
+Fill the form and send it back to ${name of broker}.
+You may need the following information to fill it in:
+Your ${name of broker} account number, full name, phone number, email address, Tax ID.
+The stock (${company name}), its ticker (${Stock Symbol}), and its CUSIP (${CUSIP}).
+How many shares you want to transfer.
+The Transfer Agent's name, address, and DTC number. In ${company name}'s case that's: ${transfer agent address}. DTC # ${transfer agent DTC member #}
+
+Halifax
+To request the transfer you can send ${name of broker} an email:
+Write an email to: brokertransfers@halifax.co.uk.
+For the subject line write: “Outbound DRS Transfer Request (${name of broker} account number)”.
+For the email write: “I would like to transfer shares as an outbound DRS transfer to ${transfer agent name}”.
+Be sure to include:
+The stock (${company name}), its ticker (${Stock Symbol}), and its CUSIP (${CUSIP}).
+How many shares you want to transfer.
+Your ${name of broker} account number, full name, phone number, email address, Tax ID.
+The Transfer Agent's name, address, and DTC number. In ${company name}'s case that's: ${transfer agent address}. DTC # ${transfer agent DTC member #}
+Optional: If you want the shares ordered in Last In First Out (newest shares transferred first), or First In First Out (oldest shares transferred first).
+Click "Send".
+
+
+
+Hatch
+To request the transfer you can contact ${name of broker} by email (hello@hatchinvest.nz), chat (www.hatchinvest.nz), or book a phone call (www.hatchinvest.nz), explaining that you want to DRS your ${Stock Symbol} shares (giving the quantity of shares to be transferred). Ask for them to generate a DRS form and email it to you.
+Sign and date this form before sending it back to ${name of broker} via email, ensuring that you have ${expected fee} in your account for the DRS fee.
+Keep a copy of your DRS form as it will help knowing exactly how ${name of broker} entered your information into their system, which will be reflected on ${transfer agent name}’s system.
+You should receive acknowledgement back from ${name of broker} within 48 hours that they have received your DRS form
+Don’t hesitate to phone, email or chat to ${name of broker} to ensure that they have received your DRS form and are "onto it".
+You will know when the DRS transfer is taking place as your account will be restricted while the process occurs (time varies, but normally 5-10 business days). Note: your available cash balance in your account may show as “0” while the transfer is taking place.
+${name of broker} will advise you via email that your account is unlocked, which means that your shares have left ${name of broker} and are now at ${transfer agent name}.
+ 
+
+HSBC UK
+To request the transfer, you can give ${name of broker} a call on 03457-456-123 requesting the transfer.
+The agent will ask you to confirm you want the shares DRS transferred, and not withdrawn as certificates (it’s more expensive to withdraw certificates, and many companies do not create certificates anymore anyway).
+You may also be asked to confirm the following information:
+The stock (${company name}), its ticker (${Stock Symbol}), and its CUSIP (${CUSIP}).
+How many shares you want to transfer.
+Your ${name of broker} account number, full name, phone number, email address, Tax ID.
+The Transfer Agent's name, address, and DTC number. In ${company name}'s case that's: ${transfer agent address}. DTC # ${transfer agent DTC member #}
+Optional: If you want the shares ordered in Last In First Out (newest shares transferred first), or First In First Out (oldest shares transferred first).
+Optional: Your ${transfer agent name} account number (for security reasons, we do not recommend sharing this with your broker).
+Ensure that you have ${expected fee} available in your account to cover the fees.
+HSBC will send you a letter in the post confirming the shares have been sent.
+
+
+
+
+IG Australia
+To request the transfer, you can send ${name of broker} an email:
+Write an email to: austransfers@ig.com.
+For the subject line write: “Outbound DRS Transfer Request (${name of broker} account  number)”.
+For the email write: “Please transfer XX shares of ${Stock Symbol} "${company name}" to the registrar ${transfer agent name} from ${name of broker} account ISXXX”.
+Provide your full name and address (this is how your ${transfer agent name} account is assigned, so be sure everything is spelled correctly).
+Click on "Send".
+
+
+
+IG UK
+To request the transfer, you can send ${name of broker} an email:
+Write an email to: helpdesk.uk@ig.com.
+For the subject line write: “Outbound DRS Transfer Request (${name of broker} account number)”.
+For the email write: “I would like to transfer shares as an outbound DRS transfer to ${transfer agent name}”.
+Be sure to include:
+The stock (${company name}), its ticker (${Stock Symbol}), and its CUSIP (${CUSIP}).
+How many shares you want to transfer.
+Your ${name of broker} account number, full name, phone number, email address, Tax ID.
+The Transfer Agent's name, address, and DTC number. In ${company name}'s case that's: ${transfer agent address}. DTC # ${transfer agent DTC member #}
+Optional: If you want the shares ordered in Last In First Out (newest shares transferred first), or First In First Out (oldest shares transferred first).
+Click on "Send".
+
+
+
+
+
+
+IBKR
+DISCLAIMER: If you deposit money into ${name of broker} using a “Direct ACH Transfer”, then ${name of broker} may hold on to any purchased shares for up to 44 days before you can direct register them. If you do a “Bank Wire” transfer there is a small fee, but you can direct register your shares 3 days after purchase.
+
+
+How to get the $5 for the DRS transfer fee:
+When your money arrives with ${name of broker} it will be in your local currency. To convert it to US Dollars you need to:
+Click on “Trade” on the menu bar and select “Convert Currency”.
+A pop up will ask you what currency you want converted (your local currency), and what currency you want to convert to (USD).
+Once you have filled out the boxes click on submit and your money will have converted instantly.
+You now need to wait 3 days for the USD to settle before you can transfer. You can purchase more shares with the USD immediately, but for transfers you have to wait for the cash to settle.
+
+
+If you transferred shares into IBKR, check your cost basis:
+Often shares transferred to ${name of broker} are missing their cost basis. It is worth double checking that your cost basis is recorded properly before you start your transfer from ${name of broker}. (Please note: ${name of broker} has a column called cost basis on your portfolio page. If you have transferred your shares to ${name of broker}, please ignore this cost basis, as it is not the actual cost basis of your shares).
+You can find your cost basis by looking at your account statements, activity statements, or contract notes from the broker you purchased the shares with.
+To update your cost basis in ${name of broker} click on “Performance & Reports” from the top menu and select “Tax Documents”.
+At the bottom of the page you will find the “Cost Basis” Section.
+Click on the cog-wheel icon next to “Position Transfer”.
+On the next page select the transfer from the drop down menu (labeled by the date of the transfer).
+A table will appear with the quantity of shares you transferred.
+To fill it out, you need to click on the “Add Lot” button.
+Here you can break down the batch of shares into the batches you ordered them in. (For example, 10 shares might have been bought in 2 lots of 5).
+If you are unsure about which shares you transferred, all share transfers are marked as First In, First Out by default. This means the oldest shares transfer first.
+To fill out each lot you will provide the quantity of shares you purchased, the date you purchased those shares, and the total cost of those shares (be sure to remove any trading fees you paid).
+Once you have added enough lots to make up for the total amount of shares, you can click on “Continue” to submit the cost basis.
+Please note, even at this stage ${transfer agent name} may not receive your cost basis. Your best bet is to keep a hold of your records showing your cost basis. It will make things a lot smoother when it comes to tax return time.​
+
+
+How to Transfer:
+Optional: You can select if you'd like your shares transferred as “First In, First Out” (oldest shares transfer first) or “Last In First Out”(newest shares transfer first). To do this:
+Click on “Performance & Reports” from the top menu, and select “Tax Documents”.
+Underneath “Tax Optimizer” you will find an “Account Match Method” drop down list.
+First In, First Out is selected as default (oldest shares transfer first), but you can switch to Last in, First Out (newest shares transfer first).
+There are several other options, but these are the main two to concern yourself with.
+Click on “Transfer & Pay” from the top menu and select “Transfer Positions”.
+On the next page select “Outgoing”.
+On the next page select “United States” from the drop down menu.
+On the next page select the option “Deliver Shares to the Issuer's Transfer Agent/Registrar”.
+${name of broker} have now streamlined the next part. You should not have to enter the Transfer Agent's info as there is only one Transfer Agent for ${company name} and that's ${transfer agent name}.
+You are shown the name the shares will be direct registered in (same as your ${name of broker} account name). This, along with your address is the only info needed to set up your account with ${transfer agent name}. The rest you provide once it's opened.
+You can leave the Tax Identification Number alone (you will give this to ${transfer agent name} later).
+Select which stock you'd like to transfer (${company name}) and how many shares you'd like to transfer.
+Click “Continue”.
+On the next page you'll see a summary of the transfer and ${name of broker} asks you to sign your name (simply type your name to match what it says on the screen).
+You will then be asked to provide your login details again as authorization. If you have 2FA activated then you will need to authorize through that as well.
+Once you have done that and clicked “Submit” ${name of broker} will review your transfer request. This takes about a day.​​
+
+
+After you have submitted the transfer request:
+${name of broker} will not contact you when the status of your transfer updates, even if it fails.
+To check in on your transfer you can login, click on “Transfer & Pay” from the top menu, and select “Transaction Status & History”.
+
+
+
+
+IWeb
+To request the transfer you can send ${name of broker} an email:
+Write an email to: brokertransfers@halifax.co.uk (Halifax is who ${name of broker} uses).
+For the subject line write: “Outbound DRS Transfer Request (${name of broker} account number)”.
+For the email write: “I would like to transfer shares as an outbound DRS transfer to ${transfer agent name}”.
+Be sure to include:
+The stock (${company name}), its ticker (${Stock Symbol}), and its CUSIP (${CUSIP}).
+How many shares you want to transfer.
+Your ${name of broker} account number, full name, phone number, email address, Tax ID.
+The Transfer Agent's name, address, and DTC number. In ${company name}'s case that's: ${transfer agent address}. DTC # ${transfer agent DTC member #}
+Optional: If you want the shares ordered in Last In First Out (newest shares transferred first), or First In First Out (oldest shares transferred first).
+Click "Send".
+
+
+
+
+
+
+LHV Bank
+You can request the DRS transfer by filling in a FOP transfer form and including the extra DRS info in the notes of the form.
+Log in to ${name of broker} and go to "RAHA KASVATAMINE - Makseta väärtpaberikanne".
+There you can access the FOP transfer request form.
+When filling in the transaction dates, make sure they're the same as the day you purchased the shares. The value date is always 5 business days after the transaction date.
+Then in the "Additional Information About the Transfer" box, enter:
+The Transfer Agent's name, address, and DTC number. In ${company name}'s case that's: ${transfer agent address}. DTC # ${transfer agent DTC member #}
+The full name you are registering the shares in (your name most likely).
+Your ${transfer agent name} account number.
+Your US tax ID (Social Security Number) if you're a U.S. citizen. If you’re not then state you are a "Non-Resident Alien" so you have no SSN to provide.
+Your home address.
+${name of broker} has said before that you should put in a transfer request with ${transfer agent name}, but since ${transfer agent name} is a transfer agent and not a broker they cannot initiate any transfers. So include a statement saying that ${name of broker} needs to contact ${transfer agent name} and initiate the transfer, as ${transfer agent name} is a Transfer Agent and not a broker.
+Submit the FOP transfer request.
+
+
+
+
+
+
+Lloyds
+To request the transfer you can send ${name of broker} an email:
+Write an email to: $stockbrokingtransfers@lloydsbanking.com (include the $, it is part of the email address).
+For the subject line write: “Outbound DRS Transfer Request (${name of broker} account number)”.
+For the email write: “I would like to transfer shares as an outbound DRS transfer to ${transfer agent name}”.
+Be sure to include:
+The stock (${company name}), its ticker (${Stock Symbol}), and its CUSIP (${CUSIP}).
+How many shares you want to transfer.
+Your ${name of broker} account number, full name, phone number, email address, Tax ID.
+The Transfer Agent's name, address, and DTC number. In ${company name}'s case that's: ${transfer agent address}. DTC # ${transfer agent DTC member #}
+Optional: If you want the shares ordered in Last In First Out (newest shares transferred first), or First In First Out (oldest shares transferred first).
+Click "Send".
+
+
+
+
+
+
+MeXeM
+To request the transfer:
+Login to ${name of broker} and raise a “New Ticket”.
+For the subject line write: “Outbound DRS Transfer Request to ${transfer agent name}”.
+In the message write: “I want an outbound DRS transfer to ${transfer agent name} based on the following information”.
+Put a statement agreeing to the fees, (eg. “I agree to the fee of $5 US associated with the DRS transfer”).
+The stock (${company name}), its ticker (${Stock Symbol}), and its CUSIP (${CUSIP}).
+How many shares you want to transfer.
+Your ${name of broker} account number, full name, phone number, email address, Tax ID.
+The Transfer Agent's name, address, and DTC number. In ${company name}'s case that's: ${transfer agent address}. DTC # ${transfer agent DTC member #}
+Optional: If you want the shares ordered in Last In First Out (newest shares transferred first), or First In First Out (oldest shares transferred first).
+
+
+
+
+
+National Bank Direct Brokerage (NBDB)
+If you want to DRS shares from a TFSA, ${name of broker} may ask you to move them to your cash account first. Either way you will have to remove the tax advantaged status from those shares.
+
+
+To request the transfer, you can call ${name of broker} on 1- 800-363-3511 and request a DRS transfer, they should know exactly what you are talking about. The process is easy and straightforward.
+
+
+Pearler
+${name of broker} can also transfer to another broker for free, so you could save some money by transferring to IBKR first (who charge $5 per DRS transfer). However, this will take longer than the direct DRS transfer.
+
+
+To request the DRS transfer:
+You will either have to start a chat in the app to make the request, or send them an email at us-shares-transfer@pearler.com. As well as complete DriveWealth's Outgoing DRS Transfer form, located here (DriveWealth is the broker that ${name of broker} uses to manage US stocks).
+How to fill out the Outgoing Share Transfer form (this is all the information you need for a chat representative as well):
+DW Account Number: This can be found on your Settings > Shares settings & dividends > US page.
+Account Holder (name): Your name.
+Phone: Your Phone Number.
+Email Address: Your email address.
+Company Name: ${company name}.
+Ticker: ${Stock Symbol}.
+CUSIP: ${CUSIP}
+Number of Shares: How many shares you want to transfer.
+Receiving Firm Name: ${transfer agent name}.
+DTC Number: ${transfer agent DTC member #}.
+Receiving Firm’s Address: Attn: Stock Transfer Department, ${transfer agent address}.
+Shares should be registered to the benefit of: Your Name.
+Social Security #: If you don’t have one, enter “999-99-999” in this field.
+Once the form is completed (as well as signed and dated), send it to ${name of broker} through their app or email address: us-shares-transfer@pearler.com.
+Keep a copy of your DRS form as it will help knowing exactly how ${name of broker} entered your information into their system, which in turn will be used on ${transfer agent name}’s system.
+You should receive an automated email response from ${name of broker}, advising that one of their team will be in touch shortly. This contact may take anywhere from hours to a couple of days.
+You will know when the DRS transfer is taking place, as your account will be restricted for the duration. Time varies, but it's normally 5-10 business days.
+During this period, you will not be able to purchase or sell any stock from your account with ${name of broker}.
+Your account being unlocked indicates that your shares have left ${name of broker}, and are now at ${transfer agent name}.
+
+
+
+Phillip Securities (POEMS)
+To request the DRS transfer, you can fill out a couple of forms and mail them to ${name of broker}.
+The first form is: "DRS Transfer Request Form (Phillip Capital Deliver Out)" a copy can be downloaded from here.
+Fill in the form with the following information:
+Phillip Capital Inc. Account: Your ${name of broker} Account Number.
+Beneficial Holders Name: Your Name.
+Social Security# or Tax Payer ID of Beneficial Holder: Your Tax ID.
+Beneficial Holder Address: Your home address.
+Quantity of shares to be transferred: How many shares you want to direct register.
+Security Ticker Symbol: ${Stock Symbol}.
+Security CUSIP # or ISIN #: ${CUSIP} or ${ISIN}.
+Print Name: Your name written clearly.
+Print it, sign it and date it.
+The second form is the “DRS Indemnity Letter”. A copy can be downloaded here.
+Fill in the form with the following information:
+Security Counter: ${Stock Symbol} / ${CUSIP}.
+Holder Account Name: Your Name.
+Holder Account Number: Your ${name of broker} Account Number.
+Total Quantity: How many shares you want to transfer.
+Print it, sign it and date it.
+Send the documents by post to: “Phillip Securities PTE LTP 250 North Bridge Road #06-00 RAFFLES CITY TOWER SINGAPORE 179101” (template here).
+For more information, you can contact Phillip Equities Dealing Team on Tel: 6438 2586 Hp: 8210 7552(Whatapps/WeChat) Email: teamWG@phillip.com.sg.
+
+
+
+PostFinance
+${name of broker} uses Swissquote as their broker. You can call ${name of broker} on 0848-888-710 (max. CHF 0.08/min in Switzerland) or from abroad you can call +41 58 667 99 85 (charged at telecom provider's international rate). From there you can follow the Swissquote guide
+
+
+
+
+Qtrade
+To request the DRS transfer:
+Login to ${name of broker} and click on the "Accounts" drop down menu.
+Select "Service Center".
+Under "Additional Services" you can find the Certificate Request link. (Link only works if you are logged in: https://www.qtrade.ca/qservice/certificate).
+QTrade should understand that a Certificate Request is actually a digital "Direct Registration Request". It may be worth clarifying your preference though, as it’s the same fee to request a certificate or to digitally DRS transfer.
+On the Certificate Request page you will have a few drop down boxes:
+For "Account" you choose which account to transfer from (you can only transfer from a regular cash account. If you want to DRS your TFSA shares, you need to remove them from that account and put them in the cash account, removing their tax free status.
+For "Positions" you select which stock you want to direct register (${company name}).
+For "Quantity" you can check "Entire Position" to move all available shares, or write in how many shares you would like to direct register.
+For “Delivery Method” you can select regular mail if you want paper certificates. Or if available, select another option for digital DRS.
+Lastly, provide a contact number or email.
+Then click "Verify".
+
+
+
+Questrade
+If you want to save some money you could transfer to IBKR first, as they can DRS transfer for $5. If you want to use a Canadian institution then CIBC or RBC are the cheapest option with a $50 fee for DRS transfers. ${name of broker} only charges a $25 fee to transfer to another broker (although they don't seem to charge it from what we’ve been told). 
+
+
+You can direct register shares straight out of any ${name of broker} account. This includes margin accounts and your TFSA, or RRSP. Please note: shares taken out of TFSA and RRSP accounts will lose their tax-free status.
+
+
+Royal Bank of Canada (RBC)
+If you want to DRS shares from a TFSA, RBC may ask you to move them to your cash account first. Either way you will have to remove the tax advantaged status from those shares.
+
+
+To request the DRS transfer:
+Call ${name of broker} on 1-800-769-2560. When asked what you want to do, say: “I want an outbound DRS transfer of my ${Stock Symbol} shares to ${transfer agent name}”. You may then be asked for the following information: 
+Your ${name of broker} account number, full name, phone number, email address, Tax ID.
+The stock (${company name}), its ticker (${Stock Symbol}), and its CUSIP (${CUSIP}).
+How many shares you want to transfer.
+The Transfer Agent's name, address, and DTC number. In ${company name}'s case that's: ${transfer agent address}. DTC # ${transfer agent DTC member #}
+Optional: If you want the shares ordered in Last In First Out (newest shares transferred first), or First In First Out (oldest shares transferred first).
+You may also be asked who's name to transfer the shares to. This is just in case you want to transfer the shares to someone else. You can give your own name here.
+Once you have provided all of the info, the agent will submit the request for you.
+
+
+S Broker
+S Broker is a broker branch of the Sparkasse Group. They even have the same app/online platform. Because of this, you can follow the Sparkasse guide. You can even log in to the Sparkasse website with your S Broker credentials.
+
+
+Scotia iTrade
+If you want to DRS shares from a TFSA, ${name of broker} may ask you to move them to your cash account first. Either way you will have to remove the tax advantaged status from those shares.
+
+
+To request the transfer:
+Call ${name of broker} on 1-888-872-3388.
+When going through the automated prompts, select “Others” to speak to someone.
+When you reach an agent, say:
+“I want an outbound DRS transfer of my ${Stock Symbol} shares to ${transfer agent name}”.
+You may then be asked for the following information:
+Your ${name of broker} account number, full name, phone number, email address, Tax ID.
+Your ${name of broker} account number, full name, phone number, email address, Tax ID.
+The stock (${company name}), its ticker (${Stock Symbol}), and its CUSIP (${CUSIP}).
+How many shares you want to transfer.
+The Transfer Agent's name, address, and DTC number. In ${company name}'s case that's: ${transfer agent address}. DTC # ${transfer agent DTC member #}
+Optional: If you want the shares ordered in Last In First Out (newest shares transferred first), or First In First Out (oldest shares transferred first).
+Once you have provided all of the info, the agent will submit the request for you.
+
+
+Sharesies
+Alternatively it is $50 (USD) to transfer to another broker. If you have the time and want to save a bit of money, then you could transfer to another broker that can DRS transfer cheaper first (such as IBKR who DRS transfer for $5).
+
+
+To request the transfer, you can log in to ${name of broker} to make the request:
+Go to your Investment Portfolio, then select "Manage", and then select "Transfer Shares".
+Choose "Transfer Out".
+Select "NASDAQ" from the list of stock exchanges.
+Select the platform that your shares are held with.
+Sharesies may ask for your ${transfer agent name} account number. Whether you have an existing ${transfer agent name} account or not, for security reasons we do not recommend giving this information to your broker. With ${transfer agent name} accounts, the account number is the "key" that allows brokers to authorize a transfer of shares out of the DRS and back to the broker. For this reason, we recommend entering N/A for account number.
+Check that your name is correct.
+Enter the stock(s) that you wish to transfer. In this case, it's ${Stock Symbol}.
+Confirm the details are correct in the summary.
+If prompted - download and fill in the transfer form. This can be done digitally.
+${name of broker} may also ask for a picture of a ${transfer agent name} account statement to ensure your name and address match. If you do send them one, be sure to obscure your account number.
+Submit the request.
+
+
+
+
+Sparkasse
+To make the DRS transfer request, contact your "Savings Bank Advisors" and request a "Deposit Transfer" to ${transfer agent name}.
+For the message you can write: "I would like to request a transfer of my ${company name} shares to my existing securities account at ${transfer agent name}. You can send me the necessary documents by e-mail. <insert your e-mail here> . "Thank you" <insert your name here> .
+${name of broker} will now email you a document to fill out.
+The document is called "Securities Transfer Without Creditor Change".
+For the recipient's securities account number enter your ${transfer agent name} account number.
+For street address write: ${transfer agent address}.
+For Credit Institution of the Recipient: ${transfer agent name}
+Then fill in the number of ${company name} shares you want to transfer.
+Sign the document.
+BLZ or BIC are not required.
+Then hand in the documents at your local ${name of broker} branch.
+
+
+
+Sproutfi
+Sproutfi is taking on clients from Passfolio and Stake. All 3 of them use DriveWealth as their American broker so the process should be much the same.
+
+
+To request the transfer, you will either have to start a chat in the ${name of broker} app, or complete DriveWealth's Outgoing DRS Transfer form, located here (DriveWealth is the US broker that ${name of broker} uses to manage US stocks).
+How to fill out the Outgoing Share Transfer form (this is all the information you need for a chat representative as well):
+DW Account Number: ${name of broker} Account Number.
+Account Holder (name): Your name.
+Phone: Your Phone Number.
+Email Address: Your email address.
+Company Name: ${company name}.
+Ticker: ${Stock Symbol}.
+CUSIP: ${CUSIP}
+Number of Shares: How many shares you want to transfer.
+Receiving Firm Name: ${transfer agent name} DTC Number:  ${transfer agent DTC member #}.
+Receiving Firm’s Address: Attn: Stock Transfer Department, ${transfer agent address}.
+Shares should be registered to the benefit of: Your Name.
+Social Security #: If you don’t have one, enter “999-99-999” in this field.
+Once the form is completed (as well as signed and dated), send it to ${name of broker} through their app.
+Keep a copy of your DRS form as it will help knowing exactly how ${name of broker} and DriveWealth entered your information into their system, which in turn will be used on ${transfer agent name}’s system.
+You should receive an automated email response from ${name of broker}, advising that one of their team will be in touch shortly. This contact may take anywhere from hours to a couple of days.
+You will know when the DRS transfer is taking place, as your account will be restricted for the duration. Time varies, but it's normally 5-10 business days.
+During this period, you will not be able to purchase or sell any stock from your account with ${name of broker}.
+Your account being unlocked indicates that your shares have left ${name of broker} and are now at ${transfer agent name}.
+
+
+
+Stake
+${name of broker} also charges a $200 fee to transfer to another broker via FOP or ACAT. So there is no cheaper alternative unfortunately.
+
+
+To request the transfer, complete DriveWealth's Outgoing DRS Transfer form, located here (DriveWealth is the US broker that ${name of broker} uses to manage US stocks).
+How to fill out the Outgoing Share Transfer form:
+DW Account Number: ${name of broker} Account Number.
+Account Holder (name): Your name.
+Phone: Your Phone Number.
+Email Address: Your email address.
+Company Name: ${company name}.
+Ticker: ${Stock Symbol}.
+CUSIP: ${CUSIP}
+Number of Shares: How many shares you want to transfer.
+Receiving Firm Name: ${transfer agent name} DTC Number:  ${transfer agent DTC member #}.
+Receiving Firm’s Address: Attn: Stock Transfer Department, ${transfer agent address}.
+Shares should be registered to the benefit of: Your Name.
+Social Security #: If you don’t have one, enter “999-99-999” in this field.
+Once the form is completed (as well as signed and dated), send it to support@hellostake.com.
+Keep a copy of your DRS form as it will help knowing exactly how ${name of broker} and DriveWealth entered your information into their system, which in turn will be used on ${transfer agent name}’s system.
+You should receive an automated email response from ${name of broker}, advising that one of their team will be in touch shortly. This contact may take anywhere from hours to a couple of days.
+You will know when the DRS transfer is taking place, as your account will be restricted for the duration. Time varies, but it's normally 5-10 business days.
+During this period, you will not be able to purchase or sell any stock from your account with ${name of broker}.
+Your account being unlocked indicates that your shares have left ${name of broker} and are now at ${transfer agent name}.
+
+
+
+Stockal
+To request the transfer, complete DriveWealth's Outgoing DRS Transfer form, located here (DriveWealth is the US broker that ${name of broker} uses to manage US stocks).
+How to fill out the Outgoing Share Transfer form:
+DW Account Number: ${name of broker} Account Number.
+Account Holder (name): Your name.
+Phone: Your Phone Number.
+Email Address: Your email address.
+Company Name: ${company name}.
+Ticker: ${Stock Symbol}.
+CUSIP: ${CUSIP}
+Number of Shares: How many shares you want to transfer.
+Receiving Firm Name: ${transfer agent name} DTC Number:  ${transfer agent DTC member #}.
+Receiving Firm’s Address: Attn: Stock Transfer Department, ${transfer agent address}.
+Shares should be registered to the benefit of: Your Name.
+Social Security #: If you don’t have one, enter “999-99-999” in this field.
+You're now ready to send it to Drivewealth through their online portal.
+You can log in using your broker account number (also known as the DriveWealth account number) and some of your personal details (that your broker shares with DriveWealth).
+Once you are logged in, go to the help page and click on create new ticket button at the bottom. (Direct link to new ticket page here).
+Select "I have a money movement and transfer request".
+Select "Transfers", then select "Transfers out of DriveWealth".
+Use “Outbound DRS Transfer Request” as the subject line.
+In the message say: “I want an outbound DRS transfer of my ${Stock Symbol} shares to ${transfer agent name}, please see the 'Outbound DRS Transfer Form' attached for instruction”.
+Fill in your personal details, attach the filled out form, and click on "Submit".
+
+
+Swissquote
+If you want to try and save some money, you could transfer to a broker that can DRS transfer for less. ${name of broker} charges $50/50CHF to transfer to another broker.
+
+
+To request the transfer, you can call ${name of broker} on +41-848-258-888.
+Select your language and press “1” (Stock Exchange).
+Say you want to do a DRS transfer for a US listed stock (${company name}).
+The phone agent will take care of the rest.
+Optional: You can also ask them to put a note on the transfer method. If you want the shares ordered in Last In First Out (newest shares transferred first), or First In First Out (oldest shares transferred first).
+
+
+
+
+TD Canada Trust
+If you want to DRS shares from a TFSA, ${name of broker} may ask you to move them to your cash account first. Either way you will have to remove the tax advantaged status from those shares.
+
+
+To request the transfer:
+Call ${name of broker} on 1-800-465-5463 (English) or 1-800-361-2684 (Français) and say: “I want an outbound DRS transfer of my ${Stock Symbol} shares to ${transfer agent name}”..
+You may then be asked for the following information:
+Your ${name of broker} account number, full name, phone number, email address, SSN/Tax ID.
+The stock (${company name}), its ticker (${Stock Symbol}), and its CUSIP (${CUSIP}).
+How many shares you want to transfer.
+The Transfer Agent's name, address, and DTC number. In ${company name}'s case that's: ${transfer agent address}. DTC # ${transfer agent DTC member #}
+Optional: If you want the shares ordered in Last In First Out (newest shares transferred first), or First In First Out (oldest shares transferred first).
+Once you have provided all of the info, the agent will submit the request for you.
+
+
+
+
+TradeStation
+To request the transfer, you can make a Letter of Instruction and fill in their "DTC Transfer Out Form" and send both to ${name of broker} in an email. The form can be found here.
+
+
+How to fill in the form:
+For "Date of Request" and "Time of Request" enter today's date and the time you are submitting the form.
+For "${name of broker} Account Title" write in your full name.
+For "${name of broker} Account number" write in your account number.
+Then you need to enter the shares in the batches you purchased them. If you have more than 3 batches of shares, you will need to fill out more forms.
+Number of shares purchased
+The ticker: ${Stock Symbol}
+Its CUSIP: ${CUSIP}
+The cost per share of that trade
+The date of the trade
+Then they ask for the receiving firm information in ${company name}'s case that is:
+"Firm Name" is: ${transfer agent name}.
+"Firm Address" is: ${transfer agent address}.
+"Firm Clearing ID Number" is: ${transfer agent Clearing ID #}
+"DTC Number" is: ${transfer agent DTC member #}.
+"For Further Credit To" is where you specify your account number at a receiving firm. In the case of DRS, the transfer goes to you, not the firm. So include your full name again.
+For "Account Title" write in your full name just as you did before
+"Account Number" is only if you have an existing ${transfer agent name} account. You should try to leave it blank, but ${name of broker} may demand it. Please note, the account number is considered the key to your account. For security reasons, we do not recommend you give your broker the key to your ${transfer agent name} account.
+Then sign at the bottom of the page with wet ink. (there are two signature lines in case you have a joint account)
+Scan or take a picture of the form.
+
+
+
+
+Volksbank
+To request the transfer, you can go into your local ${name of broker} branch and request the transfer of shares.
+You will need to fill in a form called "Kundenauftrag Depotübertrag Abgang". Let the ${name of broker} employee know this is the form you need if they are unsure.
+Typically this form is used for broker-to-broker transfers, but it can also be applied to direct registration with a transfer agent. Other brokers have asked to clarify this in an "extra notes box". If one is available, it would be best to include this clarification.
+${name of broker} will then pass this form to their stock department.
+
+
+
+
+Wealthsimple
+If you want to save some money you could transfer to IBKR first, as they can DRS transfer for $5. If you want to use a Canadian institution then CIBC or RBC are the cheapest option with a $50 fee for DRS transfers. It's free to transfer from Wealthsimple to another broker.
+
+
+If you want to DRS shares from a TFSA, ${name of broker} may ask you to move them to your cash account first. Either way you will have to remove the tax advantaged status from those shares.
+
+
+To request the transfer, login to ${name of broker} start a chat and say:
+“I want to DRS transfer my ${Stock Symbol} shares to ${transfer agent name}”.
+If they ask you questions, or try to talk you out of it, simply repeat yourself.
+The ${name of broker} chat support will then ask for the following info:
+Your ${name of broker} account number, name, phone number, email address.
+The stock (${company name}), its ticker (${Stock Symbol}), and its CUSIP (${CUSIP}).
+How many shares you want to transfer.
+The Transfer Agent's name, address, and DTC number. In ${company name}'s case that's: ${transfer agent address}. DTC # ${transfer agent DTC member #}.
+
+
+Westpac
+To request the transfer, you can send ${name of broker} a DRS form over email:
+You can request the form by either emailing GlobalMarkets@westpac.com.au, or phoning 1300-757-319 (they will email the form to you).
+When you receive the form, fill it out and send it back to GlobalMarkets@westpac.com.au.
+Please Note: There is mention of a $100 fee on the form, but that would be for paper certificate requests, not digital DRS transfers.
+This DRS transfer is still $10(AU) though.
+
+
+XTB
+To request the transfer, you can send ${name of broker} an email with a filled out transfer form:
+The transfer form is available here.
+Fill the ”Outgoing Transfer of Investment Portfolio form” with the following information:
+xStation login: your email address.
+Securities data:
+${Stock Symbol} / ${ISIN} / New York.
+Data of the broker:
+Name: ${transfer agent name}.
+Account id: you should leave it blank. The account number is considered the key to your account. For security reasons, we do not recommend you give your broker the key to your ${transfer agent name} account.
+Account owner: your name.
+email: careregistryinfo@computershare.com.
+Sign with ink and scan the form in.
+Send your email to support (support@xtb.XX ; for France it is support@xtb.fr).
+For the subject line write: “Outbound DRS Transfer Request (${name of broker} account number)”.
+For the email write: “I would like an outbound DRS transfer as detailed in the attached transfer out request form”.
+Attach the filled out form.
+Click on "Send".
+
+
+
+
+Transfer Instructions:
+{if using a letter of instruction}
+To initiate the transfer you can send ${name of broker} a Letter of Instruction (also known as a Letter of Authority or Letter of Direction). This can be handwritten or typed, but it must be signed with wet ink. You can write it informally, or use the following template: blank LoI template.
+
+
+Writing it yourself?
+Be sure to include:
+Say: “I want an outbound DRS transfer of my ${Stock Symbol} shares to ${transfer agent name}”.
+If there are transfer fees, put a statement agreeing to the fees (eg. I agree to the fee of ${expected fee} associated with the DRS transfer).
+Your ${name of broker} account number, full name, phone number, email address, Tax ID.
+The stock (${company name}), its ticker (${Stock Symbol}), and its CUSIP (${CUSIP}).
+How many shares you want to transfer.
+The Transfer Agent's name, address, and DTC number. In ${company name}'s case that's: ${transfer agent address}. DTC # ${transfer agent DTC member #}
+Optional: If you want the shares ordered in Last In First Out (newest shares transferred first), or First In First Out (oldest shares transferred first).}
+
+
+
+
+Bespoke broker info - after transfer instructions:
+Avenue
+With your Letter of Instruction complete, write an email to: customer@avenue.us.
+For the subject line write: “Outbound DRS Transfer Request (${name of broker} account number)”.
+For the email write: “I would like an outbound DRS transfer as detailed in the attached Letter of Instruction. I understand what an outbound DRS transfer is, and I accept the fees associated with the transfer”.
+Attach the Letter of Instruction.
+Click on "Send".
+
+
+Citibank HK
+Your ${transfer agent name} account number.
+With the Letter of Instruction completed and signed, scan it in.
+Scan your latest ${transfer agent name} Statement proving your account number.
+You have to go to a physical branch to submit the transfer request. Bring copies of the documents with you.
+
+
+Danske Bank
+With your Letter of Instruction complete, write an email to: danskebank@danskebank.dk.
+For the subject line write: “Outbound DRS Transfer Request (${name of broker} account number)”.
+For the email write: “I would like an outbound DRS transfer as detailed in the attached Letter of Instruction. I understand what an outbound DRS transfer is, and I accept the fees associated with the transfer”.
+Attach the Letter of Instruction.
+Click on "Send".
+
+
+DirectaSIM
+Your ${transfer agent name} account number.
+With the Letter of Instruction completed and signed, scan it in.
+Scan your latest ${transfer agent name} Statement proving your account number.
+write an email to: directa@directa.it
+For the subject line write: “Outbound DRS Transfer Request (${name of broker} account number)”.
+For the email write: “I would like an outbound DRS transfer as detailed in the attached Letter of Instruction. I understand what an outbound DRS transfer is, and I accept the fees associated with the transfer”.
+Attach the Letter of Instruction.
+Attach your ${transfer agent name} Statement.
+Click on "Send".
+
+
+Nabtrade
+With your Letter of Instruction complete, write an email to forms@nabtrade.com.au
+For the subject line write: “Outbound DRS Transfer Request (${name of broker} account number)”.
+For the email write: “I would like an outbound DRS transfer as detailed in the attached Letter of Instruction.”
+Attach the Letter of Instruction.
+Click on "Send".
+
+Questrade
+With the Letter of Instruction completed, scan it in and upload it through ${name of broker}'s “Secure Upload Portal”.
+Once you have uploaded the form start a chat with ${name of broker} support to ensure they have received the form and have begun processing the transfer. If they have begun processing it, the agent will provide you with a Confirmation Number.
+
+
+Rabobank
+With your Letter of Instruction complete, write an email to info_beleggen@rabobank.nl
+For the subject line write: “Outbound DRS Transfer Request (${name of broker} account number)”.
+For the email write: “I would like an outbound DRS transfer as detailed in the attached Letter of Instruction. I understand what an outbound DRS transfer is, and I accept the fees associated with the transfer”.
+Attach the Letter of Instruction.
+Click on "Send"
+
+
+Raiffeisen
+With your Letter of Instruction complete, get a DRS advice document or DRS statement from ${transfer agent name} and write an email to ebanking@raiffeisen.ch
+For the subject line write: “Outbound DRS Transfer Request (${name of broker} account number)”.
+For the email write: 
+"Guten Tag,
+
+
+Ich würde gerne [Anzahl] meiner ${company name} Aktien direkt registrieren ("DRS Transfer").
+
+
+Dies gilt für folgendes Konto:
+Konto Information Name: [Vorname] [Name]
+${name of broker} Aktiendepot: [nnn.nnn.nnn.n]
+Kontakt-Informationen: [Adresse]; [PLZ] [Ort]
+Company Name: ${company name}
+Ticker: ${Stock Symbol}
+Anzahl Aktien: [Anzahl]
+CUSIP: ${CUSIP}, Valor ${Swiss Valoren Number} / ISIN ${ISIN}
+
+
+Details der Empfangenden:
+Firma: Name: ${transfer agent name}, DTC Number: ${transfer agent DTC member #}
+Addresse: ${transfer agent address}
+Zugunsten von: Name: [Vorname] [Name]
+Adresse: [Adresse]; [PLZ] [Ort]; CH (Switzerland)
+
+
+Ich habe schon ein existierendes Depot bei ${transfer agent name}, im Anhang finden Sie einen Scan von meiner "DRS Advice"; inklusive Vermerk meiner Anfrage und meiner Unterschrift. Meine AHV-Nr. ist [nnn.nnnn.nnnn.nn]
+
+
+Bei allfälligen Fragen stehe ich gerne zur Verfügung
+
+
+Freundlich Grüsse [Vorname] [Name] "
+Attach the Letter of Instruction and your DRS statement.
+Click on "Send"
+
+
+Seibert
+With your Letter of Instruction complete send an email to: Service@Seibert.com.
+For the subject write: “(${name of broker} account number) Outbound DRS Transfer Request”.
+For the message write: “I would like an outbound DRS transfer as detailed in the attached Letter of Instruction.”
+Attach the Letter of Instruction.
+Click on "Send".
+
+
+
+
+Superhero
+With your Letter of Authority complete, login to Superhero and start a live chat.
+Ask for an outbound DRS transfer and they should provide an email address for you to send your Letter of Authority to. Or they will email you, which you can reply to.
+For the message write: “I would like an outbound DRS transfer as detailed in the attached Letter of Authority.”
+Attach the Letter of Instruction and a scan or photo of a photo ID.
+Click on "Send".
+
+
+TradeStation
+With your Letter of Instruction and DTC Transfer Out Form complete, write an email to: ClientServices@TradeStation.com.
+For the subject line write: “Outbound DRS Transfer Request (${name of broker} account number)”.
+For the email write: “I would like an outbound DRS transfer as detailed in the attached DTC Transfer Out Form”.
+Attach the Letter of Instruction, and the DTC Transfer Out Form.
+Click on "Send".
+
+
+
+
+Transfer Agent Instructions:
+The transfer will take 3-15 business days to process. If you're feeling uncertain you can check in with ${name of broker} by contacting them through the following methods: ${broker phone number}, ${broker email address}, ${broker contact page}.
+
+
+{if a transfer agent account number is required}
+If you have an existing ${transfer agent name} account:
+Your broker will DRS transfer the shares based on your name and address. As a result, a second account may be created for you. This can be for a few reasons, such as a middle initial existing on one account, but not the other. If your name and address match exactly, then the transfer will process within the normal amount of time. If not, then it will take another 2-4 weeks for the account to be made and the DRS Account Statement sent out to you.}
+
+
+{if transfer agent is Computershare}
+If you don't have an existing ${transfer agent name} account:
+Your broker and ${transfer agent name} will take care of the transfer and ${transfer agent name} will open an account for you. This will take another 2-3 business days.
+
+If you have an existing ${transfer agent name} account:
+Your broker will DRS transfer the shares based on your name and address. As a result, a second account may be created for you. This can be for a few reasons, such as a middle initial existing on one account, but not the other. If your name and address match exactly, then the transfer will process within the normal amount of time. If not, then it will take another 2-4 weeks for the account to be made and the DRS Account Statement sent out to you.
+
+Your broker may ask you for a ${transfer agent name} account number. For security reasons we do not recommend giving this information to your broker. With ${transfer agent name} accounts, the account number is the "key" that allows brokers to authorize a transfer of shares out of the DRS and back to the broker.
+
+After your shares leave your broker:
+Now you will need to wait for the first ${transfer agent name} letter to arrive.
+This letter is the DRS Account Statement.
+It will take another 2-8 weeks after your shares have left your broker.
+If you don't want to wait around 4 weeks, you have another option:
+You can expedite the letter for $45 by giving payment details to ${transfer agent name} over the phone. The letter will arrive within a week.
+${transfer agent name}'s contact information for each company can be found here: https://www-us.computershare.com/Investor/#Contact/Enquiry 
+Scroll down to “Contact information for a specific company” and search for ${company name} or ${Stock Symbol} to find their phone number.
+If you're outside the US, you can get a free trial month of Skype to call these numbers.
+If you don't hear any relevant options with the automated menu, you can keep pressing 0 to get through to a human.
+If you are asked to verify your address and live outside of the US, you will have to use an ISO code instead of your country. For example, London in the UK is GB-LDN and Barcelona in Spain is ES-B. You can find your country's ISO codes through this wikipedia page.
+When you have the DRS Account Statement:
+Go to Computershare.com/us.
+Click on “Login to Investor Center”.
+Click on “Register Now”.
+Make sure to select the “Holder Account Number” tab, instead of “Social Security Number”.
+Select “I am not a U.S. Resident”.
+Provide the ${transfer agent name} account number that is on your DRS Account Statement (starts with “C”).
+Provide your last name, surname, or business name.
+Enter the name of the stock that you hold (${company name}).
+${transfer agent name} will then prompt you to create your username, password and security questions.
+Once your account is created, ${transfer agent name} will send you a verification letter in the mail. This will arrive in 1 to 3 weeks.
+If you'd like it sooner you can call ${transfer agent name} and pay a $30 fee to get the verification code via email within 48 hours.
+${transfer agent name}'s contact information for each company can be found here: https://www-us.computershare.com/Investor/#Contact/Enquiry 
+Scroll down to “Contact information for a specific company” and search for ${company name} or ${Stock Symbol} to find their phone number.
+If you're outside the US, you can get a free trial month of Skype to call these numbers.
+If you don't hear any relevant options with the automated menu, you can keep pressing 0 to get through to a human.
+If you are asked to verify your address and live outside of the US, you will have to use an ISO code instead of your country. For example, London in the UK is GB-LDN and Barcelona in Spain is ES-B. You can find your country's ISO codes through this wikipedia page.
+When you receive the verification code letter:
+Return to Computershare.com/us.
+Click on “Login to Investor Center”.
+Login using the username, and password you have created.
+Then you can enter the verification code.
+You now have full access to your ${transfer agent name} account!
+There is no more need for the verification code.
+We recommend you now activate your two-step verification (2FA) to improve your account security. You can set this up by going to: "My Profile", then "Account Security Preferences".}
+Tax Form:
+At this stage it is important to verify your tax status as a non-US citizen. While logged into your account, go to the My Profile tab, then “Tax Details” and fill in the form.
+You must fill in the W-8 BEN form before you buy any shares through ${transfer agent name}, or add your banking information (especially if it's a US dollar account). Otherwise you will be assumed to be a US citizen.
+
