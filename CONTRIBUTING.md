@@ -70,7 +70,7 @@ You might contribute here by:
 
 Once approved, your contribution will be merged into the project!
 
-**Screenshots coming soon**. Also in the works: an easier way for contributors to enter their submissions.
+**In the works:** An easier way for contributors to enter their submissions.
 
 
 ## Getting Started with GitHub Desktop
