@@ -26,47 +26,47 @@ You might contribute here by:
 
 1. You will need to fork the repository by pressing the "Fork" button at the top, then "Create Fork". If you have trouble finding it, press CTRL+F on your keyboard and search "Fork". 
 
-![Fork Button](assets/images/image.png)
+![Fork Button](assets/images/Contributing-Screenshots/image.png)
 
-![Create Fork](assets/images/image-2.png)
+![Create Fork](assets/images/Contributing-Screenshots/image-2.png)
 
 2. Sign into Github or make a new account to access your "fork", which gives you a personal copy of the database repository that you can edit.
 
-![Link to Forked Repo](assets/images/image-3.png)
+![Link to Forked Repo](assets/images/Contributing-Screenshots/image-3.png)
 
 3. Open the `data/Issuers/Main-Database-CSV-Files` folder from your fork, select the letter you wish to contribute to, then press "." on your keyboard to enter VS Code for the Web.
 
-![Data Folder](assets/images/image-4.png)
+![Data Folder](assets/images/Contributing-Screenshots/image-4.png)
 
-![Data Folder Letter A](assets/images/image-5.png)
+![Data Folder Letter A](assets/images/Contributing-Screenshots/image-5.png)
 
-![Github Dev Site](assets/images/image-6.png)
+![Github Dev Site](assets/images/Contributing-Screenshots/image-6.png)
 
 4. On the left-hand side, click the icon with four squares and search for "Excel Viewer" and Install the extension from MESCIUS. This will allow you to edit the CSV file as if you're working in a spreadsheet.
 
-![Excel Viewer](assets/images/image-7.png)
+![Excel Viewer](assets/images/Contributing-Screenshots/image-7.png)
 
 5. Once the extension is installed, you can right-click on the tab of the previously opened CSV file and select "Reopen Editor With..." and press CSV Editor.
 
-![Open With](assets/images/image-8.png)
+![Open With](assets/images/Contributing-Screenshots/image-8.png)
 
-![Open With CSV Editor](assets/images/image-9.png)
+![Open With CSV Editor](assets/images/Contributing-Screenshots/image-9.png)
 
 6. Make the changes to the CSV file that you'd like to submit, then once complete you should see a button on the left with a blue circle and a number inside it. Press that icon, write a message and press "Commit & Push" to save changes to your local fork.
 
-![Edit Cell](assets/images/image-10.png)
+![Edit Cell](assets/images/Contributing-Screenshots/image-10.png)
 
-![Commit & Push](assets/images/image-11.png)
+![Commit & Push](assets/images/Contributing-Screenshots/image-11.png)
 
 7. Press the Top left menu then select "Go to Repository", press "Contribute" and then press "Open pull request". Make sure to select your branch and the base repository’s `main` branch.
 
-![Back To Repository](assets/images/image-12.png)
+![Back To Repository](assets/images/Contributing-Screenshots/image-12.png)
 
-![Open pull request](assets/images/image-13.png)
+![Open pull request](assets/images/Contributing-Screenshots/image-13.png)
 
 8. Press "Create pull request" and your submission will be reviewed. You may be asked to make some adjustments based on feedback.
 
-![Create pull request](assets/images/image-14.png)
+![Create pull request](assets/images/Contributing-Screenshots/image-14.png)
 
 Once approved, your contribution will be merged into the project!
 
