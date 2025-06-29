@@ -859,12 +859,6 @@
             "NYSE"
         ],
         [
-            "310732",
-            "BNP PARIBAS",
-            "BNPQY",
-            "OTC"
-        ],
-        [
             "1156375",
             "CME GROUP INC.",
             "CME",
@@ -6994,7 +6988,7 @@
             "1592386",
             "Virtu Financial, Inc.",
             "VIRT",
-            "NYSE"
+            "Nasdaq"
         ],
         [
             "917273",
@@ -12601,6 +12595,12 @@
             "NYSE"
         ],
         [
+            "1692412",
+            "Playa Hotels & Resorts N.V.",
+            "PLYA",
+            "Nasdaq"
+        ],
+        [
             "102426",
             "SRH Total Return Fund, Inc.",
             "STEW",
@@ -15412,7 +15412,7 @@
             "2019410",
             "Caris Life Sciences, Inc.",
             "CAI",
-            "Nasdaq"
+            null
         ],
         [
             "1493683",
@@ -18760,6 +18760,12 @@
             "2019793",
             "XCF Global, Inc.",
             "SAFX",
+            "Nasdaq"
+        ],
+        [
+            "1793862",
+            "Dada Nexus Ltd",
+            "DADA",
             "Nasdaq"
         ],
         [
@@ -27686,7 +27692,7 @@
         ],
         [
             "1084937",
-            "Green Rain Energy Holdings Inc.",
+            "NOW Corp I",
             "NWPN",
             "OTC"
         ],
@@ -31375,12 +31381,6 @@
             "NYSE"
         ],
         [
-            "1936255",
-            "Four Leaf Acquisition Corp",
-            "FORL",
-            "Nasdaq"
-        ],
-        [
             "1951294",
             "VS MEDIA Holdings Ltd",
             "VSME",
@@ -34154,7 +34154,7 @@
         ],
         [
             "1404353",
-            "West Point Gold Corp.",
+            "Gold79 Mines Ltd.",
             "WPGCF",
             "OTC"
         ],
@@ -34667,12 +34667,6 @@
             "ZINCORE METALS INC",
             "ZCRMD",
             "OTC"
-        ],
-        [
-            "1253689",
-            "GLYCOMIMETICS INC",
-            "CBIO",
-            "Nasdaq"
         ],
         [
             "1527352",
@@ -36589,6 +36583,12 @@
             "Nasdaq"
         ],
         [
+            "1253689",
+            "GLYCOMIMETICS INC",
+            "GLYC",
+            "Nasdaq"
+        ],
+        [
             "1835615",
             "Meihua International Medical Technologies Co., Ltd.",
             "MHUA",
@@ -38086,12 +38086,6 @@
             "1471727",
             "SRx Health Solutions, Inc.",
             "SRXH",
-            "NYSE"
-        ],
-        [
-            "946644",
-            "AIM ImmunoTech Inc.",
-            "AIM",
             "NYSE"
         ],
         [
@@ -41830,7 +41824,7 @@
             "1815476",
             "Braxia Scientific Corp.",
             "BRAXF",
-            null
+            "OTC"
         ],
         [
             "1729944",
@@ -41896,6 +41890,12 @@
             "1210618",
             "SPI Energy Co., Ltd.",
             "SPIEF",
+            "OTC"
+        ],
+        [
+            "946644",
+            "AIM ImmunoTech Inc.",
+            "AIMI",
             "OTC"
         ],
         [
@@ -41987,6 +41987,12 @@
             "NATIONAL RURAL UTILITIES COOPERATIVE FINANCE CORP /DC/",
             "NRUC",
             "NYSE"
+        ],
+        [
+            "310732",
+            "BNP PARIBAS",
+            "BNPZY",
+            "OTC"
         ],
         [
             "723533",
@@ -42327,7 +42333,7 @@
         [
             "1555812",
             "Siam Makro Public Co Limited/ADR",
-            "CPAXF",
+            "CPXTF",
             "OTC"
         ],
         [
@@ -42712,7 +42718,7 @@
             "1886428",
             "Slide Insurance Holdings, Inc.",
             "SLDE",
-            "Nasdaq"
+            null
         ],
         [
             "1886799",
@@ -42769,6 +42775,12 @@
             "OTC"
         ],
         [
+            "1936255",
+            "Four Leaf Acquisition Corp",
+            "FORLU",
+            "Nasdaq"
+        ],
+        [
             "1943421",
             "Rubico Inc.",
             "RUBI",
@@ -42802,7 +42814,7 @@
             "1954488",
             "Jyong Biotech Ltd.",
             "MENS",
-            "Nasdaq"
+            null
         ],
         [
             "1954705",
@@ -44488,6 +44500,12 @@
             "769594",
             "NIPPON TELEGRAPH & TELEPHONE CORP",
             "NTTYY",
+            "OTC"
+        ],
+        [
+            "310732",
+            "BNP PARIBAS",
+            "BNPQY",
             "OTC"
         ],
         [
@@ -46723,12 +46741,6 @@
             "OTC"
         ],
         [
-            "1692412",
-            "Playa Hotels & Resorts N.V.",
-            "PLYA",
-            "Nasdaq"
-        ],
-        [
             "1412558",
             "Evotec SE",
             "EVOTF",
@@ -47117,12 +47129,6 @@
             "GAMCO Global Gold, Natural Resources & Income Trust",
             "GGN-PB",
             "NYSE"
-        ],
-        [
-            "1793862",
-            "Dada Nexus Ltd",
-            "DADA",
-            "Nasdaq"
         ],
         [
             "863110",
@@ -47617,6 +47623,12 @@
             "OTC"
         ],
         [
+            "1842937",
+            "Red Rock Acquisition Corp.",
+            "HCVI",
+            "OTC"
+        ],
+        [
             "1672619",
             "Enliven Therapeutics, Inc.",
             "IMRA",
@@ -47833,6 +47845,12 @@
             "OTC"
         ],
         [
+            "1515114",
+            "GLORYWIN ENTERTAINMENT GROUP, INC.",
+            "GWIN",
+            "OTC"
+        ],
+        [
             "1501078",
             "Oconee Federal Financial Corp.",
             "OFED",
@@ -47932,6 +47950,12 @@
             "1429260",
             "Fortress Biotech, Inc.",
             "FBIOP",
+            "Nasdaq"
+        ],
+        [
+            "1936255",
+            "Four Leaf Acquisition Corp",
+            "FORL",
             "Nasdaq"
         ],
         [
@@ -48257,12 +48281,6 @@
             "My City Builders, Inc.",
             "MYCB",
             "OTC"
-        ],
-        [
-            "1253689",
-            "GLYCOMIMETICS INC",
-            "GLYC",
-            "Nasdaq"
         ],
         [
             "1640251",
@@ -49111,12 +49129,6 @@
             "OTC"
         ],
         [
-            "946644",
-            "AIM ImmunoTech Inc.",
-            "AIMI",
-            "OTC"
-        ],
-        [
             "1394638",
             "Driveitaway Holdings, Inc.",
             "DWAY",
@@ -49768,12 +49780,6 @@
             "310522",
             "FEDERAL NATIONAL MORTGAGE ASSOCIATION FANNIE MAE",
             "FNMAP",
-            "OTC"
-        ],
-        [
-            "310732",
-            "BNP PARIBAS",
-            "BNPZY",
             "OTC"
         ],
         [
@@ -51434,7 +51440,7 @@
         ],
         [
             "1084937",
-            "Green Rain Energy Holdings Inc.",
+            "NOW Corp I",
             "NWPND",
             "OTC"
         ],
@@ -52011,7 +52017,7 @@
         [
             "1270131",
             "LMP CAPITAL & INCOME FUND INC.",
-            "SCD-RI",
+            "SCD-RW",
             "NYSE"
         ],
         [
@@ -53757,7 +53763,7 @@
         [
             "1555812",
             "Siam Makro Public Co Limited/ADR",
-            "CPXTF",
+            "CPAXF",
             "OTC"
         ],
         [
@@ -56642,7 +56648,7 @@
         ],
         [
             "1852536",
-            "Redox International Group, Corp.",
+            "Intorio, Corp.",
             "ITOR",
             "OTC"
         ],
@@ -58000,12 +58006,6 @@
             "1935418",
             "Foremost Clean Energy Ltd.",
             "FMSTW",
-            "Nasdaq"
-        ],
-        [
-            "1936255",
-            "Four Leaf Acquisition Corp",
-            "FORLU",
             "Nasdaq"
         ],
         [
@@ -59797,12 +59797,6 @@
             "OTC"
         ],
         [
-            "2040381",
-            "Pioneer Acquisition I Corp",
-            "PACHU",
-            "Nasdaq"
-        ],
-        [
             "2041047",
             "Dune Acquisition Corp II",
             "IPODU",
@@ -60082,12 +60076,6 @@
             "2056634",
             "ProCap Acquisition Corp",
             "PCAPU",
-            "Nasdaq"
-        ],
-        [
-            "2057030",
-            "Axiom Intelligence Acquisition Corp 1",
-            "AXINU",
             "Nasdaq"
         ],
         [
