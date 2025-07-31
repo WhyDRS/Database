@@ -1,53 +1,79 @@
-# The WhyDRS Database
+# WhyDRS Database Front-End Revamp
 
-### Not your name, not your shares!
+![WhyDRS Logo](assets/images/WhyDRS_Logo_transparent_background.png)
 
-## A Comprehensive Public Database for Companies, Brokers, and Transfer Agents
+## 📋 Project Overview
 
-Managing and accessing information about the Direct Registration System and individual publicly traded stocks can be challenging due to scattered and unorganized data sources. This information has been gathered in one place to make it easy for any investor to get direct access to static information about their investments. [This Lemmy post](https://lemmy.whynotdrs.org/post/21495) goes into detail about the Database structure, goals, and development in addition to information on contributing.
+This branch contains a complete redesign and modernization of the front-end interface for the WhyDRS Database website. The WhyDRS Database is a comprehensive, open-source, nonprofit resource that provides information about Direct Registration Systems (DRS) for publicly traded companies.
 
-You can:
-- [View the raw data](https://database.whydrs.org/)
-- Volunteer to add missing information
-- Search for specific entities of interest
+### Current Status
 
-All data is freely available for use and access.
+This is a work in progress that significantly improves the user interface and experience of the original WhyDRS Database site. The revamp focuses on enhancing search capabilities, visual design, mobile responsiveness, and accessibility while maintaining the core database functionality.
 
-## How Is the Database Organized?
+### What is DRS?
 
-Initially, the database **used manually collected data** for all tickers from major exchanges like the NYSE and NASDAQ. We have since **automated this process**, utilizing the SEC's [**Company Tickers and Exchange Data**](https://www.sec.gov/files/company_tickers_exchange.json), which includes the ticker, company name, exchange, and, crucially, the **CIK**.
+Direct Registration puts stocks in **YOUR** name instead of your broker's — giving you true ownership of your investments. The WhyDRS Database helps investors find information about DRS for thousands of publicly traded companies.
 
-**CIK** stands for **Central Index Key** and is a unique number assigned to each publicly trading company. If a company stops trading, its CIK is retired.
+## ✨ Front-End Improvements
 
-Every 24 hours, this resource is **scraped automatically**, and new items are added to the database. If companies leave public trading for any reason, their information remains in the database to maintain historical records, ensuring that data remains accessible for analysis and reference.
+- **Modern UI/UX**: Complete redesign with a clean, professional aesthetic
+- **Mobile-First Responsive Design**: Optimized for all screen sizes and devices
+- **Improved Search Experience**: Enhanced search functionality with better results display
+- **Step-by-Step DRS Process Flow**: Clear visualization of how DRS works
+- **Smooth Scrolling Navigation**: Improved internal page navigation
+- **Performance Optimized**: Fast loading times and optimized assets
+- **Accessibility Improvements**: Better semantic HTML and ARIA attributes
 
-## Features
+## 🛠️ Technologies Used
 
-- **Comprehensive Data:** Includes information on companies, brokers (pending), and transfer agents (pending).
-- **Automated Updates:** Data is refreshed every 24 hours to ensure accuracy.
-- **Free Access:** All data is freely available for use and access.
-- **User Contributions:** Volunteers can add missing information to enhance the database.
-- **Search Functionality:** Easily search for specific entities of interest.
+- HTML5
+- CSS3 (with CSS Variables for theming)
+- JavaScript (Vanilla)
+- Responsive Design (Mobile-first approach)
+- Vercel (Development deployment platform)
 
-## How to Use
+## 🔍 Project Structure
 
-- **View Raw Data:** Access the complete dataset [here](https://database.whydrs.org/).
-- **Search for Entities:** Use the search functionality on the website to find specific companies, brokers (pending), or transfer agents (pending).
-- **Contribute Data:** Volunteer to add or update information by submitting a pull request. You can also report a bug or request a feature in the [Issues tab](https://github.com/WhyDRS/Database/issues).
+- `/assets` - Images and other static assets
+- `/css` - Styling files
+- `/js` - JavaScript functionality
+- `/data` - Database files (JSON)
 
-## Contributing
+## 🖥️ Local Development
 
-We welcome contributions from the community! If you have additional information or corrections, please follow these steps:
+To run this project locally:
 
-1. Fork the repository.
-2. Create a new branch for your feature or fix.
-3. Commit your changes with clear messages.
-4. Submit a pull request detailing your changes.
+1. Clone the repository
+   ```
+   git clone https://github.com/NYTEMODEONLY/whydrs-db.git
+   ```
 
-## License
+2. Checkout the landing page revamp branch
+   ```
+   git checkout landing-page-revamp
+   ```
 
-The source code is licensed under the [Affero General Public License (AGPL)](https://www.gnu.org/licenses/agpl-3.0.html) and the database is licensed under the [Open Database License ODbL](https://opendatacommons.org/licenses/odbl/1-0/).
+3. Open the `index.html` file in your browser or use a local server
 
-## Contact
+## 🔮 Future Plans
 
-For questions, suggestions, or support, please contact us at [hi@whydrs.org](mailto:hi@whydrs.org).
+- Integration with the main WhyDRS Database website
+- Enhanced data visualization components
+- Additional broker guides
+- Expanded search filters and sorting options
+
+## 🤝 Contributing
+
+Contributions to improve the WhyDRS front-end are welcome! Please feel free to submit a pull request or open an issue.
+
+## 📄 License
+
+This project is licensed under the Affero General Public License (AGPL) and the database is licensed under the Open Database License (ODbL).
+
+## 📞 Contact
+
+For questions, suggestions, or support, please contact us at hi@whydrs.org.
+
+---
+
+*Not your name, not your shares!*
