@@ -388,8 +388,14 @@ VSTTF,OTC,Vast Renewables Ltd,,,,,,,,,,,,,,,,1964630,,,,,,,,
 VSTWF,OTC,Vast Renewables Ltd,,,,,,,,,,,,,,,,1964630,,,,,,,,
 VAPE,Nasdaq,CEA Industries Inc.,,,,,,,,,,,,,,,,1482541,,,,,,,,
 VAPEW,Nasdaq,CEA Industries Inc.,,,,,,,,,,,,,,,,1482541,,,,,,,,
+<<<<<<< HEAD
 VSGRY,OTC,VusionGroup,,,,,,,,,,,,,,,,2075141,,,,,,,,
 VRMWW,OTC,"Vroom, Inc.",,,,,,,,,,,,,,,,1580864,,,,,,,,
 VNMEU,Nasdaq,Vendome Acquisition Corp I,,,,,,,,,,,,,,,,2055879,,,,,,,,
+=======
+VNMEU,Nasdaq,Vendome Acquisition Corp I,,,,,,,,,,,,,,,,2055879,,,,,,,,
+VSGRY,OTC,VusionGroup,,,,,,,,,,,,,,,,2075141,,,,,,,,
+VRMWW,OTC,"Vroom, Inc.",,,,,,,,,,,,,,,,1580864,,,,,,,,
+>>>>>>> origin/main
 VIIQ,OTC,Capstone Technologies Group Inc.,,,,,,,,,,,,,,,,1470129,,,,,,,,
 VWAVW,Nasdaq,"VisionWave Holdings, Inc.",,,,,,,,,,,,,,,,2038439,,,,,,,,

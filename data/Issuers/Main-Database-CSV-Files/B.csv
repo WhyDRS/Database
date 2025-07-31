@@ -974,8 +974,13 @@ BMOK,,BM Acquisition Corp.,,,,,,,,,,,,,,,,2071607,,,,,,,,
 BRZLD,OTC,"Adapti, Inc.",,,,,,,,,,,,,,,,1420924,,,,,,,,
 BROGF,OTC,Brooge Energy Ltd,,,,,,,,,,,,,,,,1774983,,,,,,,,
 BGLWW,Nasdaq,Blue Gold Ltd,,,,,,,,,,,,,,,,2019435,,,,,,,,
+<<<<<<< HEAD
 BRSL,NYSE,International Game Technology PLC,,,,,,,,,,,,,,,,1619762,,,,,,,,
 BPPTU,OTC,BP PRUDHOE BAY ROYALTY TRUST,,,,,,,,,,,,,,,,850033,,,,,,,,
+=======
+BPPTU,OTC,BP PRUDHOE BAY ROYALTY TRUST,,,,,,,,,,,,,,,,850033,,,,,,,,
+BRSL,NYSE,International Game Technology PLC,,,,,,,,,,,,,,,,1619762,,,,,,,,
+>>>>>>> origin/main
 BIREY,OTC,Birchcliff Energy Ltd./ADR,,,,,,,,,,,,,,,,2073268,,,,,,,,
 BIREF,OTC,Birchcliff Energy Ltd./ADR,,,,,,,,,,,,,,,,2073268,,,,,,,,
 BRSL,NYSE,Brightstar Lottery PLC,,,,,,,,,,,,,,,,1619762,,,,,,,,
