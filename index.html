@@ -1,137 +1,272 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- 
-        To add a favicon, you’ll need to add a <link rel="icon"> 
-        element in the <head> section of your index.html.
-    -->
-    <link rel="icon" type="image/png" href="assets/images/WhyDRS_favicon.png">
-
-    <!-- 
-        The "lang" attribute specifies the language of the webpage's content,
-        helping search engines and screen readers handle the text correctly.
-    -->
     <meta charset="UTF-8">
-    <!-- 
-        Ensures the page is rendered correctly on mobile devices.
-        'width=device-width' sets the width to the device-width, 
-        and 'initial-scale=1.0' sets the initial zoom level.
-    -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- 
-        Provides a brief description of the webpage content, 
-        which can be used by search engines for indexing.
-    -->
-    <meta name="description" content="WhyDRS Database - A Comprehensive Public Database for Companies, Brokers, and Transfer Agents">
-
-    <!-- 
-        Defines the color of the browser toolbar in some mobile browsers,
-        improving brand visibility and user experience.
-    -->
-    <meta name="theme-color" content="#144F9B">
-    
-    <!-- 
-        The title of the webpage that appears in the browser tab 
-        and in search engine results.
-    -->
-    <title>WhyDRS Database</title>
-
-    <!-- 
-        Preload instructions to hint that these resources 
-        are high priority. 'as' attribute identifies the resource type.
-    -->
-    <link rel="preload" href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css" as="style">
-    <link rel="preload" href="https://cdn.datatables.net/buttons/2.3.6/css/buttons.dataTables.min.css" as="style">
-
-    <!-- 
-        Links to the DataTables and Buttons library CSS files.
-        DataTables helps create interactive tables with search, 
-        sorting, pagination, etc.
-    -->
-    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css">
-    <link rel="stylesheet" href="https://cdn.datatables.net/buttons/2.3.6/css/buttons.dataTables.min.css">
-
-    <!-- 
-        Links to our custom stylesheet which holds site-specific styling.
-    -->
-    <link rel="stylesheet" href="src/web/css/styles.css">
+    <meta name="description" content="WhyDRS: The comprehensive public database for information about publicly traded companies and the Direct Registration System (DRS) for shares.">
+    <meta name="keywords" content="DRS, Direct Registration System, stocks, shares, publicly traded companies, share ownership">
+    <meta name="author" content="WhyDRS.org">
+    <meta name="theme-color" content="#1565C0">
+    <meta property="og:title" content="WhyDRS - Not your name, not your shares!">
+    <meta property="og:description" content="The comprehensive public database on Direct Registration Systems for publicly traded companies.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://whydrs.org">
+    <title>WhyDRS - Not your name, not your shares!</title>
+    <link rel="icon" href="favicon.ico">
+    <link rel="icon" href="assets/images/WhyDRS_favicon.png" type="image/png">
+    <link rel="apple-touch-icon" href="assets/images/WhyDRS_favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <div class="container">
-        <!-- 
-            Main heading of the webpage, introducing the database.
-        -->
-        <h1>WhyDRS Database</h1>
-
-        <!-- 
-            Small paragraph providing context about the database and 
-            encouraging the user to contribute missing data or contact.
-        -->
-        <p class="info-text"><sup>*</sup> Empty cells indicate missing data. You can help us improve by <a href="https://forms.gle/deQ6YDoyX4kTNXy28" target="_blank">contributing missing information</a> or emailing us at <a href="mailto:hi@whydrs.org">hi@whydrs.org</a>.</p>
-
-        <!-- 
-            Loading overlay that displays while the data is being fetched.
-            It prevents the user from interacting with the page 
-            and shows a spinner and a loading message.
-        -->
-        <div id="loading-overlay">
-            <div class="loader"></div>
-            <p>Loading data, please wait...</p>
+    <header role="banner">
+        <div class="container">
+            <div class="logo">
+                <a href="/" aria-label="WhyDRS Home">
+                    <img src="assets/images/WhyDRS_Logo_transparent_background.png" alt="WhyDRS Logo" width="150" height="50">
+                </a>
+            </div>
+            <nav role="navigation" aria-label="Main navigation">
+                <button id="menu-toggle" class="menu-toggle" aria-expanded="false" aria-controls="main-menu" aria-label="Toggle menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+                <ul id="main-menu">
+                    <li><a href="#about" aria-label="Learn about WhyDRS">About</a></li>
+                    <li><a href="#database" aria-label="Access database features">Database</a></li>
+                    <li><a href="#contribute" aria-label="Contribute to WhyDRS">Contribute</a></li>
+                    <li><a href="https://github.com/WhyDRS/Database" target="_blank" rel="noopener noreferrer" aria-label="WhyDRS GitHub repository">GitHub</a></li>
+                </ul>
+            </nav>
         </div>
+    </header>
 
-        <!-- 
-            Table element that will be initialized as a DataTable in the script.
-            The "hidden" class is applied initially to hide it until data is ready.
-        -->
-        <table id="data-table" class="hidden">
-            <thead>
-                <tr>
-                    <!-- 
-                        Table headers (th) are dynamically generated 
-                        in the script.js based on JSON keys.
-                    -->
-                </tr>
-            </thead>
-            <tbody>
-                <!-- 
-                    Table rows (tr) are populated dynamically 
-                    with data from the fetched JSON.
-                -->
-            </tbody>
-        </table>
-    </div>
+    <main>
+        <section class="hero" aria-labelledby="hero-heading">
+            <div class="container">
+                <div class="hero-content">
+                    <h1 id="hero-heading">Not your name, not your shares!</h1>
+                    <p class="subtitle">The comprehensive open source, nonprofit, public database on Direct Registration Systems for publicly traded companies</p>
+                    
+                    <div class="hero-explainer">
+                        <p>Direct Registration puts stocks in <strong>YOUR</strong> name instead of your broker's — giving you true ownership of your investments</p>
+                    </div>
+                    
+                    <div class="quick-search">
+                        <form id="hero-search-form">
+                            <label for="hero-search" class="visually-hidden">Quick search for company</label>
+                            <input type="text" id="hero-search" placeholder="Search by company name or ticker..." aria-label="Quick search">
+                            <button type="submit" class="search-button" aria-label="Search">Search</button>
+                        </form>
+                    </div>
+                    
+                    <div class="cta-buttons">
+                        <a href="#contribute" class="button secondary" aria-label="Contribute to the database">
+                            <span>Contribute Data</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                        </a>
+                        <a href="#how-it-works" class="button tertiary" aria-label="Learn how DRS works">
+                            <span>How DRS Works</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+                        </a>
+                        <a href="https://github.com/WhyDRS/Database" class="button primary" target="_blank" rel="noopener noreferrer" aria-label="View GitHub repository">
+                            <span>View GitHub</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                        </a>
+                    </div>
+                    
+                    <div class="social-proof">
+                        <div class="stat">
+                            <span class="stat-number" id="companies-count">3,500+</span>
+                            <span class="stat-label">Companies Tracked</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number" id="transfer-agents-count">100+</span>
+                            <span class="stat-label">Transfer Agents</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">150+</span>
+                            <span class="stat-label">Broker Guides</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="scroll-indicator">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="8 12 12 16 16 12"></polyline><line x1="12" y1="8" x2="12" y2="16"></line></svg>
+                    <span>Scroll to learn more</span>
+                </div>
+            </div>
+        </section>
+        
+        <section id="how-it-works" class="how-it-works">
+            <div class="container">
+                <h2>How DRS Works</h2>
+                
+                <div class="steps-container">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h3>Find Your Company</h3>
+                            <p>Search our database to find the company you own shares in and its transfer agent</p>
+                        </div>
+                    </div>
+                    
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h3>Contact Transfer Agent</h3>
+                            <p>Follow instructions to contact the company's transfer agent to initiate DRS</p>
+                        </div>
+                    </div>
+                    
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h3>Register Your Shares</h3>
+                            <p>Complete the process to move your shares from broker to direct registration</p>
+                        </div>
+                    </div>
+                    
+                    <div class="step">
+                        <div class="step-number">4</div>
+                        <div class="step-content">
+                            <h3>Enjoy True Ownership</h3>
+                            <p>Your shares are now registered in your name with all associated rights</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-    <!-- 
-        jQuery library (a dependency for DataTables) 
-        is loaded first so DataTables can use it.
-    -->
-    <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
+        <section id="about" class="about" aria-labelledby="about-heading">
+            <div class="container">
+                <h2 id="about-heading">About WhyDRS</h2>
+                <div class="about-content">
+                    <div class="about-text">
+                        <p>The WhyDRS Database is a comprehensive, community-driven resource providing essential information about publicly traded companies and share registration systems.</p>
+                        <p>This Database is maintained by WhyDRS, which is a 501(c)(3) charitable organization and a DUNA.</p>
+                        <p>Our mission is to collect and source the scattered information about the Direct Registration System (DRS), making ownership accessible to any investor who wants to understand their investments better and take control of their share ownership. We believe that all investors deserve access to this information.</p>
+                        <p>This 100% volunteer-driven project updates daily with the latest data from official sources including the SEC, and can be updated manually by individual contributors. If you want to learn more or if you want to help verify contributions, check out our GitHub.</p>
+                        <a href="https://whydrs.org" class="button primary" target="_blank" rel="noopener noreferrer">Visit Main Site</a>
+                    </div>
+                    <div class="about-image" style="display: flex; justify-content: center; align-items: center;">
+                        <img src="assets/images/WhyDRS_Logo_transparent_background.png" alt="WhyDRS Database Logo" width="280" height="140" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </section>
 
-    <!-- 
-        DataTables core script, which turns ordinary HTML tables 
-        into powerful interactive tables with searching, sorting, etc.
-    -->
-    <script type="text/javascript" src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
+        <section id="database" class="database" aria-labelledby="database-heading">
+            <div class="container">
+                <h2 id="database-heading">Database Access</h2>
+                <p>Search our comprehensive database of publicly traded companies to find information about their Direct Registration Systems.</p>
+                <div class="search-container">
+                    <form id="search-form">
+                        <label for="search-input" class="visually-hidden">Search by company name or ticker</label>
+                        <input type="text" id="search-input" placeholder="Search by company name or ticker..." aria-label="Search the database">
+                        <button type="submit" class="search-button" aria-label="Submit search">Search</button>
+                    </form>
+                </div>
+                <div id="search-results" class="search-results-container"></div>
+                <div class="database-features">
+                    <div class="feature" aria-labelledby="feature-1-heading">
+                        <h3 id="feature-1-heading">Community Updates</h3>
+                        <p>Our database is continuously enhanced by passionate contributors, ensuring the information remains accurate and comprehensive.</p>
+                    </div>
+                    <div class="feature" aria-labelledby="feature-2-heading">
+                        <h3 id="feature-2-heading">Multiple Formats</h3>
+                        <p>Access data in CSV, JSON, or through our interactive web interface.</p>
+                    </div>
+                    <div class="feature" aria-labelledby="feature-3-heading">
+                        <h3 id="feature-3-heading">Comprehensive Data</h3>
+                        <p>Get detailed information on ticker symbols, company names, exchanges, transfer agents, and DRS eligibility.</p>
+                    </div>
+                </div>
+                <div class="database-access">
+                    <a href="full-database" class="button primary" aria-label="Access the full database">Access Full Database</a>
+                </div>
+            </div>
+        </section>
 
-    <!-- 
-        Buttons extension for DataTables, adding column visibility and other features.
-    -->
-    <script src="https://cdn.datatables.net/buttons/2.3.6/js/dataTables.buttons.min.js"></script>
-    <script src="https://cdn.datatables.net/buttons/2.3.6/js/buttons.colVis.min.js"></script>
+        <section id="contribute" class="contribute" aria-labelledby="contribute-heading">
+            <div class="container">
+                <h2 id="contribute-heading">Contribute</h2>
+                <p>WhyDRS is a community-driven project. We welcome contributions from everyone!</p>
+                <div class="contribution-methods">
+                    <div class="contribution-method" aria-labelledby="method-1-heading">
+                        <h3 id="method-1-heading">GitHub</h3>
+                        <p>Fork our repository, make changes, and submit a pull request.</p>
+                        <a href="https://github.com/WhyDRS/Database" class="button secondary" target="_blank" rel="noopener noreferrer" aria-label="Fork project on GitHub">Fork on GitHub</a>
+                    </div>
+                    <div class="contribution-method" aria-labelledby="method-2-heading">
+                        <h3 id="method-2-heading">Data Submission</h3>
+                        <p>Submit new data or corrections through our simple form.</p>
+                        <a href="https://forms.gle/deQ6YDoyX4kTNXy28" class="button secondary" target="_blank" rel="noopener noreferrer" aria-label="Submit data via form">Submit Data</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 
-    <!-- 
-        Our custom JavaScript which fetches data and initializes the table.
-    -->
-    <script src="src/web/javascript/script.js"></script>
+    <footer role="contentinfo">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="assets/images/WhyDRS_Logo_transparent_background.png" alt="WhyDRS Logo" width="180" height="80">
+                    <div class="footer-tagline">
+                        <p>Not your name, not your shares!</p>
+                    </div>
+                    <div class="footer-disclaimer">
+                        <p>WhyDRS does not give financial advice. Each investor is responsible for their own decisions.</p>
+                        <p>WhyDRS provides educational and reference information about the U.S. financial markets, publicly traded companies, and the Direct Registration System.</p>
+                    </div>
+                    <div class="footer-social">
+                        <a href="https://github.com/WhyDRS/Database" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#about">About WhyDRS</a></li>
+                        <li><a href="#database">Database Access</a></li>
+                        <li><a href="https://forms.gle/deQ6YDoyX4kTNXy28" target="_blank" rel="noopener noreferrer">Contribute Data</a></li>
+                        <li><a href="https://github.com/WhyDRS/Database" target="_blank" rel="noopener noreferrer">GitHub Repository</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h3>Contact</h3>
+                    <p class="contact-item">
+                        <svg class="contact-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                        <a href="mailto:hi@whydrs.org">hi@whydrs.org</a>
+                    </p>
+                    <p class="contact-item">
+                        <svg class="contact-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+                        <a href="https://whydrs.org" target="_blank" rel="noopener noreferrer">whydrs.org</a>
+                    </p>
+                </div>
+            </div>
+            <div class="footer-divider"></div>
+            <div class="footer-bottom">
+                <div class="footer-copyright">
+                    <p>&copy; <span id="current-year"></span> WhyDRS. WhyDRS is a 501(c)(3) Charitable Organization and DUNA.</p>
+                </div>
+                <div class="footer-legal">
+                    <p>
+                        <span>Code: <a href="https://www.gnu.org/licenses/agpl-3.0.en.html" target="_blank" rel="noopener noreferrer">AGPL License</a></span>
+                        <span class="separator">|</span>
+                        <span>Data: <a href="https://opendatacommons.org/licenses/odbl/" target="_blank" rel="noopener noreferrer">Open Database License (ODbL)</a></span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
 
-    <!-- 
-        A sticky bottom bar that stays fixed at the bottom 
-        of the viewport, providing additional links and context.
-    -->
-    <div class="sticky-bottom-bar" id="sticky-bottom-bar">
-        <p>WhyDRS is 100% volunteer-driven. Help us improve by contributing or providing feedback <a href="https://github.com/WhyDRS/Database/tree/main" style="color: #FFFFFF; text-decoration: underline;">here</a>. Have questions? Visit <a href="https://whydrs.org" style="color: #FFFFFF; text-decoration: underline;">WhyDRS.org</a> or contact us at <a href="mailto:hi@whydrs.org" style="color: #FFFFFF; text-decoration: underline;">hi@whydrs.org</a></p>
-        <button class="close-button" aria-label="Close banner">×</button>
-    </div>
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
 </body>
-</html>
+</html> 
