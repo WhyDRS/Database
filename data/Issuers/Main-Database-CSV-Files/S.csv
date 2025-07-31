@@ -1207,8 +1207,13 @@ SJW,Nasdaq,H2O AMERICA,,,,,,,,,,,,,,,,766829,,,,,,,,
 SANPD,OTC,SANTO MINING CORP.,,,,,,,,,,,,,,,,1499275,,,,,,,,
 SUNXF,OTC,Stardust Solar Energy Inc.,,,,,,,,,,,,,,,,2048958,,,,,,,,
 SCXBF,OTC,SCB X Public Co Ltd,,,,,,,,,,,,,,,,2066600,,,,,,,,
+<<<<<<< HEAD
+SLDE,Nasdaq,"Slide Insurance Holdings, Inc.",,,,,,,,,,,,,,,,1886428,,,,,,,,
+SORA,Nasdaq,Top Win International Ltd,,,,,,,,,,,,,,,,2033515,,,,,,,,
+=======
 SORA,Nasdaq,Top Win International Ltd,,,,,,,,,,,,,,,,2033515,,,,,,,,
 SLDE,Nasdaq,"Slide Insurance Holdings, Inc.",,,,,,,,,,,,,,,,1886428,,,,,,,,
+>>>>>>> origin/main
 SBBTF,OTC,Schibsted ASA / ADR,,,,,,,,,,,,,,,,1451561,,,,,,,,
 SBSNF,OTC,Schibsted ASA / ADR,,,,,,,,,,,,,,,,1451561,,,,,,,,
 SOUL-RI,NYSE,Soulpower Acquisition Corp.,,,,,,,,,,,,,,,,2025608,,,,,,,,

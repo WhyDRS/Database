@@ -1289,6 +1289,15 @@ CHPGR,Nasdaq,ChampionsGate Acquisition Corp,,,,,,,,,,,,,,,,2024460,,,,,,,,
 CGCTW,Nasdaq,Cartesian Growth Corp III,,,,,,,,,,,,,,,,2049662,,,,,,,,
 CRAQR,Nasdaq,Cal Redwood Acquisition Corp.,,,,,,,,,,,,,,,,2058359,,,,,,,,
 CBIO,Nasdaq,"CRESCENT BIOPHARMA, INC.",,,,,,,,,,,,,,,,1253689,,,,,,,,
+<<<<<<< HEAD
+CHEC,,Chenghe Acquisition III Co.,,,,,,,,,,,,,,,,2047177,,,,,,,,
+CYATY,OTC,"Contemporary Amperex Technology Co., Limited/ADR",,,,,,,,,,,,,,,,2070829,,,,,,,,
+CHRO,NYSE,Pelthos Therapeutics Inc.,,,,,,,,,,,,,,,,1919246,,,,,,,,
+CLRUF,OTC,ClimateRock,,,,,,,,,,,,,,,,1903392,,,,,,,,
+CLRWF,OTC,ClimateRock,,,,,,,,,,,,,,,,1903392,,,,,,,,
+CCCXW,Nasdaq,Churchill Capital Corp X/Cayman,,,,,,,,,,,,,,,,2007825,,,,,,,,
+CCIIU,Nasdaq,Cohen Circle Acquisition Corp. II,,,,,,,,,,,,,,,,2064683,,,,,,,,
+=======
 CHRO,NYSE,Pelthos Therapeutics Inc.,,,,,,,,,,,,,,,,1919246,,,,,,,,
 CCIIU,Nasdaq,Cohen Circle Acquisition Corp. II,,,,,,,,,,,,,,,,2064683,,,,,,,,
 CHEC,,Chenghe Acquisition III Co.,,,,,,,,,,,,,,,,2047177,,,,,,,,
@@ -1296,6 +1305,7 @@ CYATY,OTC,"Contemporary Amperex Technology Co., Limited/ADR",,,,,,,,,,,,,,,,2070
 CLRUF,OTC,ClimateRock,,,,,,,,,,,,,,,,1903392,,,,,,,,
 CLRWF,OTC,ClimateRock,,,,,,,,,,,,,,,,1903392,,,,,,,,
 CCCXW,Nasdaq,Churchill Capital Corp X/Cayman,,,,,,,,,,,,,,,,2007825,,,,,,,,
+>>>>>>> origin/main
 CCOOF,OTC,CORE SILVER CORP.,,,,,,,,,,,,,,,,1853599,,,,,,,,
 CPXXY,OTC,Capital Power Corp/ADR,,,,,,,,,,,,,,,,2071911,,,,,,,,
 CPRHF,OTC,Capital Power Corp/ADR,,,,,,,,,,,,,,,,2071911,,,,,,,,

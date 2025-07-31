@@ -632,10 +632,17 @@ EFTY,,"ETOILES CAPITAL GROUP CO., LTD",,,,,,,,,,,,,,,,2058349,,,,,,,,
 EHSI,OTC,Elite Health Systems Inc.,,,,,,,,,,,,,,,,1089815,,,,,,,,
 EVAC,,EQV Ventures Acquisition Corp. II,,,,,,,,,,,,,,,,2042902,,,,,,,,
 EGHAR,Nasdaq,EGH Acquisition Corp.,,,,,,,,,,,,,,,,2052547,,,,,,,,
+<<<<<<< HEAD
+EMIS,,Emmis Acquisition Corp.,,,,,,,,,,,,,,,,2075816,,,,,,,,
+ELVR,,Sayona Mining Ltd,,,,,,,,,,,,,,,,1739016,,,,,,,,
+EYEN,Nasdaq,"HYPERION DEFI, INC.",,,,,,,,,,,,,,,,1682639,,,,,,,,
+EVAC-UN,NYSE,EQV Ventures Acquisition Corp. II,,,,,,,,,,,,,,,,2042902,,,,,,,,
+=======
 EYEN,Nasdaq,"HYPERION DEFI, INC.",,,,,,,,,,,,,,,,1682639,,,,,,,,
 EVAC-UN,NYSE,EQV Ventures Acquisition Corp. II,,,,,,,,,,,,,,,,2042902,,,,,,,,
 EMIS,,Emmis Acquisition Corp.,,,,,,,,,,,,,,,,2075816,,,,,,,,
 ELVR,,Sayona Mining Ltd,,,,,,,,,,,,,,,,1739016,,,,,,,,
+>>>>>>> origin/main
 EMRH,OTC,EMERGING HOLDINGS INC,,,,,,,,,,,,,,,,1300306,,,,,,,,
 ELFTY,OTC,Element Fleet Management Corp./ADR,,,,,,,,,,,,,,,,2073615,,,,,,,,
 ELEEF,OTC,Element Fleet Management Corp./ADR,,,,,,,,,,,,,,,,2073615,,,,,,,,

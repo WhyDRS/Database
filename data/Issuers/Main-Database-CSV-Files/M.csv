@@ -834,8 +834,13 @@ MWAI,OTC,"MedWellAI, Inc.",,,,,,,,,,,,,,,,1520118,,,,,,,,
 MH,NYSE,"McGraw Hill, Inc.",,,,,,,,,,,,,,,,1951070,,,,,,,,
 MAJI,OTC,"Exousia Pro, Inc.",,,,,,,,,,,,,,,,1492448,,,,,,,,
 MZTI,Nasdaq,MARZETTI CO,,,,,,,,,,,,,,,,57515,,,,,,,,
+<<<<<<< HEAD
+MIMDF,OTC,MiMedia Holdings Inc.,,,,,,,,,,,,,,,,1920576,,,,,,,,
+MKLY,,McKinley Acquisition Corp,,,,,,,,,,,,,,,,2067592,,,,,,,,
+=======
 MKLY,,McKinley Acquisition Corp,,,,,,,,,,,,,,,,2067592,,,,,,,,
 MIMDF,OTC,MiMedia Holdings Inc.,,,,,,,,,,,,,,,,1920576,,,,,,,,
+>>>>>>> origin/main
 MUX,NYSE,McEwen Inc.,,,,,,,,,,,,,,,,314203,,,,,,,,
 MFB,,"General Enterprise Ventures, Inc.",,,,,,,,,,,,,,,,894556,,,,,,,,
 METRY,OTC,METRO INC./ADR,,,,,,,,,,,,,,,,2073643,,,,,,,,

@@ -705,10 +705,17 @@ NPACW,Nasdaq,New Providence Acquisition Corp. III/Cayman,,,,,,,,,,,,,,,,2048948,
 NWPN,OTC,Green Rain Energy Holdings Inc.,,,,,,,,,,,,,,,,1084937,,,,,,,,
 NWPND,OTC,Green Rain Energy Holdings Inc.,,,,,,,,,,,,,,,,1084937,,,,,,,,
 NIQ,,NIQ Global Intelligence Ltd,,,,,,,,,,,,,,,,2054696,,,,,,,,
+<<<<<<< HEAD
+NXPGY,OTC,Mobico Group PLC/ADR,,,,,,,,,,,,,,,,1455632,,,,,,,,
+NYMTH,Nasdaq,"NEW YORK MORTGAGE TRUST, INC.",,,,,,,,,,,,,,,,1273685,,,,,,,,
+NXPGF,OTC,Mobico Group PLC/ADR,,,,,,,,,,,,,,,,1455632,,,,,,,,
+NMPAU,Nasdaq,NMP Acquisition Corp.,,,,,,,,,,,,,,,,2054876,,,,,,,,
+=======
 NMPAU,Nasdaq,NMP Acquisition Corp.,,,,,,,,,,,,,,,,2054876,,,,,,,,
 NXPGY,OTC,Mobico Group PLC/ADR,,,,,,,,,,,,,,,,1455632,,,,,,,,
 NYMTH,Nasdaq,"NEW YORK MORTGAGE TRUST, INC.",,,,,,,,,,,,,,,,1273685,,,,,,,,
 NXPGF,OTC,Mobico Group PLC/ADR,,,,,,,,,,,,,,,,1455632,,,,,,,,
+>>>>>>> origin/main
 NSRX,,Nasus Pharma Ltd,,,,,,,,,,,,,,,,2029039,,,,,,,,
 NSKFD,OTC,Kongsberg Gruppen ASA/ADR,,,,,,,,,,,,,,,,1535759,,,,,,,,
 NEXT,Nasdaq,NextDecade Corp,,,,,,,,,,,,,,,,1612720,,,,,,,,
