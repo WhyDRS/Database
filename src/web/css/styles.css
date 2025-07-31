@@ -1,863 +1,640 @@
-/* ==========================================
-   WhyDRS Database - Modern CSS Framework
-   ========================================== */
+/*******************************************************
+ * GLOBAL STYLES
+ *******************************************************/
 
-/* ---------- CSS Variables ---------- */
-:root {
-  /* Color Palette */
-  --primary: #2563eb;
-  --primary-light: #3b82f6;
-  --primary-dark: #1d4ed8;
-  --secondary: #f59e0b;
-  --secondary-light: #fbbf24;
-  --secondary-dark: #d97706;
-  
-  /* UI Status Colors */
-  --success: #10b981;
-  --warning: #f59e0b;
-  --danger: #ef4444;
-  --info: #3b82f6;
-  
-  /* Neutral Colors */
-  --neutral-50: #f9fafb;
-  --neutral-100: #f3f4f6;
-  --neutral-200: #e5e7eb;
-  --neutral-300: #d1d5db;
-  --neutral-400: #9ca3af;
-  --neutral-500: #6b7280;
-  --neutral-600: #4b5563;
-  --neutral-700: #374151;
-  --neutral-800: #1f2937;
-  --neutral-900: #111827;
-  
-  /* Semantic Colors */
-  --background: var(--neutral-50);
-  --surface: white;
-  --text-primary: var(--neutral-900);
-  --text-secondary: var(--neutral-700);
-  --text-tertiary: var(--neutral-500);
-  --border: var(--neutral-200);
-  --divider: var(--neutral-200);
-  
-  /* Typography */
-  --font-heading: 'Manrope', sans-serif;
-  --font-body: 'Inter', sans-serif;
-  --font-size-xs: 0.75rem;   /* 12px */
-  --font-size-sm: 0.875rem;  /* 14px */
-  --font-size-base: 1rem;    /* 16px */
-  --font-size-lg: 1.125rem;  /* 18px */
-  --font-size-xl: 1.25rem;   /* 20px */
-  --font-size-2xl: 1.5rem;   /* 24px */
-  --font-size-3xl: 1.875rem; /* 30px */
-  --font-size-4xl: 2.25rem;  /* 36px */
-  --font-size-5xl: 3rem;     /* 48px */
-  --font-size-6xl: 3.75rem;  /* 60px */
-  
-  /* Font Weights */
-  --font-light: 300;
-  --font-normal: 400;
-  --font-medium: 500;
-  --font-semibold: 600;
-  --font-bold: 700;
-  --font-extrabold: 800;
-  
-  /* Spacing */
-  --space-1: 0.25rem;  /* 4px */
-  --space-2: 0.5rem;   /* 8px */
-  --space-3: 0.75rem;  /* 12px */
-  --space-4: 1rem;     /* 16px */
-  --space-5: 1.25rem;  /* 20px */
-  --space-6: 1.5rem;   /* 24px */
-  --space-8: 2rem;     /* 32px */
-  --space-10: 2.5rem;  /* 40px */
-  --space-12: 3rem;    /* 48px */
-  --space-16: 4rem;    /* 64px */
-  --space-20: 5rem;    /* 80px */
-  --space-24: 6rem;    /* 96px */
-  
-  /* Border Radius */
-  --radius-sm: 0.125rem;  /* 2px */
-  --radius-md: 0.25rem;   /* 4px */
-  --radius-lg: 0.5rem;    /* 8px */
-  --radius-xl: 0.75rem;   /* 12px */
-  --radius-2xl: 1rem;     /* 16px */
-  --radius-full: 9999px;
-  
-  /* Shadows */
-  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-  --shadow-inner: inset 0 2px 4px 0 rgba(0, 0, 0, 0.06);
-  
-  /* Transitions */
-  --transition-fast: 150ms ease-in-out;
-  --transition-normal: 250ms ease-in-out;
-  --transition-slow: 350ms ease-in-out;
-  
-  /* Z-indices */
-  --z-0: 0;
-  --z-10: 10;
-  --z-20: 20;
-  --z-30: 30;
-  --z-40: 40;
-  --z-50: 50;
-  --z-auto: auto;
-  
-  /* Layout */
-  --header-height: 4rem;
-  --content-width: 1280px;
-  --container-padding: 1rem;
-}
-
-/* Dark mode theme variables */
-.dark-mode {
-  --background: var(--neutral-900);
-  --surface: var(--neutral-800);
-  --text-primary: var(--neutral-50);
-  --text-secondary: var(--neutral-300);
-  --text-tertiary: var(--neutral-400);
-  --border: var(--neutral-700);
-  --divider: var(--neutral-700);
-}
-
-/* ---------- Base Styles ---------- */
-*, *::before, *::after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-html {
-  font-family: var(--font-body);
-  font-size: 16px;
-  scroll-behavior: smooth;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
+/* 
+    The body element is the main container for all content.
+    We set a default font family, background color, and
+    some spacing around the edges.
+*/
 body {
-  font-size: var(--font-size-base);
-  line-height: 1.5;
-  color: var(--text-primary);
-  background-color: var(--background);
-  min-height: 100vh;
-  transition: color var(--transition-normal), background-color var(--transition-normal);
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background-color: #F5F5F5;
+    margin: 0;
+    padding: 20px;
+    padding-bottom: 60px;
+    color: #333;
+    min-width: 320px; /* Ensures at least a 320px wide display */
+    overflow-x: hidden; /* Prevents horizontal scrollbar on small screens */
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-heading);
-  font-weight: var(--font-bold);
-  line-height: 1.2;
-  margin-bottom: var(--space-4);
-  color: var(--text-primary);
-}
-
-h1 { font-size: var(--font-size-5xl); }
-h2 { font-size: var(--font-size-4xl); }
-h3 { font-size: var(--font-size-3xl); }
-h4 { font-size: var(--font-size-2xl); }
-h5 { font-size: var(--font-size-xl); }
-h6 { font-size: var(--font-size-lg); }
-
-p {
-  margin-bottom: var(--space-4);
-}
-
-a {
-  color: var(--primary);
-  text-decoration: none;
-  transition: color var(--transition-fast);
-}
-
-a:hover {
-  color: var(--primary-light);
-}
-
-img {
-  max-width: 100%;
-  height: auto;
-}
-
-ul, ol {
-  padding-left: var(--space-6);
-  margin-bottom: var(--space-4);
-}
-
-button {
-  cursor: pointer;
-  font-family: var(--font-body);
-  border: none;
-  background: none;
-}
-
-button:focus, input:focus, select:focus, textarea:focus {
-  outline: none;
-}
-
-/* Custom scrollbar */
-::-webkit-scrollbar {
-  width: 14px;
-}
-
-::-webkit-scrollbar-track {
-  background-color: var(--background);
-}
-
-::-webkit-scrollbar-thumb {
-  background-color: var(--neutral-300);
-  border: 3px solid var(--background);
-  border-radius: var(--radius-full);
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background-color: var(--neutral-400);
-}
-
-/* ---------- Layout ---------- */
+/* 
+    Container class that provides a max width and centers 
+    the content horizontally with responsive padding.
+*/
 .container {
-  width: 100%;
-  max-width: var(--content-width);
-  margin: 0 auto;
-  padding: 0 var(--container-padding);
-}
-
-section {
-  padding: var(--space-16) 0;
-}
-
-.section-header {
-  text-align: center;
-  max-width: 800px;
-  margin: 0 auto var(--space-12);
-}
-
-.section-header h2 {
-  margin-bottom: var(--space-4);
-  position: relative;
-}
-
-.section-header h2::after {
-  content: '';
-  position: absolute;
-  bottom: -10px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 60px;
-  height: 4px;
-  background-color: var(--primary);
-  border-radius: var(--radius-full);
-}
-
-.section-header p {
-  color: var(--text-secondary);
-  font-size: var(--font-size-lg);
-  max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-/* ---------- Header ---------- */
-.header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: var(--header-height);
-  background-color: var(--surface);
-  box-shadow: var(--shadow-md);
-  z-index: var(--z-50);
-  transition: background-color var(--transition-normal), box-shadow var(--transition-normal);
-}
-
-.header-wrap {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  height: 100%;
-}
-
-.logo {
-  display: flex;
-  align-items: center;
-  gap: var(--space-2);
-  color: var(--text-primary);
-  font-family: var(--font-heading);
-  font-weight: var(--font-bold);
-  font-size: var(--font-size-xl);
-  transition: color var(--transition-fast);
-}
-
-.logo:hover {
-  color: var(--primary);
-}
-
-.logo-icon {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 40px;
-  height: 40px;
-  border-radius: var(--radius-lg);
-  background-image: linear-gradient(135deg, var(--primary), var(--primary-dark));
-  color: white;
-  font-size: var(--font-size-xl);
-}
-
-.nav-list {
-  display: flex;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  gap: var(--space-6);
-}
-
-.nav-link {
-  position: relative;
-  display: inline-block;
-  color: var(--text-secondary);
-  font-weight: var(--font-medium);
-  padding: var(--space-2) 0;
-  transition: color var(--transition-fast);
-}
-
-.nav-link::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 0;
-  height: 2px;
-  background-color: var(--primary);
-  transition: width var(--transition-normal);
-}
-
-.nav-link:hover, .nav-link.active {
-  color: var(--primary);
-}
-
-.nav-link:hover::after, .nav-link.active::after {
-  width: 100%;
-}
-
-.nav-link-github {
-  display: flex;
-  align-items: center;
-  gap: var(--space-2);
-}
-
-.header-actions {
-  display: flex;
-  align-items: center;
-  gap: var(--space-4);
-}
-
-.theme-toggle {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 36px;
-  height: 36px;
-  border-radius: var(--radius-lg);
-  color: var(--text-secondary);
-  font-size: var(--font-size-lg);
-  transition: color var(--transition-fast), background-color var(--transition-fast);
-}
-
-.theme-toggle:hover {
-  color: var(--primary);
-  background-color: var(--neutral-100);
-}
-
-.menu-toggle {
-  display: none;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 24px;
-  height: 18px;
-  padding: 0;
-}
-
-.menu-toggle span {
-  display: block;
-  width: 100%;
-  height: 2px;
-  background-color: var(--text-primary);
-  transition: transform var(--transition-normal), opacity var(--transition-normal);
-}
-
-/* Mobile menu */
-.mobile-menu {
-  position: fixed;
-  top: var(--header-height);
-  left: 0;
-  width: 100%;
-  height: calc(100vh - var(--header-height));
-  background-color: var(--surface);
-  z-index: var(--z-40);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: var(--space-4);
-  transform: translateY(-100%);
-  transition: transform var(--transition-slow);
-}
-
-.mobile-menu.active {
-  transform: translateY(0);
-}
-
-.mobile-nav-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  width: 100%;
-  max-width: 300px;
-  text-align: center;
-}
-
-.mobile-nav-link {
-  display: block;
-  padding: var(--space-4);
-  font-size: var(--font-size-xl);
-  font-weight: var(--font-semibold);
-  color: var(--text-primary);
-  transition: color var(--transition-fast);
-}
-
-.mobile-nav-link:hover {
-  color: var(--primary);
-}
-
-/* ---------- Hero Section ---------- */
-.hero {
-  position: relative;
-  min-height: 100vh;
-  padding-top: var(--header-height);
-  display: flex;
-  align-items: center;
-  overflow: hidden;
-}
-
-.hero-bg {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-}
-
-.hero-gradient {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: linear-gradient(135deg, var(--primary-dark), var(--primary));
-  opacity: 0.9;
-}
-
-.hero-particles {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-}
-
-.hero-content {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: var(--space-10);
-  align-items: center;
-  color: white;
-}
-
-.hero-text {
-  max-width: 600px;
-}
-
-.hero-title {
-  font-size: var(--font-size-6xl);
-  margin-bottom: var(--space-6);
-  line-height: 1.1;
-  color: white;
-}
-
-.highlight {
-  position: relative;
-  color: var(--secondary);
-  display: inline-block;
-}
-
-.highlight::after {
-  content: '';
-  position: absolute;
-  bottom: 0.1em;
-  left: 0;
-  width: 100%;
-  height: 0.2em;
-  background-color: var(--secondary);
-  opacity: 0.3;
-  z-index: -1;
-}
-
-.hero-subtitle {
-  font-size: var(--font-size-2xl);
-  margin-bottom: var(--space-6);
-  font-weight: var(--font-medium);
-  opacity: 0.9;
-}
-
-.hero-description {
-  font-size: var(--font-size-lg);
-  margin-bottom: var(--space-8);
-  max-width: 500px;
-  opacity: 0.8;
-}
-
-.hero-stats {
-  display: flex;
-  gap: var(--space-4);
-  margin-bottom: var(--space-8);
-}
-
-.stat-card {
-  background-color: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);
-  border-radius: var(--radius-lg);
-  padding: var(--space-4);
-  width: 120px;
-  text-align: center;
-  box-shadow: var(--shadow-lg);
-}
-
-.stat-value {
-  font-size: var(--font-size-3xl);
-  font-weight: var(--font-bold);
-  margin-bottom: var(--space-2);
-}
-
-.stat-label {
-  font-size: var(--font-size-sm);
-  opacity: 0.8;
-}
-
-.hero-actions {
-  display: flex;
-  gap: var(--space-4);
-}
-
-.hero-visual {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-}
-
-.chart-preview {
-  width: 100%;
-  max-width: 450px;
-  aspect-ratio: 1 / 1;
-  perspective: 1000px;
-}
-
-.chart-wrapper {
-  width: 100%;
-  height: 100%;
-  background-color: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(10px);
-  border-radius: var(--radius-2xl);
-  box-shadow: var(--shadow-xl);
-  padding: var(--space-6);
-  transform: rotateY(-5deg) rotateX(5deg);
-  transform-style: preserve-3d;
-  animation: float 6s ease-in-out infinite;
-}
-
-@keyframes float {
-  0%, 100% { transform: rotateY(-5deg) rotateX(5deg) translateY(0); }
-  50% { transform: rotateY(-8deg) rotateX(8deg) translateY(-10px); }
-}
-
-.chart-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: var(--space-4);
-}
-
-.chart-title {
-  display: flex;
-  align-items: center;
-  gap: var(--space-2);
-  font-weight: var(--font-semibold);
-}
-
-.chart-legend {
-  display: flex;
-  gap: var(--space-3);
-}
-
-.legend-item {
-  display: flex;
-  align-items: center;
-  gap: var(--space-2);
-  font-size: var(--font-size-sm);
-}
-
-.legend-color {
-  width: 12px;
-  height: 12px;
-  border-radius: var(--radius-full);
-}
-
-.legend-color.yes { background-color: var(--success); }
-.legend-color.no { background-color: var(--danger); }
-.legend-color.unknown { background-color: var(--neutral-400); }
-
-.chart-body {
-  height: 75%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-}
-
-.chart-canvas {
-  width: 100%;
-  height: 100%;
-  background-image: radial-gradient(var(--success) 20%, var(--danger) 25%, var(--danger) 35%, transparent 36%);
-  background-size: 300% 300%;
-  border-radius: var(--radius-full);
-  animation: pulse 4s ease-in-out infinite;
-}
-
-@keyframes pulse {
-  0%, 100% { background-position: 0% 0%; }
-  50% { background-position: 100% 100%; }
-}
-
-/* Ticker tape */
-.ticker-tape {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  background-color: rgba(0, 0, 0, 0.2);
-  overflow: hidden;
-  padding: var(--space-3) 0;
-}
-
-.ticker-line {
-  display: flex;
-  width: fit-content;
-}
-
-.ticker-items {
-  display: flex;
-  animation: ticker 30s linear infinite;
-  white-space: nowrap;
-}
-
-.ticker-item {
-  margin: 0 var(--space-4);
-  font-family: var(--font-heading);
-  font-weight: var(--font-bold);
-  color: white;
-}
-
-@keyframes ticker {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-100%); }
-}
-
-/* ---------- Buttons ---------- */
-.btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: var(--space-3) var(--space-6);
-  font-family: var(--font-heading);
-  font-weight: var(--font-semibold);
-  font-size: var(--font-size-base);
-  border-radius: var(--radius-lg);
-  transition: all var(--transition-normal);
-  position: relative;
-  overflow: hidden;
-  z-index: 1;
-}
-
-.btn::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(255, 255, 255, 0.1);
-  transform: translateY(100%);
-  transition: transform var(--transition-fast);
-  z-index: -1;
-}
-
-.btn:hover::before {
-  transform: translateY(0);
-}
-
-.btn-primary {
-  background-color: var(--primary);
-  color: white;
-  box-shadow: 0 4px 14px rgba(37, 99, 235, 0.4);
-}
-
-.btn-primary:hover {
-  background-color: var(--primary-dark);
-  color: white;
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(37, 99, 235, 0.5);
-}
-
-.btn-secondary {
-  background-color: var(--secondary);
-  color: white;
-  box-shadow: 0 4px 14px rgba(245, 158, 11, 0.4);
-}
-
-.btn-secondary:hover {
-  background-color: var(--secondary-dark);
-  color: white;
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(245, 158, 11, 0.5);
-}
-
-.btn-outline {
-  background-color: transparent;
-  color: var(--primary);
-  border: 2px solid var(--primary);
-}
-
-.btn-outline:hover {
-  background-color: var(--primary);
-  color: white;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 14px rgba(37, 99, 235, 0.4);
-}
-
-.btn-icon {
-  display: inline-flex;
-  align-items: center;
-  gap: var(--space-2);
-}
-
-/* Dark mode specific styles */
-.dark-mode .btn-outline {
-  border-color: var(--primary-light);
-  color: var(--primary-light);
-}
-
-.dark-mode .btn-outline:hover {
-  background-color: var(--primary-light);
-}
-
-/* ---------- Media Queries ---------- */
-@media (max-width: 1200px) {
-  :root {
-    --container-padding: 2rem;
-  }
-  
-  .hero-title {
-    font-size: var(--font-size-5xl);
-  }
-}
-
-@media (max-width: 992px) {
-  .hero-content {
-    grid-template-columns: 1fr;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+    box-sizing: border-box;
+    position: relative;
+}
+
+/* 
+    H1 heading style, centered text, and custom color. 
+    We also include a margin to space it properly from surrounding elements.
+*/
+h1 {
     text-align: center;
-    gap: var(--space-12);
-  }
-  
-  .hero-text {
-    max-width: 700px;
-    margin: 0 auto;
-  }
-  
-  .hero-description {
-    margin-left: auto;
-    margin-right: auto;
-  }
-  
-  .hero-stats, .hero-actions {
-    justify-content: center;
-  }
-  
-  .chart-preview {
-    max-width: 400px;
-    margin: 0 auto;
-  }
+    color: #144F9B;
+    margin-bottom: 10px;
+    font-size: 2em;
+    width: 100%;
+    box-sizing: border-box;
 }
 
-@media (max-width: 768px) {
-  :root {
-    --space-16: 3rem;
-    --space-20: 4rem;
-  }
-  
-  h1 { font-size: var(--font-size-4xl); }
-  h2 { font-size: var(--font-size-3xl); }
-  h3 { font-size: var(--font-size-2xl); }
-  
-  .nav {
-    display: none;
-  }
-  
-  .menu-toggle {
+/* 
+    Paragraph style for informational text under the main heading.
+*/
+.info-text {
+    text-align: center;
+    font-size: 1em;
+    color: #3E3E3E;
+    margin-bottom: 20px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/*******************************************************
+ * LOADING OVERLAY
+ *******************************************************/
+
+/* 
+    Covers the entire screen while data is loading. 
+    A slightly transparent background is used to obscure content.
+*/
+#loading-overlay {
+    position: fixed;   /* Ensures it covers the viewport entirely */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(245, 245, 245, 0.95);
     display: flex;
-  }
-  
-  .hero-title {
-    font-size: var(--font-size-4xl);
-  }
-  
-  .hero-subtitle {
-    font-size: var(--font-size-xl);
-  }
-  
-  .chart-preview {
-    max-width: 320px;
-  }
+    flex-direction: column; /* Vertically stacks the loader and text */
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;     /* High z-index to ensure it sits above everything else */
 }
 
-@media (max-width: 576px) {
-  :root {
-    --container-padding: 1rem;
-    --space-12: 2rem;
-    --space-16: 2.5rem;
-  }
-  
-  .hero-stats {
-    flex-wrap: wrap;
+/* 
+    The spinning loader circle. 
+    We use the CSS border trick to animate a spinner.
+*/
+#loading-overlay .loader {
+    border: 8px solid #f3f3f3;
+    border-top: 8px solid #144F9B; /* The top border is colored to create the spinner effect */
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    animation: spin 1s linear infinite;
+    margin-bottom: 20px;
+}
+
+/* 
+    Loading message text under the spinner.
+*/
+#loading-overlay p {
+    font-size: 18px;
+    color: #3E3E3E;
+}
+
+/* 
+    Keyframes defining the spinner's rotation animation.
+    It rotates 360 degrees repeatedly.
+*/
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/*******************************************************
+ * TABLE & DATATABLES STYLING
+ *******************************************************/
+
+/* 
+    Sets up basic table styles, merges borders, 
+    and prevents overflow of table content.
+*/
+table {
+    border-collapse: collapse;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    table-layout: auto;
+    border: 1px solid #ccc;
+    width: 100%;
+}
+
+/* 
+    DataTables plugin specifically targets .dataTable thead th. 
+    !important is used to override inline styles set by DataTables.
+*/
+table.dataTable thead th {
+    text-align: center !important;
+}
+
+/* 
+    Table headers with a background color and shadow effect. 
+    The text is centered, and a box-shadow adds depth.
+*/
+th {
+    background-color: #144F9B;
+    color: #FFFFFF;
+    text-align: center;
+    box-shadow: inset 0 -3px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* 
+    Changes the background color of the header cell when hovered, 
+    indicating it's clickable for sorting.
+*/
+th:hover {
+    background-color: #0B3C75;
+    cursor: pointer;
+}
+
+/* 
+    Table cells in the body use a white background by default.
+*/
+td {
+    background-color: #FFFFFF;
+}
+
+/* 
+    General spacing and font size for both headers and body cells.
+*/
+th, td {
+    padding: 14px;
+    text-align: left;
+    font-size: 14px;
+    line-height: 1.5;
+    border-bottom: 1px solid #ddd;
+}
+
+/* 
+    Applies a subtle background on every even row, making the table easier to read.
+*/
+tbody tr:nth-child(even) {
+    background-color: #F7F7F7;
+}
+
+/* 
+    Highlight effect on row hover to guide the user’s eye.
+*/
+tbody tr:hover {
+    background-color: #DCEEFF;
+}
+
+/*******************************************************
+ * DATATABLES WRAPPER / BUTTONS
+ *******************************************************/
+
+/* 
+    Ensures the DataTables container can handle horizontal overflow 
+    and keeps the table responsive.
+*/
+.dataTables_wrapper {
+    width: 100%;
+    margin: 0 auto;
+    overflow-x: auto;
+    box-sizing: border-box;
+    padding-bottom: 15px;
+}
+
+/* 
+    Additional wrapper that DataTables uses for vertical/horizontal scroll.
+*/
+.dataTables_scroll {
+    overflow-x: auto;
+    margin-bottom: 15px;
+}
+
+/* 
+    Styles for the DataTables buttons (e.g., column visibility, export, etc.).
+    Provides a consistent button look and feel matching our color scheme.
+*/
+.dataTables_wrapper .dt-buttons .dt-button {
+    background-color: #144F9B;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 4px;
+    margin-right: 5px;
+    padding: 6px 12px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.dataTables_wrapper .dt-buttons .dt-button:hover {
+    background-color: #0B3C75;
+    color: #FFFFFF;
+}
+
+/* 
+    The button collection is the dropdown or popup with column toggle options.
+*/
+.dataTables_wrapper div.dt-button-collection .dt-button {
+    background-color: #FFFFFF;
+    color: #144F9B;
+    border: 1px solid #144F9B;
+    padding: 6px 12px;
+    margin: 2px;
+    border-radius: 4px;
+}
+
+.dataTables_wrapper div.dt-button-collection .dt-button:hover {
+    background-color: #DCEEFF;
+    color: #144F9B;
+}
+
+/* 
+    Indicates a toggled (pressed) state for buttons 
+    in the button collection.
+*/
+.dataTables_wrapper div.dt-button-collection .dt-button[aria-pressed="true"] {
+    background-color: #144F9B;
+    color: #FFFFFF;
+}
+
+.dataTables_wrapper div.dt-button-collection .dt-button[aria-pressed="true"]:hover {
+    background-color: #0B3C75;
+    color: #FFFFFF;
+}
+
+/*******************************************************
+ * DATATABLES PAGINATION
+ *******************************************************/
+
+/* 
+    Styles for the pagination container (forward/back buttons, page numbers, etc.).
+*/
+.dataTables_wrapper .dataTables_paginate {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 4px;
+}
+
+/* 
+    Pagination buttons, default white background with a border 
+    matching the theme color.
+*/
+.dataTables_wrapper .dataTables_paginate .paginate_button {
+    background-color: #FFFFFF;
+    color: #144F9B !important; 
+    border: 1px solid #144F9B;
+    border-radius: 4px;
+    margin: 0 2px;
+    padding: 6px 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
     justify-content: center;
-  }
-  
-  .stat-card {
-    width: calc(50% - var(--space-2));
-  }
-  
-  .hero-actions {
-    flex-direction: column;
+    min-width: 32px;
+    text-decoration: none; /* Removes underline from links if any */
+}
+
+/* 
+    Hover and focus style for pagination buttons 
+    that are not disabled.
+*/
+.dataTables_wrapper .dataTables_paginate .paginate_button:hover:not(.disabled),
+.dataTables_wrapper .dataTables_paginate .paginate_button:focus:not(.disabled) {
+    background: #0B3C75 !important;
+    background-color: #0B3C75 !important;
+    color: #FFFFFF !important;
+    border-color: #0B3C75;
+    text-decoration: none;
+}
+
+/* 
+    Hover style to ensure consistency even if :focus doesn't apply.
+*/
+.dataTables_wrapper .dataTables_paginate .paginate_button:hover {
+    background: #0B3C75 !important;
+    background-color: #0B3C75 !important;
+    color: #FFFFFF !important;
+}
+
+/* 
+    Pagination button for the currently active page.
+*/
+.dataTables_wrapper .dataTables_paginate .paginate_button.current,
+.dataTables_wrapper .dataTables_paginate .paginate_button.current:hover {
+    background-color: #144F9B !important;
+    color: #FFFFFF !important;
+    border-color: #144F9B;
+}
+
+/* 
+    Disabled pagination buttons (when there's no previous or next page).
+*/
+.dataTables_wrapper .dataTables_paginate .paginate_button.disabled {
+    background-color: #F5F5F5 !important;
+    color: #999999 !important;
+    border-color: #CCCCCC;
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
+/* 
+    Specific styles for previous, next, first, last buttons 
+    to keep them consistent with other pagination buttons.
+*/
+.dataTables_wrapper .dataTables_paginate .paginate_button.previous,
+.dataTables_wrapper .dataTables_paginate .paginate_button.next,
+.dataTables_wrapper .dataTables_paginate .paginate_button.first,
+.dataTables_wrapper .dataTables_paginate .paginate_button.last {
+    min-width: auto;
+    padding: 6px 12px;
+    color: #144F9B;
+}
+
+/*******************************************************
+ * DATATABLES LENGTH / FILTER / INFO
+ *******************************************************/
+
+/* 
+    Labels for "Show x entries" (dataTables_length) 
+    and the search box (dataTables_filter).
+*/
+.dataTables_wrapper .dataTables_length label,
+.dataTables_wrapper .dataTables_filter label {
+    color: #3E3E3E;
+}
+
+/* 
+    Table information text ("Showing x to y of z entries").
+*/
+.dataTables_wrapper .dataTables_info {
+    color: #3E3E3E;
+}
+
+/* 
+    The dropdown used to select the number of table rows shown at once.
+*/
+.dataTables_length select {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 4px;
+    background-color: #FFFFFF;
+}
+
+/* 
+    Search box styling in the top-right corner of the table by default.
+*/
+.dataTables_filter input {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 4px;
+    background-color: #FFFFFF;
+}
+
+/*******************************************************
+ * DATATABLES TOP/BOTTOM SECTIONS
+ *******************************************************/
+
+/* 
+    The bottom area of the DataTable which can contain 
+    table length control, table info, and pagination controls.
+*/
+.dataTables_wrapper .bottom {
+    display: grid;
+    grid-template-columns: 200px 1fr 200px; /* Defines 3 columns layout */
     width: 100%;
-    gap: var(--space-3);
-  }
-  
-  .btn {
+    box-sizing: border-box;
+    padding: 10px 0;
+    position: sticky; /* Stays at the bottom of its container */
+    left: 0;
+    background-color: #F5F5F5;
+    z-index: 1;
+    align-items: center;
+}
+
+/* 
+    First column for the length (Show x entries) selection.
+*/
+.dataTables_length {
+    grid-column: 1;
+    white-space: nowrap;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    height: 32px; /* Aligns the dropdown nicely vertically */
+}
+
+/* 
+    Label containing the text for the length menu. 
+    We use gap to space the label text and the select.
+*/
+.dataTables_length label {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+/* 
+    The dropdown select used for length selection, styled to match button heights.
+*/
+.dataTables_length select {
+    margin: 0 5px;
+    height: 28px;
+}
+
+/* 
+    Second column for the table info text (e.g., "Showing 1 to 100 of 500 entries").
+*/
+.dataTables_info {
+    grid-column: 2;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 32px;
+}
+
+/* 
+    Third column for pagination controls (e.g., previous, next, page numbers).
+*/
+.dataTables_paginate {
+    grid-column: 3;
+    margin: 0;
+    padding: 0;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 4px;
+}
+
+/* 
+    Ensures pagination buttons fit well in the container.
+*/
+.dataTables_paginate .paginate_button {
+    display: inline-block;
+    min-width: auto;
+    height: auto;
+    margin: 0 2px;
+    padding: 6px 12px;
+    line-height: normal;
+}
+
+/* 
+    The top section (under the heading) which typically contains 
+    the search box and/or length menu.
+*/
+.dataTables_wrapper .top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;       /* Adjusts layout for smaller screens */
     width: 100%;
-  }
-  
-  .chart-preview {
-    max-width: 280px;
-  }
+    box-sizing: border-box;
+    padding: 10px 0;
+    position: sticky; /* Sticks to the top while scrolling within the container */
+    left: 0;
+    background-color: #F5F5F5;
+    z-index: 1;       /* Ensures it's above the table rows */
+}
+
+/* 
+    The filter (search box) and length menu in the top area.
+    We keep them visually consistent.
+*/
+.dataTables_filter,
+.dataTables_length {
+    position: static;
+    background-color: transparent;
+    padding: 10px 0;
+}
+
+.dataTables_length label {
+    margin: 0;
+}
+
+.dataTables_info {
+    margin: 10px 0;
+}
+
+/*******************************************************
+ * UTILITY CLASSES
+ *******************************************************/
+
+/* 
+    .hidden is used to hide elements without removing them from the DOM, 
+    typically until data has loaded.
+*/
+.hidden {
+    display: none !important;
+}
+
+/*******************************************************
+ * STICKY BOTTOM BAR
+ *******************************************************/
+
+/* 
+    A fixed bar at the bottom of the screen. We use a box shadow 
+    to create separation from the page content.
+*/
+.sticky-bottom-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #144F9B;
+    color: #FFFFFF;
+    padding: 15px;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000; /* Renders above other elements */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+/* 
+    Text within the sticky bar, white text on a colored background.
+*/
+.sticky-bottom-bar p {
+    margin: 0;
+    font-size: 14px;
+}
+
+/* 
+    Close button styling for the sticky bottom bar
+*/
+.close-button {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: #FFFFFF;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 0 8px;
+    line-height: 1;
+    opacity: 0.8;
+    transition: opacity 0.2s ease;
+}
+
+.close-button:hover {
+    opacity: 1;
+}
+
+/*******************************************************
+ * MEDIA QUERIES
+ *******************************************************/
+
+/* 
+    Responsive adjustments for screens smaller than 768px. 
+    Reduces padding on the body and adjusts table controls layout.
+*/
+@media screen and (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+    
+    .dataTables_wrapper .bottom {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+    
+    .dataTables_info,
+    .dataTables_paginate,
+    .dataTables_length {
+        margin: 5px 0;
+    }
+}
+
+/*******************************************************
+ * FOOTER
+ *******************************************************/
+
+/* 
+    Footer style, typically used if there's a footer element. 
+    Centered text and a subtle color.
+*/
+.footer {
+    text-align: center;
+    font-size: 1em;
+    margin-top: 30px;
+    color: #3E3E3E;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 15px;
 }

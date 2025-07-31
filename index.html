@@ -2,10 +2,10 @@
 <html lang="en">
 <head>
     <!-- 
-        To add a favicon, you'll need to add a <link rel="icon"> 
+        To add a favicon, you’ll need to add a <link rel="icon"> 
         element in the <head> section of your index.html.
     -->
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📊</text></svg>">
+    <link rel="icon" type="image/png" href="assets/images/WhyDRS_favicon.png">
 
     <!-- 
         The "lang" attribute specifies the language of the webpage's content,
@@ -23,732 +23,115 @@
         Provides a brief description of the webpage content, 
         which can be used by search engines for indexing.
     -->
-    <meta name="description" content="WhyDRS Database - The definitive resource for direct share registration information">
+    <meta name="description" content="WhyDRS Database - A Comprehensive Public Database for Companies, Brokers, and Transfer Agents">
 
     <!-- 
         Defines the color of the browser toolbar in some mobile browsers,
         improving brand visibility and user experience.
     -->
-    <meta name="theme-color" content="#2563eb">
+    <meta name="theme-color" content="#144F9B">
     
     <!-- 
         The title of the webpage that appears in the browser tab 
         and in search engine results.
     -->
-    <title>WhyDRS | Direct Registration Database</title>
+    <title>WhyDRS Database</title>
 
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-
-    <!-- Preload critical resources -->
+    <!-- 
+        Preload instructions to hint that these resources 
+        are high priority. 'as' attribute identifies the resource type.
+    -->
     <link rel="preload" href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css" as="style">
     <link rel="preload" href="https://cdn.datatables.net/buttons/2.3.6/css/buttons.dataTables.min.css" as="style">
 
-    <!-- Font Awesome for icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <!-- DataTables CSS -->
+    <!-- 
+        Links to the DataTables and Buttons library CSS files.
+        DataTables helps create interactive tables with search, 
+        sorting, pagination, etc.
+    -->
     <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css">
     <link rel="stylesheet" href="https://cdn.datatables.net/buttons/2.3.6/css/buttons.dataTables.min.css">
-    
-    <!-- AOS Animation Library -->
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    
-    <!-- Custom styles -->
-    <link rel="stylesheet" href="src/web/css/styles.css">
 
-    <!-- jQuery and DataTables JS -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
+    <!-- 
+        Links to our custom stylesheet which holds site-specific styling.
+    -->
+    <link rel="stylesheet" href="src/web/css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- 
+            Main heading of the webpage, introducing the database.
+        -->
+        <h1>WhyDRS Database</h1>
+
+        <!-- 
+            Small paragraph providing context about the database and 
+            encouraging the user to contribute missing data or contact.
+        -->
+        <p class="info-text"><sup>*</sup> Empty cells indicate missing data. You can help us improve by <a href="https://forms.gle/deQ6YDoyX4kTNXy28" target="_blank">contributing missing information</a> or emailing us at <a href="mailto:hi@whydrs.org">hi@whydrs.org</a>.</p>
+
+        <!-- 
+            Loading overlay that displays while the data is being fetched.
+            It prevents the user from interacting with the page 
+            and shows a spinner and a loading message.
+        -->
+        <div id="loading-overlay">
+            <div class="loader"></div>
+            <p>Loading data, please wait...</p>
+        </div>
+
+        <!-- 
+            Table element that will be initialized as a DataTable in the script.
+            The "hidden" class is applied initially to hide it until data is ready.
+        -->
+        <table id="data-table" class="hidden">
+            <thead>
+                <tr>
+                    <!-- 
+                        Table headers (th) are dynamically generated 
+                        in the script.js based on JSON keys.
+                    -->
+                </tr>
+            </thead>
+            <tbody>
+                <!-- 
+                    Table rows (tr) are populated dynamically 
+                    with data from the fetched JSON.
+                -->
+            </tbody>
+        </table>
+    </div>
+
+    <!-- 
+        jQuery library (a dependency for DataTables) 
+        is loaded first so DataTables can use it.
+    -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
+
+    <!-- 
+        DataTables core script, which turns ordinary HTML tables 
+        into powerful interactive tables with searching, sorting, etc.
+    -->
+    <script type="text/javascript" src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
+
+    <!-- 
+        Buttons extension for DataTables, adding column visibility and other features.
+    -->
     <script src="https://cdn.datatables.net/buttons/2.3.6/js/dataTables.buttons.min.js"></script>
     <script src="https://cdn.datatables.net/buttons/2.3.6/js/buttons.colVis.min.js"></script>
-    
-    <!-- Chart.js for data visualization -->
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-</head>
-<body class="has-noise">
-    <!-- Header with glass effect -->
-    <header class="site-header glass-effect">
-        <div class="container">
-            <div class="header-content">
-                <div class="logo-container">
-                    <div class="logo-icon-container">
-                        <i class="fas fa-chart-line logo-icon"></i>
-                    </div>
-                    <h1>WhyDRS</h1>
-                </div>
-                
-                <nav class="main-nav">
-                    <ul>
-                        <li><a href="#database" class="nav-link"><span>Database</span></a></li>
-                        <li><a href="#about" class="nav-link"><span>About DRS</span></a></li>
-                        <li><a href="#analytics" class="nav-link"><span>Analytics</span></a></li>
-                        <li><a href="#contribute" class="nav-link"><span>Contribute</span></a></li>
-                        <li><a href="https://github.com/WhyDRS/Database" target="_blank" class="nav-link github-link"><i class="fab fa-github"></i><span>GitHub</span></a></li>
-                    </ul>
-                </nav>
-                
-                <div class="header-actions">
-                    <button class="theme-toggle" aria-label="Toggle dark mode">
-                        <i class="fas fa-moon"></i>
-                    </button>
-                    <button class="mobile-menu-toggle" aria-label="Toggle mobile menu">
-                        <span></span><span></span><span></span>
-                    </button>
-                </div>
-            </div>
-        </div>
-    </header>
 
-    <!-- Mobile navigation overlay -->
-    <div class="mobile-nav-overlay">
-        <div class="mobile-nav-content">
-            <ul>
-                <li><a href="#database" class="mobile-nav-link">Database</a></li>
-                <li><a href="#about" class="mobile-nav-link">About DRS</a></li>
-                <li><a href="#analytics" class="mobile-nav-link">Analytics</a></li>
-                <li><a href="#contribute" class="mobile-nav-link">Contribute</a></li>
-                <li><a href="https://github.com/WhyDRS/Database" target="_blank" class="mobile-nav-link"><i class="fab fa-github"></i> GitHub</a></li>
-            </ul>
-        </div>
-    </div>
-
-    <!-- Main content -->
-    <main>
-        <!-- Hero section with animated gradient -->
-        <section class="hero-section">
-            <div class="hero-gradient"></div>
-            <div class="hero-particles"></div>
-            
-            <div class="container">
-                <div class="hero-content" data-aos="fade-up">
-                    <div class="hero-text">
-                        <h2 class="hero-title">Own Your<br><span class="gradient-text">Investments</span></h2>
-                        <p class="hero-subtitle">Take control with Direct Registration</p>
-                        <p class="hero-description">A comprehensive database helping investors secure proper ownership of their shares through direct registration.</p>
-                        
-                        <div class="hero-stats">
-                            <div class="stat-card">
-                                <div class="stat-value" id="hero-company-count">0</div>
-                                <div class="stat-label">Companies</div>
-                            </div>
-                            <div class="stat-card">
-                                <div class="stat-value" id="hero-exchange-count">0</div>
-                                <div class="stat-label">Exchanges</div>
-                            </div>
-                            <div class="stat-card">
-                                <div class="stat-value" id="hero-agent-count">0</div>
-                                <div class="stat-label">Transfer Agents</div>
-                            </div>
-                        </div>
-                        
-                        <div class="hero-actions">
-                            <a href="#database" class="btn btn-primary btn-lg">Search Database</a>
-                            <a href="#about" class="btn btn-outline btn-lg">Learn More</a>
-                        </div>
-                    </div>
-                    
-                    <div class="hero-visual">
-                        <div class="hero-card floating">
-                            <div class="card-header">
-                                <span>Not your name,</span>
-                                <span class="gradient-text">not your shares!</span>
-                            </div>
-                            <div class="card-content">
-                                <div class="hero-ticker-tape">
-                                    <div class="ticker-content">
-                                        <span>GME</span>
-                                        <span>AMC</span>
-                                        <span>TSLA</span>
-                                        <span>AAPL</span>
-                                        <span>MSFT</span>
-                                        <span>AMZN</span>
-                                        <span>GME</span>
-                                        <span>AMC</span>
-                                        <span>TSLA</span>
-                                        <span>AAPL</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="hero-wave">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" preserveAspectRatio="none">
-                    <path fill="var(--background)" fill-opacity="1" d="M0,224L48,213.3C96,203,192,181,288,181.3C384,181,480,203,576,202.7C672,203,768,181,864,170.7C960,160,1056,160,1152,176C1248,192,1344,224,1392,240L1440,256L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
-                </svg>
-            </div>
-        </section>
-        
-        <!-- Benefits section -->
-        <section class="benefits-section">
-            <div class="container">
-                <div class="section-header" data-aos="fade-up">
-                    <h2>Why Direct Registration Matters</h2>
-                    <p>Protect your investments with proper share ownership</p>
-                </div>
-                
-                <div class="benefits-grid">
-                    <div class="benefit-card" data-aos="fade-up" data-aos-delay="100">
-                        <div class="benefit-icon">
-                            <i class="fas fa-shield-alt"></i>
-                        </div>
-                        <h3>True Ownership</h3>
-                        <p>Shares are registered directly in <strong>your name</strong>, not your broker's "street name"</p>
-                    </div>
-                    
-                    <div class="benefit-card" data-aos="fade-up" data-aos-delay="200">
-                        <div class="benefit-icon">
-                            <i class="fas fa-ban"></i>
-                        </div>
-                        <h3>Stop Share Lending</h3>
-                        <p>Prevent your shares from being lent out to short sellers without your permission</p>
-                    </div>
-                    
-                    <div class="benefit-card" data-aos="fade-up" data-aos-delay="300">
-                        <div class="benefit-icon">
-                            <i class="fas fa-vote-yea"></i>
-                        </div>
-                        <h3>Direct Voting Rights</h3>
-                        <p>Receive communications and vote directly with the company, not through a broker</p>
-                    </div>
-                    
-                    <div class="benefit-card" data-aos="fade-up" data-aos-delay="400">
-                        <div class="benefit-icon">
-                            <i class="fas fa-hand-holding-usd"></i>
-                        </div>
-                        <h3>Guaranteed Dividends</h3>
-                        <p>Receive dividends directly from the company, including special non-cash dividends</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-        <!-- Featured companies scroller -->
-        <div class="featured-tickers-container">
-            <div class="ticker-label">Featured in our database:</div>
-            <div class="ticker-tape">
-                <div class="ticker-content">
-                    <span class="ticker-item">GME</span>
-                    <span class="ticker-item">TSLA</span>
-                    <span class="ticker-item">AAPL</span>
-                    <span class="ticker-item">MSFT</span>
-                    <span class="ticker-item">AMZN</span>
-                    <span class="ticker-item">GOOG</span>
-                    <span class="ticker-item">FB</span>
-                    <span class="ticker-item">BRK.A</span>
-                    <span class="ticker-item">JPM</span>
-                    <span class="ticker-item">JNJ</span>
-                    <span class="ticker-item">GME</span>
-                    <span class="ticker-item">TSLA</span>
-                    <span class="ticker-item">AAPL</span>
-                    <span class="ticker-item">MSFT</span>
-                    <span class="ticker-item">AMZN</span>
-                    <span class="ticker-item">GOOG</span>
-                    <span class="ticker-item">FB</span>
-                    <span class="ticker-item">BRK.A</span>
-                    <span class="ticker-item">JPM</span>
-                    <span class="ticker-item">JNJ</span>
-                </div>
-            </div>
-        </div>
-        
-        <!-- Database section with modern UI -->
-        <section id="database" class="database-section">
-            <div class="container">
-                <div class="section-header" data-aos="fade-up">
-                    <h2>Company Database</h2>
-                    <p>Find direct registration information for any publicly traded company</p>
-                </div>
-                
-                <!-- Search and filters bar -->
-                <div class="search-filters-bar glass-effect" data-aos="fade-up">
-                    <div class="search-container">
-                        <div class="search-icon">
-                            <i class="fas fa-search"></i>
-                        </div>
-                        <input type="text" id="global-search" placeholder="Search by company name, ticker symbol, or transfer agent...">
-                    </div>
-                    
-                    <div class="filter-actions">
-                        <button id="select-columns" class="btn btn-sm btn-outline">
-                            <i class="fas fa-columns"></i>
-                            <span>Columns</span>
-                        </button>
-                        <button id="reset-columns" class="btn btn-sm btn-outline">
-                            <i class="fas fa-redo"></i>
-                            <span>Reset</span>
-                        </button>
-                    </div>
-                </div>
-                
-                <!-- Loading overlay -->
-                <div id="loading-overlay">
-                    <div class="spinner-container">
-                        <div class="spinner">
-                            <div class="double-bounce1"></div>
-                            <div class="double-bounce2"></div>
-                        </div>
-                    </div>
-                    <p>Loading database, please wait...</p>
-                </div>
-                
-                <!-- Notice about empty data -->
-                <div class="notice-box" data-aos="fade-up">
-                    <div class="notice-icon">
-                        <i class="fas fa-info-circle"></i>
-                    </div>
-                    <div class="notice-content">
-                        <p>Empty cells indicate missing data. Help us improve by <a href="#contribute">contributing missing information</a>.</p>
-                    </div>
-                </div>
-                
-                <!-- DataTable wrapper -->
-                <div class="datatable-container glass-effect" data-aos="fade-up">
-                    <div class="table-responsive">
-                        <table id="data-table" class="hidden display hover">
-                            <thead>
-                                <tr>
-                                    <!-- Table headers will be dynamically generated -->
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <!-- Table data will be dynamically populated -->
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-                
-                <!-- Statistics summary cards -->
-                <div class="stats-summary" data-aos="fade-up">
-                    <div class="stat-summary-card glass-effect">
-                        <div class="stat-icon">
-                            <i class="fas fa-building"></i>
-                        </div>
-                        <div class="stat-details">
-                            <div class="stat-value counter" id="company-count">0</div>
-                            <div class="stat-label">Companies</div>
-                        </div>
-                    </div>
-                    
-                    <div class="stat-summary-card glass-effect">
-                        <div class="stat-icon">
-                            <i class="fas fa-exchange-alt"></i>
-                        </div>
-                        <div class="stat-details">
-                            <div class="stat-value counter" id="exchange-count">0</div>
-                            <div class="stat-label">Exchanges</div>
-                        </div>
-                    </div>
-                    
-                    <div class="stat-summary-card glass-effect">
-                        <div class="stat-icon">
-                            <i class="fas fa-handshake"></i>
-                        </div>
-                        <div class="stat-details">
-                            <div class="stat-value counter" id="transfer-agent-count">0</div>
-                            <div class="stat-label">Transfer Agents</div>
-                        </div>
-                    </div>
-                    
-                    <div class="stat-summary-card glass-effect">
-                        <div class="stat-icon">
-                            <i class="fas fa-clock"></i>
-                        </div>
-                        <div class="stat-details">
-                            <div class="stat-value" id="last-updated">--</div>
-                            <div class="stat-label">Last Updated</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-        <!-- About DRS section with interactive elements -->
-        <section id="about" class="about-drs-section">
-            <div class="container">
-                <div class="section-header" data-aos="fade-up">
-                    <h2>How Direct Registration Works</h2>
-                    <p>Understanding the Direct Registration System (DRS)</p>
-                </div>
-                
-                <div class="drs-explainer" data-aos="fade-up">
-                    <div class="drs-intro">
-                        <p class="intro-text">Direct Registration System (DRS) is a service offered by transfer agents that allows investors to hold shares directly on the company's books in your own name, rather than in "street name" through a broker.</p>
-                    </div>
-                    
-                    <div class="comparison-container">
-                        <div class="ownership-comparison">
-                            <div class="ownership-path drs-path">
-                                <div class="path-title">Direct Registration</div>
-                                <div class="path-diagram">
-                                    <div class="entity you">
-                                        <div class="entity-icon">
-                                            <i class="fas fa-user"></i>
-                                        </div>
-                                        <div class="entity-label">You</div>
-                                    </div>
-                                    <div class="connection direct">
-                                        <div class="connection-line"></div>
-                                        <div class="connection-icon">
-                                            <i class="fas fa-check-circle"></i>
-                                        </div>
-                                    </div>
-                                    <div class="entity company">
-                                        <div class="entity-icon">
-                                            <i class="fas fa-building"></i>
-                                        </div>
-                                        <div class="entity-label">Company</div>
-                                    </div>
-                                </div>
-                                <div class="path-benefits">
-                                    <div class="benefit-item">
-                                        <i class="fas fa-check"></i>
-                                        <span>Shares in YOUR name</span>
-                                    </div>
-                                    <div class="benefit-item">
-                                        <i class="fas fa-check"></i>
-                                        <span>Direct voting rights</span>
-                                    </div>
-                                    <div class="benefit-item">
-                                        <i class="fas fa-check"></i>
-                                        <span>No share lending</span>
-                                    </div>
-                                    <div class="benefit-item">
-                                        <i class="fas fa-check"></i>
-                                        <span>Direct dividends</span>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <div class="vs-divider">VS</div>
-                            
-                            <div class="ownership-path broker-path">
-                                <div class="path-title">Broker ("Street Name")</div>
-                                <div class="path-diagram">
-                                    <div class="entity you">
-                                        <div class="entity-icon">
-                                            <i class="fas fa-user"></i>
-                                        </div>
-                                        <div class="entity-label">You</div>
-                                    </div>
-                                    <div class="connection indirect">
-                                        <div class="connection-line"></div>
-                                        <div class="connection-icon">
-                                            <i class="fas fa-times-circle"></i>
-                                        </div>
-                                    </div>
-                                    <div class="entity broker">
-                                        <div class="entity-icon">
-                                            <i class="fas fa-university"></i>
-                                        </div>
-                                        <div class="entity-label">Broker</div>
-                                    </div>
-                                    <div class="connection indirect">
-                                        <div class="connection-line"></div>
-                                        <div class="connection-icon">
-                                            <i class="fas fa-times-circle"></i>
-                                        </div>
-                                    </div>
-                                    <div class="entity company">
-                                        <div class="entity-icon">
-                                            <i class="fas fa-building"></i>
-                                        </div>
-                                        <div class="entity-label">Company</div>
-                                    </div>
-                                </div>
-                                <div class="path-downsides">
-                                    <div class="downside-item">
-                                        <i class="fas fa-times"></i>
-                                        <span>Shares in broker's name</span>
-                                    </div>
-                                    <div class="downside-item">
-                                        <i class="fas fa-times"></i>
-                                        <span>Proxy voting through broker</span>
-                                    </div>
-                                    <div class="downside-item">
-                                        <i class="fas fa-times"></i>
-                                        <span>Shares can be lent out</span>
-                                    </div>
-                                    <div class="downside-item">
-                                        <i class="fas fa-times"></i>
-                                        <span>Potential dividend issues</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="drs-process" data-aos="fade-up">
-                    <h3>How to Direct Register Your Shares</h3>
-                    
-                    <div class="process-steps">
-                        <div class="process-step">
-                            <div class="step-number">1</div>
-                            <div class="step-content">
-                                <h4>Find Your Company</h4>
-                                <p>Use our database to find your company's transfer agent information</p>
-                            </div>
-                        </div>
-                        
-                        <div class="process-step">
-                            <div class="step-number">2</div>
-                            <div class="step-content">
-                                <h4>Contact Your Broker</h4>
-                                <p>Request a DRS transfer to the company's transfer agent</p>
-                            </div>
-                        </div>
-                        
-                        <div class="process-step">
-                            <div class="step-number">3</div>
-                            <div class="step-content">
-                                <h4>Complete Transfer</h4>
-                                <p>Your broker will process the request (usually within 3-5 business days)</p>
-                            </div>
-                        </div>
-                        
-                        <div class="process-step">
-                            <div class="step-number">4</div>
-                            <div class="step-content">
-                                <h4>Receive Confirmation</h4>
-                                <p>You'll receive account information directly from the transfer agent</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-        <!-- Analytics section with visualizations -->
-        <section id="analytics" class="analytics-section">
-            <div class="container">
-                <div class="section-header" data-aos="fade-up">
-                    <h2>Database Analytics</h2>
-                    <p>Visual insights from our company database</p>
-                </div>
-                
-                <div class="analytics-grid">
-                    <div class="analytics-card glass-effect" data-aos="fade-up" data-aos-delay="100">
-                        <div class="analytics-header">
-                            <h3>Companies by Exchange</h3>
-                        </div>
-                        <div class="chart-container">
-                            <canvas id="exchangeChart"></canvas>
-                        </div>
-                    </div>
-                    
-                    <div class="analytics-card glass-effect" data-aos="fade-up" data-aos-delay="200">
-                        <div class="analytics-header">
-                            <h3>Top Transfer Agents</h3>
-                        </div>
-                        <div class="chart-container">
-                            <canvas id="transferAgentChart"></canvas>
-                        </div>
-                    </div>
-                    
-                    <div class="analytics-card wide glass-effect" data-aos="fade-up" data-aos-delay="300">
-                        <div class="analytics-header">
-                            <h3>Database Growth Over Time</h3>
-                        </div>
-                        <div class="chart-container">
-                            <canvas id="growthChart"></canvas>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-        <!-- Contribute section with interactive elements -->
-        <section id="contribute" class="contributing-section">
-            <div class="container">
-                <div class="section-header" data-aos="fade-up">
-                    <h2>Contribute to the Database</h2>
-                    <p>WhyDRS is 100% volunteer-driven. Here's how you can help us improve.</p>
-                </div>
-                
-                <div class="contribution-methods">
-                    <div class="contribution-card glass-effect" data-aos="fade-up" data-aos-delay="100">
-                        <div class="card-icon">
-                            <i class="fab fa-github"></i>
-                        </div>
-                        <h3>GitHub Contribution</h3>
-                        <p>Contribute directly to the codebase with pull requests</p>
-                        <div class="steps-container">
-                            <div class="step">
-                                <div class="step-indicator">1</div>
-                                <div class="step-text">Fork repo</div>
-                            </div>
-                            <div class="step-connector"></div>
-                            <div class="step">
-                                <div class="step-indicator">2</div>
-                                <div class="step-text">Make changes</div>
-                            </div>
-                            <div class="step-connector"></div>
-                            <div class="step">
-                                <div class="step-indicator">3</div>
-                                <div class="step-text">Submit PR</div>
-                            </div>
-                        </div>
-                        <a href="https://github.com/WhyDRS/Database" class="btn btn-outline" target="_blank">View on GitHub</a>
-                    </div>
-                    
-                    <div class="contribution-card glass-effect" data-aos="fade-up" data-aos-delay="200">
-                        <div class="card-icon">
-                            <i class="fas fa-file-alt"></i>
-                        </div>
-                        <h3>Form Submission</h3>
-                        <p>Submit information through our online form. No technical skills required.</p>
-                        <div class="steps-container">
-                            <div class="step">
-                                <div class="step-indicator">1</div>
-                                <div class="step-text">Fill form</div>
-                            </div>
-                            <div class="step-connector"></div>
-                            <div class="step">
-                                <div class="step-indicator">2</div>
-                                <div class="step-text">Submit data</div>
-                            </div>
-                            <div class="step-connector"></div>
-                            <div class="step">
-                                <div class="step-indicator">3</div>
-                                <div class="step-text">We'll update</div>
-                            </div>
-                        </div>
-                        <a href="https://forms.gle/deQ6YDoyX4kTNXy28" class="btn btn-outline" target="_blank">Open Form</a>
-                    </div>
-                    
-                    <div class="contribution-card glass-effect" data-aos="fade-up" data-aos-delay="300">
-                        <div class="card-icon">
-                            <i class="fas fa-envelope"></i>
-                        </div>
-                        <h3>Email Submission</h3>
-                        <p>Send your contributions or questions via email directly to our team.</p>
-                        <div class="steps-container">
-                            <div class="step">
-                                <div class="step-indicator">1</div>
-                                <div class="step-text">Collect data</div>
-                            </div>
-                            <div class="step-connector"></div>
-                            <div class="step">
-                                <div class="step-indicator">2</div>
-                                <div class="step-text">Email us</div>
-                            </div>
-                            <div class="step-connector"></div>
-                            <div class="step">
-                                <div class="step-indicator">3</div>
-                                <div class="step-text">We'll review</div>
-                            </div>
-                        </div>
-                        <a href="mailto:hi@whydrs.org" class="btn btn-outline">Contact Us</a>
-                    </div>
-                </div>
-                
-                <div class="community-cta" data-aos="fade-up">
-                    <div class="cta-content glass-effect">
-                        <div class="cta-icon">
-                            <i class="fas fa-users"></i>
-                        </div>
-                        <div class="cta-text">
-                            <h3>Join Our Community</h3>
-                            <p>Connect with fellow investors who believe in direct ownership and help improve this resource together.</p>
-                        </div>
-                        <div class="cta-actions">
-                            <a href="https://github.com/WhyDRS" class="btn btn-primary" target="_blank">Join Now</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-    
-    <!-- Footer with gradient effect -->
-    <footer class="site-footer">
-        <div class="footer-wave">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" preserveAspectRatio="none">
-                <path fill="var(--primary-dark)" fill-opacity="1" d="M0,96L40,117.3C80,139,160,181,240,181.3C320,181,400,139,480,133.3C560,128,640,160,720,192C800,224,880,256,960,261.3C1040,267,1120,245,1200,213.3C1280,181,1360,139,1400,117.3L1440,96L1440,0L1400,0C1360,0,1280,0,1200,0C1120,0,1040,0,960,0C880,0,800,0,720,0C640,0,560,0,480,0C400,0,320,0,240,0C160,0,80,0,40,0L0,0Z"></path>
-            </svg>
-        </div>
-        
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-branding">
-                    <div class="footer-logo">
-                        <i class="fas fa-chart-line"></i>
-                        <h3>WhyDRS Database</h3>
-                    </div>
-                    <p>A project dedicated to share ownership transparency and direct registration advocacy.</p>
-                    <div class="social-links">
-                        <a href="https://github.com/WhyDRS" target="_blank" class="social-link">
-                            <i class="fab fa-github"></i>
-                        </a>
-                        <a href="https://lemmy.whynotdrs.org" target="_blank" class="social-link">
-                            <i class="fab fa-discord"></i>
-                        </a>
-                        <a href="mailto:hi@whydrs.org" class="social-link">
-                            <i class="fas fa-envelope"></i>
-                        </a>
-                    </div>
-                </div>
-                
-                <div class="footer-links">
-                    <div class="links-group">
-                        <h4>Resources</h4>
-                        <ul>
-                            <li><a href="https://whydrs.org">WhyDRS.org</a></li>
-                            <li><a href="https://github.com/WhyDRS/Database">GitHub Repository</a></li>
-                            <li><a href="https://lemmy.whynotdrs.org/post/21495">Project Details</a></li>
-                        </ul>
-                    </div>
-                    
-                    <div class="links-group">
-                        <h4>Navigation</h4>
-                        <ul>
-                            <li><a href="#database">Database</a></li>
-                            <li><a href="#about">About DRS</a></li>
-                            <li><a href="#analytics">Analytics</a></li>
-                            <li><a href="#contribute">Contribute</a></li>
-                        </ul>
-                    </div>
-                    
-                    <div class="links-group">
-                        <h4>Contact</h4>
-                        <ul>
-                            <li><a href="mailto:hi@whydrs.org"><i class="fas fa-envelope"></i> hi@whydrs.org</a></li>
-                            <li><a href="https://github.com/WhyDRS"><i class="fab fa-github"></i> GitHub</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="footer-bottom">
-                <p>The source code is licensed under the <a href="https://www.gnu.org/licenses/agpl-3.0.html">AGPL</a> and the database is licensed under the <a href="https://opendatacommons.org/licenses/odbl/1-0/">ODbL</a>.</p>
-                <p>&copy; 2025 WhyDRS Database. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
-    
-    <!-- Notification bar -->
-    <div class="notification-bar" id="sticky-bottom-bar">
-        <div class="notification-content">
-            <p>WhyDRS is 100% volunteer-driven. Help us improve by <a href="https://github.com/WhyDRS/Database/tree/main">contributing</a> or providing feedback. Have questions? Visit <a href="https://whydrs.org">WhyDRS.org</a></p>
-        </div>
-        <button class="notification-close" aria-label="Close notification">
-            <i class="fas fa-times"></i>
-        </button>
-    </div>
-    
-    <!-- Back to top button -->
-    <button id="back-to-top" class="back-to-top" aria-label="Back to top">
-        <i class="fas fa-arrow-up"></i>
-    </button>
-    
-    <!-- Scripts -->
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <!-- 
+        Our custom JavaScript which fetches data and initializes the table.
+    -->
     <script src="src/web/javascript/script.js"></script>
+
+    <!-- 
+        A sticky bottom bar that stays fixed at the bottom 
+        of the viewport, providing additional links and context.
+    -->
+    <div class="sticky-bottom-bar" id="sticky-bottom-bar">
+        <p>WhyDRS is 100% volunteer-driven. Help us improve by contributing or providing feedback <a href="https://github.com/WhyDRS/Database/tree/main" style="color: #FFFFFF; text-decoration: underline;">here</a>. Have questions? Visit <a href="https://whydrs.org" style="color: #FFFFFF; text-decoration: underline;">WhyDRS.org</a> or contact us at <a href="mailto:hi@whydrs.org" style="color: #FFFFFF; text-decoration: underline;">hi@whydrs.org</a></p>
+        <button class="close-button" aria-label="Close banner">×</button>
+    </div>
 </body>
 </html>
