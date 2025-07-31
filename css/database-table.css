@@ -1,0 +1,405 @@
+/* Database Table Styles */
+
+/* Database Header */
+.database-header {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    padding: var(--spacing-md) 0;
+    text-align: center;
+}
+
+.database-header h1 {
+    margin-bottom: var(--spacing-sm);
+    color: var(--text-light);
+}
+
+.database-subtitle {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 0.95rem;
+    opacity: 0.9;
+}
+
+.database-subtitle a {
+    color: var(--accent-color);
+    text-decoration: underline;
+}
+
+.database-subtitle a:hover {
+    text-decoration: none;
+}
+
+/* Database Controls */
+.database-controls {
+    background-color: var(--background-grey);
+    padding: var(--spacing-sm) 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.controls-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: var(--spacing-sm);
+}
+
+.column-controls {
+    display: flex;
+    gap: var(--spacing-sm);
+}
+
+.search-controls {
+    flex: 1;
+    max-width: 400px;
+}
+
+#table-search {
+    width: 100%;
+    padding: 0.6rem 1rem;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    font-size: 0.95rem;
+    background-color: white;
+}
+
+/* Table Styles */
+.database-table {
+    padding: var(--spacing-md) 0;
+}
+
+.database-table .container {
+    max-width: 100%;
+    width: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.table-wrapper {
+    overflow-x: auto;
+    width: 100%;
+    max-width: 100%;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: var(--spacing-md);
+}
+
+.data-table {
+    width: 100%;
+    min-width: 800px;
+    border-collapse: collapse;
+    border-spacing: 0;
+    font-size: 0.9rem;
+    table-layout: fixed;
+}
+
+.data-table th, 
+.data-table td {
+    padding: 0.65rem 0.75rem;
+    text-align: left;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.data-table th {
+    background-color: var(--primary-color);
+    color: white;
+    font-weight: 600;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    user-select: none;
+    height: 3.5rem;
+    vertical-align: middle;
+    line-height: 1.2;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* Column widths */
+.data-table th[data-column="Ticker"],
+.data-table td:nth-child(1) {
+    width: 8%;
+}
+
+.data-table th[data-column="Exchange"],
+.data-table td:nth-child(2) {
+    width: 10%;
+}
+
+.data-table th[data-column="Company_Name_Issuer"],
+.data-table td:nth-child(3) {
+    width: 27%;
+}
+
+.data-table th[data-column="Transfer_Agent"],
+.data-table td:nth-child(4) {
+    width: 27%;
+}
+
+.data-table th[data-column="IR_Emails"],
+.data-table td:nth-child(5) {
+    width: 18%;
+}
+
+.data-table th[data-column="IR_Phone_Number"],
+.data-table td:nth-child(6) {
+    width: 10%;
+}
+
+.data-table tbody tr:nth-child(even) {
+    background-color: rgba(0, 0, 0, 0.02);
+}
+
+.data-table tbody tr:hover {
+    background-color: rgba(13, 71, 161, 0.05);
+}
+
+.data-table tbody td {
+    white-space: normal;
+    word-break: break-word;
+    font-size: 0.85rem;
+    min-height: 2.2rem;
+    vertical-align: middle;
+}
+
+/* Email and Phone cells - Click to copy */
+.data-table td.copyable-cell {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    cursor: pointer;
+    position: relative;
+    transition: background-color 0.2s ease;
+}
+
+.data-table td.copyable-cell:hover {
+    background-color: rgba(13, 71, 161, 0.1);
+}
+
+.data-table td.copyable-cell:hover::after {
+    content: "Click to copy";
+    position: absolute;
+    bottom: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    z-index: 20;
+    white-space: nowrap;
+}
+
+.data-table td.copy-success {
+    background-color: rgba(76, 175, 80, 0.1) !important;
+}
+
+.data-table td.copy-success::after {
+    content: "Copied!" !important;
+    position: absolute;
+    bottom: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(76, 175, 80, 0.9);
+    color: white;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    z-index: 20;
+    white-space: nowrap;
+}
+
+/* Sortable headers */
+.sortable {
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    position: relative;
+    padding-right: 1.5rem;
+}
+
+.sortable:hover {
+    background-color: var(--primary-dark);
+}
+
+.sort-icon {
+    position: absolute;
+    right: 0.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 12px;
+    text-align: center;
+    opacity: 0.7;
+}
+
+/* Loading message */
+.loading-message {
+    text-align: center;
+    padding: 2rem !important;
+    font-style: italic;
+    color: var(--secondary-color);
+}
+
+/* Table Navigation */
+.table-navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: var(--spacing-md);
+    margin-top: var(--spacing-md);
+}
+
+.pagination-controls {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+#page-indicator {
+    font-size: 0.9rem;
+    color: var(--secondary-color);
+}
+
+.page-size-control {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+}
+
+#page-size {
+    padding: 0.3rem;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    background-color: white;
+}
+
+/* Column selector modal */
+.column-selector-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    max-width: 500px;
+    max-height: 80vh;
+    overflow-y: auto;
+    padding: var(--spacing-md);
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--spacing-md);
+    padding-bottom: var(--spacing-sm);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.modal-header h3 {
+    margin: 0;
+}
+
+.close-modal {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--secondary-color);
+    transition: color 0.2s ease;
+}
+
+.close-modal:hover {
+    color: var(--error-color);
+}
+
+.column-options {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 0.5rem;
+}
+
+.column-option {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem;
+    border-radius: 4px;
+    transition: background-color 0.2s ease;
+}
+
+.column-option:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.column-option input {
+    margin: 0;
+}
+
+.modal-footer {
+    display: flex;
+    justify-content: flex-end;
+    gap: var(--spacing-sm);
+    margin-top: var(--spacing-md);
+    padding-top: var(--spacing-sm);
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .controls-wrapper {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .column-controls {
+        width: 100%;
+    }
+
+    .search-controls {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .table-navigation {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .pagination-controls {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .page-size-control {
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .data-table th, 
+    .data-table td {
+        padding: 0.6rem 0.5rem;
+        font-size: 0.85rem;
+    }
+}
+
+/* Empty Cell Styling */
+.data-table td:empty::before {
+    content: "—";
+    color: rgba(0, 0, 0, 0.3);
+} 
