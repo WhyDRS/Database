@@ -4,10 +4,11 @@
 
 ## 📋 Project Overview
 
-Managing and accessing information about the Direct Registration System and individual publicly traded stocks can be challenging due to scattered and unorganized data sources. This information has been gathered in one place to make it easy for any investor to get direct access to static information about their investments.
+Managing and accessing information about the Direct Registration System and individual publicly traded stocks can be challenging due to scattered and unorganized data sources. This information has been gathered in one place to make it easy for any investor to get direct access to static information about their investments. It is a volunteer asynchronous group effort in order to populate and maintain this database for the public good.
 
 You can:
-- [View the raw data](https://database.whydrs.org/)
+- [View through our custon UI](https://database.whydrs.org/)
+- [View the raw data .json](https://github.com/WhyDRS/Database/blob/main/data/Issuers/Main_Database.json)
 - Volunteer to add missing information
 - Search for specific entities of interest
 
@@ -64,7 +65,9 @@ To run this project locally:
    git checkout main
    ```
 
-3. Open the `index.html` file in your browser or use a local server
+3a. Open the `index.html` file in your browser or use a local server
+
+3b. Use the opensource webtool https://github.com/htmlpreview/htmlpreview.github.com to access the html. Access https://htmlpreview.github.io/ and paste the html to review in your browser.
 
 ## 🔮 Future Plans
 
