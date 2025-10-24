@@ -158,6 +158,13 @@ A popular route to transfer shares from **${name of broker}** to **${transfer ag
 
 
 
+### eToro
+Please note that the $100 fee is per stock, and each of your positions within that stock may be treated separately and fractionals of each position will be liquidated in the process, the cash will stay in your eToro account. Any positions smaller than one share will also be kept at eToro (the same goes for CFDs, CopyPortfolios and Smart Portfolios).
+
+If this option is too expensive for you then we have the original no transfers guide below: 
+(include no transfers guide).
+
+
 
 ### Exante
 
@@ -667,25 +674,26 @@ Login to **${name of broker}** and start a chat support.
 
 ### Grupo Bursatil Mexicano (GBM)
 
-Once the Letter of instruction is signed and scanned in, login to ${name of broker} and start a chat support (Terminar Conversación).
-Ask for an outbound Basic FOP transfer to IBKR as detailed in the Letter of Instruction.
-Attach the Letter of Instruction.
-The support agent should handle the rest.
-
-Hargreaves Lansdown
-Once the Letter of Instruction is signed, and scanned in, send an email to helpdesk.emailteam@hl.co.uk.
-For the subject write: “(Your ${name of broker} Client Number) - Transfer out Request”.
-For the email write: “Please see the attached Letter of Instruction as authorization for my request to transfer the securities held in my Fund & Share account (or Stocks and Shares ISA) to my Interactive Brokers account".
-Attach the Letter of Instruction.
-Hit "Send".
+- Once the Letter of instruction is signed and scanned in, login to ${name of broker} and start a chat support (Terminar Conversación).
+- Ask for an outbound Basic FOP transfer to IBKR as detailed in the Letter of Instruction.
+- Attach the Letter of Instruction.
+- The support agent should handle the rest.
 
 
 
+### Hargreaves Lansdown
+- Once the Letter of Instruction is signed, and scanned in, send an email to helpdesk.emailteam@hl.co.uk.
+- For the subject write: “(Your ${name of broker} Client Number) - Transfer out Request”.
+- For the email write: “Please see the attached Letter of Instruction as authorization for my request to transfer the securities held in my Fund & Share account (or Stocks and Shares ISA) to my Interactive Brokers account".
+- Attach the Letter of Instruction.
+- Hit "Send".
 
-ING
-Send the signed form via email to info@ing.de.
-For the subject write: Transfer out request (${name of broker} account number).
-For the email text you can use something like:
+
+
+### ING
+- Send the signed form via email to info@ing.de.
+- For the subject write: Transfer out request (${name of broker} account number).
+- For the email text you can use something like:
 Dear ${name of broker} staff,
 
 I hereby request a transfer of [AMOUNT OF SHARES TO TRANSFER TO IBKR] shares of ${Stock Symbol} (ISIN: ${ISIN}.) from my ${name of broker} account number [YOUR ${name of broker} DIREKTDEPOT NUMBER] to my account at Interactive Broker (account number: [IBKR ACCOUNT NUMBER]). I already informed Interactive Brokers about an incoming share transfer from ${name of broker}.
@@ -695,15 +703,19 @@ I hereby request a transfer of [AMOUNT OF SHARES TO TRANSFER TO IBKR] shares of 
  Regards,
 "[YOUR NAME]"
 
-Interactive Investor
-Once you have the Letter of Instruction signed and scanned in, login to ${name of broker} and send a secure message.
-For the subject write: “(Your ${name of broker} Client Number) - Transfer Out Request”.
-For the message write: “Please see the attached letter as authorization for my request to transfer the securities held in my general investment account (or stocks and shares ISA) over to my Interactive Brokers Account as detailed in the attached Letter of Instruction”.
-Attach the Letter of Instruction.
-Optional: Attach a screenshot of your IBKR account.
-Click on "Send".
 
-Intesa Sanpaolo
+
+### Interactive Investor
+- Once you have the Letter of Instruction signed and scanned in, login to ${name of broker} and send a secure message.
+- For the subject write: “(Your ${name of broker} Client Number) - Transfer Out Request”.
+- For the message write: “Please see the attached letter as authorization for my request to transfer the securities held in my general investment account (or stocks and shares ISA) over to my Interactive Brokers Account as detailed in the attached Letter of Instruction”.
+- Attach the Letter of Instruction.
+- Optional: Attach a screenshot of your IBKR account.
+- Click on "Send".
+
+
+
+### Intesa Sanpaolo
 Normally you send the Letter of Instruction IBKR generates, but this is no longer appropriate for ${name of broker}, instead you must write your own Letter of Instruction, take it into a local branch and sign it in front of them. The following has worked for another investor:
 
 
@@ -716,145 +728,165 @@ si comunica che il trasferimento avviene senza cambio d’intestazione e per qua
 We recommend you take two copies with you. One for the bank, and one for your own records.
 
 
-Keytrade
-Once the Letter of Instruction is signed and scanned in, you can send a message to ${name of broker} with the Letter of Instruction:
-Login to  ${name of broker} and start a support chat and ask for an outbound transfer of ${Stock Symbol} shares as detailed in your Letter of Instruction.
-Attach the Letter of Instruction and the agent will lead you through the next steps.
+
+### Keytrade
+- Once the Letter of Instruction is signed and scanned in, you can send a message to ${name of broker} with the Letter of Instruction:
+- Login to  ${name of broker} and start a support chat and ask for an outbound transfer of ${Stock Symbol} shares as detailed in your Letter of Instruction.
+- Attach the Letter of Instruction and the agent will lead you through the next steps.
 
 
-Ninety Nine
-Once the Letter of instruction is signed and scanned, send an email to: ${broker email address}.
-For the subject write: FOP Transfer Out Request (${name of broker} account number).
-For the message write: “I would like an Outbound DRS Transfer as detailed in the attached Letter of Instruction".
-Attach the Letter of Instruction.
-Click on "Send".
+### Ninety Nine
+- Once the Letter of instruction is signed and scanned, send an email to: ${broker email address}.
+- For the subject write: FOP Transfer Out Request (${name of broker} account number).
+- For the message write: “I would like an Outbound DRS Transfer as detailed in the attached Letter of Instruction".
+- Attach the Letter of Instruction.
+- Click on "Send".
 
 
-Nordnet
-Once the Letter of Instruction is signed and scanned in, log into ${name of broker} and start a new message.
-In the message write "Please see the attached Letter of Instruction as authorization for my request to transfer the securities held in my ${name of broker} account to my Interactive Brokers account".
-Click on "Send".
-Onvista
-Once the Letter of Instruction is signed, put it in an envelope addressed to:
+
+### Nordnet
+- Once the Letter of Instruction is signed and scanned in, log into ${name of broker} and start a new message.
+- In the message write "Please see the attached Letter of Instruction as authorization for my request to transfer the securities held in my ${name of broker} account to my Interactive Brokers account".
+- Click on "Send".
+
+
+
+### Onvista
+- Once the Letter of Instruction is signed, put it in an envelope addressed to:
 Onvista Bank
 Wildunger Str. 6 A
 60487
 Frankfurt am Main
-Then post the letter.
-
-
-Openbank
-Once the Letter of instruction is signed and scanned, send an email to: “ayuda@openbank.es".
-For the subject write: FOP Transfer Out Request (${name of broker} account number).
-For the message write: “I would like an Outbound DRS Transfer as detailed in the attached Letter of Instruction".
-Attach the Letter of Instruction.
-Click on "Send".
-
-Postbank
-Once the Letter of instruction is signed and scanned, send an email to: wertpapiere@postbank.de.
-For the Subject write: Outbound Transfer Request (${name of broker} account number).
-For the message write: "Please find attached the Letter of Instruction for authorization to transfer XX of my ${Stock Symbol} shares to my IBKR account (IBKR account number)".
-Attach the Letter of Instruction.
-Click on "Send".
-
-Rakuten
-Once the Letter of instruction is signed and scanned, send an email to: “info@sec.rakuten.com.hk".
-For the subject write: FOP Transfer Out Request (${name of broker} account number).
-For the message write: “I would like an Outbound DRS Transfer as detailed in the attached Letter of Instruction".
-Attach the Letter of Instruction.
-Click on "Send".
-
-Renta 4
-Once the Letter of instruction is signed and scanned, send an email to: “sistemas@renta4.es".
-For the subject write: FOP Transfer Out Request (${name of broker} account number).
-For the message write: “I would like an Outbound DRS Transfer as detailed in the attached Letter of Instruction".
-Attach the Letter of Instruction.
-Click on "Send".
+- Then post the letter.
 
 
 
-Saxobank
-Once the Letter of instruction is signed and scanned, send an email to ${name of broker} containing both the original Letter of Instruction, as well as the signed copy as attachments. Request ${name of broker} to initiate the Basic FOP Transfer and say that you agree to pay the associated fee for it.
-If you're using Saxo Netherlands send the email to: overboekingen@saxobank.com
-If you're using Saxo Belgium send the email to: transfersBE@saxobank.com
-If you're using Saxo Denmark send the email to: saxobankdanmark@saxobank.com
+### Openbank
+- Once the Letter of instruction is signed and scanned, send an email to: “ayuda@openbank.es".
+- For the subject write: FOP Transfer Out Request (${name of broker} account number).
+- For the message write: “I would like an Outbound DRS Transfer as detailed in the attached Letter of Instruction".
+- Attach the Letter of Instruction.
+- Click on "Send".
 
 
-Scalable Capital (uses baader bank)
-Once the Letter of Instruction is signed, and scanned in- send an email to communications@baaderbank.de.
-For the subject write: “(Your Baader Bank Account Number) - Transfer out Request”.
-For the email write: “Please see the attached Letter of Instruction as authorization for my request to transfer the securities held in my Baader Bank investing account, to my Interactive Brokers account".
-Attach the Letter of Instruction.
-Hit "Send".
+
+### Postbank
+- Once the Letter of instruction is signed and scanned, send an email to: wertpapiere@postbank.de.
+- For the Subject write: Outbound Transfer Request (${name of broker} account number).
+- For the message write: "Please find attached the Letter of Instruction for authorization to transfer XX of my ${Stock Symbol} shares to my IBKR account (IBKR account number)".
+- Attach the Letter of Instruction.
+- Click on "Send".
 
 
-SEB Bank
-Once the Letter of Instruction is signed, and scanned in, log into your ${name of broker} account online.
-Click on the "Kitos paslaugos ir nustatymal" tab.
-Then click on "Elektroniniai dokumentai".
-From here you will be able to upload the Letter of Instruction to SEB bank.
+
+### Rakuten
+- Once the Letter of instruction is signed and scanned, send an email to: “info@sec.rakuten.com.hk".
+- For the subject write: FOP Transfer Out Request (${name of broker} account number).
+- For the message write: “I would like an Outbound DRS Transfer as detailed in the attached Letter of Instruction".
+- Attach the Letter of Instruction.
+- Click on "Send".
 
 
-SmartBroker
-Once the Letter of instruction is signed and scanned, send an email to: “service@smartbroker.de".
-For the subject write: FOP Transfer Out Request (${name of broker} account number).
-For the message write: “I would like an Outbound DRS Transfer as detailed in the attached Letter of Instruction".
-Attach the Letter of Instruction.
-Click on "Send".
+
+### Renta 4
+- Once the Letter of instruction is signed and scanned, send an email to: “sistemas@renta4.es".
+- For the subject write: FOP Transfer Out Request (${name of broker} account number).
+- For the message write: “I would like an Outbound DRS Transfer as detailed in the attached Letter of Instruction".
+- Attach the Letter of Instruction.
+- Click on "Send".
 
 
-St George Directshares
-Once the Letter of instruction is signed and scanned, send an email to: service@directshares.com.au.
-For the subject write: FOP Transfer Out Request (${name of broker} account number).
-For the message write: “I would like an Outbound DRS Transfer as detailed in the attached Letter of Instruction".
-Attach the Letter of Instruction.
-Click on "Send"
+
+### Saxobank
+- Once the Letter of instruction is signed and scanned, send an email to ${name of broker} containing both the original Letter of Instruction, as well as the signed copy as attachments. Request ${name of broker} to initiate the Basic FOP Transfer and say that you agree to pay the associated fee for it.
+- If you're using Saxo Netherlands send the email to: overboekingen@saxobank.com
+- If you're using Saxo Belgium send the email to: transfersBE@saxobank.com
+- If you're using Saxo Denmark send the email to: saxobankdanmark@saxobank.com
 
 
-Swedbank
-Once the Letter of Instruction is signed, and scanned in, send an email to info@swedbank.lt
-For the subject write: “(${name of broker} Account Number) - Transfer out Request”.
-For the email write: “Please see the attached Letter of Instruction as authorization for my request to transfer the securities held in my SWED account to my Interactive Brokers account".
-Attach the Letter of Instruction.
-Hit "Send".
-Once the Letter of Instruction is signed, and scanned in, log into your SWED account online.
-Click on the "Kitos paslaugos ir nustatymal" tab.
-Then click on "Elektroniniai dokumentai"
-From here you will be able to upload the Letter of Instruction to SWED bank.
-After a successful upload the transfer request is complete.
+
+### Scalable Capital (uses baader bank)
+- Once the Letter of Instruction is signed, and scanned in- send an email to communications@baaderbank.de.
+- For the subject write: “(Your Baader Bank Account Number) - Transfer out Request”.
+- For the email write: “Please see the attached Letter of Instruction as authorization for my request to transfer the securities held in my Baader Bank investing account, to my Interactive Brokers account".
+- Attach the Letter of Instruction.
+- Hit "Send".
 
 
-Trade Republic
-Once the Letter of instruction is signed and scanned, send an email to: service-de@traderepublic.com.
-For the subject write: “${Stock Symbol} Outgoing Position Transfer Demand”.
-For the email write: “I would like to order a transfer of XX ${company name} shares (${Stock Symbol}) to my account at Interactive Brokers (U*******). The signed form is attached. Kind regards (First name, last name, deposit number at ${name of broker})”.
-Attach the screenshot of your IBKR account, and the transfer form.
-Click on "Send"
+
+### SEB Bank
+- Once the Letter of Instruction is signed, and scanned in, log into your ${name of broker} account online.
+- Click on the "Kitos paslaugos ir nustatymal" tab.
+- Then click on "Elektroniniai dokumentai".
+- From here you will be able to upload the Letter of Instruction to SEB bank.
 
 
-Tradernet
-Once the Letter of instruction is signed and scanned, send an email to: info@freedomfinance.eu.
-For the subject write: “(${name of broker} account number) - Transfer Out Request”.
-For the email write: “Please see the attached Letter of Instruction as authorization for my request to transfer the securities held in my trading account to my Interactive Brokers account".
-Attach the Letter of Instruction.
-Click on "Send"
+
+### SmartBroker
+- Once the Letter of instruction is signed and scanned, send an email to: “service@smartbroker.de".
+- For the subject write: FOP Transfer Out Request (${name of broker} account number).
+- For the message write: “I would like an Outbound DRS Transfer as detailed in the attached Letter of Instruction".
+- Attach the Letter of Instruction.
+- Click on "Send".
 
 
-X-O
-Once the Letter of instruction is signed and scanned, send an email to: “enquiries@x-o.co.uk".
-For the subject write: FOP Transfer Out Request (${name of broker} account number).
-For the message write: “I would like an Outbound DRS Transfer as detailed in the attached Letter of Instruction".
-Attach the Letter of Instruction.
-Click on "Send"
+
+### St George Directshares
+- Once the Letter of instruction is signed and scanned, send an email to: service@directshares.com.au.
+- For the subject write: FOP Transfer Out Request (${name of broker} account number).
+- For the message write: “I would like an Outbound DRS Transfer as detailed in the attached Letter of Instruction".
+- Attach the Letter of Instruction.
+- Click on "Send"
+
+
+
+### Swedbank
+- Once the Letter of Instruction is signed, and scanned in, send an email to info@swedbank.lt
+- For the subject write: “(${name of broker} Account Number) - Transfer out Request”.
+- For the email write: “Please see the attached Letter of Instruction as authorization for my request to transfer the securities held in my SWED account to my Interactive Brokers account".
+- Attach the Letter of Instruction.
+- Hit "Send".
+- Once the Letter of Instruction is signed, and scanned in, log into your SWED account online.
+- Click on the "Kitos paslaugos ir nustatymal" tab.
+- Then click on "Elektroniniai dokumentai"
+- From here you will be able to upload the Letter of Instruction to SWED bank.
+- After a successful upload the transfer request is complete.
+
+
+
+### Trade Republic
+- Once the Letter of instruction is signed and scanned, send an email to: service-de@traderepublic.com.
+- For the subject write: “${Stock Symbol} Outgoing Position Transfer Demand”.
+- For the email write: “I would like to order a transfer of XX ${company name} shares (${Stock Symbol}) to my account at Interactive Brokers (U*******). The signed form is attached. Kind regards (First name, last name, deposit number at ${name of broker})”.
+- Attach the screenshot of your IBKR account, and the transfer form.
+- Click on "Send"
+
+
+
+### Tradernet
+- Once the Letter of instruction is signed and scanned, send an email to: info@freedomfinance.eu.
+- For the subject write: “(${name of broker} account number) - Transfer Out Request”.
+- For the email write: “Please see the attached Letter of Instruction as authorization for my request to transfer the securities held in my trading account to my Interactive Brokers account".
+- Attach the Letter of Instruction.
+- Click on "Send"
+
+
+
+### X-O
+- Once the Letter of instruction is signed and scanned, send an email to: “enquiries@x-o.co.uk".
+- For the subject write: FOP Transfer Out Request (${name of broker} account number).
+- For the message write: “I would like an Outbound DRS Transfer as detailed in the attached Letter of Instruction".
+- Attach the Letter of Instruction.
+- Click on "Send"
 
 
 
 ## Transfer Agent Instructions:
 {if outside US}
 The transfer should be processed within 3-5 business days, but can sometimes take longer. You should receive an email confirming that the transfer was successfully performed. If you have not received confirmation within a week or two, then it’s best practice to chase it up with both brokers.
+
 After your shares reach IBKR:
 Now you are able to request the DRS transfer from IBKR to ${transfer agent name}. To do this you can follow our guide on how to DRS transfer from IBKR (link to IBKR guide here?).
-
 
 
 
