@@ -1711,6 +1711,12 @@
             "NYSE"
         ],
         [
+            "1555280",
+            "Zoetis Inc.",
+            "ZTS",
+            "NYSE"
+        ],
+        [
             "1534701",
             "Phillips 66",
             "PSX",
@@ -1750,12 +1756,6 @@
             "715957",
             "DOMINION ENERGY, INC",
             "D",
-            "NYSE"
-        ],
-        [
-            "1555280",
-            "Zoetis Inc.",
-            "ZTS",
             "NYSE"
         ],
         [
@@ -1915,12 +1915,6 @@
             "Nasdaq"
         ],
         [
-            "1713683",
-            "Zscaler, Inc.",
-            "ZS",
-            "Nasdaq"
-        ],
-        [
             "1136808",
             "E.ON SE",
             "EONGY",
@@ -2035,6 +2029,12 @@
             "NYSE"
         ],
         [
+            "1713683",
+            "Zscaler, Inc.",
+            "ZS",
+            "Nasdaq"
+        ],
+        [
             "946581",
             "TAKE TWO INTERACTIVE SOFTWARE INC",
             "TTWO",
@@ -2063,6 +2063,12 @@
             "Dollarama Inc./ADR",
             "DLMAY",
             "OTC"
+        ],
+        [
+            "1041061",
+            "YUM BRANDS INC",
+            "YUM",
+            "NYSE"
         ],
         [
             "1539838",
@@ -2128,12 +2134,6 @@
             "1090872",
             "AGILENT TECHNOLOGIES, INC.",
             "A",
-            "NYSE"
-        ],
-        [
-            "1041061",
-            "YUM BRANDS INC",
-            "YUM",
             "NYSE"
         ],
         [
@@ -2239,15 +2239,15 @@
             "NYSE"
         ],
         [
-            "1512673",
-            "Block, Inc.",
-            "XYZ",
-            "NYSE"
-        ],
-        [
             "1396009",
             "Vulcan Materials CO",
             "VMC",
+            "NYSE"
+        ],
+        [
+            "1512673",
+            "Block, Inc.",
+            "XYZ",
             "NYSE"
         ],
         [
@@ -2431,6 +2431,12 @@
             "Nasdaq"
         ],
         [
+            "1524472",
+            "Xylem Inc.",
+            "XYL",
+            "NYSE"
+        ],
+        [
             "1172724",
             "GOLD FIELDS LTD",
             "GFI",
@@ -2452,12 +2458,6 @@
             "1475260",
             "CENOVUS ENERGY INC.",
             "CVE",
-            "NYSE"
-        ],
-        [
-            "1524472",
-            "Xylem Inc.",
-            "XYL",
             "NYSE"
         ],
         [
@@ -3067,12 +3067,6 @@
             "OTC"
         ],
         [
-            "1585521",
-            "Zoom Communications, Inc.",
-            "ZM",
-            "Nasdaq"
-        ],
-        [
             "29905",
             "DOVER Corp",
             "DOV",
@@ -3113,6 +3107,12 @@
             "Leidos Holdings, Inc.",
             "LDOS",
             "NYSE"
+        ],
+        [
+            "1585521",
+            "Zoom Communications, Inc.",
+            "ZM",
+            "Nasdaq"
         ],
         [
             "861967",
@@ -3811,6 +3811,12 @@
             "OTC"
         ],
         [
+            "1136869",
+            "ZIMMER BIOMET HOLDINGS, INC.",
+            "ZBH",
+            "NYSE"
+        ],
+        [
             "1447669",
             "TWILIO INC",
             "TWLO",
@@ -3901,12 +3907,6 @@
             "NYSE"
         ],
         [
-            "1136869",
-            "ZIMMER BIOMET HOLDINGS, INC.",
-            "ZBH",
-            "NYSE"
-        ],
-        [
             "920522",
             "ESSEX PROPERTY TRUST, INC.",
             "ESS",
@@ -3917,6 +3917,12 @@
             "TechnipFMC plc",
             "FTI",
             "NYSE"
+        ],
+        [
+            "1617640",
+            "ZILLOW GROUP, INC.",
+            "ZG",
+            "Nasdaq"
         ],
         [
             "1043277",
@@ -3955,6 +3961,12 @@
             "NYSE"
         ],
         [
+            "1673358",
+            "Yum China Holdings, Inc.",
+            "YUMC",
+            "NYSE"
+        ],
+        [
             "2041610",
             "Paramount Skydance Corp",
             "PSKY",
@@ -3982,12 +3994,6 @@
             "1901440",
             "UL Solutions Inc.",
             "ULS",
-            "NYSE"
-        ],
-        [
-            "1673358",
-            "Yum China Holdings, Inc.",
-            "YUMC",
             "NYSE"
         ],
         [
@@ -4063,12 +4069,6 @@
             "NYSE"
         ],
         [
-            "1617640",
-            "ZILLOW GROUP, INC.",
-            "ZG",
-            "Nasdaq"
-        ],
-        [
             "1579878",
             "Figma, Inc.",
             "FIG",
@@ -4108,12 +4108,6 @@
             "70318",
             "TENET HEALTHCARE CORP",
             "THC",
-            "NYSE"
-        ],
-        [
-            "904851",
-            "YPF SOCIEDAD ANONIMA",
-            "YPF",
             "NYSE"
         ],
         [
@@ -4231,6 +4225,12 @@
             "NYSE"
         ],
         [
+            "1166003",
+            "XPO, Inc.",
+            "XPO",
+            "NYSE"
+        ],
+        [
             "1069202",
             "LENNOX INTERNATIONAL INC",
             "LII",
@@ -4321,6 +4321,18 @@
             "NYSE"
         ],
         [
+            "1677250",
+            "ZTO Express (Cayman) Inc.",
+            "ZTO",
+            "NYSE"
+        ],
+        [
+            "904851",
+            "YPF SOCIEDAD ANONIMA",
+            "YPF",
+            "NYSE"
+        ],
+        [
             "15615",
             "MASTEC INC",
             "MTZ",
@@ -4339,12 +4351,6 @@
             "NYSE"
         ],
         [
-            "1677250",
-            "ZTO Express (Cayman) Inc.",
-            "ZTO",
-            "NYSE"
-        ],
-        [
             "1477049",
             "Sprott Physical Gold Trust",
             "PHYS",
@@ -4354,12 +4360,6 @@
             "1751788",
             "DOW INC.",
             "DOW",
-            "NYSE"
-        ],
-        [
-            "1166003",
-            "XPO, Inc.",
-            "XPO",
             "NYSE"
         ],
         [
@@ -4951,6 +4951,12 @@
             "Nasdaq"
         ],
         [
+            "877212",
+            "ZEBRA TECHNOLOGIES CORP",
+            "ZBRA",
+            "Nasdaq"
+        ],
+        [
             "21076",
             "CLOROX CO /DE/",
             "CLX",
@@ -5101,12 +5107,6 @@
             "Nasdaq"
         ],
         [
-            "877212",
-            "ZEBRA TECHNOLOGIES CORP",
-            "ZBRA",
-            "Nasdaq"
-        ],
-        [
             "2074176",
             "Viper Energy, Inc.",
             "VNOM",
@@ -5146,12 +5146,6 @@
             "40729",
             "Ally Financial Inc.",
             "ALLY",
-            "NYSE"
-        ],
-        [
-            "1838413",
-            "Full Truck Alliance Co. Ltd.",
-            "YMM",
             "NYSE"
         ],
         [
@@ -5332,6 +5326,12 @@
             "1236275",
             "QXO, Inc.",
             "QXO",
+            "NYSE"
+        ],
+        [
+            "1838413",
+            "Full Truck Alliance Co. Ltd.",
+            "YMM",
             "NYSE"
         ],
         [
@@ -6415,6 +6415,12 @@
             "NYSE"
         ],
         [
+            "1439288",
+            "Zurn Elkay Water Solutions Corp",
+            "ZWS",
+            "NYSE"
+        ],
+        [
             "7431",
             "ARMSTRONG WORLD INDUSTRIES INC",
             "AWI",
@@ -6451,6 +6457,12 @@
             "NYSE"
         ],
         [
+            "109380",
+            "ZIONS BANCORPORATION, NATIONAL ASSOCIATION /UT/",
+            "ZION",
+            "Nasdaq"
+        ],
+        [
             "937556",
             "MASIMO CORP",
             "MASI",
@@ -6485,12 +6497,6 @@
             "Figure Technology Solutions, Inc.",
             "FIGR",
             "Nasdaq"
-        ],
-        [
-            "1439288",
-            "Zurn Elkay Water Solutions Corp",
-            "ZWS",
-            "NYSE"
         ],
         [
             "1285785",
@@ -6617,12 +6623,6 @@
             "Brookfield Renewable Corp",
             "BEPC",
             "NYSE"
-        ],
-        [
-            "109380",
-            "ZIONS BANCORPORATION, NATIONAL ASSOCIATION /UT/",
-            "ZION",
-            "Nasdaq"
         ],
         [
             "1639300",
@@ -6853,12 +6853,6 @@
             "NYSE"
         ],
         [
-            "1954042",
-            "ZEEKR Intelligent Technology Holding Ltd",
-            "ZK",
-            "NYSE"
-        ],
-        [
             "1438569",
             "Grifols SA",
             "GRFS",
@@ -6898,6 +6892,12 @@
             "899689",
             "VORNADO REALTY TRUST",
             "VNO",
+            "NYSE"
+        ],
+        [
+            "1954042",
+            "ZEEKR Intelligent Technology Holding Ltd",
+            "ZK",
             "NYSE"
         ],
         [
@@ -8030,7 +8030,7 @@
         ],
         [
             "1005284",
-            "UNIVERSAL DISPLAY CORP PA",
+            "UNIVERSAL DISPLAY CORP \\PA\\",
             "OLED",
             "Nasdaq"
         ],
@@ -8305,6 +8305,12 @@
             "NYSE"
         ],
         [
+            "1538118",
+            "Yakult Honsha Co., LTD/ADR",
+            "YKLTY",
+            "OTC"
+        ],
+        [
             "2017206",
             "Millrose Properties, Inc.",
             "MRP",
@@ -8333,6 +8339,12 @@
             "TG THERAPEUTICS, INC.",
             "TGTX",
             "Nasdaq"
+        ],
+        [
+            "1856314",
+            "Clear Secure, Inc.",
+            "YOU",
+            "NYSE"
         ],
         [
             "1025996",
@@ -8405,12 +8417,6 @@
             "RADIAN GROUP INC",
             "RDN",
             "NYSE"
-        ],
-        [
-            "1538118",
-            "Yakult Honsha Co., LTD/ADR",
-            "YKLTY",
-            "OTC"
         ],
         [
             "57515",
@@ -8555,12 +8561,6 @@
             "ICAHN ENTERPRISES L.P.",
             "IEP",
             "Nasdaq"
-        ],
-        [
-            "1856314",
-            "Clear Secure, Inc.",
-            "YOU",
-            "NYSE"
         ],
         [
             "1922641",
@@ -9025,6 +9025,12 @@
             "NYSE"
         ],
         [
+            "1851003",
+            "Zeta Global Holdings Corp.",
+            "ZETA",
+            "NYSE"
+        ],
+        [
             "1144800",
             "TRANSALTA CORP",
             "TAC",
@@ -9131,12 +9137,6 @@
             "Centessa Pharmaceuticals plc",
             "CNTA",
             "Nasdaq"
-        ],
-        [
-            "1851003",
-            "Zeta Global Holdings Corp.",
-            "ZETA",
-            "NYSE"
         ],
         [
             "315709",
@@ -10303,6 +10303,12 @@
             "NYSE"
         ],
         [
+            "1670592",
+            "YETI Holdings, Inc.",
+            "YETI",
+            "NYSE"
+        ],
+        [
             "16040",
             "CABOT CORP",
             "CBT",
@@ -10522,12 +10528,6 @@
             "1697500",
             "Solaris Energy Infrastructure, Inc.",
             "SEI",
-            "NYSE"
-        ],
-        [
-            "1670592",
-            "YETI Holdings, Inc.",
-            "YETI",
             "NYSE"
         ],
         [
@@ -11155,6 +11155,12 @@
             "NYSE"
         ],
         [
+            "1877787",
+            "Ermenegildo Zegna N.V.",
+            "ZGN",
+            "NYSE"
+        ],
+        [
             "46765",
             "Helmerich & Payne, Inc.",
             "HP",
@@ -11380,12 +11386,6 @@
             "1070235",
             "BLACKBERRY Ltd",
             "BB",
-            "NYSE"
-        ],
-        [
-            "1877787",
-            "Ermenegildo Zegna N.V.",
-            "ZGN",
             "NYSE"
         ],
         [
@@ -11767,12 +11767,6 @@
             "Nasdaq"
         ],
         [
-            "1704292",
-            "Zai Lab Ltd",
-            "ZLAB",
-            "Nasdaq"
-        ],
-        [
             "1078271",
             "EXTREME NETWORKS INC",
             "EXTR",
@@ -11867,6 +11861,12 @@
             "FLOWERS FOODS INC",
             "FLO",
             "NYSE"
+        ],
+        [
+            "1704292",
+            "Zai Lab Ltd",
+            "ZLAB",
+            "Nasdaq"
         ],
         [
             "1005757",
@@ -12029,6 +12029,12 @@
             "CONSTELLIUM SE",
             "CSTM",
             "NYSE"
+        ],
+        [
+            "818479",
+            "DENTSPLY SIRONA Inc.",
+            "XRAY",
+            "Nasdaq"
         ],
         [
             "1722608",
@@ -12199,6 +12205,12 @@
             "NYSE"
         ],
         [
+            "1654126",
+            "ZIM Integrated Shipping Services Ltd.",
+            "ZIM",
+            "NYSE"
+        ],
+        [
             "1468328",
             "Addus HomeCare Corp",
             "ADUS",
@@ -12229,22 +12241,10 @@
             "NYSE"
         ],
         [
-            "1654126",
-            "ZIM Integrated Shipping Services Ltd.",
-            "ZIM",
-            "NYSE"
-        ],
-        [
             "1704715",
             "Alpha Metallurgical Resources, Inc.",
             "AMR",
             "NYSE"
-        ],
-        [
-            "818479",
-            "DENTSPLY SIRONA Inc.",
-            "XRAY",
-            "Nasdaq"
         ],
         [
             "921738",
@@ -12287,12 +12287,6 @@
             "STEWART INFORMATION SERVICES CORP",
             "STC",
             "NYSE"
-        ],
-        [
-            "1953926",
-            "Zenas BioPharma, Inc.",
-            "ZBIO",
-            "Nasdaq"
         ],
         [
             "1421876",
@@ -12505,6 +12499,18 @@
             "Nasdaq"
         ],
         [
+            "1174511",
+            "ANADOLU EFES BIRACILIK VE MALT SANAYI A S/ADR",
+            "AEBZY",
+            "OTC"
+        ],
+        [
+            "1953926",
+            "Zenas BioPharma, Inc.",
+            "ZBIO",
+            "Nasdaq"
+        ],
+        [
             "1688757",
             "ESTABLISHMENT LABS HOLDINGS INC.",
             "ESTA",
@@ -12694,6 +12700,12 @@
             "1636282",
             "Spyre Therapeutics, Inc.",
             "SYRE",
+            "Nasdaq"
+        ],
+        [
+            "1937653",
+            "Zymeworks Inc.",
+            "ZYME",
             "Nasdaq"
         ],
         [
@@ -13018,12 +13030,6 @@
             "1721947",
             "Jamf Holding Corp.",
             "JAMF",
-            "Nasdaq"
-        ],
-        [
-            "1937653",
-            "Zymeworks Inc.",
-            "ZYME",
             "Nasdaq"
         ],
         [
@@ -13387,6 +13393,12 @@
             "Nasdaq"
         ],
         [
+            "1575828",
+            "EXPRO GROUP HOLDINGS N.V.",
+            "XPRO",
+            "NYSE"
+        ],
+        [
             "1581280",
             "Twist Bioscience Corp",
             "TWST",
@@ -13601,12 +13613,6 @@
             "TheRealReal, Inc.",
             "REAL",
             "Nasdaq"
-        ],
-        [
-            "1575828",
-            "EXPRO GROUP HOLDINGS N.V.",
-            "XPRO",
-            "NYSE"
         ],
         [
             "37785",
@@ -14251,6 +14257,12 @@
             "Nasdaq"
         ],
         [
+            "1873951",
+            "Exzeo Group, Inc.",
+            "XZO",
+            "NYSE"
+        ],
+        [
             "1577670",
             "Ladder Capital Corp",
             "LADR",
@@ -14308,12 +14320,6 @@
             "1836057",
             "BlackRock Technology & Private Equity Term Trust",
             "BTX",
-            "NYSE"
-        ],
-        [
-            "1873951",
-            "Exzeo Group, Inc.",
-            "XZO",
             "NYSE"
         ],
         [
@@ -14386,6 +14392,12 @@
             "912562",
             "GIBRALTAR INDUSTRIES, INC.",
             "ROCK",
+            "Nasdaq"
+        ],
+        [
+            "1084048",
+            "ZIFF DAVIS, INC.",
+            "ZD",
             "Nasdaq"
         ],
         [
@@ -14905,12 +14917,6 @@
             "Nasdaq"
         ],
         [
-            "1084048",
-            "ZIFF DAVIS, INC.",
-            "ZD",
-            "Nasdaq"
-        ],
-        [
             "1832511",
             "P3 Health Partners Inc.",
             "PIII",
@@ -15361,12 +15367,6 @@
             "Nasdaq"
         ],
         [
-            "1794350",
-            "Yalla Group Ltd",
-            "YALA",
-            "NYSE"
-        ],
-        [
             "1953530",
             "Oculis Holding AG",
             "OCS",
@@ -15389,6 +15389,12 @@
             "Relay Therapeutics, Inc.",
             "RLAY",
             "Nasdaq"
+        ],
+        [
+            "1794350",
+            "Yalla Group Ltd",
+            "YALA",
+            "NYSE"
         ],
         [
             "1687187",
@@ -15643,6 +15649,12 @@
             "Nasdaq"
         ],
         [
+            "1614178",
+            "Yext, Inc.",
+            "YEXT",
+            "NYSE"
+        ],
+        [
             "885978",
             "U S PHYSICAL THERAPY INC /NV",
             "USPH",
@@ -15707,12 +15719,6 @@
             "LGI Homes, Inc.",
             "LGIH",
             "Nasdaq"
-        ],
-        [
-            "1614178",
-            "Yext, Inc.",
-            "YEXT",
-            "NYSE"
         ],
         [
             "1783183",
@@ -16015,12 +16021,6 @@
             "Nasdaq"
         ],
         [
-            "1995520",
-            "Yuanbao Inc.",
-            "YB",
-            "Nasdaq"
-        ],
-        [
             "1844452",
             "Intuitive Machines, Inc.",
             "LUNR",
@@ -16211,6 +16211,12 @@
             "Bowhead Specialty Holdings Inc.",
             "BOW",
             "NYSE"
+        ],
+        [
+            "1995520",
+            "Yuanbao Inc.",
+            "YB",
+            "Nasdaq"
         ],
         [
             "1010000",
@@ -17971,12 +17977,6 @@
             "NYSE"
         ],
         [
-            "2011674",
-            "YD Bio Ltd",
-            "YDES",
-            "Nasdaq"
-        ],
-        [
             "879635",
             "MID PENN BANCORP INC",
             "MPB",
@@ -18517,6 +18517,12 @@
             "NYSE"
         ],
         [
+            "1819580",
+            "Yatsen Holding Ltd",
+            "YSG",
+            "NYSE"
+        ],
+        [
             "1789029",
             "Aeva Technologies, Inc.",
             "AEVA",
@@ -18526,6 +18532,12 @@
             "1828791",
             "Viant Technology Inc.",
             "DSP",
+            "Nasdaq"
+        ],
+        [
+            "2011674",
+            "YD Bio Ltd",
+            "YDES",
             "Nasdaq"
         ],
         [
@@ -18829,12 +18841,6 @@
             "Nasdaq"
         ],
         [
-            "1819580",
-            "Yatsen Holding Ltd",
-            "YSG",
-            "NYSE"
-        ],
-        [
             "2059573",
             "Pinewood Technologies Group plc",
             "PINWF",
@@ -18940,12 +18946,6 @@
             "1387467",
             "ALPHA & OMEGA SEMICONDUCTOR Ltd",
             "AOSL",
-            "Nasdaq"
-        ],
-        [
-            "1434647",
-            "ZEVRA THERAPEUTICS, INC.",
-            "ZVRA",
             "Nasdaq"
         ],
         [
@@ -19459,6 +19459,12 @@
             "NYSE"
         ],
         [
+            "1862044",
+            "ZKH Group Ltd",
+            "ZKH",
+            "NYSE"
+        ],
+        [
             "1627281",
             "Cellectis S.A.",
             "CLLS",
@@ -19519,12 +19525,6 @@
             "NYSE"
         ],
         [
-            "1862044",
-            "ZKH Group Ltd",
-            "ZKH",
-            "NYSE"
-        ],
-        [
             "1652535",
             "ICHOR HOLDINGS, LTD.",
             "ICHR",
@@ -19571,6 +19571,12 @@
             "Peakstone Realty Trust",
             "PKST",
             "NYSE"
+        ],
+        [
+            "1434647",
+            "ZEVRA THERAPEUTICS, INC.",
+            "ZVRA",
+            "Nasdaq"
         ],
         [
             "835011",
@@ -19879,6 +19885,12 @@
             "Nasdaq"
         ],
         [
+            "108985",
+            "YORK WATER CO",
+            "YORW",
+            "Nasdaq"
+        ],
+        [
             "1848731",
             "Glass House Brands Inc.",
             "GLASF",
@@ -19889,6 +19901,12 @@
             "CADIZ INC",
             "CDZI",
             "Nasdaq"
+        ],
+        [
+            "1794276",
+            "Intelligent Hotel Group Ltd.",
+            "ZHJD",
+            "OTC"
         ],
         [
             "2075786",
@@ -20023,12 +20041,6 @@
             "Nasdaq"
         ],
         [
-            "108985",
-            "YORK WATER CO",
-            "YORW",
-            "Nasdaq"
-        ],
-        [
             "895419",
             "WOLFSPEED, INC.",
             "WOLF",
@@ -20045,6 +20057,12 @@
             "Design Therapeutics, Inc.",
             "DSGN",
             "Nasdaq"
+        ],
+        [
+            "2025583",
+            "ZEDCOR, INC.",
+            "ZDCAF",
+            "OTC"
         ],
         [
             "1173489",
@@ -20195,12 +20213,6 @@
             "AMTD Digital Inc.",
             "HKD",
             "NYSE"
-        ],
-        [
-            "2025583",
-            "ZEDCOR, INC.",
-            "ZDCAF",
-            "OTC"
         ],
         [
             "2073928",
@@ -20455,12 +20467,6 @@
             "Nasdaq"
         ],
         [
-            "1631761",
-            "Yiren Digital Ltd.",
-            "YRD",
-            "NYSE"
-        ],
-        [
             "1821534",
             "Exodus Movement, Inc.",
             "EXOD",
@@ -20551,12 +20557,6 @@
             "Nasdaq"
         ],
         [
-            "1725033",
-            "X Financial",
-            "XYF",
-            "NYSE"
-        ],
-        [
             "1403475",
             "Bank of Marin Bancorp",
             "BMRC",
@@ -20629,6 +20629,12 @@
             "Nasdaq"
         ],
         [
+            "917470",
+            "OLYMPIC STEEL INC",
+            "ZEUS",
+            "Nasdaq"
+        ],
+        [
             "72573",
             "MOVADO GROUP INC",
             "MOV",
@@ -20693,6 +20699,12 @@
             "Meridian Mining UK Societas",
             "MRRDF",
             "OTC"
+        ],
+        [
+            "1318008",
+            "Zumiez Inc",
+            "ZUMZ",
+            "Nasdaq"
         ],
         [
             "1495825",
@@ -20765,6 +20777,12 @@
             "BEYOND MEAT, INC.",
             "BYND",
             "Nasdaq"
+        ],
+        [
+            "1631761",
+            "Yiren Digital Ltd.",
+            "YRD",
+            "NYSE"
         ],
         [
             "1422930",
@@ -20899,6 +20917,12 @@
             "NYSE"
         ],
         [
+            "1720446",
+            "Zepp Health Corp",
+            "ZEPP",
+            "NYSE"
+        ],
+        [
             "796505",
             "Clearfield, Inc.",
             "CLFD",
@@ -20909,12 +20933,6 @@
             "Nouveau Monde Graphite Inc.",
             "NMG",
             "NYSE"
-        ],
-        [
-            "917470",
-            "OLYMPIC STEEL INC",
-            "ZEUS",
-            "Nasdaq"
         ],
         [
             "2006291",
@@ -21145,12 +21163,6 @@
             "NYSE"
         ],
         [
-            "1318008",
-            "Zumiez Inc",
-            "ZUMZ",
-            "Nasdaq"
-        ],
-        [
             "1175680",
             "CytoDyn Inc.",
             "CYDY",
@@ -21349,12 +21361,6 @@
             "Nasdaq"
         ],
         [
-            "1835724",
-            "Zhihu Inc.",
-            "ZH",
-            "NYSE"
-        ],
-        [
             "1074769",
             "NUVEEN NEW YORK QUALITY MUNICIPAL INCOME FUND",
             "NAN",
@@ -21364,6 +21370,12 @@
             "1519401",
             "Regional Management Corp.",
             "RM",
+            "NYSE"
+        ],
+        [
+            "1835724",
+            "Zhihu Inc.",
+            "ZH",
             "NYSE"
         ],
         [
@@ -21463,6 +21475,12 @@
             "Nasdaq"
         ],
         [
+            "1617553",
+            "ZIPRECRUITER, INC.",
+            "ZIP",
+            "NYSE"
+        ],
+        [
             "1499849",
             "BrasilAgro - Brazilian Agricultural Real Estate Co",
             "LND",
@@ -21509,12 +21527,6 @@
             "E.W. SCRIPPS Co",
             "SSP",
             "Nasdaq"
-        ],
-        [
-            "1720446",
-            "Zepp Health Corp",
-            "ZEPP",
-            "NYSE"
         ],
         [
             "1901637",
@@ -21659,12 +21671,6 @@
             "Ocugen, Inc.",
             "OCGN",
             "Nasdaq"
-        ],
-        [
-            "1617553",
-            "ZIPRECRUITER, INC.",
-            "ZIP",
-            "NYSE"
         ],
         [
             "2077010",
@@ -21913,6 +21919,12 @@
             "Nasdaq"
         ],
         [
+            "1770450",
+            "Xerox Holdings Corp",
+            "XRX",
+            "Nasdaq"
+        ],
+        [
             "1871509",
             "Portillo's Inc.",
             "PTLO",
@@ -22141,6 +22153,12 @@
             "Nasdaq"
         ],
         [
+            "1725033",
+            "X Financial",
+            "XYF",
+            "NYSE"
+        ],
+        [
             "2050501",
             "Blue Water Acquisition Corp. III",
             "BLUW",
@@ -22339,12 +22357,6 @@
             "Nasdaq"
         ],
         [
-            "1770450",
-            "Xerox Holdings Corp",
-            "XRX",
-            "Nasdaq"
-        ],
-        [
             "2031561",
             "Aldel Financial II Inc.",
             "ALDF",
@@ -22468,7 +22480,7 @@
             "1780531",
             "ONECONNECT FINANCIAL TECHNOLOGY CO., LTD.",
             "OCFT",
-            "NYSE"
+            null
         ],
         [
             "1281895",
@@ -22867,15 +22879,15 @@
             "OTC"
         ],
         [
+            "1802156",
+            "Xponential Fitness, Inc.",
+            "XPOF",
+            "NYSE"
+        ],
+        [
             "1374690",
             "Larimar Therapeutics, Inc.",
             "LRMR",
-            "Nasdaq"
-        ],
-        [
-            "2034723",
-            "One & one Green Technologies. INC",
-            "YDDL",
             "Nasdaq"
         ],
         [
@@ -23087,6 +23099,12 @@
             "HomesToLife Ltd",
             "HTLM",
             "Nasdaq"
+        ],
+        [
+            "1858400",
+            "Golden Independence Mining Corp.",
+            "GIDMF",
+            "OTC"
         ],
         [
             "1638290",
@@ -23389,16 +23407,16 @@
             "NYSE"
         ],
         [
+            "2034723",
+            "One & one Green Technologies. INC",
+            "YDDL",
+            "Nasdaq"
+        ],
+        [
             "1756701",
             "LINKBANCORP, Inc.",
             "LNKB",
             "Nasdaq"
-        ],
-        [
-            "1802156",
-            "Xponential Fitness, Inc.",
-            "XPOF",
-            "NYSE"
         ],
         [
             "1846416",
@@ -23782,12 +23800,6 @@
             "2028935",
             "FACT II Acquisition Corp.",
             "FACT",
-            "Nasdaq"
-        ],
-        [
-            "1855644",
-            "Zura Bio Ltd",
-            "ZURA",
             "Nasdaq"
         ],
         [
@@ -24211,6 +24223,12 @@
             "Nasdaq"
         ],
         [
+            "1855644",
+            "Zura Bio Ltd",
+            "ZURA",
+            "Nasdaq"
+        ],
+        [
             "2052162",
             "Digital Asset Acquisition Corp.",
             "DAAQ",
@@ -24443,6 +24461,12 @@
             "INVESCO DB BASE METALS FUND",
             "DBB",
             "NYSE"
+        ],
+        [
+            "1473334",
+            "XMax Inc.",
+            "XWIN",
+            "Nasdaq"
         ],
         [
             "2033593",
@@ -24847,12 +24871,6 @@
             "Nasdaq"
         ],
         [
-            "1473334",
-            "XMax Inc.",
-            "XWIN",
-            "Nasdaq"
-        ],
-        [
             "27093",
             "U.S. GOLD CORP.",
             "USAU",
@@ -24947,12 +24965,6 @@
             "Cabaletta Bio, Inc.",
             "CABA",
             "Nasdaq"
-        ],
-        [
-            "1131312",
-            "ZION OIL & GAS INC",
-            "ZNOG",
-            "OTC"
         ],
         [
             "2041047",
@@ -25237,6 +25249,12 @@
             "Nasdaq"
         ],
         [
+            "1131312",
+            "ZION OIL & GAS INC",
+            "ZNOG",
+            "OTC"
+        ],
+        [
             "1628063",
             "Seritage Growth Properties",
             "SRG",
@@ -25312,7 +25330,7 @@
             "1544400",
             "NFiniTi inc.",
             "NFTN",
-            null
+            "OTC"
         ],
         [
             "1384195",
@@ -25525,12 +25543,6 @@
             "Nasdaq"
         ],
         [
-            "1754323",
-            "X3 Holdings Co., Ltd.",
-            "XTKG",
-            "Nasdaq"
-        ],
-        [
             "1765850",
             "Prestige Wealth Inc.",
             "AURE",
@@ -25579,12 +25591,6 @@
             "NYSE"
         ],
         [
-            "1794276",
-            "Intelligent Hotel Group Ltd.",
-            "ZHJD",
-            "OTC"
-        ],
-        [
             "1819404",
             "Nerdy Inc.",
             "NRDY",
@@ -25600,6 +25606,12 @@
             "894871",
             "Arena Group Holdings, Inc.",
             "AREN",
+            "NYSE"
+        ],
+        [
+            "1854139",
+            "Zevia PBC",
+            "ZVIA",
             "NYSE"
         ],
         [
@@ -25630,6 +25642,12 @@
             "1075736",
             "Crexendo, Inc.",
             "CXDO",
+            "Nasdaq"
+        ],
+        [
+            "1754323",
+            "X3 Holdings Co., Ltd.",
+            "XTKG",
             "Nasdaq"
         ],
         [
@@ -25888,12 +25906,6 @@
             "746838",
             "UNISYS CORP",
             "UIS",
-            "NYSE"
-        ],
-        [
-            "1854139",
-            "Zevia PBC",
-            "ZVIA",
             "NYSE"
         ],
         [
@@ -26173,6 +26185,12 @@
             "Nasdaq"
         ],
         [
+            "1865506",
+            "Zeo Energy Corp.",
+            "ZEO",
+            "Nasdaq"
+        ],
+        [
             "1872529",
             "MDxHealth SA",
             "MDXH",
@@ -26219,12 +26237,6 @@
             "JELD-WEN Holding, Inc.",
             "JELD",
             "NYSE"
-        ],
-        [
-            "1865506",
-            "Zeo Energy Corp.",
-            "ZEO",
-            "Nasdaq"
         ],
         [
             "2030277",
@@ -26503,6 +26515,12 @@
             "Nasdaq"
         ],
         [
+            "1941506",
+            "ZJK Industrial Co., Ltd.",
+            "ZJK",
+            "Nasdaq"
+        ],
+        [
             "1875558",
             "Nuvectis Pharma, Inc.",
             "NVCT",
@@ -26641,12 +26659,6 @@
             "NYSE"
         ],
         [
-            "2075336",
-            "AA Mission Acquisition Corp. II",
-            "YCY",
-            "NYSE"
-        ],
-        [
             "904112",
             "MORGAN STANLEY EMERGING MARKETS DEBT FUND INC",
             "MSD",
@@ -26657,6 +26669,12 @@
             "Fold Holdings, Inc.",
             "FLD",
             "Nasdaq"
+        ],
+        [
+            "2075336",
+            "AA Mission Acquisition Corp. II",
+            "YCY",
+            "NYSE"
         ],
         [
             "1098972",
@@ -27091,12 +27109,6 @@
             "Nasdaq"
         ],
         [
-            "1991605",
-            "Yimutian Inc.",
-            "YMT",
-            "Nasdaq"
-        ],
-        [
             "1228627",
             "Opus Genetics, Inc.",
             "IRD",
@@ -27190,12 +27202,6 @@
             "798081",
             "LAKELAND INDUSTRIES INC",
             "LAKE",
-            "Nasdaq"
-        ],
-        [
-            "2028177",
-            "Youlife Group Inc.",
-            "YOUL",
             "Nasdaq"
         ],
         [
@@ -27511,12 +27517,6 @@
             "NYSE"
         ],
         [
-            "1997403",
-            "ZenaTech, Inc.",
-            "ZENA",
-            "Nasdaq"
-        ],
-        [
             "1496690",
             "BlueOne Card, Inc.",
             "BCRD",
@@ -27553,6 +27553,12 @@
             null
         ],
         [
+            "1991605",
+            "Yimutian Inc.",
+            "YMT",
+            "Nasdaq"
+        ],
+        [
             "1787400",
             "Nkarta, Inc.",
             "NKTX",
@@ -27572,7 +27578,7 @@
         ],
         [
             "2028355",
-            "Maywood Acquisition Corp.",
+            "Inflection Point Acquisition Corp. V",
             "MAYA",
             "Nasdaq"
         ],
@@ -27685,9 +27691,21 @@
             "Nasdaq"
         ],
         [
+            "1684505",
+            "Xtract One Technologies Inc.",
+            "XTRAF",
+            "OTC"
+        ],
+        [
             "1697818",
             "Amber International Holding Ltd",
             "AMBR",
+            "Nasdaq"
+        ],
+        [
+            "1997403",
+            "ZenaTech, Inc.",
+            "ZENA",
             "Nasdaq"
         ],
         [
@@ -27751,12 +27769,6 @@
             "Nasdaq"
         ],
         [
-            "1684505",
-            "Xtract One Technologies Inc.",
-            "XTRAF",
-            "OTC"
-        ],
-        [
             "1843477",
             "Spring Valley Acquisition Corp. II",
             "SVIIF",
@@ -27787,12 +27799,6 @@
             "Nasdaq"
         ],
         [
-            "1747661",
-            "Zeta Network Group",
-            "ZNB",
-            "Nasdaq"
-        ],
-        [
             "31107",
             "EASTERN CO",
             "EML",
@@ -27820,6 +27826,12 @@
             "1540684",
             "Atlas Lithium Corp",
             "ATLX",
+            "Nasdaq"
+        ],
+        [
+            "2028177",
+            "Youlife Group Inc.",
+            "YOUL",
             "Nasdaq"
         ],
         [
@@ -27997,12 +28009,6 @@
             "Nasdaq"
         ],
         [
-            "1941506",
-            "ZJK Industrial Co., Ltd.",
-            "ZJK",
-            "Nasdaq"
-        ],
-        [
             "866095",
             "ABRDN JAPAN EQUITY FUND, INC.",
             "JEQ",
@@ -28111,10 +28117,10 @@
             "NYSE"
         ],
         [
-            "1288770",
-            "XTRA-GOLD RESOURCES CORP",
-            "XTGRF",
-            "OTC"
+            "1747661",
+            "Zeta Network Group",
+            "ZNB",
+            "Nasdaq"
         ],
         [
             "72205",
@@ -28133,6 +28139,12 @@
             "Kestrel Group Ltd",
             "KG",
             "Nasdaq"
+        ],
+        [
+            "1288770",
+            "XTRA-GOLD RESOURCES CORP",
+            "XTGRF",
+            "OTC"
         ],
         [
             "1732406",
@@ -28241,6 +28253,12 @@
             "CHEGG, INC",
             "CHGG",
             "NYSE"
+        ],
+        [
+            "1684144",
+            "Zomedica Corp.",
+            "ZOMDF",
+            "OTC"
         ],
         [
             "1138723",
@@ -28501,12 +28519,6 @@
             "Nasdaq"
         ],
         [
-            "1975641",
-            "Zhengye Biotechnology Holding Ltd",
-            "ZYBT",
-            "Nasdaq"
-        ],
-        [
             "1675033",
             "Great Elm Capital Corp.",
             "GECC",
@@ -28541,6 +28553,12 @@
             "EMPIRE PETROLEUM CORP",
             "EP",
             "NYSE"
+        ],
+        [
+            "1975641",
+            "Zhengye Biotechnology Holding Ltd",
+            "ZYBT",
+            "Nasdaq"
         ],
         [
             "811922",
@@ -28669,12 +28687,6 @@
             "Nasdaq"
         ],
         [
-            "1516899",
-            "Yatra Online, Inc.",
-            "YTRA",
-            "Nasdaq"
-        ],
-        [
             "706863",
             "UNION BANKSHARES INC",
             "UNB",
@@ -28783,6 +28795,12 @@
             "Nasdaq"
         ],
         [
+            "1725160",
+            "Zentalis Pharmaceuticals, Inc.",
+            "ZNTL",
+            "Nasdaq"
+        ],
+        [
             "1416090",
             "BLUSKY AI INC.",
             "BSAI",
@@ -28831,12 +28849,6 @@
             "NYSE"
         ],
         [
-            "1725160",
-            "Zentalis Pharmaceuticals, Inc.",
-            "ZNTL",
-            "Nasdaq"
-        ],
-        [
             "1746473",
             "PLIANT THERAPEUTICS, INC.",
             "PLRX",
@@ -28877,12 +28889,6 @@
             "AsiaStrategy",
             "SORA",
             "Nasdaq"
-        ],
-        [
-            "1684144",
-            "Zomedica Corp.",
-            "ZOMDF",
-            "OTC"
         ],
         [
             "2017950",
@@ -28942,6 +28948,12 @@
             "1422142",
             "Whitehawk Therapeutics, Inc.",
             "WHWK",
+            "Nasdaq"
+        ],
+        [
+            "1516899",
+            "Yatra Online, Inc.",
+            "YTRA",
             "Nasdaq"
         ],
         [
@@ -29021,12 +29033,6 @@
             "Plum Acquisition Corp. III",
             "PLMJF",
             "OTC"
-        ],
-        [
-            "1453593",
-            "Xtant Medical Holdings, Inc.",
-            "XTNT",
-            "NYSE"
         ],
         [
             "771856",
@@ -29341,6 +29347,12 @@
             "OTC"
         ],
         [
+            "1453593",
+            "Xtant Medical Holdings, Inc.",
+            "XTNT",
+            "NYSE"
+        ],
+        [
             "2043630",
             "StoneBridge Acquisition II Corp",
             "APAC",
@@ -29485,6 +29497,12 @@
             "OTC"
         ],
         [
+            "1992818",
+            "ZOOZ Strategy Ltd.",
+            "ZOOZ",
+            "Nasdaq"
+        ],
+        [
             "785557",
             "DLH Holdings Corp.",
             "DLHC",
@@ -29575,18 +29593,6 @@
             "Nasdaq"
         ],
         [
-            "1904501",
-            "Zentek Ltd.",
-            "ZTEK",
-            "Nasdaq"
-        ],
-        [
-            "1992818",
-            "ZOOZ Strategy Ltd.",
-            "ZOOZ",
-            "Nasdaq"
-        ],
-        [
             "1884516",
             "Drilling Tools International Corp",
             "DTI",
@@ -29635,6 +29641,12 @@
             "Nasdaq"
         ],
         [
+            "2020987",
+            "YHN Acquisition I Ltd",
+            "YHNA",
+            "Nasdaq"
+        ],
+        [
             "2028201",
             "Columbus Acquisition Corp/Cayman Islands",
             "COLA",
@@ -29665,16 +29677,16 @@
             "Nasdaq"
         ],
         [
+            "1904501",
+            "Zentek Ltd.",
+            "ZTEK",
+            "Nasdaq"
+        ],
+        [
             "1023109",
             "CANALASKA URANIUM LTD",
             "CVVUF",
             "OTC"
-        ],
-        [
-            "2020987",
-            "YHN Acquisition I Ltd",
-            "YHNA",
-            "Nasdaq"
         ],
         [
             "1863218",
@@ -30187,12 +30199,6 @@
             "Nasdaq"
         ],
         [
-            "1836934",
-            "Zenvia Inc.",
-            "ZENV",
-            "Nasdaq"
-        ],
-        [
             "1823878",
             "PLAYSTUDIOS, Inc.",
             "MYPS",
@@ -30607,6 +30613,12 @@
             "Nasdaq"
         ],
         [
+            "1836934",
+            "Zenvia Inc.",
+            "ZENV",
+            "Nasdaq"
+        ],
+        [
             "1059689",
             "BrightRock Gold Corp",
             "BRGC",
@@ -30739,12 +30751,6 @@
             "Nasdaq"
         ],
         [
-            "1868395",
-            "Planet Image International Ltd",
-            "YIBO",
-            "Nasdaq"
-        ],
-        [
             "1874875",
             "Hour Loop, Inc",
             "HOUR",
@@ -30814,6 +30820,12 @@
             "1224133",
             "MARCHEX INC",
             "MCHX",
+            "Nasdaq"
+        ],
+        [
+            "1868395",
+            "Planet Image International Ltd",
+            "YIBO",
             "Nasdaq"
         ],
         [
@@ -31178,7 +31190,7 @@
         ],
         [
             "1001171",
-            "BROADWAY FINANCIAL CORP DE",
+            "BROADWAY FINANCIAL CORP \\DE\\",
             "BYFC",
             "Nasdaq"
         ],
@@ -31411,6 +31423,12 @@
             "NYSE"
         ],
         [
+            "1993463",
+            "YSX Tech Co., Ltd",
+            "YSXT",
+            "Nasdaq"
+        ],
+        [
             "1663038",
             "Quantumzyme Corp.",
             "QTZM",
@@ -31573,12 +31591,6 @@
             "OTC"
         ],
         [
-            "1993463",
-            "YSX Tech Co., Ltd",
-            "YSXT",
-            "Nasdaq"
-        ],
-        [
             "2063863",
             "Elauwit Connection, Inc.",
             "ELWT",
@@ -31619,6 +31631,12 @@
             "Upland Software, Inc.",
             "UPLD",
             "Nasdaq"
+        ],
+        [
+            "917225",
+            "SOLITARIO RESOURCES CORP.",
+            "XPL",
+            "NYSE"
         ],
         [
             "1840229",
@@ -31679,12 +31697,6 @@
             "XChange TEC.INC",
             "XHG",
             "Nasdaq"
-        ],
-        [
-            "917225",
-            "SOLITARIO RESOURCES CORP.",
-            "XPL",
-            "NYSE"
         ],
         [
             "2030763",
@@ -32119,12 +32131,6 @@
             "OTC"
         ],
         [
-            "1872090",
-            "YXT.COM GROUP HOLDING Ltd",
-            "YXT",
-            "Nasdaq"
-        ],
-        [
             "91668",
             "SOLITRON DEVICES INC",
             "SODI",
@@ -32203,12 +32209,6 @@
             "Nasdaq"
         ],
         [
-            "1821468",
-            "17 Education & Technology Group Inc.",
-            "YQ",
-            "Nasdaq"
-        ],
-        [
             "1843656",
             "Royalty Management Holding Corp",
             "RMCO",
@@ -32281,6 +32281,18 @@
             "Nasdaq"
         ],
         [
+            "1529113",
+            "XTI Aerospace, Inc.",
+            "XTIA",
+            "Nasdaq"
+        ],
+        [
+            "1821468",
+            "17 Education & Technology Group Inc.",
+            "YQ",
+            "Nasdaq"
+        ],
+        [
             "2033383",
             "Fusemachines Inc.",
             "FUSE",
@@ -32327,12 +32339,6 @@
             "EAGLE CAPITAL GROWTH FUND, INC.",
             "GRF",
             "NYSE"
-        ],
-        [
-            "1529113",
-            "XTI Aerospace, Inc.",
-            "XTIA",
-            "Nasdaq"
         ],
         [
             "1850119",
@@ -32533,12 +32539,6 @@
             "OTC"
         ],
         [
-            "1837821",
-            "Jin Medical International Ltd.",
-            "ZJYL",
-            "Nasdaq"
-        ],
-        [
             "1751876",
             "Paranovus Entertainment Technology Ltd.",
             "PAVS",
@@ -32725,6 +32725,12 @@
             "Nasdaq"
         ],
         [
+            "1837821",
+            "Jin Medical International Ltd.",
+            "ZJYL",
+            "Nasdaq"
+        ],
+        [
             "1839154",
             "Nevada King Gold Corp.",
             "NKGFF",
@@ -32819,6 +32825,12 @@
             "HEALTHY EXTRACTS INC.",
             "HYEX",
             "OTC"
+        ],
+        [
+            "1872090",
+            "YXT.COM GROUP HOLDING Ltd",
+            "YXT",
+            "Nasdaq"
         ],
         [
             "1924482",
@@ -33109,12 +33121,6 @@
             "Nasdaq"
         ],
         [
-            "1490596",
-            "GoviEx Uranium Inc.",
-            "GVXXF",
-            "OTC"
-        ],
-        [
             "1886894",
             "Snail, Inc.",
             "SNAL",
@@ -33265,12 +33271,6 @@
             "Nasdaq"
         ],
         [
-            "1667313",
-            "Zedge, Inc.",
-            "ZDGE",
-            "NYSE"
-        ],
-        [
             "1295514",
             "MDWerks, Inc.",
             "MDWK",
@@ -33289,16 +33289,22 @@
             "Nasdaq"
         ],
         [
+            "1966750",
+            "Zhibao Technology Inc.",
+            "ZBAO",
+            "Nasdaq"
+        ],
+        [
+            "1667313",
+            "Zedge, Inc.",
+            "ZDGE",
+            "NYSE"
+        ],
+        [
             "1491434",
             "SERNOVA CORP.",
             "SEOVF",
             "OTC"
-        ],
-        [
-            "1738906",
-            "111, Inc.",
-            "YI",
-            "Nasdaq"
         ],
         [
             "101594",
@@ -33425,6 +33431,12 @@
             "Harvard Apparatus Regenerative Technology, Inc.",
             "HRGN",
             "OTC"
+        ],
+        [
+            "1738906",
+            "111, Inc.",
+            "YI",
+            "Nasdaq"
         ],
         [
             "2020228",
@@ -33670,12 +33682,6 @@
             "1880438",
             "AN2 Therapeutics, Inc.",
             "ANTX",
-            "Nasdaq"
-        ],
-        [
-            "1966750",
-            "Zhibao Technology Inc.",
-            "ZBAO",
             "Nasdaq"
         ],
         [
@@ -34309,12 +34315,6 @@
             "OTC"
         ],
         [
-            "2011458",
-            "Zenta Group Co Ltd",
-            "ZGM",
-            "Nasdaq"
-        ],
-        [
             "1446159",
             "Predictive Oncology Inc.",
             "POAI",
@@ -34349,6 +34349,12 @@
             "ATICO MINING Corp",
             "ATCMF",
             "OTC"
+        ],
+        [
+            "2011458",
+            "Zenta Group Co Ltd",
+            "ZGM",
+            "Nasdaq"
         ],
         [
             "1916241",
@@ -35125,12 +35131,6 @@
             "NYSE"
         ],
         [
-            "1674440",
-            "AIRWA INC.",
-            "YYAI",
-            "Nasdaq"
-        ],
-        [
             "1310488",
             "BIOFORCE NANOSCIENCES HOLDINGS, INC.",
             "BFNH",
@@ -35317,6 +35317,12 @@
             "OTC"
         ],
         [
+            "846475",
+            "ZYNEX INC",
+            "ZYXI",
+            "Nasdaq"
+        ],
+        [
             "926617",
             "Aspira Women's Health Inc.",
             "AWHL",
@@ -35351,6 +35357,12 @@
             "Ryde Group Ltd",
             "RYDE",
             "NYSE"
+        ],
+        [
+            "1674440",
+            "AIRWA INC.",
+            "YYAI",
+            "Nasdaq"
         ],
         [
             "1735041",
@@ -35471,12 +35483,6 @@
             "SURGE COMPONENTS INC",
             "SPRS",
             "OTC"
-        ],
-        [
-            "1637147",
-            "zSpace, Inc.",
-            "ZSPC",
-            "Nasdaq"
         ],
         [
             "1620463",
@@ -35707,12 +35713,6 @@
             "OTC"
         ],
         [
-            "846475",
-            "ZYNEX INC",
-            "ZYXI",
-            "Nasdaq"
-        ],
-        [
             "1096275",
             "Worksport Ltd",
             "WKSP",
@@ -35759,6 +35759,12 @@
             "Argo Blockchain Plc",
             "ARBK",
             "Nasdaq"
+        ],
+        [
+            "1945138",
+            "Zefiro Methane Corp.",
+            "ZEFIF",
+            "OTC"
         ],
         [
             "1103833",
@@ -35825,12 +35831,6 @@
             "IRIDEX CORP",
             "IRIX",
             "Nasdaq"
-        ],
-        [
-            "1945138",
-            "Zefiro Methane Corp.",
-            "ZEFIF",
-            "OTC"
         ],
         [
             "1996192",
@@ -35929,16 +35929,16 @@
             "Nasdaq"
         ],
         [
-            "1438943",
-            "RANGE IMPACT, INC.",
-            "RNGE",
-            "OTC"
-        ],
-        [
             "1985337",
             "YY Group Holding Ltd.",
             "YYGH",
             "Nasdaq"
+        ],
+        [
+            "1438943",
+            "RANGE IMPACT, INC.",
+            "RNGE",
+            "OTC"
         ],
         [
             "1832487",
@@ -36056,7 +36056,7 @@
         ],
         [
             "1969928",
-            "CTRL GROUP Ltd",
+            "TJGC GROUP Ltd",
             "MCTR",
             "Nasdaq"
         ],
@@ -36103,16 +36103,16 @@
             "OTC"
         ],
         [
-            "1687451",
-            "ZK International Group Co., Ltd.",
-            "ZKIN",
-            "Nasdaq"
-        ],
-        [
             "1558924",
             "Tenet Fintech Group Inc.",
             "PKKFF",
             "OTC"
+        ],
+        [
+            "1785566",
+            "Zhongchao Inc.",
+            "ZCMD",
+            "Nasdaq"
         ],
         [
             "1406944",
@@ -36166,12 +36166,6 @@
             "1743745",
             "Greenlane Holdings, Inc.",
             "GNLN",
-            "Nasdaq"
-        ],
-        [
-            "1785566",
-            "Zhongchao Inc.",
-            "ZCMD",
             "Nasdaq"
         ],
         [
@@ -36271,6 +36265,12 @@
             "NYSE"
         ],
         [
+            "1687451",
+            "ZK International Group Co., Ltd.",
+            "ZKIN",
+            "Nasdaq"
+        ],
+        [
             "1875016",
             "J-Star Holding Co., Ltd.",
             "YMAT",
@@ -36299,6 +36299,12 @@
             "First American Uranium Inc.",
             "NIOMF",
             "OTC"
+        ],
+        [
+            "1042187",
+            "YUNHONG GREEN CTI LTD.",
+            "YHGJ",
+            "Nasdaq"
         ],
         [
             "2024114",
@@ -36346,12 +36352,6 @@
             "1980210",
             "WF Holding Ltd",
             "WFF",
-            "Nasdaq"
-        ],
-        [
-            "1042187",
-            "YUNHONG GREEN CTI LTD.",
-            "YHGJ",
             "Nasdaq"
         ],
         [
@@ -36493,6 +36493,12 @@
             "NYSE"
         ],
         [
+            "1637147",
+            "zSpace, Inc.",
+            "ZSPC",
+            "Nasdaq"
+        ],
+        [
             "1610820",
             "BriaCell Therapeutics Corp.",
             "BCTX",
@@ -36529,12 +36535,6 @@
             "Nasdaq"
         ],
         [
-            "1557376",
-            "Zeo ScientifiX, Inc.",
-            "ZEOX",
-            "OTC"
-        ],
-        [
             "1839285",
             "Healthcare Triangle, Inc.",
             "HCTI",
@@ -36551,6 +36551,12 @@
             "MANGOCEUTICALS, INC.",
             "MGRX",
             "Nasdaq"
+        ],
+        [
+            "1557376",
+            "Zeo ScientifiX, Inc.",
+            "ZEOX",
+            "OTC"
         ],
         [
             "924168",
@@ -37021,6 +37027,12 @@
             "OTC"
         ],
         [
+            "1894954",
+            "Expion360 Inc.",
+            "XPON",
+            "Nasdaq"
+        ],
+        [
             "2022308",
             "Classover Holdings, Inc.",
             "KIDZ",
@@ -37037,12 +37049,6 @@
             "Plurilock Security Inc.",
             "PLCKF",
             "OTC"
-        ],
-        [
-            "1966678",
-            "DirectBooking Technology Co., Ltd.",
-            "ZDAI",
-            "Nasdaq"
         ],
         [
             "31667",
@@ -37097,6 +37103,12 @@
             "Nepra Foods Inc.",
             "NPRFF",
             "OTC"
+        ],
+        [
+            "1966678",
+            "DirectBooking Technology Co., Ltd.",
+            "ZDAI",
+            "Nasdaq"
         ],
         [
             "1688126",
@@ -37273,12 +37285,6 @@
             "Nasdaq"
         ],
         [
-            "1894954",
-            "Expion360 Inc.",
-            "XPON",
-            "Nasdaq"
-        ],
-        [
             "1574565",
             "Evogene Ltd.",
             "EVGN",
@@ -37379,6 +37385,12 @@
             "KwikClick, Inc.",
             "KWIK",
             "OTC"
+        ],
+        [
+            "1755058",
+            "ATIF Holdings Ltd",
+            "ZBAI",
+            "Nasdaq"
         ],
         [
             "1414382",
@@ -37504,12 +37516,6 @@
             "1938186",
             "Jayud Global Logistics Ltd",
             "JYD",
-            "Nasdaq"
-        ],
-        [
-            "1755058",
-            "ATIF Holdings Ltd",
-            "ZBAI",
             "Nasdaq"
         ],
         [
@@ -37681,6 +37687,12 @@
             "Nasdaq"
         ],
         [
+            "1843165",
+            "LQR House Inc.",
+            "YHC",
+            "Nasdaq"
+        ],
+        [
             "313364",
             "MESA ROYALTY TRUST/TX",
             "MTR",
@@ -37774,12 +37786,6 @@
             "1835615",
             "Meihua International Medical Technologies Co., Ltd.",
             "MHUA",
-            "Nasdaq"
-        ],
-        [
-            "1843165",
-            "LQR House Inc.",
-            "YHC",
             "Nasdaq"
         ],
         [
@@ -37921,12 +37927,6 @@
             "Nasdaq"
         ],
         [
-            "1413745",
-            "Yueda Digital Holding",
-            "YDKG",
-            "Nasdaq"
-        ],
-        [
             "1739174",
             "BiomX Inc.",
             "PHGE",
@@ -38023,27 +38023,15 @@
             "Nasdaq"
         ],
         [
-            "1759614",
-            "Yunji Inc.",
-            "YJ",
-            "Nasdaq"
+            "1465311",
+            "Zicix Corp",
+            "ZICX",
+            "OTC"
         ],
         [
             "1331612",
             "AnTix Holdings, Inc.",
             "IMTH",
-            "OTC"
-        ],
-        [
-            "1023549",
-            "XTL BIOPHARMACEUTICALS LTD",
-            "XTLB",
-            "Nasdaq"
-        ],
-        [
-            "1858400",
-            "Golden Independence Mining Corp.",
-            "GIDMD",
             "OTC"
         ],
         [
@@ -38110,12 +38098,6 @@
             "1866146",
             "Interra Copper Corp.",
             "IMIMF",
-            "OTC"
-        ],
-        [
-            "1465311",
-            "Zicix Corp",
-            "ZICX",
             "OTC"
         ],
         [
@@ -38299,9 +38281,21 @@
             "Nasdaq"
         ],
         [
+            "1759614",
+            "Yunji Inc.",
+            "YJ",
+            "Nasdaq"
+        ],
+        [
             "1781397",
             "EpicQuest Education Group International Ltd",
             "EEIQ",
+            "Nasdaq"
+        ],
+        [
+            "1413745",
+            "Yueda Digital Holding",
+            "YDKG",
             "Nasdaq"
         ],
         [
@@ -38362,6 +38356,12 @@
             "1701963",
             "Versus Systems Inc.",
             "VS",
+            "Nasdaq"
+        ],
+        [
+            "1023549",
+            "XTL BIOPHARMACEUTICALS LTD",
+            "XTLB",
             "Nasdaq"
         ],
         [
@@ -38437,6 +38437,12 @@
             "OTC"
         ],
         [
+            "1047227",
+            "ZTEST ELECTRONICS INC /FI",
+            "ZTSTF",
+            "OTC"
+        ],
+        [
             "1498710",
             "Spirit Aviation Holdings, Inc.",
             "FLYYQ",
@@ -38507,12 +38513,6 @@
             "Fast Track Group",
             "FTRK",
             "Nasdaq"
-        ],
-        [
-            "1047227",
-            "ZTEST ELECTRONICS INC /FI",
-            "ZTSTF",
-            "OTC"
         ],
         [
             "2016337",
@@ -38635,22 +38635,10 @@
             "Nasdaq"
         ],
         [
-            "1964946",
-            "Youxin Technology Ltd",
-            "YAAS",
-            "Nasdaq"
-        ],
-        [
             "1815021",
             "Boqii Holding Ltd",
             "BQ",
             "NYSE"
-        ],
-        [
-            "1347858",
-            "22nd Century Group, Inc.",
-            "XXII",
-            "Nasdaq"
         ],
         [
             "1471727",
@@ -38791,6 +38779,12 @@
             "Nasdaq"
         ],
         [
+            "1347858",
+            "22nd Century Group, Inc.",
+            "XXII",
+            "Nasdaq"
+        ],
+        [
             "1978527",
             "Globavend Holdings Ltd",
             "GVH",
@@ -38857,6 +38851,12 @@
             "Nasdaq"
         ],
         [
+            "1964946",
+            "Youxin Technology Ltd",
+            "YAAS",
+            "Nasdaq"
+        ],
+        [
             "1648087",
             "AMERICAN REBEL HOLDINGS INC",
             "AREB",
@@ -38920,12 +38920,6 @@
             "1367083",
             "Sonoma Pharmaceuticals, Inc.",
             "SNOA",
-            "Nasdaq"
-        ],
-        [
-            "1782037",
-            "MingZhu Logistics Holdings Ltd",
-            "YGMZ",
             "Nasdaq"
         ],
         [
@@ -39011,6 +39005,12 @@
             "ORANGEKLOUD TECHNOLOGY INC.",
             "ORKT",
             "Nasdaq"
+        ],
+        [
+            "1279620",
+            "Zoned Properties, Inc.",
+            "ZDPY",
+            "OTC"
         ],
         [
             "1006028",
@@ -39157,12 +39157,6 @@
             "Nasdaq"
         ],
         [
-            "1279620",
-            "Zoned Properties, Inc.",
-            "ZDPY",
-            "OTC"
-        ],
-        [
             "1912582",
             "Thunder Power Holdings, Inc.",
             "AIEV",
@@ -39241,15 +39235,15 @@
             "OTC"
         ],
         [
-            "1650101",
-            "ADDENTAX GROUP CORP.",
-            "ATXG",
+            "1782037",
+            "MingZhu Logistics Holdings Ltd",
+            "YGMZ",
             "Nasdaq"
         ],
         [
-            "1410428",
-            "XWELL, Inc.",
-            "XWEL",
+            "1650101",
+            "ADDENTAX GROUP CORP.",
+            "ATXG",
             "Nasdaq"
         ],
         [
@@ -39335,12 +39329,6 @@
             "Raytech Holding Ltd",
             "RAY",
             "Nasdaq"
-        ],
-        [
-            "1644903",
-            "cbdMD, Inc.",
-            "YCBD",
-            "NYSE"
         ],
         [
             "1738758",
@@ -39523,6 +39511,12 @@
             "OTC"
         ],
         [
+            "1410428",
+            "XWELL, Inc.",
+            "XWEL",
+            "Nasdaq"
+        ],
+        [
             "1421981",
             "Peer To Peer Network",
             "PTOP",
@@ -39599,6 +39593,12 @@
             "Mobile-health Network Solutions",
             "MNDR",
             "Nasdaq"
+        ],
+        [
+            "1644903",
+            "cbdMD, Inc.",
+            "YCBD",
+            "NYSE"
         ],
         [
             "1481857",
@@ -39907,12 +39907,6 @@
             "OTC"
         ],
         [
-            "1613979",
-            "ZEPHYR MINERALS LTD.",
-            "ZPHYF",
-            "OTC"
-        ],
-        [
             "1168981",
             "CordovaCann Corp.",
             "LVRLF",
@@ -40007,6 +40001,12 @@
             "Polyrizon Ltd.",
             "PLRZ",
             "Nasdaq"
+        ],
+        [
+            "1613979",
+            "ZEPHYR MINERALS LTD.",
+            "ZPHYF",
+            "OTC"
         ],
         [
             "1530425",
@@ -40153,6 +40153,12 @@
             "OTC"
         ],
         [
+            "1729214",
+            "XORTX Therapeutics Inc.",
+            "XRTX",
+            "Nasdaq"
+        ],
+        [
             "1701756",
             "Sadot Group Inc.",
             "SDOT",
@@ -40163,12 +40169,6 @@
             "Trillion Energy International Inc.",
             "TRLEF",
             "OTC"
-        ],
-        [
-            "1729214",
-            "XORTX Therapeutics Inc.",
-            "XRTX",
-            "Nasdaq"
         ],
         [
             "1809750",
@@ -40283,12 +40283,6 @@
             "Star Gold Corp.",
             "SRGZ",
             "OTC"
-        ],
-        [
-            "1956741",
-            "CleanCore Solutions, Inc.",
-            "ZONE",
-            "NYSE"
         ],
         [
             "1611747",
@@ -40459,10 +40453,22 @@
             "OTC"
         ],
         [
+            "1956741",
+            "CleanCore Solutions, Inc.",
+            "ZONE",
+            "NYSE"
+        ],
+        [
             "1946703",
             "WEBUY GLOBAL LTD",
             "WBUY",
             "Nasdaq"
+        ],
+        [
+            "895464",
+            "Yubo International Biotech Ltd",
+            "YBGJ",
+            "OTC"
         ],
         [
             "1873213",
@@ -40498,12 +40504,6 @@
             "856984",
             "QHSLab, Inc.",
             "USAQ",
-            "OTC"
-        ],
-        [
-            "895464",
-            "Yubo International Biotech Ltd",
-            "YBGJ",
             "OTC"
         ],
         [
@@ -40969,6 +40969,12 @@
             "OTC"
         ],
         [
+            "1854275",
+            "Zoomcar Holdings, Inc.",
+            "ZCAR",
+            "OTC"
+        ],
+        [
             "1199392",
             "EMERGENT METALS CORP.",
             "EGMCF",
@@ -41047,12 +41053,6 @@
             "OTC"
         ],
         [
-            "1854275",
-            "Zoomcar Holdings, Inc.",
-            "ZCAR",
-            "OTC"
-        ],
-        [
             "1643721",
             "LEAFBUYER TECHNOLOGIES, INC.",
             "LBUY",
@@ -41074,7 +41074,7 @@
             "1496383",
             "Ilustrato Pictures International Inc.",
             "ILUS",
-            "OTC"
+            null
         ],
         [
             "1455684",
@@ -41137,6 +41137,12 @@
             "OTC"
         ],
         [
+            "1859007",
+            "ZyVersa Therapeutics, Inc.",
+            "ZVSA",
+            "OTC"
+        ],
+        [
             "1953988",
             "Helio Corp /FL/",
             "HLEO",
@@ -41165,12 +41171,6 @@
             "Harrison Global Holdings Inc.",
             "BLMZ",
             "Nasdaq"
-        ],
-        [
-            "1859007",
-            "ZyVersa Therapeutics, Inc.",
-            "ZVSA",
-            "OTC"
         ],
         [
             "1873722",
@@ -41254,12 +41254,6 @@
             "790273",
             "CONECTISYS CORP",
             "CONC",
-            "OTC"
-        ],
-        [
-            "1955104",
-            "Zapp Electric Vehicles Group Ltd",
-            "ZAPPF",
             "OTC"
         ],
         [
@@ -41374,6 +41368,12 @@
             "1973368",
             "SRIVARU Holding Ltd",
             "SVUHF",
+            "OTC"
+        ],
+        [
+            "1955104",
+            "Zapp Electric Vehicles Group Ltd",
+            "ZAPPF",
             "OTC"
         ],
         [
@@ -41722,7 +41722,7 @@
             "1657045",
             "NEXT-ChemX Corporation.",
             "CHMX",
-            "OTC"
+            null
         ],
         [
             "1227282",
@@ -41908,13 +41908,13 @@
             "1695473",
             "Greater Cannabis Company, Inc.",
             "GCAN",
-            null
+            "OTC"
         ],
         [
             "1761696",
             "Crown Electrokinetics Corp.",
             "CRKN",
-            "OTC"
+            null
         ],
         [
             "774415",
@@ -41956,7 +41956,7 @@
             "799698",
             "LadRx Corp",
             "LADX",
-            "OTC"
+            null
         ],
         [
             "1499961",
@@ -42016,7 +42016,7 @@
             "1419559",
             "CAM GROUP, INC.",
             "CAMG",
-            "OTC"
+            null
         ],
         [
             "1803096",
@@ -42070,7 +42070,7 @@
             "2073553",
             "AI Infrastructure Acquisition Corp.",
             "AIIA",
-            null
+            "NYSE"
         ],
         [
             "1912966",
@@ -42137,12 +42137,6 @@
             "VOYA CREDIT INCOME FUND",
             "XSIAX",
             null
-        ],
-        [
-            "1174511",
-            "ANADOLU EFES BIRACILIK VE MALT SANAYI A S/ADR",
-            "AEBMY",
-            "OTC"
         ],
         [
             "1254699",
@@ -42604,7 +42598,7 @@
             "1791703",
             "Titan Mining Corp",
             "TII",
-            null
+            "NYSE"
         ],
         [
             "1793497",
@@ -42647,6 +42641,12 @@
             "CoinShares Bitcoin ETF",
             "BRRR",
             "Nasdaq"
+        ],
+        [
+            "1842726",
+            "London Stock Exchange Group plc",
+            "LSEGY",
+            "OTC"
         ],
         [
             "1850391",
@@ -42695,6 +42695,12 @@
             "Invesco Galaxy Bitcoin ETF",
             "BTCO",
             "CBOE"
+        ],
+        [
+            "1856491",
+            "Clover Biopharmaceuticals, Ltd.",
+            "CBPHF",
+            "OTC"
         ],
         [
             "1857629",
@@ -43321,6 +43327,12 @@
             "CBOE"
         ],
         [
+            "2034012",
+            "Grayscale Sui Trust (SUI)",
+            "GSUI",
+            "OTC"
+        ],
+        [
             "2034300",
             "Digital Domain Holdings Limited/ADR",
             "DDHLY",
@@ -43358,7 +43370,7 @@
         ],
         [
             "2037427",
-            "Grayscale XRP Trust",
+            "Grayscale XRP Trust ETF",
             "GXRP",
             null
         ],
@@ -43628,7 +43640,7 @@
         ],
         [
             "2055510",
-            "Grayscale Dogecoin Trust (DOGE)",
+            "Grayscale Dogecoin Trust ETF",
             "GDOG",
             null
         ],
@@ -44284,7 +44296,7 @@
             "2078653",
             "Range Capital Acquisition Corp II",
             "RNGT",
-            null
+            "Nasdaq"
         ],
         [
             "2078856",
@@ -44641,6 +44653,12 @@
             null
         ],
         [
+            "2093654",
+            "Zijin Gold International Co Limited/ADR",
+            "ZJGIY",
+            "OTC"
+        ],
+        [
             "2093667",
             "Maruwa Co., Ltd./ADR",
             "MRUWY",
@@ -44665,6 +44683,12 @@
             null
         ],
         [
+            "2094100",
+            "PT Medco Energi Internasional Tbk/ADR",
+            "MDCOY",
+            "OTC"
+        ],
+        [
             "2094201",
             "DPC DASH LTD/ADR",
             "DPDSY",
@@ -44675,6 +44699,18 @@
             "Suncrete, Inc.",
             "RMIX",
             null
+        ],
+        [
+            "2094687",
+            "Chery Automobile Co., Ltd./ADR",
+            "CRAUY",
+            "OTC"
+        ],
+        [
+            "2094691",
+            "Ottobock SE & Co. KGaA/ADR",
+            "OBCKF",
+            "OTC"
         ],
         [
             "2095161",
@@ -46333,12 +46369,6 @@
             "OTC"
         ],
         [
-            "750004",
-            "Light & Wonder, Inc.",
-            "LNW",
-            "Nasdaq"
-        ],
-        [
             "1289688",
             "Jardine Cycle & Carriage Ltd.",
             "JCYCF",
@@ -46705,12 +46735,6 @@
             "Nasdaq"
         ],
         [
-            "1437470",
-            "Mytilineos Holdings S.A.",
-            "MYTHF",
-            "OTC"
-        ],
-        [
             "1592049",
             "Ryohin Keikaku Co/ADR",
             "RYKKF",
@@ -46897,12 +46921,6 @@
             "OTC"
         ],
         [
-            "1489082",
-            "Medco Energi Internasional Tbk PT/ADR/",
-            "PTGIF",
-            "OTC"
-        ],
-        [
             "18654",
             "Ameren Illinois Co",
             "AILLM",
@@ -47026,12 +47044,6 @@
             "310522",
             "FEDERAL NATIONAL MORTGAGE ASSOCIATION FANNIE MAE",
             "FNMFM",
-            "OTC"
-        ],
-        [
-            "1174511",
-            "ANADOLU EFES BIRACILIK VE MALT SANAYI A S/ADR",
-            "AEBZY",
             "OTC"
         ],
         [
@@ -47443,12 +47455,6 @@
             "Nasdaq"
         ],
         [
-            "1527762",
-            "Chaince Digital Holdings Inc.",
-            "MFH",
-            "Nasdaq"
-        ],
-        [
             "1452857",
             "STEEL PARTNERS HOLDINGS L.P.",
             "SPLP",
@@ -47587,12 +47593,6 @@
             "Nasdaq"
         ],
         [
-            "1285786",
-            "EMX Royalty Corp",
-            "EMX",
-            "NYSE"
-        ],
-        [
             "1604174",
             "Eagle Point Credit Co Inc.",
             "ECCX",
@@ -47710,12 +47710,6 @@
             "1466026",
             "Midland States Bancorp, Inc.",
             "MSBI",
-            "Nasdaq"
-        ],
-        [
-            "1932770",
-            "QuantaSing Group Ltd",
-            "QSG",
             "Nasdaq"
         ],
         [
@@ -47959,12 +47953,6 @@
             "OTC"
         ],
         [
-            "1826397",
-            "AVAX ONE TECHNOLOGY LTD.",
-            "AGRI",
-            "Nasdaq"
-        ],
-        [
             "71508",
             "ENTERGY NEW ORLEANS, LLC",
             "ENO",
@@ -48089,12 +48077,6 @@
             "Alpha One Inc.",
             "AOAO",
             "OTC"
-        ],
-        [
-            "1509745",
-            "CYPHERPUNK TECHNOLOGIES INC.",
-            "LPTX",
-            "Nasdaq"
         ],
         [
             "793040",
@@ -48319,12 +48301,6 @@
             "OTC"
         ],
         [
-            "899394",
-            "HARBOR DIVERSIFIED, INC.",
-            "HRBR",
-            "OTC"
-        ],
-        [
             "1302084",
             "NextSource Materials Inc.",
             "NSRCF",
@@ -48401,12 +48377,6 @@
             "OceanPal Inc.",
             "OP",
             "Nasdaq"
-        ],
-        [
-            "1734875",
-            "Mid-Southern Bancorp, Inc.",
-            "MSVB",
-            "OTC"
         ],
         [
             "1605057",
@@ -48502,18 +48472,6 @@
             "1723059",
             "Bio Essence Corp",
             "BIOE",
-            "OTC"
-        ],
-        [
-            "1175483",
-            "Drive Shack Inc.",
-            "DSHK",
-            "OTC"
-        ],
-        [
-            "1850262",
-            "Integral Acquisition Corp 1",
-            "INTE",
             "OTC"
         ],
         [
@@ -48761,12 +48719,6 @@
             "CoJax Oil & Gas Corp",
             "CJAX",
             "OTC"
-        ],
-        [
-            "1879373",
-            "GRAPHJET TECHNOLOGY",
-            "GTI",
-            "Nasdaq"
         ],
         [
             "1092570",
@@ -49018,12 +48970,6 @@
             "825171",
             "37 CAPITAL INC",
             "HHHEF",
-            "OTC"
-        ],
-        [
-            "1776048",
-            "Ameramex International Inc",
-            "AMMX",
             "OTC"
         ],
         [
@@ -49357,12 +49303,6 @@
             "OTC"
         ],
         [
-            "319458",
-            "Enservco Corp",
-            "ENSV",
-            "OTC"
-        ],
-        [
             "1498067",
             "CITRINE GLOBAL, CORP.",
             "CTGL",
@@ -49429,12 +49369,6 @@
             "OTC"
         ],
         [
-            "884380",
-            "1812 Brewing Company, Inc.",
-            "KEGS",
-            "OTC"
-        ],
-        [
             "1490054",
             "VERDE BIO HOLDINGS, INC.",
             "APHD",
@@ -49468,12 +49402,6 @@
             "1138867",
             "EESTech, Inc.",
             "EESH",
-            "OTC"
-        ],
-        [
-            "918545",
-            "BALTIC INTERNATIONAL USA INC",
-            "BISA",
             "OTC"
         ],
         [
@@ -50755,12 +50683,6 @@
             "OTC"
         ],
         [
-            "883569",
-            "Fossil Group, Inc.",
-            "FOSLL",
-            "Nasdaq"
-        ],
-        [
             "883948",
             "Atlantic Union Bankshares Corp",
             "AUB-PA",
@@ -51865,6 +51787,12 @@
             "OTC"
         ],
         [
+            "1101215",
+            "BREAD FINANCIAL HOLDINGS, INC.",
+            "BFHIV",
+            "OTC"
+        ],
+        [
             "1108329",
             "PETROCHINA CO LTD",
             "PTCCY",
@@ -52089,12 +52017,6 @@
         [
             "1144800",
             "TRANSALTA CORP",
-            "TRNTF",
-            "OTC"
-        ],
-        [
-            "1144800",
-            "TRANSALTA CORP",
             "TSLTF",
             "OTC"
         ],
@@ -52207,21 +52129,9 @@
             "OTC"
         ],
         [
-            "1175483",
-            "Drive Shack Inc.",
-            "DSHKN",
-            "OTC"
-        ],
-        [
-            "1175483",
-            "Drive Shack Inc.",
-            "DSHKO",
-            "OTC"
-        ],
-        [
-            "1175483",
-            "Drive Shack Inc.",
-            "DSHKP",
+            "1174511",
+            "ANADOLU EFES BIRACILIK VE MALT SANAYI A S/ADR",
+            "AEBMY",
             "OTC"
         ],
         [
@@ -53593,12 +53503,6 @@
             "NYSE"
         ],
         [
-            "1501729",
-            "FS Specialty Lending Fund",
-            "FSEN",
-            "OTC"
-        ],
-        [
             "1502292",
             "Presurance Holdings, Inc.",
             "PRHIZ",
@@ -53877,8 +53781,14 @@
         [
             "1533615",
             "Global Medical REIT Inc.",
-            "GMRBV",
+            "GMRBP",
             "OTC"
+        ],
+        [
+            "1533615",
+            "Global Medical REIT Inc.",
+            "GMRE-PB",
+            "NYSE"
         ],
         [
             "1534254",
@@ -53921,12 +53831,6 @@
             "Carlyle Secured Lending, Inc.",
             "CGBDL",
             "Nasdaq"
-        ],
-        [
-            "1544400",
-            "NFiniTi inc.",
-            "NFTND",
-            "OTC"
         ],
         [
             "1545772",
@@ -54955,12 +54859,6 @@
             "Nasdaq"
         ],
         [
-            "1695473",
-            "Greater Cannabis Company, Inc.",
-            "GCAND",
-            "OTC"
-        ],
-        [
             "1695519",
             "AltaGas Ltd.",
             "ATGAF",
@@ -55267,6 +55165,12 @@
             null
         ],
         [
+            "1757064",
+            "Genfit S.A.",
+            "GNFTY",
+            "OTC"
+        ],
+        [
             "1758699",
             "TRANSUITE.ORG INC.",
             "TRSO",
@@ -55425,12 +55329,6 @@
         [
             "1786117",
             "Alpine Income Property Trust, Inc.",
-            "APNEP",
-            "OTC"
-        ],
-        [
-            "1786117",
-            "Alpine Income Property Trust, Inc.",
             "PINE-PA",
             "NYSE"
         ],
@@ -55523,6 +55421,12 @@
             "MicroAlgo Inc.",
             "VENAF",
             "OTC"
+        ],
+        [
+            "1801169",
+            "Opendoor Technologies Inc.",
+            "OPENW",
+            "Nasdaq"
         ],
         [
             "1801417",
@@ -55685,6 +55589,12 @@
             "Abacus Global Management, Inc.",
             "ABLLL",
             "Nasdaq"
+        ],
+        [
+            "1815620",
+            "Opthea Ltd",
+            "OPTEY",
+            "OTC"
         ],
         [
             "1815846",
@@ -56689,18 +56599,6 @@
             "Nasdaq"
         ],
         [
-            "1850262",
-            "Integral Acquisition Corp 1",
-            "INTEU",
-            "OTC"
-        ],
-        [
-            "1850262",
-            "Integral Acquisition Corp 1",
-            "INTEW",
-            "OTC"
-        ],
-        [
             "1851909",
             "Compass Digital Acquisition Corp.",
             "CDAUF",
@@ -56777,18 +56675,6 @@
             "Nova Minerals Ltd",
             "NVAWW",
             "Nasdaq"
-        ],
-        [
-            "1852889",
-            "Investcorp AI Acquisition Corp.",
-            "IVAUF",
-            "OTC"
-        ],
-        [
-            "1852889",
-            "Investcorp AI Acquisition Corp.",
-            "IVAWF",
-            "OTC"
         ],
         [
             "1852973",
@@ -56999,30 +56885,6 @@
             "Tevogen Bio Holdings Inc.",
             "TVGNW",
             "Nasdaq"
-        ],
-        [
-            "1860879",
-            "Rigel Resource Acquisition Corp.",
-            "RRAUF",
-            "OTC"
-        ],
-        [
-            "1860879",
-            "Rigel Resource Acquisition Corp.",
-            "RRAWF",
-            "OTC"
-        ],
-        [
-            "1861063",
-            "Aquaron Acquisition Corp.",
-            "AQUNR",
-            "OTC"
-        ],
-        [
-            "1861063",
-            "Aquaron Acquisition Corp.",
-            "AQUNU",
-            "OTC"
         ],
         [
             "1861841",
@@ -57925,6 +57787,12 @@
             "Nasdaq"
         ],
         [
+            "1923734",
+            "Ark7 Properties Plus LLC",
+            "AKPPS",
+            "OTC"
+        ],
+        [
             "1924064",
             "RoyaLand Co Ltd.",
             "RLNDF",
@@ -58114,12 +57982,6 @@
             "1944212",
             "DT Cloud Acquisition Corp",
             "DYCQR",
-            "Nasdaq"
-        ],
-        [
-            "1944212",
-            "DT Cloud Acquisition Corp",
-            "DYCQU",
             "Nasdaq"
         ],
         [
@@ -58999,6 +58861,12 @@
             "Nasdaq"
         ],
         [
+            "2017206",
+            "Millrose Properties, Inc.",
+            "MRP-WI",
+            "NYSE"
+        ],
+        [
             "2017950",
             "DT Cloud Star Acquisition Corp",
             "DTSQR",
@@ -59336,13 +59204,13 @@
         ],
         [
             "2028355",
-            "Maywood Acquisition Corp.",
+            "Inflection Point Acquisition Corp. V",
             "MAYAR",
             "Nasdaq"
         ],
         [
             "2028355",
-            "Maywood Acquisition Corp.",
+            "Inflection Point Acquisition Corp. V",
             "MAYAU",
             "Nasdaq"
         ],
@@ -60801,6 +60669,12 @@
         [
             "2073553",
             "AI Infrastructure Acquisition Corp.",
+            "AIIA-RI",
+            "NYSE"
+        ],
+        [
+            "2073553",
+            "AI Infrastructure Acquisition Corp.",
             "AIIA-UN",
             "NYSE"
         ],
@@ -61063,6 +60937,12 @@
             "Nasdaq"
         ],
         [
+            "2078653",
+            "Range Capital Acquisition Corp II",
+            "RNGTW",
+            "Nasdaq"
+        ],
+        [
             "2079106",
             "LaFayette Acquisition Corp.",
             "LAFAU",
@@ -61270,6 +61150,12 @@
             "2092258",
             "Air Water Inc./ADR",
             "AWTRF",
+            "OTC"
+        ],
+        [
+            "2093654",
+            "Zijin Gold International Co Limited/ADR",
+            "ZJNGF",
             "OTC"
         ],
         [
